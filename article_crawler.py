@@ -4,11 +4,45 @@ import requests
 from bs4 import BeautifulSoup
 
 ATLANTIC_BASE = 'https://www.theatlantic.com'
-ATLANTIC_FILMS = 'https://www.theatlantic.com/category/film/'
+ATLANTIC_FILMS = 'https://www.theatlantic.com/category/film/?page='
+ATLANTIC_SELECT_TERM = 'li.article.blog-article a[data-omni-click="inherit"]'
+VULTURE_BASE = ''
+VULTURE = 'http://www.vulture.com/movies/'
+VULTURE_SELECT_TERM = 'a.newsfeed-article-link'
+WASHINGTONPOST_BASE = ''
+WASHINGTONPOST = 'https://www.washingtonpost.com/goingoutguide/theater-dance'
+WASHINGTONPOST_SELECT_TERM = 'a[data-pb-local-content-field="web_headline"]'
 INDEX_FILE = 'stage1_docs/index.txt'
 DIRECTORY = 'stage1_docs/raw/'
 
-def article_spider(baseurl, searchurl, max_pages):
+
+def article_spider_one_page(baseurl, searchurl, select_term):
+    """
+    Finds all the links to articles from a starting page.
+    Will need to be tweaked for each specific web page.
+    :param baseurl: the base name of the website (e.g. "https://www.theatlantic.com")
+    :param searchurl: the starting place to search for articles (e.g. "https://www.theatlantic.com/category/film/")
+    :return: a list of url's to articles
+    """
+
+    links = []
+
+    # open link and set up BeautifulSoup object
+    source = requests.get(searchurl)
+    plain_text = source.text
+    bs = BeautifulSoup(plain_text, 'html.parser')
+
+    # Find all list elements with articles
+    article_list = bs.select(select_term)
+    for link in article_list:
+        links.append(baseurl + link['href'])
+
+    print('Links found on page ' + searchurl + ': ' + str(len(article_list)))
+
+    return links
+
+
+def article_spider_multi_page(baseurl, searchurl, max_pages, select_term):
     """
     Finds all the links to articles from a starting page.
     Will need to be tweaked for each specific web page.
@@ -18,22 +52,15 @@ def article_spider(baseurl, searchurl, max_pages):
     :return: a list of url's to articles
     """
 
+    links = []
+
     for page in range(1, max_pages+1):
         print('Currently on page ' + str(page) + '...')
 
-        links = []
+        list = article_spider_one_page(baseurl, searchurl + str(page), select_term)
+        links += list
 
-        # open link and set up BeautifulSoup object
-        source = requests.get(searchurl)
-        plain_text = source.text
-        bs = BeautifulSoup(plain_text, 'html.parser')
-
-        # Find all list elements with articles
-        article_list = bs.findAll('li', {'class': ['article']})
-        for list in article_list:
-            links.append(baseurl + list.a['href'])
-
-        print('Links found on page ' + str(page) + ': ' + str(len(article_list)))
+        print('Links found on page ' + str(page) + ': ' + str(len(list)))
 
     return links
 
@@ -47,19 +74,45 @@ def text_extractor(url, filename):
     #print("Extracting from link.. {}".format(url))
 
     # open link and set up BeautifulSoup object
-    source = requests.get(url)
-    plain_text = source.text
-    bs = BeautifulSoup(plain_text, 'html.parser')
+    try:
+        source = requests.get(url)
+        plain_text = source.text
+        bs = BeautifulSoup(plain_text, 'html.parser')
 
-    # extract the article and remove extraneous info
-    article = bs.find('section', id='article-section-1')
-    if article.aside is not None:
-        article.aside.extract()
-    article_text = article.get_text()
+        # extract the article and remove extraneous info
+        article_text = ''
 
-    # write text to file
-    with open(filename, 'w') as file:
-        file.write(article_text)
+        # Atlantic
+        article = bs.find('section', id='article-section-1')
+        if article is not None:
+            if article.aside is not None:
+                article.aside.extract()
+            article_text = article.get_text()
+        else:
+            # Vulture
+            article = bs.select_one('div.article-content')
+            if article is not None:
+                if article.div is not None:
+                    article.div.extract()
+                if article.aside is not None:
+                    article.aside.extract()
+                article_text = article.get_text()
+            else:
+                # Washington Post
+                # there is a paywall.. I wonder if this will still work?
+                article = bs.select_one('article[itemprop="articleBody"]')
+                if article is not None:
+                    if article.div is not None:
+                        article.div.extract()
+                article_text = article.get_text()
+
+        # write text to file
+        with open(filename, 'w') as file:
+            file.write(article_text)
+    except:
+        print('Skipping unopenable link: ' + url)
+
+
 
 def main():
     """
@@ -71,6 +124,9 @@ def main():
 
     # new indices to add to file
     new_link_ind = {}
+
+    # list of all links to articles
+    links = []
 
     # determine start of index based on index.txt
     index = 0
@@ -84,7 +140,10 @@ def main():
                 index = count+1
 
     # take all links from the following websites and extract them into .txt files
-    links = article_spider(ATLANTIC_BASE, ATLANTIC_FILMS, 1)
+    links += article_spider_multi_page(ATLANTIC_BASE, ATLANTIC_FILMS, 2, ATLANTIC_SELECT_TERM)
+    links += article_spider_one_page(VULTURE_BASE, VULTURE, VULTURE_SELECT_TERM)
+    links += article_spider_one_page(WASHINGTONPOST_BASE, WASHINGTONPOST, WASHINGTONPOST_SELECT_TERM)
+
     for link in links:
         # check to see if the link has already been processed
         if link in iter(link_ind.values()):
