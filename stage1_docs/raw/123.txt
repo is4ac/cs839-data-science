@@ -1,0 +1,42 @@
+
+
+ 
+
+
+
+Sen. Bernie SandersBernard (Bernie) Sanders   MORE (I-Vt.) will head to Iowa this month to campaign with a former presidential campaign aide who is running for Congress. Sanders will headline a Feb. 23 event in Des Moines for Iowa's 3rd District Democratic candidate Pete D’Alessandro, who worked as his adviser during the Iowa caucus in 2016.“Bernie knows that we need bold, progressive leaders in Congress if we’re going to change the direction of our country,” D’Alessandro said in a statement to the Des Moines Register.“That’s why I’m proudly supporting Medicare for All, a $15/hour living wage, and free college tuition for those who work hard. We can take our country back and continue the movement Bernie started here in 2016," he continued. The visit marks Sanders's first trip to Iowa this year and is likely to spark speculation about a potential 2020 presidential run. Sanders narrowly lost the state's caucus to eventual Democratic presidential nominee Hillary ClintonHillary Diane Rodham Clinton   MORE in 2016.  He is considered part of a large field of potential Democratic candidates to challenge President TrumpDonald John Trump   MORE, including former Vice President Joe BidenJoseph (Joe) Robinette Biden   MORE, former Virginia Gov. Terry McAuliffe, and Sens. Kamala HarrisKamala Devi Harris   MORE (Calif.), Cory BookerCory Anthony Booker   MORE (N.J.) and Elizabeth WarrenElizabeth Ann Warren   MORE (Mass.). 
+Tags Elizabeth Warren Hillary Clinton Bernie Sanders Kamala Harris Donald Trump Cory Booker Joe Biden 
+
+
+
+
+
+      ;(function(){
+        var linkedinScriptEl = document.querySelector('script[src="//platform.linkedin.com/in.js"]');
+        if (linkedinScriptEl == null) {
+          var shareLinkedinEl = document.querySelector('.share-linkedin');
+          var scriptEl = document.createElement('script');
+          scriptEl.src = "//platform.linkedin.com/in.js";
+          scriptEl.async = true;
+          scriptEl.innerHTML = " lang: en_US";
+          shareLinkedinEl.appendChild(scriptEl);
+        }
+      })();
+    
+
+
+
+
+
+      (function() {
+        var li = document.createElement('script'); li.type = 'text/javascript'; li.async = true;
+        li.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//platform.stumbleupon.com/1/widgets.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(li, s);
+      })();
+    
+
+
+
+   
+
+

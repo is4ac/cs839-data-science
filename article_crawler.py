@@ -12,6 +12,9 @@ VULTURE_SELECT_TERM = 'a.newsfeed-article-link'
 WASHINGTONPOST_BASE = ''
 WASHINGTONPOST = 'https://www.washingtonpost.com/goingoutguide/theater-dance'
 WASHINGTONPOST_SELECT_TERM = 'a[data-pb-local-content-field="web_headline"]'
+HILL_BASE = 'http://www.thehill.com'
+HILL_SENATE = 'http://thehill.com/homenews/senate?page='
+HILL_SELECT_TERM = 'h2.node__title.node-title a'
 INDEX_FILE = 'stage1_docs/index.txt'
 DIRECTORY = 'stage1_docs/raw/'
 
@@ -42,7 +45,7 @@ def article_spider_one_page(baseurl, searchurl, select_term):
     return links
 
 
-def article_spider_multi_page(baseurl, searchurl, max_pages, select_term):
+def article_spider_multi_page(baseurl, searchurl, start_page, max_pages, select_term):
     """
     Finds all the links to articles from a starting page.
     Will need to be tweaked for each specific web page.
@@ -54,7 +57,7 @@ def article_spider_multi_page(baseurl, searchurl, max_pages, select_term):
 
     links = []
 
-    for page in range(1, max_pages+1):
+    for page in range(start_page, max_pages+1):
         print('Currently on page ' + str(page) + '...')
 
         list = article_spider_one_page(baseurl, searchurl + str(page), select_term)
@@ -87,7 +90,6 @@ def text_extractor(url, filename):
         if article is not None:
             if article.aside is not None:
                 article.aside.extract()
-            article_text = article.get_text()
         else:
             # Vulture
             article = bs.select_one('div.article-content')
@@ -96,22 +98,35 @@ def text_extractor(url, filename):
                     article.div.extract()
                 if article.aside is not None:
                     article.aside.extract()
-                article_text = article.get_text()
             else:
                 # Washington Post
-                # there is a paywall.. I wonder if this will still work?
+                # there is a paywall.. I wonder if this will still work? - edit: It does!! sweet
                 article = bs.select_one('article[itemprop="articleBody"]')
                 if article is not None:
                     if article.div is not None:
                         article.div.extract()
-                article_text = article.get_text()
+                else:
+                    # TheHill
+                    article = bs.select_one('article.node-article')
+                    if article is not None:
+                        if article.div is not None:
+                            article.div.extract()
+
+                        to_remove = article.select('a.people-articles')
+                        for a in to_remove:
+                            a.extract()
+
+                        to_remove = article.select_one('div#dfp-ad-mosad_1-wrapper')
+                        to_remove.extract()
+
+        if article is not None:
+            article_text = article.get_text()
 
         # write text to file
         with open(filename, 'w') as file:
             file.write(article_text)
     except:
         print('Skipping unopenable link: ' + url)
-
 
 
 def main():
@@ -140,9 +155,11 @@ def main():
                 index = count+1
 
     # take all links from the following websites and extract them into .txt files
-    links += article_spider_multi_page(ATLANTIC_BASE, ATLANTIC_FILMS, 2, ATLANTIC_SELECT_TERM)
-    links += article_spider_one_page(VULTURE_BASE, VULTURE, VULTURE_SELECT_TERM)
-    links += article_spider_one_page(WASHINGTONPOST_BASE, WASHINGTONPOST, WASHINGTONPOST_SELECT_TERM)
+    # TODO: Uncomment the corresponding lines of the websites you wish to scrape
+    #links += article_spider_multi_page(ATLANTIC_BASE, ATLANTIC_FILMS, 1, 2, ATLANTIC_SELECT_TERM)
+    #links += article_spider_one_page(VULTURE_BASE, VULTURE, VULTURE_SELECT_TERM)
+    #links += article_spider_one_page(WASHINGTONPOST_BASE, WASHINGTONPOST, WASHINGTONPOST_SELECT_TERM)
+    links += article_spider_multi_page(HILL_BASE, HILL_SENATE, 0, 1, HILL_SELECT_TERM)
 
     for link in links:
         # check to see if the link has already been processed

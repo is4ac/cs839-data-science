@@ -1,0 +1,42 @@
+
+
+ 
+
+
+
+Sen. Rand PaulRandal (Rand) Howard Paul   MORE (R-Ky.) on Sunday slammed deficit spending under congressional Republicans, saying it’s no better than the spending he adamantly opposed under former President Obama.“I think we should draw attention to the fact that we're spending so much money. I ran for office in 2010 with what was called sort of the Tea Party tidal wave,” Paul told CBS’s “Face the Nation.”“At that point we were very, very critical of President Obama's deficits, you know, approaching a trillion dollars in a year. We talked endlessly about them we had 100,000 people rally on the [National] Mall in Washington. And I'm still against deficit spending; just because Republicans are doing it, doesn't make it any better.”Paul’s remarks come after the Kentucky lawmaker railed against last week’s budget deal and delayed vote on the agreement, causing a brief government shutdown overnight.The Kentucky senator called the budget deal “recklessness” masked as bipartisanship during a floor speech last week. His blockade against the bill angered his fellow Republicans, who were forced to vote on the deal in the middle of the night. 
+Tags Rand Paul Deficit spending 
+
+
+
+
+
+      ;(function(){
+        var linkedinScriptEl = document.querySelector('script[src="//platform.linkedin.com/in.js"]');
+        if (linkedinScriptEl == null) {
+          var shareLinkedinEl = document.querySelector('.share-linkedin');
+          var scriptEl = document.createElement('script');
+          scriptEl.src = "//platform.linkedin.com/in.js";
+          scriptEl.async = true;
+          scriptEl.innerHTML = " lang: en_US";
+          shareLinkedinEl.appendChild(scriptEl);
+        }
+      })();
+    
+
+
+
+
+
+      (function() {
+        var li = document.createElement('script'); li.type = 'text/javascript'; li.async = true;
+        li.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//platform.stumbleupon.com/1/widgets.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(li, s);
+      })();
+    
+
+
+
+   
+
+

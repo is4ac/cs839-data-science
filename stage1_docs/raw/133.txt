@@ -1,0 +1,42 @@
+
+
+ 
+
+
+
+A group of GOP senators are preparing to introduce an immigration plan that lines up with President TrumpDonald John Trump   MORE's framework as the Senate barrels toward a heated debate over the issue. Seven GOP senators, led by Sen. Chuck GrassleyCharles (Chuck) Ernest Grassley   MORE (R-Iowa), will file the bill, known as the Secure and Succeed Act, on Monday."Our proposal is supported by the President, who’s come a long way to reach a compromise. This is the only Senate proposal that has any chance of passing the House and being signed into law," Grassley said in a statement. The legislation mirrors Trump's framework by offering a path to citizenship for roughly 1.8 million immigrants brought into the country as children illegally in exchange for $25 billion in border security.It would also place new limits on family-based immigration, a key point for conservatives but considered a nonstarter for many Democrats.And it would toughen interior enforcement, including implementing E-Verify, strengthening penalties for immigrants who re-enter the country illegally after being deported and cracking down on visa overstays.In addition to Grassley, the proposal is backed by GOP Sens. John CornynJohn Cornyn   MORE (Texas), Thom TillisThomas (Thom) Roland Tillis   MORE (N.C.), David Perdue (Ga.), James LankfordJames Paul Lankford   MORE (Okla.), Tom CottonThomas (Tom) Bryant Cotton   MORE (Ark.) and Joni ErnstJoni Kay Ernst   MORE (Iowa). The plan is one of several that senators are expected to put forward as the chamber searches for a fix for the Deferred Action for Childhood Arrivals (DACA) program that can get the 60 votes it needs to pass. GOP senators argued on Sunday night their plan is the only one the president supports — a requirement, according to Speaker Paul RyanPaul  Davis Ryan   MORE (R-Wis.), for any bill to be taken up in that chamber. But the conservative proposal is expected to fall short of the needed 60 votes in the Senate, with senators in both parties predicting Trump's framework can't get the support to break a filibuster. Trump kicked the immigration fight to Congress last year when he announced that he was ending the DACA program, which allows qualified immigrants brought into the country illegally as children to work and go to school without fear of deportation.Under his decision, Congress has until March 5 to find a fix, but the Senate is expected to start its work on the issue Monday evening.  
+Tags James Lankford Chuck Grassley Donald Trump Thom Tillis John Cornyn Joni Ernst Tom Cotton Paul Ryan 
+
+
+
+
+
+      ;(function(){
+        var linkedinScriptEl = document.querySelector('script[src="//platform.linkedin.com/in.js"]');
+        if (linkedinScriptEl == null) {
+          var shareLinkedinEl = document.querySelector('.share-linkedin');
+          var scriptEl = document.createElement('script');
+          scriptEl.src = "//platform.linkedin.com/in.js";
+          scriptEl.async = true;
+          scriptEl.innerHTML = " lang: en_US";
+          shareLinkedinEl.appendChild(scriptEl);
+        }
+      })();
+    
+
+
+
+
+
+      (function() {
+        var li = document.createElement('script'); li.type = 'text/javascript'; li.async = true;
+        li.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//platform.stumbleupon.com/1/widgets.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(li, s);
+      })();
+    
+
+
+
+   
+
+

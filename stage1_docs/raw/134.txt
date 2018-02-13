@@ -1,0 +1,42 @@
+
+
+ 
+
+
+
+Sen. Kirsten GillibrandKirsten Elizabeth Gillibrand   MORE (D-N.Y.) said Sunday she believes Congress should hold President TrumpDonald John Trump   MORE accountable for the numerous allegations of sexual misconduct leveled against him.“I think he should resign, and if he’s unwilling to do that, which is what I assume, then Congress should hold him accountable. We’re obligated to have hearings,” Gillibrand said in an interview with CBS's “60 Minutes.”Gillibrand, who was among the first to call for former Sen. Al FrankenAlan (Al) Stuart Franken   MORE (D-Minn.) to resign due to sexual misconduct allegations, was also one of several Democratic senators who late last year said Trump should resign due to sexual misconduct allegations that surfaced during the 2016 presidential campaign. If he did not resign, the senators and some of Trump’s accusers said Congress should investigate the claims.When asked on "60 Minutes" why it took until late last year to call for Trump to be held accountable, Gillibrand said "something changed" when he was elected, "and I think it changed for women."Trump attacked Gillibrand on Twitter after she called for his resignation, saying she would “do anything” for campaign donations. White House counselor Kellyanne ConwayKellyanne Elizabeth Conway   MORE on Sunday criticized the senator for protecting and defending former President Clinton when he was accused of sexual misconduct. Clinton left office in 2000, and Gillibrand was elected to Congress in 2006. Gillibrand, who recently said Clinton should have resigned at the time, told “60 Minutes” her perspective on the allegations against the former president has changed.“I think I’m not alone here. Like, how many of us were having this conversation even a year ago?” she said. “I think we’re all learning.”She declined to say whether she’s spoken to the Clintons since she changed her stance, but added that Hillary ClintonHillary Diane Rodham Clinton   MORE is still her “greatest role model in politics.” 
+Tags Kirsten Gillibrand Kellyanne Conway Hillary Clinton Donald Trump Al Franken 
+
+
+
+
+
+      ;(function(){
+        var linkedinScriptEl = document.querySelector('script[src="//platform.linkedin.com/in.js"]');
+        if (linkedinScriptEl == null) {
+          var shareLinkedinEl = document.querySelector('.share-linkedin');
+          var scriptEl = document.createElement('script');
+          scriptEl.src = "//platform.linkedin.com/in.js";
+          scriptEl.async = true;
+          scriptEl.innerHTML = " lang: en_US";
+          shareLinkedinEl.appendChild(scriptEl);
+        }
+      })();
+    
+
+
+
+
+
+      (function() {
+        var li = document.createElement('script'); li.type = 'text/javascript'; li.async = true;
+        li.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//platform.stumbleupon.com/1/widgets.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(li, s);
+      })();
+    
+
+
+
+   
+
+

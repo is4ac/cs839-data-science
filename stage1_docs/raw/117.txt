@@ -1,0 +1,42 @@
+
+
+ 
+
+
+
+Sen. Bernie SandersBernard (Bernie) Sanders   MORE (I-Vt.) called President TrumpDonald John Trump   MORE’s budget the budget of the Koch brothers and the billionaire class at a Senate Budget Committee hearing Tuesday morning.“This budget is the budget of the Koch brothers, it is the budget of the billionaire class, and the American people understand it," Sanders, the ranking member of the Senate Budget Committee, said, referring to the billionaire conservative donors Charles and David Koch.  The Trump budget is the budget of the Koch brothers, of the billionaire class.— Bernie Sanders (@SenSanders) February 13, 2018 President Trump released his $4.4 trillion federal budget proposal on Monday. It includes large increases in military spending and heavy cuts to domestic programs. The proposal would also add $984 billion to the federal deficit next year. “You don’t help working people when your budget would eliminate financial aid to hundreds of thousands of low-income college students,” Sanders said on Tuesday. Sanders criticized Trump for saying there isn’t enough money to help working people while proposing to provide a “massive increase in the bloated Pentagon budget.”The president's proposal has little chance of being implemented as written, but it marks a shift away from the Republican quest to control the ever-increasing deficit.“When Donald Trump campaigned for president, he told the American people that he would be a different type of Republican, that he would take on the political and economic establishment, and that he would stand up for working people,” Sanders said.But Trump betrayed his campaign promises to help working class people, the senator said. He added that Trump’s proposed policies show he is not a “different” kind of Republican.  You’re not a “different” kind of Republican by proposing a budget that would eliminate heating assistance to 6 million families in this country by abolishing the Low-Income Home Energy Assistance Program.— Bernie Sanders (@SenSanders) February 13, 2018  Sanders called the budget a Robin Hood in reverse proposal that does not take on the establishment. “As a candidate, Donald Trump said that he understood the pain that working families across this country were feeling,” Sanders said. “Well, you’re not responding to that pain, Mr. President, when you propose a budget that would throw over a million kids off of afterschool programs.”“We need a budget that works for all Americans, not just the wealthy and the powerful,” Sanders said. 
+Tags Bernie Sanders Donald Trump trump budget Defense spending 
+
+
+
+
+
+      ;(function(){
+        var linkedinScriptEl = document.querySelector('script[src="//platform.linkedin.com/in.js"]');
+        if (linkedinScriptEl == null) {
+          var shareLinkedinEl = document.querySelector('.share-linkedin');
+          var scriptEl = document.createElement('script');
+          scriptEl.src = "//platform.linkedin.com/in.js";
+          scriptEl.async = true;
+          scriptEl.innerHTML = " lang: en_US";
+          shareLinkedinEl.appendChild(scriptEl);
+        }
+      })();
+    
+
+
+
+
+
+      (function() {
+        var li = document.createElement('script'); li.type = 'text/javascript'; li.async = true;
+        li.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//platform.stumbleupon.com/1/widgets.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(li, s);
+      })();
+    
+
+
+
+   
+
+

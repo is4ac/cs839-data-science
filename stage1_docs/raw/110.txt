@@ -1,0 +1,42 @@
+
+
+ 
+
+
+
+Senate Democratic Leader Charles SchumerCharles (Chuck) Ellis Schumer   MORE (N.Y.) is urging President TrumpDonald John Trump   MORE to denounce domestic abuse following the resignation of two senior White House aides.White House press secretary Sarah Huckabee Sanders told reporters Monday that Trump “supports victims of domestic violence” but also thinks that “everyone should be treated fairly and with due process.”Schumer on Tuesday said that falls short of what is needed.“I haven’t heard the president say something directly about how bad domestic abuse is. To have a spokesperson get out and say something is not good enough,” Schumer said.Schumer delivered his statement after a reporter asked him if the White House was taking the issue seriously enough.Sanders’s statement on Monday has raised questions about why Trump himself has not spoken out directly against domestic violence following departures by two senior White House aides.Staff secretary Rob Porter and speechwriter David Sorensen both abruptly resigned last week after their ex-wives came forward publicly with allegations of past domestic abuse.White House chief of staff John KellyJohn Francis KellyMORE initially defended Porter when allegations of abuse by his two ex-wives emerged in the press, calling Porter “a man of true integrity and honor,” a ”friend” and a “trusted professional.”On Friday, Trump said he was “surprised” by the allegations against Porter and had found out about them only recently.Without mentioning any specific allegations, the president tweeted on Saturday that “peoples [sic] lives are being shattered and destroyed by a mere allegation. Some are true and some are false. Some are old and some are new.”The following day, White House counselor Kellyanne ConwayKellyanne Elizabeth Conway   MORE said Trump was “very disturbed” by the accusations against Porter.  
+Tags Kellyanne Conway Charles Schumer Donald Trump John Kelly Chuck Schumer Domestic violence Rob Porter trump white house 
+
+
+
+
+
+      ;(function(){
+        var linkedinScriptEl = document.querySelector('script[src="//platform.linkedin.com/in.js"]');
+        if (linkedinScriptEl == null) {
+          var shareLinkedinEl = document.querySelector('.share-linkedin');
+          var scriptEl = document.createElement('script');
+          scriptEl.src = "//platform.linkedin.com/in.js";
+          scriptEl.async = true;
+          scriptEl.innerHTML = " lang: en_US";
+          shareLinkedinEl.appendChild(scriptEl);
+        }
+      })();
+    
+
+
+
+
+
+      (function() {
+        var li = document.createElement('script'); li.type = 'text/javascript'; li.async = true;
+        li.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//platform.stumbleupon.com/1/widgets.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(li, s);
+      })();
+    
+
+
+
+   
+
+
