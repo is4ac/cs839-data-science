@@ -1,7 +1,7 @@
 __author__ = 'Isaac Sung'
 
 import requests
-from bs4 import BeautifulSoup, NavigableString
+from bs4 import BeautifulSoup
 
 ATLANTIC_BASE = 'https://www.theatlantic.com'
 ATLANTIC_FILMS = 'https://www.theatlantic.com/category/film/'
@@ -69,6 +69,9 @@ def main():
     # dictionary to keep track of indices and http links
     link_ind = {}
 
+    # new indices to add to file
+    new_link_ind = {}
+
     # determine start of index based on index.txt
     index = 0
 
@@ -90,13 +93,14 @@ def main():
             # process link
             text_extractor(link, DIRECTORY + str(index) + '.txt')
             link_ind[index] = link
+            new_link_ind[index] = link
 
         index += 1
 
     # write the link indices to a file so we can cross reference articles easily
     with open(INDEX_FILE, 'a') as file:
-        for key in link_ind:
-            file.write(str(key) + " " + link_ind[key] + "\n")
+        for key in new_link_ind:
+            file.write(str(key) + " " + new_link_ind[key] + "\n")
 
 if __name__ == "__main__":
     main()
