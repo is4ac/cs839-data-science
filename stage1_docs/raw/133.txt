@@ -3,40 +3,9 @@
  
 
 
+.@tedcruz: "If Republican majorities in Congress pass citizenship for millions of people, an amnesty, I think it is quite likely we will lose both houses of Congress and Speaker @NancyPelosi will impeach President @realDonaldTrump." pic.twitter.com/rS0MFx3mGK— Fox News (@FoxNews) February 15, 2018
 
-A group of GOP senators are preparing to introduce an immigration plan that lines up with President TrumpDonald John Trump   MORE's framework as the Senate barrels toward a heated debate over the issue. Seven GOP senators, led by Sen. Chuck GrassleyCharles (Chuck) Ernest Grassley   MORE (R-Iowa), will file the bill, known as the Secure and Succeed Act, on Monday."Our proposal is supported by the President, who’s come a long way to reach a compromise. This is the only Senate proposal that has any chance of passing the House and being signed into law," Grassley said in a statement. The legislation mirrors Trump's framework by offering a path to citizenship for roughly 1.8 million immigrants brought into the country as children illegally in exchange for $25 billion in border security.It would also place new limits on family-based immigration, a key point for conservatives but considered a nonstarter for many Democrats.And it would toughen interior enforcement, including implementing E-Verify, strengthening penalties for immigrants who re-enter the country illegally after being deported and cracking down on visa overstays.In addition to Grassley, the proposal is backed by GOP Sens. John CornynJohn Cornyn   MORE (Texas), Thom TillisThomas (Thom) Roland Tillis   MORE (N.C.), David Perdue (Ga.), James LankfordJames Paul Lankford   MORE (Okla.), Tom CottonThomas (Tom) Bryant Cotton   MORE (Ark.) and Joni ErnstJoni Kay Ernst   MORE (Iowa). The plan is one of several that senators are expected to put forward as the chamber searches for a fix for the Deferred Action for Childhood Arrivals (DACA) program that can get the 60 votes it needs to pass. GOP senators argued on Sunday night their plan is the only one the president supports — a requirement, according to Speaker Paul RyanPaul  Davis Ryan   MORE (R-Wis.), for any bill to be taken up in that chamber. But the conservative proposal is expected to fall short of the needed 60 votes in the Senate, with senators in both parties predicting Trump's framework can't get the support to break a filibuster. Trump kicked the immigration fight to Congress last year when he announced that he was ending the DACA program, which allows qualified immigrants brought into the country illegally as children to work and go to school without fear of deportation.Under his decision, Congress has until March 5 to find a fix, but the Senate is expected to start its work on the issue Monday evening.  
-Tags James Lankford Chuck Grassley Donald Trump Thom Tillis John Cornyn Joni Ernst Tom Cotton Paul Ryan 
+Sen. Ted Cruz    (R-Tex.) claimed Thursday that President Trump   ’s immigration proposal is more liberal than former President Obama’s Deferred Action for Childhood Arrivals (DACA) program.Lawmakers are debating this week on several immigration proposals, including one that mirrors Trump’s proposed framework, which would provide a pathway to citizenship for an estimated 1.8 million undocumented immigrations in exchange for heightened border security, funding for a border wall and limits on legal immigration.“That is dramatically to the left of where Barack Obama    was,” Cruz said on “Fox & Friends." “DACA covered 690,000 people, why on earth are Republicans trying to more than double, nearly triple that?”“Because it’s a more accurate number,” co-host Brian Kilmeade said, speaking over Cruz.“Tell that to the steel workers, tell that to the truck drivers,” the senator replied.While in office, Obama created DACA and sought to expand the program to the family members of people enrolled, but was blocked by the courts.Obama also backed an immigration-reform bill in 2013 that was passed by the Senate that would have placed an estimated 8 million undocumented immigrants on a path to citizenship. That bill died in the House.Lawmakers on Thursday are struggling to pull together 60 votes to pass an immigration bill, and Senate Majority Leader Mitch McConnell    (R-Ky.) has made it clear that he wants the Senate to move on from the topic after this week. Bipartisan groups of senators are working to rack up support for a plan that would protect 1.8 million undocumented immigrants who were brought to the U.S. as children from deportation and provide funding for border security. But that plan would not address changes to legal immigration that Trump has pushed for.Cruz called the proposal to provide a pathway to citizenship a “profound mistake.”“We should not be granting citizenship to people here illegally,” he said. “I can tell you the American people don’t want amnesty.”Multiple polls have found that a vast majority of Americans support some form of legal protection for DACA recipients.Cruz also warned Republicans that if these proposals pass, the party is in danger of losing power in the 2018 midterm elections.“Why would Republicans be galloping to the left of Barack Obama?” he said. “Mark my words, if Republican majorities in Congress pass citizenship for millions of people, an amnesty, I think it is quite likely we will lose both houses of Congress and Speaker Nancy Pelosi    will impeach President Trump.” 
 
-
-
-
-
-      ;(function(){
-        var linkedinScriptEl = document.querySelector('script[src="//platform.linkedin.com/in.js"]');
-        if (linkedinScriptEl == null) {
-          var shareLinkedinEl = document.querySelector('.share-linkedin');
-          var scriptEl = document.createElement('script');
-          scriptEl.src = "//platform.linkedin.com/in.js";
-          scriptEl.async = true;
-          scriptEl.innerHTML = " lang: en_US";
-          shareLinkedinEl.appendChild(scriptEl);
-        }
-      })();
-    
-
-
-
-
-
-      (function() {
-        var li = document.createElement('script'); li.type = 'text/javascript'; li.async = true;
-        li.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//platform.stumbleupon.com/1/widgets.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(li, s);
-      })();
-    
-
-
-
-   
 
 

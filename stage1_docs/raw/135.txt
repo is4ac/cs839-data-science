@@ -4,39 +4,7 @@
 
 
 
-Sen. Rand PaulRandal (Rand) Howard Paul   MORE (R-Ky.) on Sunday slammed deficit spending under congressional Republicans, saying it’s no better than the spending he adamantly opposed under former President Obama.“I think we should draw attention to the fact that we're spending so much money. I ran for office in 2010 with what was called sort of the Tea Party tidal wave,” Paul told CBS’s “Face the Nation.”“At that point we were very, very critical of President Obama's deficits, you know, approaching a trillion dollars in a year. We talked endlessly about them we had 100,000 people rally on the [National] Mall in Washington. And I'm still against deficit spending; just because Republicans are doing it, doesn't make it any better.”Paul’s remarks come after the Kentucky lawmaker railed against last week’s budget deal and delayed vote on the agreement, causing a brief government shutdown overnight.The Kentucky senator called the budget deal “recklessness” masked as bipartisanship during a floor speech last week. His blockade against the bill angered his fellow Republicans, who were forced to vote on the deal in the middle of the night. 
-Tags Rand Paul Deficit spending 
+ var _informq = _informq || []; _informq.push(['embed']);A writer for "Jimmy Kimmel Live!" is calling out lawmakers for the money they've taken from the National Rifle Association (NRA) in the wake of a mass shooting at a South Florida high school.Bess Kalb on Wednesday responded to tweets from multiple GOP lawmakers expressing their thoughts and prayers after the shooting by tweeting the amount of money they have taken from the NRA, The Huffington Post reported."This is not a political issue. This is not a Constitutional debate. This is a pandemic that's killing children," she tweeted Wednesday."And it's perpetrated by hypocrites who preach a doctrine of 'life' but take money from a profit-driven gun lobby."This is not a political issue. This is not a Constitutional debate. This is a pandemic that's killing children. And it's perpetrated by hypocrites who preach a doctrine of "life" but take money from a profit-driven gun lobby. @RoyBlunt @SenatorBurr @SenThomTillis @SenCoryGardner— Bess Kalb (@bessbell) February 14, 2018In a subsequent tweet, she shared a list of lawmakers who have received NRA funding. God have mercy on your NRA-kept souls:Richard Burr   $6,986,620 Roy Blunt   $4,551,146Thom Tillis   $4,418,012Cory Gardner   $3,879,064Marco Rubio   $3,303,355Joni Ernst   $3,124,273Rob Portman   $3,061,941Todd Young   $2,896,732Bill Cassidy   $2,861,047https://t.co/y9US2i6CPD— Bess Kalb (@bessbell) February 14, 2018She then responded to multiple tweets from lawmakers — including Sens. Marco Rubio (R-Fla.) and Cory Gardner (R-Colo.) — listing the amount they have taken from the NRA.She also responded to Republican National Committee Chairwoman Ronna Romney McDaniel, who tweeted she was praying for all those affected by the Florida shooting."In the 2015-2016 election cycle alone, GOP candidates took $17,385,437 from the NRA," she replied."This is NOT counting the $21 million given to President Trump   ," she added in a subsequent tweet.In the 2015-2016 election cycle alone, GOP candidates took $17,385,437 from the NRA. https://t.co/mhyQZ9vtli— Bess Kalb (@bessbell) February 14, 2018Kalb's tweets are similar to those of The New York Daily News, which also highlighted contributions that senators, including Rubio and Rob Portman (R-Ohio), have received from the NRA and other gun rights groups after the senators' Wednesday tweets.At least 17 people were killed and even more wounded on Wednesday in a shooting at Marjory Stoneman Douglas High School in Parkland, Fla.President Trump and many other lawmakers on Wednesday offered their thoughts and prayers to the victims.Multiple Democratic lawmakers have since called for Congress to take action on gun violence. 
 
-
-
-
-
-      ;(function(){
-        var linkedinScriptEl = document.querySelector('script[src="//platform.linkedin.com/in.js"]');
-        if (linkedinScriptEl == null) {
-          var shareLinkedinEl = document.querySelector('.share-linkedin');
-          var scriptEl = document.createElement('script');
-          scriptEl.src = "//platform.linkedin.com/in.js";
-          scriptEl.async = true;
-          scriptEl.innerHTML = " lang: en_US";
-          shareLinkedinEl.appendChild(scriptEl);
-        }
-      })();
-    
-
-
-
-
-
-      (function() {
-        var li = document.createElement('script'); li.type = 'text/javascript'; li.async = true;
-        li.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//platform.stumbleupon.com/1/widgets.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(li, s);
-      })();
-    
-
-
-
-   
 
 

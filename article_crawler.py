@@ -1,6 +1,7 @@
 __author__ = 'Isaac Sung'
 
 import requests
+import time
 from bs4 import BeautifulSoup
 
 ATLANTIC_BASE = 'https://www.theatlantic.com'
@@ -78,8 +79,9 @@ def text_extractor(url, filename):
 
     # open link and set up BeautifulSoup object
     try:
-        source = requests.get(url)
+        source = requests.get(url, allow_redirects = True)
         plain_text = source.text
+
         bs = BeautifulSoup(plain_text, 'html.parser')
 
         # extract the article and remove extraneous info
@@ -109,15 +111,25 @@ def text_extractor(url, filename):
                     # TheHill
                     article = bs.select_one('article.node-article')
                     if article is not None:
-                        if article.div is not None:
-                            article.div.extract()
+                        to_remove = article.select_one('div.content-img-wrp')
+                        if to_remove is not None:
+                            to_remove.extract()
 
-                        to_remove = article.select('a.people-articles')
+                        to_remove = article.findAll('a', {'class': ['people-articles', 'name', 'more']})
                         for a in to_remove:
                             a.extract()
 
                         to_remove = article.select_one('div#dfp-ad-mosad_1-wrapper')
-                        to_remove.extract()
+                        if to_remove is not None:
+                            to_remove.extract()
+
+                        to_remove = article.select_one('div.article-tags')
+                        if to_remove is not None:
+                            to_remove.extract()
+
+                        to_remove = article.select_one('div#bottom-story-socials')
+                        if to_remove is not None:
+                            to_remove.extract()
 
         if article is not None:
             article_text = article.get_text()
@@ -156,10 +168,10 @@ def main():
 
     # take all links from the following websites and extract them into .txt files
     # TODO: Uncomment the corresponding lines of the websites you wish to scrape
-    #links += article_spider_multi_page(ATLANTIC_BASE, ATLANTIC_FILMS, 1, 2, ATLANTIC_SELECT_TERM)
+    links += article_spider_multi_page(ATLANTIC_BASE, ATLANTIC_FILMS, 3, 5, ATLANTIC_SELECT_TERM)
     #links += article_spider_one_page(VULTURE_BASE, VULTURE, VULTURE_SELECT_TERM)
     #links += article_spider_one_page(WASHINGTONPOST_BASE, WASHINGTONPOST, WASHINGTONPOST_SELECT_TERM)
-    links += article_spider_multi_page(HILL_BASE, HILL_SENATE, 0, 1, HILL_SELECT_TERM)
+    links += article_spider_multi_page(HILL_BASE, HILL_SENATE, 2, 4, HILL_SELECT_TERM)
 
     for link in links:
         # check to see if the link has already been processed
@@ -170,6 +182,9 @@ def main():
             text_extractor(link, DIRECTORY + str(index) + '.txt')
             link_ind[index] = link
             new_link_ind[index] = link
+
+            # short pause so it can connect to all the sites?
+            #time.sleep(0.5)
 
         index += 1
 
