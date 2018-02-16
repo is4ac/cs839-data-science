@@ -1,0 +1,25 @@
+
+Thousands of people watched as SpaceX launched its Tesla Roadster to space atop a Falcon Heavy rocket on Tuesday. 
+They looked on as the nose cone housing the Tesla was stripped away, exposing the electric car to the vacuum of space as David Bowie's "Life on Mars" played, ushering it to orbit.
+Thousands continued watching a livestream of the Tesla and its passenger "Starman" as it flew past the Earth into deep space. 
+SEE ALSO: Watching SpaceX's Falcon Heavy launch to space was like seeing into the future
+But even after that livestream ended, a few astronomers have kept an eye on Starman and its car as they make their way out to an orbit around the sun that will bring it beyond Mars, allowing it to roam through space possibly for millions of years.
+
+Astronomer Gianluca Masi of the Virtual Telescope Project caught sight of the Tesla speeding through space on Feb. 8, two days after its launch. 
+"We immediately spotted the Tesla Roadster, quite bright ... moving image after image across the stars. At the time of our observations, the car was at about 470,000 km from us," Masi said in a blog post.
+"We managed to take dozen of images, and we used a group of them to show the trail of the object across the stars."
+The Deimos Sky Survey also managed to catch sight of the cosmic Tesla. 
+
+DEIMOS imaging of Tesla - can you spot it moving across the center of the field?  https://t.co/WxpOBtoF3S pic.twitter.com/6VKC0NUehu
+— Jonathan McDowell (@planet4589) February 8, 2018
+
+The Tesla Roadster effectively looks like a star moving slowly across the sky.
+Astronomers still aren't exactly sure where the Tesla is heading. According to SpaceX founder Elon Musk, the Tesla overshot its initial orbit and is heading toward the asteroid belt, but that may not be the full story. 
+The Tesla likely won't make it all the way to the asteroid belt, and according to astrophysicist Jonathan McDowell, the Roadster and Starman will make it beyond Mars, but not quite to the asteroid belt.
+But wherever it goes, the Tesla and Starman will likely be on their own in deep space for a very long time.
+
+WATCH: Here’s how NASA is preparing the largest telescope ever built for space
+
+
+      window._msla=window.loadScriptAsync||function(src,id){if(document.getElementById(id))return;var js=document.createElement('script');js.id=id;js.src=src;document.getElementsByTagName('script')[0].parentNode.insertBefore(js,fjs);};
+_msla("https://platform.twitter.com/widgets.js","twitter_jssdk");

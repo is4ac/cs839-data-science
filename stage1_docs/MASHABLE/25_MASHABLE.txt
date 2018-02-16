@@ -1,0 +1,37 @@
+
+Soon after taking office on Feb. 17, Environmental Protection Agency (EPA) administrator Scott Pruitt set out to revamp his agency's websites in order to take down longstanding information on climate science and policy. This included the agency's authoritative resources on climate science findings and data, a climate change for kids page, and a website detailing the landmark Clean Power Plan. 
+Documents released Monday by the Environmental Defense Fund show that Pruitt was involved in ordering and monitoring his staff's progress in taking down these specific websites, and putting up interim redirect sites in their stead. 
+SEE ALSO: Trump's big EPA website change should make you furious
+For example, on April 28, 2017, J.P. Freire, then the chief of public affairs at the EPA, wrote to agency web and public affairs staff to direct them to remove and archive content on several EPA webpages, including the Clean Power Plan site and the main climate science section, which had remained online and expanded throughout Democratic and Republican administrations, dating back to the presidency of George H.W. Bush. 
+"... We would like the content at the links below removed and archived as soon as possible. The removed climate change pages will be replaced with a custom page that will explain why the change is happening, include a link to the January 19, 2017 snapshot of the EPA website, and a link to the press release we'll be putting out. The clean power plan pages will be redirected to the newly posted energy independence pages," Freire wrote. 
+
+
+
+
+Email sent from an EPA public affairs official in April 28, pertaining to EPA websites.Image:  EDF.
+
+
+
+
+Bottom portion of the same email, listing some of the websites to be taken offline.Image:  EDF
+
+
+The EPA's climate change website went dark on April 28, with an archived version of the previous site still available from Jan. 19, 2017.
+In another email that EDF obtained through a Freedom of Information Act request, Pruitt pressed his public affairs staff to move swiftly in replacing all references to the Clean Power Plan on EPA websites to reflect an Executive Order that Trump signed on March 28, which the new EPA website states, "signaled the restoration of the rule of law, cooperative federalism, and sound scientific rulemaking at the Environmental Protection Agency."
+In an April 5 email to other members of the EPA communications staff, J.P. Friere wrote: "Just asking because he is asking," an apparent reference to Pruitt. 
+In the same email chain, Lincoln Ferguson, an adviser to Pruitt, asked for a progress update on the Clean Power Plan websites. "How close are we to launching this on the website?" he asked. "The Administrator would like it to go up ASAP.  He also has several other changes that need to take place."
+The reply came from Freire that, "You can tell him we have already mocked it up, and are just finishing up. Should happen this week."
+The instruction from Pruitt was to redirect "Any reference to the Clean Power Plan, any link to it," to a new page that would showcase the Trump administration's plans and offer little information on what the plan actually does. 
+
+Earth’s average global temperature from 2013 to 2017, as compared to a baseline average from 1951 to 1980.Image:  nasa giss.The Clean Power Plan was put in place (though not fully implemented) by the Obama administration, and is aimed at reducing greenhouse gas emissions from coal-fired power plants. 
+Taking down web resources on the Clean Power Plan so early is controversial, because Pruitt had not yet put forward a plan to withdraw the plan or replace it. In fact, that occurred six months after the website changes were made. Also, in his former life as Oklahoma attorney general, Pruitt had sued the EPA over the plan to try to block it. 
+Making information on it harder to find hampered peoples' ability to educate themselves about the policy in order to comment on proposed changes to the rules. 
+Also on Monday, the EDF and about a dozen other environmental and advocacy groups called for Pruitt to recuse himself from the Clean Power Plan decision making process because it was clear from the outset what his position was. 
+The EPA is in the midst of a public comment period through the end of April regarding the Clean Power Plan's repeal. The EDF contends that the removal of information from the EPA website makes it more difficult for people to educate themselves and make pertinent comments about the law. 
+
+WATCH: These straws are edible and could help reduce plastic waste
+
+
+{"player":{"description":"You can have your straw and eat it too.","image":"https://i.amz.mshcdn.com/VB9vz1Rbv649YBEqIxgRB0-rliA=/https%3A%2F%2Fvdist.aws.mashable.com%2Fcms%2F2017%2F12%2F0d1b3b13-9184-85f7%2Fthumb%2F00001.jpg","mediaid":"3Y0ND1QlGg","preload":false,"title":"These straws are edible and could help reduce plastic waste","sources":[{"file":"https://vdist.aws.mashable.com/cms/2017/12/7bec6755-c954-8035/hls.m3u8"},{"file":"https://vdist.aws.mashable.com/cms/2017/12/7bec6755-c954-8035/dash.mpd"},{"file":"https://vdist.aws.mashable.com/cms/2017/12/7bec6755-c954-8035/mp4/1080.mp4"},{"file":"https://vdist.aws.mashable.com/cms/2017/12/7bec6755-c954-8035/mp4/720.mp4"},{"file":"https://vdist.aws.mashable.com/cms/2017/12/7bec6755-c954-8035/mp4/480.mp4"}]},"options":{"disableAds":false,"disableSharing":false,"nextupAction":"autoplay","embedUrl":"https://mashable.com/videos/blueprint:3Y0ND1QlGg/embed/?player=offsite","standaloneUrl":null,"post":{"url":"https://mashable.com/2017/12/19/edible-compostable-drinking-straws/","date":"2017-12-19T14:48:40.944Z","bp_id":65402,"wp_id":null}},"advertising":{"params":{"keywords":"tech,watercooler,kickstarter,mashable-video,ocean,organic,natural,carbon emissions,renewable energy,gmo,pollution,carbon pollution,recycle,renewable,carbon footprint,real-time,real-time video,real time,sustainable,real-time-video,real time video,biodegrade,edible,recycled plastic,biodegradable,kickstarter campaign,compostable,lolistraw,loliware,non-gmo","sec0":null,"sec1":"","prc":""}},"analytics":{"labels":"tech,watercooler,kickstarter,mashable-video,ocean,organic,natural,carbon emissions,renewable energy,gmo,pollution,carbon pollution,recycle,renewable,carbon footprint,real-time,real-time video,real time,sustainable,real-time-video,real time video,biodegrade,edible,recycled plastic,biodegradable,kickstarter campaign,compostable,lolistraw,loliware,non-gmo","videoSeriesName":null}}
+
+

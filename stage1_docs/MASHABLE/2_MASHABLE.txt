@@ -1,0 +1,24 @@
+
+Ever since Super Mario Odyssey gave the world its first tantalizing glimpse at Mario's nipples, the internet has been set aflame with curiosity and thirst for more details. 
+Previously, Nintendo was even forced to answer questions about the digital character's intimate body parts. 
+But the latest news from Mario Nipple Watch comes courtesy of Twitter user Mario Broth Blog. Yesterday, they graced our timelines with an image of the Official Nintendo Mario Nipple Texture — magnified 24 times from its original size to capture every glorious contour of its pink pixels.
+
+Mario's nipple texture, extracted from his model in Super Mario Odyssey, in original size on the left and 24x magnification on the right. pic.twitter.com/AP2Au7KGUa
+— Supper Mario Broth (@MarioBrothBlog) February 15, 2018
+
+As discovered by Kotaku's Luke Plunkett, the image comes from The Models Resource. The website is usually dedicated to collecting and distributing sprites, models, textures, and sounds from games so creators can reuse them for their own projects. 
+This particular texture was extracted from the model in Super Mario Odyssey where Mario sports nothing but his boxer briefs and, of course, the natural fashion accessory of male mamilla.
+SEE ALSO: 'Super Mario Odyssey' fans can't stop putting Mario in sexually compromising positions
+The Models Resource does a great civic duty by providing web artists with ample assets for their work. But this is perhaps its most monumental contribution yet, Because, I mean, just imagine what super content can come into existence now that we have Super Mario's super-zoomed in nipple? 
+What manner of Mario Nipple Art will the interweb create with it? Or what scientific discoveries can be gleaned from this microscopic view of Mario's goods? Does this finally answer the existential question of whether or not Mario is a human being?
+The possibilities are endless.
+And just like our support for the #FreeTheNipple movement on Instagram, we are equally here for the liberation of our favorite plumber/hero's digital teats.
+
+WATCH: We built a Nintendo Labo car, and it's unlike any other video game
+
+
+{"player":{"description":"This is really something else!","image":"https://i.amz.mshcdn.com/rVGOE9CidqTs1lbXK9PGcEmEC70=/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fvideo_uploaders%2Fdistribution_thumb%2Fimage%2F84518%2F03d5ae7f-8091-4c3e-a4d4-97758a81b226.jpg","mediaid":"BdoMzyV094","preload":false,"title":"We built a Nintendo Labo car, and it's unlike any other video game","sources":[{"file":"https://vdist.aws.mashable.com/cms/2018/2/a1eacf4c-7e23-8b97/hls.m3u8"},{"file":"https://vdist.aws.mashable.com/cms/2018/2/a1eacf4c-7e23-8b97/dash.mpd"},{"file":"https://vdist.aws.mashable.com/cms/2018/2/a1eacf4c-7e23-8b97/mp4/1080.mp4"},{"file":"https://vdist.aws.mashable.com/cms/2018/2/a1eacf4c-7e23-8b97/mp4/720.mp4"},{"file":"https://vdist.aws.mashable.com/cms/2018/2/a1eacf4c-7e23-8b97/mp4/480.mp4"}]},"options":{"disableAds":false,"disableSharing":false,"nextupAction":"autoplay","embedUrl":"https://mashable.com/videos/blueprint:BdoMzyV094/embed/?player=offsite","standaloneUrl":null,"post":{"url":"https://mashable.com/2018/02/02/nintendo-labo-rc-car-build/","date":"2018-02-02T21:44:32.039Z","bp_id":68113,"wp_id":null}},"advertising":{"params":{"keywords":"tech,gaming,mashable-video,nintendo,remote control,video games,mashable video,standalone-featured,switch,nintendo switch,rc car,infrared,labo,nintendo labo","sec0":null,"sec1":"","prc":""}},"analytics":{"labels":"tech,gaming,mashable-video,nintendo,remote control,video games,mashable video,standalone-featured,switch,nintendo switch,rc car,infrared,labo,nintendo labo","videoSeriesName":null}}
+
+
+      window._msla=window.loadScriptAsync||function(src,id){if(document.getElementById(id))return;var js=document.createElement('script');js.id=id;js.src=src;document.getElementsByTagName('script')[0].parentNode.insertBefore(js,fjs);};
+_msla("https://platform.twitter.com/widgets.js","twitter_jssdk");

@@ -1,0 +1,60 @@
+
+Humanity's first-ever permanent space library was effectively founded this week, as the three books of Isaac Asimov's Foundation Trilogy blasted into the solar system.
+The novels weren't really expected to make it to space. They weren't deliberately chosen. But they will probably be out there for millions of years, zipping around the sun, moving out past Mars 20 times faster than a bullet — and they almost certainly won't be the last. 
+SEE ALSO: Watching SpaceX's Falcon Heavy launch to space was like seeing into the future
+If you missed the news of the library's launch, that's probably because of the distracting packaging it was wrapped in. Asimov's stories are on a quartz disk in a case aboard a cherry red Tesla Roadster, delivered to space by the SpaceX Heavy Falcon rocket. 
+
+
+{"player":{"description":null,"image":"https://i.amz.mshcdn.com/lofS0Uz4DfUiuBWYfwiS0CGD7So=/https%3A%2F%2Fvdist.aws.mashable.com%2Fcms%2F2018%2F2%2F45718632-d43b-3781%2Fthumb%2F00001.jpg","mediaid":"eGlv9EknkX","preload":false,"title":"SpaceX just launched the Falcon Heavy, its most powerful rocket, and landed 2 boosters","sources":[{"file":"https://vdist.aws.mashable.com/cms/2018/2/29f922fd-41e6-b47f/hls.m3u8"},{"file":"https://vdist.aws.mashable.com/cms/2018/2/29f922fd-41e6-b47f/dash.mpd"},{"file":"https://vdist.aws.mashable.com/cms/2018/2/29f922fd-41e6-b47f/mp4/1080.mp4"},{"file":"https://vdist.aws.mashable.com/cms/2018/2/29f922fd-41e6-b47f/mp4/720.mp4"},{"file":"https://vdist.aws.mashable.com/cms/2018/2/29f922fd-41e6-b47f/mp4/480.mp4"}]},"options":{"disableAds":false,"disableSharing":false,"nextupAction":"autoplay","embedUrl":"https://mashable.com/videos/blueprint:eGlv9EknkX/embed/?player=offsite","standaloneUrl":null,"post":{}},"advertising":{"params":{"keywords":"","sec0":null,"sec1":"","prc":""}},"analytics":{"labels":"","videoSeriesName":null}}
+
+Another reason you might have missed the news is because the library's curator — an entrepreneur with a fitting space name, Nova Spivack — wasn't allowed to send out so much as a press release in advance of the launch, despite it being a triumph for his young knowledge-preserving nonprofit, the Arch Mission Foundation. 
+"We agreed to secrecy," Spivack tells Mashable, before thanking SpaceX, and its CEO Elon Musk, for letting him speak out post-launch about his part in what he calls "the most epic brilliant piece of performance art in world history."
+An improbable library
+In this case, art is certainly in the eye of the beholder.
+Visually appealing and whimsical to some, the Tesla Roadster represented a gauche billionaire's midlife crisis to others. 
+But whichever side you come down on, there's a case to be made that the books are a more important story than the flashy car. 
+
+Question: The first Arch qualifies as a library. But is it (a) the 1st library in space, not on a planet, (b) the longest-lasting library in space, not on a planet, (c) library farthest from Earth, (d) all of the above, (e) none of the above, #archmission
+— Arch Mission Foundation (@archmission) February 9, 2018
+
+Not only is this a milestone in the history of human literature — the story of how they got there is fascinating, improbable, and proves the worth of sending Elon Musk a tweet. 
+It's also fantastically ironic, given that Asimov's classic Foundation Trilogy is about a super-planned, millennium-long scheme to save the galaxy, that there was absolutely no plan or intention to launch the books into space, at least at first.
+"We really just did it as a test," Spivack says of creating the disk. "If we'd known it would go to space, we would have put more stuff on it."
+
+High-minded mission
+Spivack, who started out as a tech entrepreneur, co-founded the Arch Mission in 2015 with fellow entrepreneur Nick Slavin. 
+The pair's vision was to use new technology to preserve vast data sets of human knowledge, in indestructible form, all over the world and beyond it — in space, on the moon, orbiting the sun — for as long as our solar system supports life. 
+The first new technology he turned his attention to is called 5D optical storage in quartz. 
+It's devilishly clever: There's a primary layer you can read with a microscope, which uses the language of math to teach you how to read the rest, plus, it's made of the same stuff you find in spacecraft windows. 
+Do your worst, cosmic radiation. 
+In theory, the quartz disk can hold an astonishing 360 terabytes of information, or enough for 180 million books. Given that there have only been around 130 million books published in all of human history, you'd have plenty of memory left over to preserve Wikipedia, Wolfram Alpha, all of Twitter, and a big chunk of Facebook. 
+That's a damn good representation of human civilization right there. All in one palm-sized disk that isn't expected to degrade for 14 billion years.
+That's all in theory, of course. In practice, Spivack didn't exactly exploit his 360-terabyte capacity. He used the Foundation Trilogy, all three megabytes of it, as a proof-of-concept for the first five disks. 
+He'd loved Asimov's books since he read them as a teenager, then Asimov was pretty much "in the air around MIT" when he did research there, Spivack says. The thousand year plan instigated in the book by "psychohistorian" Hari Seldon, to save civilization from a dark age using an encyclopedia — it all just seemed to fit.
+Oh, and he'd heard Elon Musk loved the trilogy too, and maybe he'd be able to press one of the five disks into the SpaceX founder's hands some day. 
+The tweet that started it all
+That day arrived way faster than Spivack expected. In December, Musk first tweeted about his Roadster payload on the Falcon Heavy. Spivack just happened to be looking at Twitter. He cold-tweeted Musk about the Arch disk. 
+Then this happened:
+
+Asimov’s Foundation books should def be part of the mission. They’re amazing.
+— Elon Musk (@elonmusk) December 2, 2017
+
+A meeting was soon arranged at Musk's SpaceX office in Hawthorne, California. 
+The mission disk was handed over; Musk got another one for his private collection. And before Spivack had time to get his head around what was happening, the disk was a secret component of the Roadster payload aboard the Falcon Heavy — all of which may have blown up on the launchpad for all he knew.
+SpaceX hasn't responded to a question about where on the car the disk was placed, which Spivack knows but says he can't tell. The spaceflight company also hasn't confirmed whether one of Musk's other tweets — about a copy of Douglas Adams' Hitchhiker's Guide to the Galaxy being placed in the glove compartment, next to a towel — was for real or just a Twitter joke. 
+(Even if it isn't, a regular unprotected paperback book in space is likely to get ripped to shreds by radiation before too long.) 
+Big ambitions
+Regardless, the Arch Mission is no joke. 
+In the long term, it plans indestructible storage as cheap and widespread as beads; you could carry around the whole of human history encrypted in a necklace. At the very least, Spivack says, Arch storage should go on every space mission, in the hopes that the technology could be used to communicate on some kind of nascent space internet. 
+"Imagine a server farm where each planet is a server," he says.
+In the short term, Spivack plans to ramp up efforts to send a more fully-loaded disk to the moon. This time, it'll be stuffed with books — the whole of Project Gutenberg, Wikipedia and Wolfram Alpha, among others. 
+Rather than form a committee to decide what should go on the disks, as NASA asked Carl Sagan to do for the famous gold records of images and sound recordings attached to the Voyager 1 and 2 space probes in the 1970s, Spivack is taking a more hands-off, Silicon Valley-style approach. "I'm curating the curators," he says, promising to work with any data set that wants to be part of the mission — and to establish a system where you too can contribute your content. 
+There are way fewer limits on storage these days, the thinking goes, so you can just inundate whatever aliens or future humans might read the disks with all the information you can gather. For all intents and purposes, the space library can be omniscient, eternal and omnipresent. 
+Those gold disks on the Voyagers should last for billions of years too — and hold the advantage of carrying their own reading device, a phonograph stylus. But only two of them were made.
+"We can make billions of Archs," Spivack says. "The redundancy and replication will ensure it’ll never be lost." 
+
+WATCH: Here’s how NASA is preparing the largest telescope ever built for space
+
+
+      window._msla=window.loadScriptAsync||function(src,id){if(document.getElementById(id))return;var js=document.createElement('script');js.id=id;js.src=src;document.getElementsByTagName('script')[0].parentNode.insertBefore(js,fjs);};
+_msla("https://platform.twitter.com/widgets.js","twitter_jssdk");

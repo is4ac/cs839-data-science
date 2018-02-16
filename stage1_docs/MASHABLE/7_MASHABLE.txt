@@ -1,0 +1,22 @@
+
+Missed out on your chance to see Get Out last year? Or just want to see it again? Either way, you'll have a shot to do just that this month.
+On Feb. 19, Presidents' Day, Get Out will screen for free at 55 AMC Theatre locations. You'll want to line up early, as each location will host only one 7:00 p.m. screening and tickets will be distributed on a first-come, first-served basis on that day.
+SEE ALSO: 'Get Out' is the best rated movie of 2017
+You'll need a photo I.D. handy in order to get a ticket, and the offer is limited to one per customer. So if you're planning to see your local Get Out screening in a group, everyone will need to request a ticket individually at the participating AMC location of your choice.
+The screenings will be held across the country in major cities. It's a long list; you can find out if a theater near you will be hosting a free Get Out screening right here.
+"When [director Jordan Peele] approached us about a way to thank fans one year after the release of Get Out, we thought a Presidents’ Day screening during Black History Month would be a wonderful way to commemorate the film’s impact," Universal Pictures exec Jim Orr said in a prepared statement. 
+"The success of his stunning vision would not have been possible without the audience’s passion for both Get Out’s groundbreaking storytelling and its deft use of art as society’s mirror."
+Peele also shared a thank you of his own in a tweet.
+
+Thank you pic.twitter.com/R7zLUewp5L
+— Jordan Peele (@JordanPeele) February 13, 2018
+
+
+WATCH: 'Get Out' receives 4 Oscar nominations and the internet is ecstatic
+
+
+{"player":{"description":null,"image":"https://i.amz.mshcdn.com/dRlSpNs1Gg0la9KMjy5sJDVMCsk=/https%3A%2F%2Fvdist.aws.mashable.com%2Fcms%2F2018%2F1%2F185b37f9-8c1a-0142%2Fthumb%2F00001.jpg","mediaid":"EGoAyDQo16","preload":false,"title":"'Get Out' receives 4 Oscar nominations and the internet is ecstatic","sources":[{"file":"https://vdist.aws.mashable.com/cms/2018/1/185b37f9-8c1a-0142/hls.m3u8"},{"file":"https://vdist.aws.mashable.com/cms/2018/1/185b37f9-8c1a-0142/dash.mpd"},{"file":"https://vdist.aws.mashable.com/cms/2018/1/185b37f9-8c1a-0142/mp4/1080.mp4"},{"file":"https://vdist.aws.mashable.com/cms/2018/1/185b37f9-8c1a-0142/mp4/720.mp4"},{"file":"https://vdist.aws.mashable.com/cms/2018/1/185b37f9-8c1a-0142/mp4/480.mp4"}]},"options":{"disableAds":false,"disableSharing":false,"nextupAction":"autoplay","embedUrl":"https://mashable.com/videos/blueprint:EGoAyDQo16/embed/?player=offsite","standaloneUrl":null,"post":{"url":"https://mashable.com/2018/01/24/get-out-oscar-nominations/","date":"2018-01-24T18:39:06.875Z","bp_id":67432,"wp_id":null}},"advertising":{"params":{"keywords":"","sec0":null,"sec1":"","prc":""}},"analytics":{"labels":"","videoSeriesName":null}}
+
+
+      window._msla=window.loadScriptAsync||function(src,id){if(document.getElementById(id))return;var js=document.createElement('script');js.id=id;js.src=src;document.getElementsByTagName('script')[0].parentNode.insertBefore(js,fjs);};
+_msla("https://platform.twitter.com/widgets.js","twitter_jssdk");

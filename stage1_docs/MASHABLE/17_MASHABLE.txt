@@ -1,0 +1,52 @@
+
+Every product here is independently selected by Mashable journalists. If you buy something featured, we may earn an affiliate commission which helps support our work.
+Love stories have defined film, TV, poetry, novels. But games? Not so much.
+"That's largely a blind spot for us," says Ken Wong, who was previously the lead designer on the iOS art house hit Monument Valley that recently launched his own studio Mountains, alongside their first game. 
+"So we thought it would be an interesting challenge to tackle: How can we use game mechanics to tell a story about love?"
+Released just in time for Valentine's Day, Florence is an iOS game best described as a wordless, interactive love story where you experience one woman's journey through the ups and downs of falling in love for the first time.
+SEE ALSO: This sex-positive indie game is basically Nintendo meets porn
+And if you think you've already heard this story a thousand times before, you've never seen it done quite like Florence.
+The story plays out through beautiful webcomic-like illustrations embedded with interactive vignettes or mechanics that, "mimic or evoke all the different beats and emotions you go through in a relationship" per Wong. Others have labeled those vignettes as "mini-games." But they feel more like participatory poetry, as they zoom in on the small moments which make up the whole of a relationship. 
+In the chapter titled Moving In, for example, you go through the ritual of merging the lives of protagonists Florence and Krish, consolidating their personal belongings into one apartment. You decide which objects go into storage, replaced by the other person's stuff. The chapter ends with the image that encapsulates this stage commitment: a single yellow toothbrush, joined by second red one.
+To be clear: relationships aren't necessarily new territory for games. 
+
+There's a whole genre of dating sims, ranging from small indies to larger role-playing action games like BioWare's Dragon Age and Mass Effect. There's also a growing spectrum of visual novels created by indie designs like Christine Love who give players dialogue choices and branching storylines, allowing them to choose and seduce a variety of potential lovers.
+Yet these dating sims explicitly "gamify" relationships, constraining explorations of love to the language of traditional game design. 
+Some have even criticized such games for perpetuating the toxic idea that dating is a game — contributing to the culture that characterizes sex through baseball terms like "getting to second base" or "hitting a homerun."  
+"There's still always a goal in those games. And the goal is usually to start dating someone, or have sex with them — or everybody," said Wong. The result is a bunch of dating sims that feel nothing like the experience of dating in the real world. 
+"That's fine. But we didn't want to make a game out of love. We didn't want to make it about 'winning' Florence. It was about bringing the players into her emotional journey through empathy."
+"We didn't want to make a game out of love."
+Florence is part of this small but growing approach to game design that throws out the typical conventions of what we think a game "needs" to have. There are still recognizable game mechanics, but instead of being used to challenge a players skill level, they're used to communicate the protagonists' feelings.
+So, for example, conversations are represented through speech bubbles that you must complete by fitting puzzle pieces together. But unlike most games, the puzzles don't get increasingly harder. Instead, the "difficulty" of fitting these pieces together fluctuates depending on how the conversation between Florence and Krish is going. 
+At the beginning of their first date, there's a lot more pieces in the puzzles, making the flow of the conversation feel halted, awkward, slow, trepidatious. They're still working to establish a rhythm of rapport. 
+Then, quickly, they start hitting it off. The more comfortable they get with each other, the more the puzzle simplifies: five pieces are consolidated into just two, and the music soars as you quickly fit the two pieces together and the two get lost in conversation with one another.
+Florence shows how interactive mediums can uniquely speak to the experience of love in ways that films and books can't. Because, "what Florence can do that other mediums are less good at is establishing a strong emotional connection to their love story — because you're part of it," says Wong.
+
+The puzzle of conversation on a first dateImage:  mountainsWong's also been interested in harnessing the power of wordless storytelling for the majority of his creative career, as proved through the poignancy of Monument Valley. Florence not only takes this design concept a step further, but introduces new layers of nuance in how we tell love stories.
+As an exploration of one of the most universal experiences ever, the game's wordlessness avoids the trapping that mediums like film or prose are bound to. Artists have always struggled with capturing the indescribable sensation of falling in love through the limitations of language, for example.
+But not Florence.
+"The power of wordless storytelling is that it allows people to interpret the events in their own heads, so they can project their own experiences onto the characters." 
+In one scene, Florence and Krish clearly get into a fight. The dialogue puzzles communicate this by becoming increasingly fast-paced and panicked. If you don't finish you dialogue as Florence fast enough, Krish will talk over you, and the screen tilts to his side — implying that he's "winning" the argument.
+SEE ALSO: How a ridiculous game uses jousting dicks to interrogate toxic masculinity
+You have no idea what the argument is about, but the situation is immediately recognizable and relatable. We've all felt overwhelmed as we frantically tried to string words together in a fight with a significant other, watching the conversation run away from you as emotions escalate.
+While testing the game out, Wong also saw how, "Couples who played together would have wildly different interpretations on the themes and what was happening in the scenes. That was really interesting." 
+It could, perhaps, even spark some important conversations about our different understandings of what love means, and how relationships are supposed to work.
+Particularly, Wong saw how male players often benefited the most from playing Florence. "There's this immediate assumption that this game is for women," he said. With a female protagonist and the focus on the romantic, it easy for male players to disregard it. But, Wong insists, Florence is for everyone. 
+Because, "This is 2018. There are a lot of men out there who are interested in emotional experiences, and the experiences of people who are not like them. They are open to discussing relationships."
+Ultimately, Florence doesn't make some grand statement about love or dating. But Wong's depiction of love was inspired by another classic, alternative approach to romantic storytelling.
+
+This is what love *actually* looks likeImage:  mountainsThe film Eternal Sunshine of the Spotless Mind was a major influence. Because from Wong's perspective, "What makes that film resonates so much with so many people is that it doesn't try to glamorize or glorify love. It tries to depict love as it really is: which is pretty messy, and full of misunderstandings."
+Like Florence and Krish, Joel and Clementine are very flawed people. And, "Try as they will — they can't help but bring their flaws into the relationship and affect each other with them." Florence is equally as intimate and honest about the soaring moments of falling love, that are inevitably followed by the pain of falling in love.  
+"Eternal Sunshine of the Spotless Mind helped fill a niche of people who wanted to see themselves reflected in the stories we tell about love. It's that sense of, 'That could be me,' or 'I've been there.' And maybe that helps us feel less alone."
+It's that sense of, 'That could be me,' or 'I've been there.' And maybe that helps us feel less alone."
+Florence is a feat of romantic storytelling that defies every reductive, mediated depiction of what love is or should look like. And through the uniquely involving language of game mechanics, it eradicates the emotional distance often embedded in the inherent voyeurism of love stories told through cinema.
+As a mobile game, the story of Florence and Krish plays out through the most intimate screen we interact with on a day-to-day basis. Phones are now at the center of how we start and build relationships, whether through falling in love via hours of texting, or seeking love through dating apps.
+The touch screen not only helps players establish a tactile relationship to Florence and Krish's  story, but also opens the game to a wider audience. Like Monument Valley (which was famously featured on House of Cards), the simplicity and intuitiveness of touch screen controls means anyone can play Florence. 
+"And I love that," said Wong. "I love bringing people into gaming that don't consider themselves 'gamers.' Making accessible games is a great challenge as a designer. It brings more of the general public into the folds of gaming, and that benefits the overall health of the industry."
+And in that, Wong sees a new future for how we tell love stories, and a path forward to bringing more intimacy into games.
+"As designers, we just have to start questioning the assumptions we make about what a game is, or requires," he said. "If you let go of the idea that a game is something that you need to be able to beat, or something you need to be able to get better at, or that needs to last many hours — that's when games can  start accessing the power of intimacy."
+Florence is available to download on all iOS devices
+
+WATCH: This company will plan your Insta-worthy proposal
+
+
