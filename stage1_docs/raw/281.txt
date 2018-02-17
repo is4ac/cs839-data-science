@@ -1,0 +1,123 @@
+ 
+While there has been a reduction in football clubs going into administration, before this season more were facing winding-up petitionsAnother year, another winding-up petition dismissed for an English Football League club.Since 2015, Bolton have been taken to court at least once a year. In 2016 their frequent appearances almost led to administration.But they have not been alone. In the five seasons between 2012-13 and 2016-17, 16 other Football League clubs also faced winding-up petitions.
+
+The number of petitions faced by clubs in recent years highlights football's "systematic failure" as a business outside the Premier League, according to Accrington owner Andy Holt.However, former Leeds United chairman Gerald Krasner says the state of finances in English football are an improvement on the "Wild West" he was involved with almost 15 years ago.A drop in administrationsFor 10 turbulent months between March 2004 and January 2005, Krasner - now partner at business recovery firm Begbies Traynor - was entrenched in that untamed financial frontier as chairman and part-owner of Leeds.He took over when the then Premier League club was £103m in debt and teetering on the brink of administration. By the time they were sold to Ken Bates, those debts were reduced to £24m."Those figures don't sound a lot by today's standards, but in those days it was a colossal fortune," Krasner told BBC Sport. "It was the Wild West when I bought Leeds." Leeds eventually went into administration in 2007, a fate that 12 other clubs in the Football League would go on to face in the next five seasons between 2007-08 and 2011-12.As he points out, however, the number of administrations have "dropped dramatically".What the numbers show
+
+
+    @-webkit-keyframes spinnerRotate
+    {
+        from{-webkit-transform:rotate(0deg);}
+        to{-webkit-transform:rotate(360deg);}
+    }
+    @-moz-keyframes spinnerRotate
+    {
+        from{-moz-transform:rotate(0deg);}
+        to{-moz-transform:rotate(360deg);}
+    }
+    @-ms-keyframes spinnerRotate
+    {
+        from{-ms-transform:rotate(0deg);}
+        to{-ms-transform:rotate(360deg);}
+    }
+    .bbc-news-visual-journalism-loading-spinner {
+        display: block;
+        margin: 10px auto;
+        width: 33px;
+        height: 33px;
+        max-width: 33px;
+        
+        -webkit-animation-name: spinnerRotate;
+        -webkit-animation-duration: 5s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        -moz-animation-name: spinnerRotate;
+        -moz-animation-duration: 5s;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-timing-function: linear;
+        -ms-animation-name: spinnerRotate;
+        -ms-animation-duration: 5s;
+        -ms-animation-iteration-count: infinite;
+        -ms-animation-timing-function: linear;
+
+        background-image: url('data:image/gif;base64,R0lGODlhIQAhALMAAMPDw/Dw8BAQECAgIICAgHBwcKCgoDAwMFBQULCwsGBgYEBAQODg4JCQkAAAAP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4zLWMwMTEgNjYuMTQ1NjYxLCAyMDEyLzAyLzA2LTE0OjU2OjI3ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjFFOTcwNTgzMDlCMjExRTQ4MDU3RThBRkIxMjYyOEYyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjFFOTcwNTg0MDlCMjExRTQ4MDU3RThBRkIxMjYyOEYyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MUU5NzA1ODEwOUIyMTFFNDgwNTdFOEFGQjEyNjI4RjIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MUU5NzA1ODIwOUIyMTFFNDgwNTdFOEFGQjEyNjI4RjIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQAAAAAACwAAAAAIQAhAAAE0vDJSScguOrNE3IgyI0bMIQoqUoF6q5jcLigsCzwJrtCAeSjDwoRAI4aLoNxxBCglEtJoFGUKFCEqCRxKkidoIP20aoVDaifFvB8XEGDseQEUjzoDq+87IijEnIPCSlpgWwhDIVyhyKKY4wOD3+BgyF3IXpjfHFvfYF4dmghalGQSgFgDmJaM2ZWWFEEKHYSTW1AojUMFEi3K7kgDRpCIUQkAcQgCDqtIT2kFgWpYVUaOzQ2NwvTIQfVHHw04iCZKibjNAPQMB7oDgiAixjzBOsbEQA7');
+    }
+
+define('vjCutsTheMustard', function cutsTheMustard() {
+    return (
+        document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#BasicStructure', '1.1') &&
+        'querySelector' in document &&
+        'localStorage' in window &&
+        'addEventListener' in window
+    );
+});
+
+
+
+Click to see content: football_wup_and_admin
+
+
+
+
+require(["jquery-1", "istats-1"], function ($, istats) {
+  $(function () {
+    
+    var monitorScrolling = function (ev) {
+      if (isElementInViewport(document.getElementById('ns_chart_football_wup_and_admin'))) {
+        istats.log(
+          "idt-content",
+          "chart-entered-view",
+          {
+            "project" : "football_wup_and_admin",
+            "page"    : window.location.href
+          });
+        window.clearInterval(intervalID);
+      }
+    };
+    
+    var isElementInViewport = function (el) {
+      var rect = el.getBoundingClientRect();
+
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    };
+
+    var intervalID = window.setInterval(monitorScrolling, 500);
+    monitorScrolling();
+    
+  });
+});
+
+    require.config({
+        paths: {
+            'pym': '//static.bbc.co.uk/indepthtoolkit/14.1.0.301/js/vendor/bower/pym.js/dist/pym.v1.min',
+            'pymManager': '//static.bbc.co.uk/indepthtoolkit/14.1.0.301/js/vendor/bower/news-vj-iframe-wrapper/js/pym-manager'
+        },
+    });
+
+
+    require(['vjCutsTheMustard', 'pymManager'], function (cutsTheMustard, pymManager) {
+        if (cutsTheMustard) {
+            pymManager.init('5a87aa1e93575', '//www.bbc.co.uk/indepthtoolkit/charts/football_wup_and_admin?iframe=true&iframeUID=5a87aa1e93575', 'pym', '5a87aa1e93575-core-content');
+        }
+    });
+A total of 18 clubs from the 87 to play in the Football League between 2007-08 and 2011-12 faced either a winding-up petition (12) or went into administration (12). Five faced both.However, there was a near 85% reduction in club administrations - from 12 to two - between 2012-13 and 2016-17 compared to the preceding five seasons.While the number of clubs going into administrations dropped in the most recent five-season period, a BBC Sport investigation has found a quarter of Football League clubs still faced winding-up petitions or serious financial issues, ranging from voluntary administration to receivership.None of the 17 clubs that faced winding-up petitions between 2012-13 and 2016-17 subsequently went into administration as a result.However, in that time, Coventry City were ruled to be in administration in March 2013, and Aldershot went into voluntary administration five days after relegation from the Football League that May.Also included are Portsmouth, who were still in administration for a period of time covered by the most recent five seasons of research, and Birmingham City, as the company that owned the Championship side in February 2015 went into receivership."There is still room for improvement, but it is a more controlled system to make sure that football clubs pay their debts," Krasner said.With more than half the campaign played, Bolton last week became the first EFL side this season to have faced a winding-up petition, which was dismissed.That followed a company which owned more than a third of shares in the Championship club being liquidated in August, while Hartlepool - relegated from League Two last season - are in danger of going into administration.EFL chief executive Shaun Harvey said: "We remain confident that, as a collective, EFL clubs are financially stable, in many cases as a direct result of shareholders' ongoing financial support."The EFL will never be complacent in managing what is a complex and challenging area but we are confident that our current approach promotes a culture of protecting the longevity of clubs while not limiting ambition."
+
+
+
+What is a winding-up petition?
+
+
+
+Portsmouth are the only club in Premier League history to go into administrationIf a company owes £750 or more, a creditor can take legal action in the form of issuing a winding-up petition in court.The Gazette - the UK's official public record - describes winding-up petitions as "very serious legal actions" which "do not usually come out of the blue" as creditors may have previously threatened legal action.A petition can lead to a hearing, and once made public can result in bank accounts being frozen.If not dismissed or adjourned in court, it can lead to administration, which incurs a 12-point deduction, or end with an order to wind up a club.
+
+
+
+'More aggressive HMRC'Revenue and Customs (HMRC) was responsible for handing out at least one winding-up petition to 15 of the 17 clubs issued with them between 2012-13 and 2016-17."HM Revenue has used winding-up petitions as a way of getting paid. Football has not had a very good history of making payments," said Krasner. "Generally, it is an attack on evasion and avoidance."Rob Wilson, a sport finance expert at Sheffield Hallam University, said the 'football creditors rule' is what prompted the new, "more aggressive" approach.The rule, which has been unsuccessfully challenged in the courts by HMRC, means clubs and players get preferential financial treatment when a team goes bust."From the taxpayers' point of view, you want them to chase that money down, even though it might be relatively small amounts," Wilson said."Money that HMRC is owed tends to be National Insurance contributions. Clubs are paying player wages and deducting National Insurance contributions from wage packets, which should be returned to HMRC. Instead they tend to withhold the money and use it to prop up short-term cash flow problems. It spirals out of control as it adds up. "Clubs then clear that debt and operate as normal. This is the hand to mouth existence that they tend to have and explains why they then don't go into administration."HMRC said the football creditors rule is "not relevant" when issuing winding-up petitions, adding that the rates of handing them out "ebbs and flows according to whole range of different factors" and "late payment of withholding taxes have nothing to do with avoidance or evasion".READ MORE: Football's stormy relationship with the taxman'It is a race to spend money'Accrington owner Holt, who took over the club in October 2015 and wiped out their debt, has been a critic of spending in the Premier League and financial strains faced by clubs outside the top flight.He said he was not surprised that so many EFL clubs have faced issues. "All clubs are close," he said. "They all systematically lose money. Without people who keep putting money in, they will go bust. "I go into other League Two clubs and there aren't many that tell me they are going ok. They tell me that they are putting £500,000 a year in, otherwise they go bust."Clubs that have faced winding-up petitions between 2012-13 and 2016-17Championship: Bolton, Nottingham Forest, Ipswich Town, Leeds UnitedLeague One: Oldham Athletic, Southend United, Swindon Town, Port Vale, BuryLeague Two: Leyton Orient, Hartlepool United, Notts County, Mansfield Town, Accrington Stanley, Wycombe Wanderers, Northampton Town, Carlisle United.Note: Club placed in the league their last winding-up petition was issued against them.The last winding-up petition Accrington faced, over a debt owed to HMRC, came 13 months before Holt took over.Holt now has a debt-free club and says "his only ambition" is for it to be sensibly run. "Football has an infinite capacity to absorb any money you are prepared to throw at it. "It is difficult, if you don't do it you will lose. You can win if you spend the money. It is kind of a race to spend money."Harvey said that the number of "more serious financial mismanagement issues" had been reduced over the last five years, and, although individual clubs had experienced difficulties, suggestions that football was 'systematically failing' as a business outside the Premier League were "incorrect"."The number of winding-up petitions has been vastly reduced and the EFL's collaborative approach with HMRC has assisted in this area. It is not surprising that clubs, who for whatever reason, are in financial distress are usually the ones where an opportunity for a new owner presents itself," he added."As we've seen, there has been an influx of new investors into the EFL in recent seasons, which is testament to the growing confidence in our competitions."'Clubs should not just be another number at court'
+
+
+
+"I rarely sleep at the end of the month" - Alan Hardy completed his takeover of Notts County, the Football League's oldest club, in January 2017Notts County owner and chairman Alan Hardy says the club came within "four hours of extinction" when they last faced a winding-up petition in December 2016.Hardy, who at the time was in the process of buying the League Two club, paid the outstanding debt owed to HMRC before taking over."I've had businesses in almost every sector and this is nothing like it," he said."Survival is key and when you survive another week and another month, you mostly breathe a sigh of relief going 'yes, we have paid off PAYE, paid the players and creditors. We now have three weeks where we can relax a bit'. Then in week four of any month I rarely sleep."The more I get involved in football, the more I realise that there is no money in it. It is so difficult to stay afloat."After assuming control of the Magpies, he was unable to prevent the club's Women's Super League One side from folding.It quickly introduced Nottingham businessman Hardy to the hard financial realities of football, and he said he was "shocked how clubs were treated in court"."It is not just another organisation that has hit the financial barriers and they are pulling the plug. There is a huge emotional attachment that the central government don't get."READ MORE: 'Players left to sink with Notts ship'Is Financial Fair Play helping?The fall in club administrations coincides with the introduction of Financial Fair Play (FFP) Regulations in 2012, since replaced with Profitability and Sustainability rules.Wilson says they "are taking hold" and predicts they will result in "a downward trend in winding-up petitions"."For the most part the evidence is telling us that clubs are becoming more fiscally responsible based on earned income. There is at least some sort of regulatory system in place," said Wilson."You will always get those who break the rules when they try to get promoted or there is a bit of money to be made."Wilson said he was "initially shocked" by the proportion of clubs that have faced winding-up petitions in recent seasons, but added: "Football League clubs have to work very hard to generate income and have players that are paid beyond the clubs' means."The reason? Wilson says clubs lower down the ladder, who receive relatively little money from television rights compared to Premier League clubs, are faced with a "chicken or the egg conundrum".READ MORE: 'Closed shop' Premier League £100m richer than EFLPremier League TV rights: Five of seven live packages sold for £4.464bn"In the Premier League, the handout from the TV deal gives you a flying start and it doesn't really matter if the fans turn up to a certain extent. But in League Two you have to earn your own money, you need the fans to come in. "For the fans to come in you need to produce some sort of brand of football on the pitch, which means you have to spend on those players and pay those wages to generate those gate receipts. "You really have to speculate and that comes with a lot of danger with lower incomes, hence the winding-up petitions."
