@@ -199,11 +199,11 @@ def main():
 
     # take all links from the following websites and extract them into .txt files
     # TODO: Uncomment the corresponding lines of the websites you wish to scrape
-    links += article_spider_multi_page(ATLANTIC_BASE, ATLANTIC_FILMS, 3, 5, ATLANTIC_SELECT_TERM)
+    # links += article_spider_multi_page(ATLANTIC_BASE, ATLANTIC_FILMS, 3, 5, ATLANTIC_SELECT_TERM)
     #links += article_spider_one_page(VULTURE_BASE, VULTURE, VULTURE_SELECT_TERM)
     #links += article_spider_one_page(WASHINGTONPOST_BASE, WASHINGTONPOST, WASHINGTONPOST_SELECT_TERM)
     #links += article_spider_multi_page(HILL_BASE, HILL_SENATE, 2, 4, HILL_SELECT_TERM)
-    links += article_spider_one_page(BBC_BASE, BBC_TENNIS, BBC_TENNIS_SELECT_TERM)
+    #links += article_spider_one_page(BBC_BASE, BBC_TENNIS, BBC_TENNIS_SELECT_TERM)
     links += article_spider_multi_page(TALKSPORT_BASE, TALKSPORT_FOOTBALL, 1, 5, TALKSPORT_FOOTBALL_SELECT_TERM)
 
     for link in links:
