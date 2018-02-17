@@ -7,15 +7,26 @@ from bs4 import BeautifulSoup
 ATLANTIC_BASE = 'https://www.theatlantic.com'
 ATLANTIC_FILMS = 'https://www.theatlantic.com/category/film/?page='
 ATLANTIC_SELECT_TERM = 'li.article.blog-article a[data-omni-click="inherit"]'
+
 VULTURE_BASE = ''
 VULTURE = 'http://www.vulture.com/movies/'
 VULTURE_SELECT_TERM = 'a.newsfeed-article-link'
+
 WASHINGTONPOST_BASE = ''
 WASHINGTONPOST = 'https://www.washingtonpost.com/goingoutguide/theater-dance'
 WASHINGTONPOST_SELECT_TERM = 'a[data-pb-local-content-field="web_headline"]'
+
 HILL_BASE = 'http://www.thehill.com'
 HILL_SENATE = 'http://thehill.com/homenews/senate?page='
 HILL_SELECT_TERM = 'h2.node__title.node-title a'
+
+BBC_BASE = 'http://www.bbc.com'
+BBC_TENNIS = 'http://www.bbc.com/sport/football'
+BBC_TENNIS_SELECT_TERM = 'a.faux-block-link__overlay'
+
+TALKSPORT_BASE = 'https://www.talksport.com'
+TALKSPORT_FOOTBALL = 'https://talksport.com/football?page='
+TALKSPORT_FOOTBALL_SELECT_TERM = 'a.cover-anchor'
 INDEX_FILE = 'stage1_docs/index.txt'
 DIRECTORY = 'stage1_docs/raw/'
 
@@ -130,6 +141,27 @@ def text_extractor(url, filename):
                         to_remove = article.select_one('div#bottom-story-socials')
                         if to_remove is not None:
                             to_remove.extract()
+                    else:
+                        # BBC Tennis
+                        article = bs.select_one('div.story-body')
+                        if article is not None:
+                            if article.div is not None:
+                                article.div.extract()
+                            if article.aside is not None:
+                                article.aside.extract()
+                            # Remove
+                            for a in article.select('div.bbccom_advert'):
+                                a.extract()  
+                        else:
+                            # TALKSPORT FOOTBALL
+                            article = bs.select_one('div#article-body')
+                            if article is not None:
+                                if article.p is not None:
+                                    article.p.extract()
+                                else:
+                                    print('article p is none')
+                            else:
+                                print('article is none')
 
         if article is not None:
             article_text = article.get_text()
@@ -139,7 +171,6 @@ def text_extractor(url, filename):
             file.write(article_text)
     except:
         print('Skipping unopenable link: ' + url)
-
 
 def main():
     """
@@ -171,7 +202,9 @@ def main():
     links += article_spider_multi_page(ATLANTIC_BASE, ATLANTIC_FILMS, 3, 5, ATLANTIC_SELECT_TERM)
     #links += article_spider_one_page(VULTURE_BASE, VULTURE, VULTURE_SELECT_TERM)
     #links += article_spider_one_page(WASHINGTONPOST_BASE, WASHINGTONPOST, WASHINGTONPOST_SELECT_TERM)
-    links += article_spider_multi_page(HILL_BASE, HILL_SENATE, 2, 4, HILL_SELECT_TERM)
+    #links += article_spider_multi_page(HILL_BASE, HILL_SENATE, 2, 4, HILL_SELECT_TERM)
+    links += article_spider_one_page(BBC_BASE, BBC_TENNIS, BBC_TENNIS_SELECT_TERM)
+    links += article_spider_multi_page(TALKSPORT_BASE, TALKSPORT_FOOTBALL, 1, 5, TALKSPORT_FOOTBALL_SELECT_TERM)
 
     for link in links:
         # check to see if the link has already been processed
