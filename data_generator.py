@@ -12,10 +12,11 @@ __author__ = 'Trang Vu'
 '''        
 
 # load packages
-import os
-import string
-import re
 import pandas as pd
+import os
+import random
+import re
+import string
 
 # list directory paths        
 MarkedUp = 'stage1_docs/Data/MarkedUp/'
@@ -23,7 +24,7 @@ CleanedMarkedUp = 'stage1_docs/Data/Cleaned_MarkedUp/'
 DATA = 'stage1_docs/Data/'
 def clean_file(filename):
     # remove extra newlines in file
-    with open(MarkedUp+filename, encoding = 'utf8') as inputfile:
+    with open(os.path.join(MarkedUp, filename), encoding='utf8') as inputfile:
         oneline_text = ''
         for text in inputfile:
             text = text.rstrip('\n')
@@ -77,8 +78,6 @@ def data_generator(filename, text):
                 
     print (count)    
     return data       
-            
-    
     
 def split_word(word, split_key):
     # assuming each word has only one split_key
@@ -99,11 +98,9 @@ def clean_string(word_string, split_key, start_tag, end_tag):
     *<pname>Kevin Winter</pname>/Getty, or
     *<pname>George R. R. Martin</pname> --> right now the '.' in 'R.' is removed.
     *some cases have weird apostrophe symbols that are not recognized
-    as string punctuations: <pname>Scott Cooper</pname>’s
+    as string punctuations: <pname>Scott Cooper</pname>'
     *sorts.<pname>Bale</pname> -> no white space
     '''
-    
-    
     if len(word_string) < 2:
         return word_string
     else:
@@ -192,7 +189,6 @@ def removeTags(word_string, start_tag, end_tag):
         word_string = word_string.replace(end_tag, '')
     return word_string
     
-    
 def findClassLabel(word_string, start_tag, end_tag):
     # find the class label for the word_string
     class_label = 0 # negative label
@@ -202,18 +198,27 @@ def findClassLabel(word_string, start_tag, end_tag):
         class_label = 1 # positive label
     return class_label
 
-# test clean_file
-#online_text = clean_file('19_m.txt')
-#print (online_text)
-#data = data_generator('19_m.txt', online_text)
-#write_to_file(data, 'data.csv')    
-    
-def main():
-    csv_file = DATA + 'data.csv'
-    headers = ['string_id', 'string', 'document_id', 'start_index', 'end_index', 'capitalized', 'class_label']
+def createDevAndTestFileSet():
+    """ Shuffles the marked-up file set and divide it into two for training and testing.
+    Returns 'train_file_names' and 'test_file_names'."""
+    file_names = []
+    for file_name in os.listdir(MarkedUp):
+        file_names.append(file_name)
+    # shuffle the list, and create training and testing list
+    random.shuffle(file_names)
+    # TODO(HoaiNguyen): change this from 50/50 -> 75/25
+    return file_names[ : int(len(file_names) / 2)], file_names[int(len(file_names) / 2) : ]
+
+def extractAndCreateCSV(file_names, csv_file):
+    """Scan all the files in file_names and produces a single CSV file that
+    containing strings, feature vectors, and class_label."""
+    headers = [ 'string_id', 'string', 'document_id', 'start_index', 
+                'end_index', 'capitalized', 'class_label']
+    print('creating csv file:' + csv_file)
     # open MarkedUp folder and process all files
-    for filename in os.listdir(MarkedUp):
+    for filename in file_names:
         if os.path.isfile(filename) == False:
+            print(filename);
             text = clean_file(filename)
             data = data_generator(filename, text)
             df = pd.DataFrame(data, columns = headers)
@@ -222,6 +227,21 @@ def main():
                 df.to_csv(csv_file, mode = 'a', header = False)
             else:
                 df.to_csv(csv_file, header = True)
+
+# test clean_file
+# online_text = clean_file('19_m.txt')
+# print (online_text)
+# data = data_generator('19_m.txt', online_text)
+# write_to_file(data, 'data.csv')
+    
+def main():
+    train_input_files, test_input_files = createDevAndTestFileSet()
+    print(train_input_files)
+    print(test_input_files)
+    train_csv_file = DATA + 'train_data.csv'
+    test_csv_file = DATA + 'test_data.csv'
+    extractAndCreateCSV(train_input_files, train_csv_file)
+    extractAndCreateCSV(test_input_files, test_csv_file)
                 
 if __name__ == "__main__":
     main()
