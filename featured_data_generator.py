@@ -74,7 +74,9 @@ def data_generator(filename, text):
                 suffix = 0
                 if end < len(words):
                     suffix = checkSuffix(words[end])
-                    
+                otherEntity = 0
+                if start > 0 and end < len(words):
+                    otherEntity = checkOthers(words, start - 1, end)
                 # find class label
                 class_label = findClassLabel(word_string, start_tag, end_tag)
                 if class_label == 1:
@@ -84,7 +86,7 @@ def data_generator(filename, text):
                 # check if words in string all capitalized
                 capitalized = isCapitalized(word_string)
                 # create data instance
-                data_instance = [string_id, word_string, filename, start, end, capitalized, prefix, suffix, class_label]
+                data_instance = [string_id, word_string, filename, start, end, capitalized, prefix, suffix, otherEntity, class_label]
                 data.append(data_instance)
                 string_id = string_id + 1
     return data       
@@ -234,7 +236,7 @@ def isCapitalized(word_string):
     word_string = word_string.split()
     flag = 1 # capitalized
     for word in word_string:
-        if not word[0].isupper:
+        if not word[0].isupper():
             flag = 0 # not capitalized
             break
     return flag
@@ -270,6 +272,15 @@ def checkSuffix(word):
     else:
         return 0
         
+def checkOthers(words, before_index, after_index):
+    # check if word_string maybe a location name or movie name
+    preceeding_words = ['the', 'The', 'in', 'on', 'at']
+    succeeding_words = ['avenue', 'city', 'street', 'st', 'ave', 'town', 'village']
+    if words[before_index] in preceeding_words or words[after_index] in succeeding_words:
+        return 1
+    else:
+        return 0
+
 def findClassLabel(word_string, start_tag, end_tag):
     # find the class label for the word_string
     class_label = 0 # negative label
@@ -288,7 +299,7 @@ def findClassLabel(word_string, start_tag, end_tag):
 def main():
     csv_file = DATA + 'data.csv'
     headers = ['string_id', 'string', 'document_id', 'start_index',
-               'end_index', 'capitalized', 'prefixed', 'suffixed', 'class_label']
+               'end_index', 'capitalized', 'prefixed', 'suffixed', 'otherEntity', 'class_label']
     # open MarkedUp folder and process all files
     for filename in os.listdir(MarkedUp):
         if os.path.isfile(filename) == False:
