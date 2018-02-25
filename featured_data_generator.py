@@ -16,6 +16,7 @@ import os
 import string
 import re
 import pandas as pd
+import random
 
 # list directory paths        
 MarkedUp = 'stage1_docs/Data/MarkedUp/'
@@ -290,18 +291,25 @@ def findClassLabel(word_string, start_tag, end_tag):
         class_label = 1 # positive label
     return class_label
 
-# test clean_file
-#online_text = clean_file('19_m.txt')
-#print (online_text)
-#data = data_generator('19_m.txt', online_text)
-#write_to_file(data, 'data.csv')    
-    
-def main():
-    csv_file = DATA + 'data.csv'
+def createDevAndTestFileSet():
+    """ Shuffles the marked-up file set and divide it into two for training and testing.
+    Returns 'train_file_names' and 'test_file_names'."""
+    file_names = []
+    for file_name in os.listdir(MarkedUp):
+        file_names.append(file_name)
+    # shuffle the list, and create training and testing list
+    random.shuffle(file_names)
+    # TODO(HoaiNguyen): change this from 50/50 -> 75/25
+    return file_names[ : int(len(file_names) / 2)], file_names[int(len(file_names) / 2) : ]
+
+def extractAndCreateCSV(file_names, csv_file):
+    """Scan all the files in file_names and produces a single CSV file that
+    containing strings, feature vectors, and class_label."""
     headers = ['string_id', 'string', 'document_id', 'start_index',
                'end_index', 'capitalized', 'prefixed', 'suffixed', 'otherEntity', 'class_label']
+    print('creating csv file:' + csv_file)
     # open MarkedUp folder and process all files
-    for filename in os.listdir(MarkedUp):
+    for filename in file_names:
         if os.path.isfile(filename) == False:
             text = clean_file(filename)
             text = text.replace('’', '\'')
@@ -319,6 +327,20 @@ def main():
                     df.to_csv(csv_file, mode = 'a', encoding = 'utf-8', header = False)
             else:
                 df.to_csv(csv_file, encoding = 'utf-8', header = True)
+
+
+def main():
+    train_input_files, test_input_files = createDevAndTestFileSet()
+    print(train_input_files)
+    print(test_input_files)
+    train_csv_file = DATA + 'train_data.csv'
+    test_csv_file = DATA + 'test_data.csv'
+    extractAndCreateCSV(train_input_files, train_csv_file)
+    extractAndCreateCSV(test_input_files, test_csv_file)
+
+
+
+
                 
 if __name__ == "__main__":
     main()
