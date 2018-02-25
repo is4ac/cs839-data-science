@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 __author__ = 'Trang Vu'
 '''
     inputs: marked up '.txt' files
@@ -22,6 +23,12 @@ import random
 MarkedUp = 'stage1_docs/Data/MarkedUp/'
 CleanedMarkedUp = 'stage1_docs/Data/Cleaned_MarkedUp/'
 DATA = 'stage1_docs/Data/'
+
+# Global feature names that will be shared between modules
+LOCATION_FEATURES = ['document_id', 'start_index', 'end_index']
+OTHER_FEATURES = ['capitalized', 'prefixed', 'suffixed', 'otherEntity']
+TRAIN_CSV = DATA + 'train_data.csv'
+TEST_CSV = DATA + 'test_data.csv'
 
 def clean_file(filename):
     # remove extra newlines in file
@@ -305,8 +312,9 @@ def createDevAndTestFileSet():
 def extractAndCreateCSV(file_names, csv_file):
     """Scan all the files in file_names and produces a single CSV file that
     containing strings, feature vectors, and class_label."""
-    headers = ['string_id', 'string', 'document_id', 'start_index',
-               'end_index', 'capitalized', 'prefixed', 'suffixed', 'otherEntity', 'class_label']
+    global LOCATION_FEATURES
+    global OTHER_FEATURES
+    headers = ['string_id', 'string'] + LOCATION_FEATURES + OTHER_FEATURES + ['class_label']
     print('creating csv file:' + csv_file)
     # open MarkedUp folder and process all files
     for filename in file_names:
@@ -328,19 +336,14 @@ def extractAndCreateCSV(file_names, csv_file):
             else:
                 df.to_csv(csv_file, encoding = 'utf-8', header = True)
 
-
 def main():
+    global TEST_CSV
+    global TRAIN_CSV
     train_input_files, test_input_files = createDevAndTestFileSet()
     print(train_input_files)
     print(test_input_files)
-    train_csv_file = DATA + 'train_data.csv'
-    test_csv_file = DATA + 'test_data.csv'
-    extractAndCreateCSV(train_input_files, train_csv_file)
-    extractAndCreateCSV(test_input_files, test_csv_file)
-
-
-
-
+    extractAndCreateCSV(train_input_files, TRAIN_CSV)
+    extractAndCreateCSV(test_input_files, TEST_CSV)
                 
 if __name__ == "__main__":
     main()
