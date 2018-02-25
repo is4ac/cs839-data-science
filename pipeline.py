@@ -1,3 +1,4 @@
+import csv
 from sklearn import svm
 from sklearn import tree
 from sklearn.ensemble import RandomForestClassifier
@@ -6,9 +7,34 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 
+def get_feature_and_label_from_file(input_csv_file):
+    """Reads a csv file and produce feature vectors and label.
+       Converts string features from the file to ints so that they
+       can be used with our classifier later on."""
+    # If you add more features, please update 'feature_names'.
+    data = []
+    label = []
+    feature_names = ['capitalized']
+    with open(input_csv_file) as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            features = []
+            for feature in feature_names:
+                # Here we assume features are int. If we ever change this assumption
+                # change this code.
+                features.append(int(row[feature]))
+            data.append(features)
+            label.append(int(row['class_label']))
+    return data, label
+
 def get_dev_and_test_data():
-    """Divides input data into dev set and test set.
-    Returns 'dev_data', 'dev_label', 'test_data', 'test_label'.
+    """Returns 'dev_data', 'dev_label', 'test_data', 'test_label'."""
+    dev_data, dev_labels =  get_feature_and_label_from_file('stage1_docs/Data/train_data.csv')
+    test_data, test_labels =  get_feature_and_label_from_file('stage1_docs/Data/test_data.csv')
+    return dev_data, dev_labels, test_data, test_labels
+    
+def get_hardcoded_dev_and_test_data():
+    """Returns 'dev_data', 'dev_label', 'test_data', 'test_label'.
     'dev_data' and 'test_data' are array of feature vectors.
     'dev_label' and 'test_label' are array of labels which are either 1 or 0.
     1: input is a person name, 0: input is not a person name."""
@@ -79,49 +105,53 @@ def get_dev_and_test_data():
         ]
     return dev_data, dev_labels, test_data, test_labels
 
-dev_data, dev_labels, test_data, test_labels = get_dev_and_test_data()
-# Fit, predict, and compute precision & recall scores for several classifiers.
-#
-# Decision tree.
-clf = tree.DecisionTreeClassifier()
-print(len(dev_data) == len(dev_labels))
-clf.fit(dev_data, dev_labels)
-test_predict = clf.predict(test_data)
-print(test_predict)
-precision = precision_score(test_labels, test_predict)
-recall = recall_score(test_labels, test_predict)
-print('Decision Tree Precision score: {0:0.2f}'.format(precision))
-print('Decision Tree Recall score: {0:0.2f}'.format(recall))
+def main():
+    dev_data, dev_labels, test_data, test_labels =  get_dev_and_test_data()
+    # Fit, predict, and compute precision & recall scores for several classifiers.
+    #
+    # Decision tree.
+    clf = tree.DecisionTreeClassifier()
+    print(len(dev_data) == len(dev_labels))
+    clf.fit(dev_data, dev_labels)
+    test_predict = clf.predict(test_data)
+    print(test_predict)
+    precision = precision_score(test_labels, test_predict)
+    recall = recall_score(test_labels, test_predict)
+    print('Decision Tree Precision score: {0:0.2f}'.format(precision))
+    print('Decision Tree Recall score: {0:0.2f}'.format(recall))
 
-# Random forest
-clf = RandomForestClassifier(max_depth=2, random_state=0)
-clf.fit(dev_data, dev_labels)
-test_predict = clf.predict(test_data)
-precision = precision_score(test_labels, test_predict)
-recall = recall_score(test_labels, test_predict)
-print('RandomForest Precision score: {0:0.2f}'.format(precision))
-print('RandomForest Recall score: {0:0.2f}'.format(recall))
+    # Random forest
+    clf = RandomForestClassifier(max_depth=2, random_state=0)
+    clf.fit(dev_data, dev_labels)
+    test_predict = clf.predict(test_data)
+    precision = precision_score(test_labels, test_predict)
+    recall = recall_score(test_labels, test_predict)
+    print('RandomForest Precision score: {0:0.2f}'.format(precision))
+    print('RandomForest Recall score: {0:0.2f}'.format(recall))
 
-# Support vector machine
-clf.fit(dev_data, dev_labels)
-test_predict = clf.predict(test_data)
-precision = precision_score(test_labels, test_predict)
-recall = recall_score(test_labels, test_predict)
-print('SVM Precision score: {0:0.2f}'.format(precision))
-print('SVM Recall score: {0:0.2f}'.format(recall))
+    # Support vector machine
+    clf.fit(dev_data, dev_labels)
+    test_predict = clf.predict(test_data)
+    precision = precision_score(test_labels, test_predict)
+    recall = recall_score(test_labels, test_predict)
+    print('SVM Precision score: {0:0.2f}'.format(precision))
+    print('SVM Recall score: {0:0.2f}'.format(recall))
 
-# Linear regression
-clf.fit(dev_data, dev_labels)
-test_predict = clf.predict(test_data)
-precision = precision_score(test_labels, test_predict)
-recall = recall_score(test_labels, test_predict)
-print('LinearRegression Precision score: {0:0.2f}'.format(precision))
-print('LinearRegression Recall score: {0:0.2f}'.format(recall))
+    # Linear regression
+    clf.fit(dev_data, dev_labels)
+    test_predict = clf.predict(test_data)
+    precision = precision_score(test_labels, test_predict)
+    recall = recall_score(test_labels, test_predict)
+    print('LinearRegression Precision score: {0:0.2f}'.format(precision))
+    print('LinearRegression Recall score: {0:0.2f}'.format(recall))
 
-# Logistic regression
-clf.fit(dev_data, dev_labels)
-test_predict = clf.predict(test_data)
-precision = precision_score(test_labels, test_predict)
-recall = recall_score(test_labels, test_predict)
-print('LogisticRegression Precision score: {0:0.2f}'.format(precision))
-print('LogisticRegression Recall score: {0:0.2f}'.format(recall))
+    # Logistic regression
+    clf.fit(dev_data, dev_labels)
+    test_predict = clf.predict(test_data)
+    precision = precision_score(test_labels, test_predict)
+    recall = recall_score(test_labels, test_predict)
+    print('LogisticRegression Precision score: {0:0.2f}'.format(precision))
+    print('LogisticRegression Recall score: {0:0.2f}'.format(recall))
+
+if __name__ == "__main__":
+    main()
