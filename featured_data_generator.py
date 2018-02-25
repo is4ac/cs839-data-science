@@ -306,8 +306,7 @@ def createDevAndTestFileSet():
         file_names.append(file_name)
     # shuffle the list, and create training and testing list
     random.shuffle(file_names)
-    # TODO(HoaiNguyen): change this from 50/50 -> 75/25
-    return file_names[ : int(len(file_names) / 2)], file_names[int(len(file_names) / 2) : ]
+    return file_names[ : int(len(file_names) * 0.66)], file_names[int(len(file_names) * 0.66) : ]
 
 def extractAndCreateCSV(file_names, csv_file):
     """Scan all the files in file_names and produces a single CSV file that
