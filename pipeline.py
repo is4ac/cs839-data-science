@@ -9,6 +9,7 @@ from sklearn.metrics import recall_score
 from featured_data_generator import OTHER_FEATURES
 from featured_data_generator import TRAIN_CSV
 from featured_data_generator import TEST_CSV
+import numpy as np
 
 def get_feature_and_label_from_file(input_csv_file):
     """Reads a csv file and produce feature vectors and label.
@@ -113,6 +114,15 @@ def main():
     test_predict = clf.predict(test_data)
     precision = precision_score(test_labels, test_predict)
     recall = recall_score(test_labels, test_predict)
+
+    # for debugging purposes
+    with open('test_predict.txt', 'w') as file:
+        for n in test_predict:
+            file.write(str(int(n)) + " ")
+    with open('test_labels.txt', 'w') as file:
+        for n in test_labels:
+            file.write(str(int(n)) + " ")
+
     print('Decision Tree Precision score: {0:0.2f}'.format(precision))
     print('Decision Tree Recall score: {0:0.2f}'.format(recall))
 

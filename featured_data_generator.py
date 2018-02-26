@@ -8,7 +8,13 @@ __author__ = 'Trang Vu'
         file id/file name: string 
         start position of the string: integer
         end position of the string: integer
+        ## I don't think we need capitalized anymore since we get rid of non-capitalized ones
         capitalized: binary with 1 or 0 being all first letters are or are not capitalized respectively 
+        otherEntity: is capitalized but is probably a location/other entity
+        near_capitalized: words before or after it are capitalized
+        name_suffix: the word ends with a common name suffix, like Jr. or Sr.
+        common_word: the word string contains a common stop word (e.g. The, A, etc)
+        title: 1 if it matches the title of a movie or TV show
         class label: binary with 1  or 0 being the string is or is not a person name, respectively 
 '''        
 
@@ -24,12 +30,15 @@ from functools import reduce
 MarkedUp = 'stage1_docs/Data/MarkedUp/'
 CleanedMarkedUp = 'stage1_docs/Data/Cleaned_MarkedUp/'
 DATA = 'stage1_docs/Data/'
+Features = 'stage1_docs/Data/Features/'
 
 # Global feature names that will be shared between modules
 LOCATION_FEATURES = ['document_id', 'start_index', 'end_index']
-OTHER_FEATURES = ['capitalized', 'prefixed', 'suffixed', 'otherEntity', 'near_capitalized']
+OTHER_FEATURES = ['prefixed', 'suffixed', 'otherEntity', 'near_capitalized', 'name_suffix', 'common_word', 'title']
+TITLES_DICT = {}
 TRAIN_CSV = DATA + 'train_data.csv'
 TEST_CSV = DATA + 'test_data.csv'
+TITLES_CSV = DATA + 'titles.csv'
 
 def clean_file(filename):
     # remove extra newlines in file
@@ -40,6 +49,7 @@ def clean_file(filename):
         for text in inputfile:
             text = text.rstrip('\n')
             text = text.replace('’', '\'')
+            text = text.replace('`', '\'')
             oneline_text = oneline_text + ' ' + text
     start_tag = '<pname>'
     end_tag = '</pname>'
@@ -82,30 +92,44 @@ def data_generator(filename, text):
                 prefix = 0
                 if start > 0:
                     prefix = checkPrefix(words[start - 1])
+                    if prefix == 0 and start > 1:
+                        prefix = checkPrefix(words[start - 2])
                 # check if succeding word is a special suffix
                 suffix = 0
                 if end < len(words):
                     suffix = checkSuffix(words[end])
+                    if suffix == 0 and end < len(words)-1:
+                        suffix = checkSuffix(words[end+1])
                 otherEntity = 0
                 if start > 0 and end < len(words):
                     otherEntity = checkOthers(words, start - 1, end)
+
                 # find class label
                 class_label = findClassLabel(word_string, start_tag, end_tag)
                 if class_label == 1:
                     count = count + 1
                 # remove markedup tags
                 word_string = removeTags(word_string, start_tag, end_tag)
+                # is another entity if it's a title
+                if otherEntity == 0:
+                    otherEntity = is_title(word_string)
                 # check if words in string all capitalized (or is a word in a special dictionary like 'van' or 'del')
                 capitalized = isCapitalized(word_string)
                 # check if word contains punctuation besides .
                 punctuation = contains_punctuation_except_some(word_string)
                 # check if previous or next word in document is capitalized
-                near_capitalized = is_near_capitalized(word_string, words, start, end)
+                near_capitalized = is_near_capitalized(words, start, end)
+                # checks if the word string ends with a name suffix, like Sr. or Jr.
+                name_suffix = is_name_suffix(word_string)
+                # checks to see if the word string contains a common stop word
+                common_word = contains_common_word(word_string)
+                # checks to see if string matches a title
+                title = is_title(word_string)
                 # if word is not capitalized, throw it away
-                if capitalized != 1 or punctuation:
+                if capitalized != 1 or punctuation or is_common_word(word_string):
                     continue
                 # create data instance
-                data_instance = [string_id, word_string, filename, start, end, capitalized, prefix, suffix, otherEntity, near_capitalized, class_label]
+                data_instance = [string_id, word_string, filename, start, end, prefix, suffix, otherEntity, near_capitalized, name_suffix, common_word, title, class_label]
                 data.append(data_instance)
                 string_id = string_id + 1
 
@@ -114,10 +138,78 @@ def data_generator(filename, text):
         print("Error: A label did not make it through! Check file {} for potential errors.".format(filename))
     return data       
 
-def is_near_capitalized(word, words, start, end):
+
+def is_title(word):
+    if word in TITLES_DICT:
+        return 1
+    else:
+        return 0
+
+
+def generate_titles():
+    titles = {}
+    with open(TITLES_CSV, 'r') as file:
+        for line in file:
+            titles[line.strip()] = 1
+    return titles
+
+
+def is_name_suffix(word):
+    suffixes = ['Sr', 'Sr.', 'Jr', 'Jr.', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X',
+                'sr', 'sr.', 'jr', 'jr.', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x']
+    words = word.split()
+    if len(words) > 0 and words[-1] in suffixes:
+        return 1
+    else:
+        return 0
+
+
+def is_common_word(word):
+    stopwords = ['\'s', 'I', 'A', 'An', 'The', 'But', 'If', 'So', 'He', 'She', 'They', 'There', 'Are', 'Is', 'Be', 'You', 'Able', 'About',
+                 'Across', 'After', 'All', 'Almost', 'Also', 'Am', 'Among', 'And', 'Any', 'As', 'At', 'Because', 'Been', 'By', 'Can',
+                 'Cannot', 'Could', 'Dear', 'Did', 'Do', 'Does', 'Either', 'Else', 'Ever', 'Every', 'For', 'From', 'Get', 'Got',
+                 'Had', 'Has', 'Have', 'He', 'Her', 'Hers', 'Him', 'His', 'How', 'However', 'In', 'Into', 'It', 'Its', 'Just',
+                 'Least', 'Let', 'Like', 'Likely', 'May', 'Me', 'Might', 'Most', 'Must', 'My', 'Neither', 'No', 'Nor', 'Not',
+                 'Of', 'Off', 'Often', 'On', 'Only', 'Or', 'Other', 'Our', 'Own', 'Rather', 'Said', 'Say', 'Says', 'She', 'Should',
+                 'Since', 'Some', 'Than', 'That', 'Their', 'Then', 'These', 'This', 'To', 'Too', 'Us', 'Wants', 'Was', 'Who', 'Whom',
+                 'Why', 'What', 'Will', 'With', 'Would', 'Yet', 'Your']
+    if word in stopwords:
+        return 1
+    else:
+        return 0
+
+
+def contains_common_word(word_string):
+    stopwords = ['\'s', 'I', 'A', 'An', 'The', 'But', 'If', 'So', 'He', 'She', 'They', 'There', 'Are', 'Is', 'Be',
+                 'You', 'Able', 'About',
+                 'Across', 'After', 'All', 'Almost', 'Also', 'Am', 'Among', 'And', 'Any', 'As', 'At', 'Because', 'Been',
+                 'By', 'Can',
+                 'Cannot', 'Could', 'Dear', 'Did', 'Do', 'Does', 'Either', 'Else', 'Ever', 'Every', 'For', 'From',
+                 'Get', 'Got',
+                 'Had', 'Has', 'Have', 'He', 'Her', 'Hers', 'Him', 'His', 'How', 'However', 'In', 'Into', 'It', 'Its',
+                 'Just',
+                 'Least', 'Let', 'Like', 'Likely', 'May', 'Me', 'Might', 'Most', 'Must', 'My', 'Neither', 'No', 'Nor',
+                 'Not',
+                 'Of', 'Off', 'Often', 'On', 'Only', 'Or', 'Other', 'Our', 'Own', 'Rather', 'Said', 'Say', 'Says',
+                 'She', 'Should',
+                 'Since', 'Some', 'Than', 'That', 'Their', 'Then', 'These', 'This', 'To', 'Too', 'Us', 'Wants', 'Was',
+                 'Who', 'Whom',
+                 'Why', 'What', 'Will', 'With', 'Would', 'Yet', 'Your']
+    for word in word_string.split():
+        if word in stopwords:
+            return 1
+
+    return 0
+
+
+def is_near_capitalized(words, start, end):
+    '''
+    Checks to see if the words are near another capitalized word (that could be part of the name) but not counting
+    common prefixes like Dr., Sen., etc
+    '''
     near_capitalized = 0
     if start > 0:
-        if len(words[start-1]) > 0 and words[start-1][0].isupper():
+        if len(words[start-1]) > 0 and words[start-1][0].isupper() and not checkPrefix(words[start-1]):
             near_capitalized = 1
 
     if end < len(words):
@@ -125,6 +217,7 @@ def is_near_capitalized(word, words, start, end):
             near_capitalized = 1
 
     return near_capitalized
+
 
 def contains_punctuation_except_some(word):
     '''
@@ -136,6 +229,7 @@ def contains_punctuation_except_some(word):
             return True
     return False
 
+
 def num_of_labels(data):
     '''
     Returns the number of positive labels in the data
@@ -146,6 +240,7 @@ def num_of_labels(data):
     for instance in data:
         sum += instance[-1]
     return sum
+
 
 def split_string(word_string):
     '''
@@ -315,9 +410,10 @@ def checkPrefix(word):
                 'Sr', 'St', 'Sen.', 'Sen', 'Sens.', 'Sens', 'Lady', 'Lord', 'Captain', 'President',
                 'General', 'Doctor', 'Professor', 'Senator', 'Senators',
                 'Father', 'Reverend', 'Earl', 'Mister', 'Miss', 'Madam', 'Chancellor',
-                'Vice-President', 'Dean', 'Pope', 'Rabbi', 'Prince', 'Queen', 'Princess',
+                'Vice-President', 'Dean', 'Pope', 'Rabbi', 'Prince', 'Queen', 'Princess', 'Leader',
+                'Whip', 'Representative', 'Congressman', 'Congresswoman', 'representative', 'congressman', 'congresswoman',
                 'director', 'composer', 'actor', 'actress', 'chief', 'detective', 'screenwriter',
-                'producer']
+                'producer', 'writer', 'by']
     if word in prefixes:
         return 1
     else:
@@ -360,6 +456,17 @@ def createDevAndTestFileSet():
     random.shuffle(file_names)
     return file_names[ : int(len(file_names) * 0.66)], file_names[int(len(file_names) * 0.66) : ]
 
+def writeToCSV(filename):
+    global LOCATION_FEATURES
+    global OTHER_FEATURES
+    headers = ['string_id', 'string'] + LOCATION_FEATURES + OTHER_FEATURES + ['class_label']
+
+    if os.path.isfile(MarkedUp + filename):
+        text = clean_file(filename)
+        data = data_generator(filename, text)
+        df = pd.DataFrame(data, columns=headers)
+        df.to_csv(csv_file, encoding='utf-8', header=True, index=False)
+
 def extractAndCreateCSV(file_names, csv_file):
     """Scan all the files in file_names and produces a single CSV file that
     containing strings, feature vectors, and class_label."""
@@ -369,13 +476,12 @@ def extractAndCreateCSV(file_names, csv_file):
     print('creating csv file:' + csv_file)
     # open MarkedUp folder and process all files
     for filename in file_names:
-        if os.path.isfile(filename) == False:
+        if os.path.isfile(MarkedUp + filename):
             text = clean_file(filename)
-            text = text.replace('’', '\'')
             data = data_generator(filename, text)
             df = pd.DataFrame(data, columns = headers)
             # if csv_file is already exist, open it and append new data
-            if os.path.isfile(csv_file) == True:
+            if os.path.isfile(csv_file):
                 # check if filename is already processed:
                 existing_df = pd.read_csv(csv_file)
                 file_list = list(existing_df['document_id'])
@@ -387,9 +493,15 @@ def extractAndCreateCSV(file_names, csv_file):
             else:
                 df.to_csv(csv_file, encoding = 'utf-8', header = True, index = False)
 
+def cleanMarkedUpFiles():
+    for filename in os.listdir(MarkedUp):
+        clean_file(filename)
+
 def main():
     global TEST_CSV
     global TRAIN_CSV
+    global TITLES_DICT
+    TITLES_DICT = generate_titles()
     train_input_files, test_input_files = createDevAndTestFileSet()
     print(train_input_files)
     print(test_input_files)
