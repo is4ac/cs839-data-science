@@ -18,6 +18,7 @@ import string
 import re
 import pandas as pd
 import random
+from functools import reduce
 
 # list directory paths        
 MarkedUp = 'stage1_docs/Data/MarkedUp/'
@@ -26,7 +27,7 @@ DATA = 'stage1_docs/Data/'
 
 # Global feature names that will be shared between modules
 LOCATION_FEATURES = ['document_id', 'start_index', 'end_index']
-OTHER_FEATURES = ['capitalized', 'prefixed', 'suffixed', 'otherEntity']
+OTHER_FEATURES = ['capitalized', 'prefixed', 'suffixed', 'otherEntity', 'near_capitalized']
 TRAIN_CSV = DATA + 'train_data.csv'
 TEST_CSV = DATA + 'test_data.csv'
 
@@ -61,7 +62,10 @@ def data_generator(filename, text):
     words = []
     for word in words_by_space:
         new_word = split_string(word)
-        words.extend(new_word) 
+        words.extend(new_word)
+
+    #print(words)
+
     # generate list of strings of words
     data = []
     string_id = 0
@@ -91,14 +95,58 @@ def data_generator(filename, text):
                     count = count + 1
                 # remove markedup tags
                 word_string = removeTags(word_string, start_tag, end_tag)
-                # check if words in string all capitalized
+                # check if words in string all capitalized (or is a word in a special dictionary like 'van' or 'del')
                 capitalized = isCapitalized(word_string)
+                # check if word contains punctuation besides .
+                punctuation = contains_punctuation_except_some(word_string)
+                # check if previous or next word in document is capitalized
+                near_capitalized = is_near_capitalized(word_string, words, start, end)
+                # if word is not capitalized, throw it away
+                if capitalized != 1 or punctuation:
+                    continue
                 # create data instance
-                data_instance = [string_id, word_string, filename, start, end, capitalized, prefix, suffix, otherEntity, class_label]
+                data_instance = [string_id, word_string, filename, start, end, capitalized, prefix, suffix, otherEntity, near_capitalized, class_label]
                 data.append(data_instance)
                 string_id = string_id + 1
+
+    # sanity check: make sure no marked up tags were accidentally thrown out
+    if num_of_labels(data) != count:
+        print("Error: A label did not make it through! Check file {} for potential errors.".format(filename))
     return data       
-    
+
+def is_near_capitalized(word, words, start, end):
+    near_capitalized = 0
+    if start > 0:
+        if len(words[start-1]) > 0 and words[start-1][0].isupper():
+            near_capitalized = 1
+
+    if end < len(words):
+        if len(words[end]) > 0 and words[end][0].isupper():
+            near_capitalized = 1
+
+    return near_capitalized
+
+def contains_punctuation_except_some(word):
+    '''
+    Returns true if the word contains a punctuation besides . or ' or - (a name might contain a . or ' or -, e.g. O'Dowd or J.F. Billings-Ladson)
+    '''
+    punctuation = [c for c in string.punctuation if c != '.' and c != '\'' and c != '-']
+    for char in word:
+        if char in punctuation:
+            return True
+    return False
+
+def num_of_labels(data):
+    '''
+    Returns the number of positive labels in the data
+    :param data: the list of data instances
+    :return: an int value of the number of positive labels in the data
+    '''
+    sum = 0
+    for instance in data:
+        sum += instance[-1]
+    return sum
+
 def split_string(word_string):
     '''
     Split string into words and punctuations except for string with tags and
@@ -107,7 +155,7 @@ def split_string(word_string):
     start_tag = '<pname>'
     end_tag = '</pname>'
     title_words = ['Dr.', 'Esq.', 'Hon.', 'Jr.', 'Mr.', 'Mrs.', 'Ms.', 'Messrs.',
-                   'Mmes.', 'Msgr.', 'Prof.', 'Rev.', 'Rt. Hon.', 'Sr.', 'St.']
+                   'Mmes.', 'Msgr.', 'Prof.', 'Rev.', 'Rt. Hon.', 'Sr.', 'St.', 'Sen.', 'Sens.']
     specials = ['U.S.'] # can extend this list
     start_tag_id = word_string.find(start_tag)
     end_tag_id = word_string.find(end_tag)
@@ -240,11 +288,14 @@ def isNumber(word):
 
 def isCapitalized(word_string):
     #print (word_string)
+    # nobiliary particles that aren't always capitalized (from Wikipedia: nobiliary particles)
+    particles = ['de', 'del', 'van', 'von', 'af', 'du', 'd', 'des', 'zu', 'do', 'dos', 'da', 'das', 'di', 'der']
+
     # check if the first letter in each word of a string is capitalized
     word_string = word_string.split()
     flag = 1 # capitalized
     for word in word_string:
-        if not word[0].isupper():
+        if not word[0].isupper() and not (word in particles or word[0] == '\''):
             flag = 0 # not capitalized
             break
     return flag
@@ -261,7 +312,8 @@ def checkPrefix(word):
     # check if word_string has a title
     prefixes = ['Dr.', 'Esq.', 'Hon.', 'Jr.', 'Mr.', 'Mrs.', 'Ms.', 'Prof.', 'Rev.',
                 'Sr.', 'St.', 'Dr', 'Esq', 'Hon', 'Jr', 'Mr', 'Mrs', 'Ms', 'Prof', 'Rev',
-                'Sr', 'St', 'Lady', 'Lord', 'Captain', 'President', 'General', 'Doctor', 'Professor',
+                'Sr', 'St', 'Sen.', 'Sen', 'Sens.', 'Sens', 'Lady', 'Lord', 'Captain', 'President',
+                'General', 'Doctor', 'Professor', 'Senator', 'Senators',
                 'Father', 'Reverend', 'Earl', 'Mister', 'Miss', 'Madam', 'Chancellor',
                 'Vice-President', 'Dean', 'Pope', 'Rabbi', 'Prince', 'Queen', 'Princess',
                 'director', 'composer', 'actor', 'actress', 'chief', 'detective', 'screenwriter',
@@ -331,9 +383,9 @@ def extractAndCreateCSV(file_names, csv_file):
                     print ('Skip file: ', filename)
                     continue
                 else:                
-                    df.to_csv(csv_file, mode = 'a', encoding = 'utf-8', header = False)
+                    df.to_csv(csv_file, mode = 'a', encoding = 'utf-8', header = False, index = False)
             else:
-                df.to_csv(csv_file, encoding = 'utf-8', header = True)
+                df.to_csv(csv_file, encoding = 'utf-8', header = True, index = False)
 
 def main():
     global TEST_CSV
