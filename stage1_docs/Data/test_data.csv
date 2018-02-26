@@ -1,0 +1,3061 @@
+string_id,string,document_id,start_index,end_index,capitalized,prefixed,suffixed,otherEntity,near_capitalized,class_label
+0,About,38_ATLANTIC_m.txt,0,1,1,0,0,0,0,0
+1,Call,38_ATLANTIC_m.txt,5,6,1,0,0,0,1,0
+2,Call Me,38_ATLANTIC_m.txt,5,7,1,0,0,0,0,0
+3,Me,38_ATLANTIC_m.txt,6,7,1,0,0,0,1,0
+4,Your,38_ATLANTIC_m.txt,8,9,1,0,0,0,1,0
+5,Your Name,38_ATLANTIC_m.txt,8,10,1,0,0,0,0,0
+6,Name,38_ATLANTIC_m.txt,9,10,1,0,0,0,1,0
+7,Luca,38_ATLANTIC_m.txt,11,12,1,0,0,0,1,0
+8,Luca Guadagnino,38_ATLANTIC_m.txt,11,13,1,0,1,0,0,1
+9,Luca Guadagnino 's,38_ATLANTIC_m.txt,11,14,1,0,0,0,0,0
+10,Guadagnino,38_ATLANTIC_m.txt,12,13,1,0,1,0,0,0
+11,Guadagnino 's,38_ATLANTIC_m.txt,12,14,1,0,0,0,0,0
+12,'s,38_ATLANTIC_m.txt,13,14,1,0,0,0,1,0
+13,André,38_ATLANTIC_m.txt,17,18,1,0,0,0,1,0
+14,André Aciman,38_ATLANTIC_m.txt,17,19,1,0,1,0,0,1
+15,André Aciman 's,38_ATLANTIC_m.txt,17,20,1,0,0,0,0,0
+16,Aciman,38_ATLANTIC_m.txt,18,19,1,0,1,0,0,0
+17,Aciman 's,38_ATLANTIC_m.txt,18,20,1,0,0,0,0,0
+18,'s,38_ATLANTIC_m.txt,19,20,1,0,0,0,1,0
+19,Elio,38_ATLANTIC_m.txt,35,36,1,0,0,0,0,1
+20,Timothée,38_ATLANTIC_m.txt,37,38,1,0,0,0,1,0
+21,Timothée Chalamet,38_ATLANTIC_m.txt,37,39,1,0,0,0,0,1
+22,Chalamet,38_ATLANTIC_m.txt,38,39,1,0,0,0,0,0
+23,He,38_ATLANTIC_m.txt,46,47,1,0,1,0,0,0
+24,He 's,38_ATLANTIC_m.txt,46,48,1,0,0,0,0,0
+25,'s,38_ATLANTIC_m.txt,47,48,1,0,0,0,1,0
+26,Oliver,38_ATLANTIC_m.txt,63,64,1,0,0,0,0,1
+27,Armie,38_ATLANTIC_m.txt,65,66,1,0,0,0,1,0
+28,Armie Hammer,38_ATLANTIC_m.txt,65,67,1,0,0,0,0,1
+29,Hammer,38_ATLANTIC_m.txt,66,67,1,0,0,0,0,0
+30,Chiara,38_ATLANTIC_m.txt,69,70,1,0,0,0,0,1
+31,Victoire,38_ATLANTIC_m.txt,71,72,1,0,0,0,1,0
+32,Victoire Du,38_ATLANTIC_m.txt,71,73,1,0,0,0,1,0
+33,Victoire Du Bois,38_ATLANTIC_m.txt,71,74,1,0,0,0,0,1
+34,Du,38_ATLANTIC_m.txt,72,73,1,0,0,0,1,0
+35,Du Bois,38_ATLANTIC_m.txt,72,74,1,0,0,0,0,0
+36,Bois,38_ATLANTIC_m.txt,73,74,1,0,0,0,1,0
+37,Who,38_ATLANTIC_m.txt,77,78,1,0,0,0,0,0
+38,Elio,38_ATLANTIC_m.txt,89,90,1,0,1,0,0,1
+39,Elio 's,38_ATLANTIC_m.txt,89,91,1,0,0,0,0,0
+40,'s,38_ATLANTIC_m.txt,90,91,1,0,0,0,0,0
+41,A,38_ATLANTIC_m.txt,94,95,1,0,0,0,0,0
+42,American,38_ATLANTIC_m.txt,96,97,1,0,0,0,0,0
+43,Oliver,38_ATLANTIC_m.txt,100,101,1,0,0,0,0,1
+44,Hellenistic,38_ATLANTIC_m.txt,108,109,1,0,0,1,0,0
+45,'s,38_ATLANTIC_m.txt,114,115,1,0,0,0,0,0
+46,'s,38_ATLANTIC_m.txt,120,121,1,0,0,0,0,0
+47,Elio,38_ATLANTIC_m.txt,122,123,1,0,1,0,0,1
+48,Elio 's,38_ATLANTIC_m.txt,122,124,1,0,0,0,0,0
+49,'s,38_ATLANTIC_m.txt,123,124,1,0,0,0,0,0
+50,The,38_ATLANTIC_m.txt,131,132,1,0,0,0,0,0
+51,Psychedelic,38_ATLANTIC_m.txt,137,138,1,0,0,1,1,0
+52,Psychedelic Furs',38_ATLANTIC_m.txt,137,139,1,0,0,1,0,0
+53,Furs',38_ATLANTIC_m.txt,138,139,1,0,0,0,1,0
+54,Love,38_ATLANTIC_m.txt,142,143,1,0,0,0,1,0
+55,Love My,38_ATLANTIC_m.txt,142,144,1,0,0,0,1,0
+56,Love My Way,38_ATLANTIC_m.txt,142,145,1,0,0,0,0,0
+57,My,38_ATLANTIC_m.txt,143,144,1,0,0,0,1,0
+58,My Way,38_ATLANTIC_m.txt,143,145,1,0,0,0,1,0
+59,Way,38_ATLANTIC_m.txt,144,145,1,0,0,0,1,0
+60,Elio,38_ATLANTIC_m.txt,148,149,1,0,1,0,0,1
+61,Elio 's,38_ATLANTIC_m.txt,148,150,1,0,0,0,0,0
+62,'s,38_ATLANTIC_m.txt,149,150,1,0,0,0,0,0
+63,At,38_ATLANTIC_m.txt,155,156,1,0,0,0,0,0
+64,Elio,38_ATLANTIC_m.txt,158,159,1,0,0,0,0,1
+65,Oliver,38_ATLANTIC_m.txt,172,173,1,0,0,1,0,1
+66,He,38_ATLANTIC_m.txt,174,175,1,0,0,0,0,0
+67,And,38_ATLANTIC_m.txt,182,183,1,0,0,0,0,0
+68,Elio,38_ATLANTIC_m.txt,184,185,1,0,0,0,0,1
+69,Oliver,38_ATLANTIC_m.txt,186,187,1,0,0,0,0,1
+70,Released,38_ATLANTIC_m.txt,229,230,1,0,0,0,0,0
+71,'s,38_ATLANTIC_m.txt,237,238,1,0,0,0,1,0
+72,'s November,38_ATLANTIC_m.txt,237,239,1,0,0,0,0,0
+73,November,38_ATLANTIC_m.txt,238,239,1,0,0,0,0,0
+74,Converse,38_ATLANTIC_m.txt,255,256,1,0,0,0,0,0
+75,Oliver,38_ATLANTIC_m.txt,258,259,1,0,0,0,0,1
+76,But,38_ATLANTIC_m.txt,266,267,1,0,0,0,0,0
+77,Though,38_ATLANTIC_m.txt,275,276,1,0,0,0,0,0
+78,Elio,38_ATLANTIC_m.txt,280,281,1,0,0,0,0,1
+79,Oliver,38_ATLANTIC_m.txt,282,283,1,0,0,0,0,1
+80,Call,38_ATLANTIC_m.txt,294,295,1,0,0,0,1,0
+81,Call Me,38_ATLANTIC_m.txt,294,296,1,0,0,0,0,0
+82,Me,38_ATLANTIC_m.txt,295,296,1,0,0,0,1,0
+83,Your,38_ATLANTIC_m.txt,297,298,1,0,0,0,1,0
+84,Your Name,38_ATLANTIC_m.txt,297,299,1,0,0,0,0,0
+85,Name,38_ATLANTIC_m.txt,298,299,1,0,0,0,1,0
+86,It,38_ATLANTIC_m.txt,300,301,1,0,1,0,0,0
+87,It 's,38_ATLANTIC_m.txt,300,302,1,0,0,0,0,0
+88,'s,38_ATLANTIC_m.txt,301,302,1,0,0,0,1,0
+89,'s,38_ATLANTIC_m.txt,311,312,1,0,0,0,0,0
+0,Last,8_ATLANTIC_m.txt,0,1,1,0,0,0,0,0
+1,The,8_ATLANTIC_m.txt,3,4,1,0,0,0,1,0
+2,The Washington,8_ATLANTIC_m.txt,3,5,1,0,0,0,1,0
+3,The Washington Post,8_ATLANTIC_m.txt,3,6,1,0,0,0,0,0
+4,Washington,8_ATLANTIC_m.txt,4,5,1,0,0,1,1,0
+5,Washington Post,8_ATLANTIC_m.txt,4,6,1,0,0,1,1,0
+6,Post,8_ATLANTIC_m.txt,5,6,1,0,0,0,1,0
+7,President,8_ATLANTIC_m.txt,8,9,1,0,0,0,0,0
+8,President Donald,8_ATLANTIC_m.txt,8,10,1,0,0,0,1,0
+9,President Donald Trump,8_ATLANTIC_m.txt,8,11,1,0,0,0,0,0
+10,Donald,8_ATLANTIC_m.txt,9,10,1,1,0,0,1,0
+11,Donald Trump,8_ATLANTIC_m.txt,9,11,1,1,0,0,1,1
+12,Trump,8_ATLANTIC_m.txt,10,11,1,0,0,0,0,0
+13,Indian,8_ATLANTIC_m.txt,16,17,1,0,0,0,1,0
+14,Indian Prime,8_ATLANTIC_m.txt,16,18,1,0,0,0,1,0
+15,Indian Prime Minister,8_ATLANTIC_m.txt,16,19,1,0,0,0,0,0
+16,Indian Prime Minister Narendra,8_ATLANTIC_m.txt,16,20,1,0,0,0,1,0
+17,Prime,8_ATLANTIC_m.txt,17,18,1,0,0,0,1,0
+18,Prime Minister,8_ATLANTIC_m.txt,17,19,1,0,0,0,1,0
+19,Prime Minister Narendra,8_ATLANTIC_m.txt,17,20,1,0,0,0,1,0
+20,Prime Minister Narendra Modi,8_ATLANTIC_m.txt,17,21,1,0,0,0,1,0
+21,Minister,8_ATLANTIC_m.txt,18,19,1,0,0,0,1,0
+22,Minister Narendra,8_ATLANTIC_m.txt,18,20,1,0,0,0,1,0
+23,Minister Narendra Modi,8_ATLANTIC_m.txt,18,21,1,0,0,0,1,0
+24,Narendra,8_ATLANTIC_m.txt,19,20,1,0,0,0,1,0
+25,Narendra Modi,8_ATLANTIC_m.txt,19,21,1,0,0,0,1,1
+26,Modi,8_ATLANTIC_m.txt,20,21,1,0,0,0,0,0
+27,Soon,8_ATLANTIC_m.txt,22,23,1,0,0,0,0,0
+28,Disturbingly,8_ATLANTIC_m.txt,40,41,1,0,0,0,0,0
+29,Trump,8_ATLANTIC_m.txt,45,46,1,0,1,0,0,1
+30,Trump 's,8_ATLANTIC_m.txt,45,47,1,0,0,0,0,0
+31,'s,8_ATLANTIC_m.txt,46,47,1,0,0,0,0,0
+32,Indian,8_ATLANTIC_m.txt,70,71,1,0,0,0,0,0
+33,While,8_ATLANTIC_m.txt,76,77,1,0,0,0,0,0
+34,Washington,8_ATLANTIC_m.txt,80,81,1,0,0,0,0,0
+35,New,8_ATLANTIC_m.txt,82,83,1,0,0,0,1,0
+36,New Delhi,8_ATLANTIC_m.txt,82,84,1,0,0,0,0,0
+37,Delhi,8_ATLANTIC_m.txt,83,84,1,0,0,0,1,0
+38,China,8_ATLANTIC_m.txt,101,102,1,0,0,0,0,0
+39,Trump,8_ATLANTIC_m.txt,110,111,1,0,0,0,0,1
+40,In,8_ATLANTIC_m.txt,117,118,1,0,0,0,0,0
+41,The,8_ATLANTIC_m.txt,121,122,1,0,0,0,1,0
+42,The Problem,8_ATLANTIC_m.txt,121,123,1,0,0,0,1,0
+43,The Problem With,8_ATLANTIC_m.txt,121,124,1,0,0,0,0,0
+44,The Problem With Apu,8_ATLANTIC_m.txt,121,125,1,0,0,0,0,0
+45,Problem,8_ATLANTIC_m.txt,122,123,1,0,0,1,1,0
+46,Problem With,8_ATLANTIC_m.txt,122,124,1,0,0,1,1,0
+47,Problem With Apu,8_ATLANTIC_m.txt,122,125,1,0,0,1,1,0
+48,With,8_ATLANTIC_m.txt,123,124,1,0,0,0,1,0
+49,With Apu,8_ATLANTIC_m.txt,123,125,1,0,0,0,1,0
+50,Apu,8_ATLANTIC_m.txt,124,125,1,0,0,0,1,1
+51,The,8_ATLANTIC_m.txt,140,141,1,0,0,1,1,0
+52,The Simpsons,8_ATLANTIC_m.txt,140,142,1,0,0,1,0,0
+53,Simpsons,8_ATLANTIC_m.txt,141,142,1,0,0,1,1,0
+54,Sakina,8_ATLANTIC_m.txt,145,146,1,1,0,0,1,0
+55,Sakina Jaffrey,8_ATLANTIC_m.txt,145,147,1,1,0,0,0,1
+56,Jaffrey,8_ATLANTIC_m.txt,146,147,1,0,0,0,0,0
+57,South,8_ATLANTIC_m.txt,159,160,1,0,0,0,1,0
+58,South Asian,8_ATLANTIC_m.txt,159,161,1,0,0,0,0,0
+59,Asian,8_ATLANTIC_m.txt,160,161,1,0,0,0,1,0
+60,For,8_ATLANTIC_m.txt,164,165,1,0,0,0,0,0
+61,V,8_ATLANTIC_m.txt,184,185,1,0,1,0,0,0
+62,V 's,8_ATLANTIC_m.txt,184,186,1,0,0,0,0,0
+63,'s,8_ATLANTIC_m.txt,185,186,1,0,0,0,1,0
+64,A's.,8_ATLANTIC_m.txt,192,193,1,0,0,0,1,0
+65,A's. It,8_ATLANTIC_m.txt,192,194,1,0,0,0,0,0
+66,It,8_ATLANTIC_m.txt,193,194,1,0,0,0,1,0
+67,Of,8_ATLANTIC_m.txt,211,212,1,0,0,0,0,0
+68,University,8_ATLANTIC_m.txt,218,219,1,0,0,1,0,0
+69,Oregon,8_ATLANTIC_m.txt,220,221,1,0,0,0,0,0
+70,Indian,8_ATLANTIC_m.txt,228,229,1,0,0,0,0,0
+71,As,8_ATLANTIC_m.txt,232,233,1,0,0,0,0,0
+72,Shilpa,8_ATLANTIC_m.txt,238,239,1,0,0,0,1,0
+73,Shilpa Davé,8_ATLANTIC_m.txt,238,240,1,0,1,0,0,1
+74,Davé,8_ATLANTIC_m.txt,239,240,1,0,1,0,0,0
+75,Indian,8_ATLANTIC_m.txt,244,245,1,0,0,0,1,0
+76,Indian Accents,8_ATLANTIC_m.txt,244,246,1,0,0,0,0,0
+77,Accents,8_ATLANTIC_m.txt,245,246,1,0,0,0,1,0
+78,Trump,8_ATLANTIC_m.txt,257,258,1,0,1,0,0,1
+79,Trump 's,8_ATLANTIC_m.txt,257,259,1,0,0,0,0,0
+80,'s,8_ATLANTIC_m.txt,258,259,1,0,0,0,0,0
+81,America,8_ATLANTIC_m.txt,268,269,1,0,1,0,0,0
+82,America 's,8_ATLANTIC_m.txt,268,270,1,0,0,0,0,0
+83,'s,8_ATLANTIC_m.txt,269,270,1,0,0,0,1,0
+84,South,8_ATLANTIC_m.txt,273,274,1,0,0,0,1,0
+85,South Asian,8_ATLANTIC_m.txt,273,275,1,0,0,0,0,0
+86,Asian,8_ATLANTIC_m.txt,274,275,1,0,0,0,1,0
+87,For,8_ATLANTIC_m.txt,277,278,1,0,0,0,0,0
+88,South,8_ATLANTIC_m.txt,300,301,1,0,0,0,1,0
+89,South Asians,8_ATLANTIC_m.txt,300,302,1,0,0,0,0,0
+90,Asians,8_ATLANTIC_m.txt,301,302,1,0,0,0,1,0
+91,Due,8_ATLANTIC_m.txt,303,304,1,0,0,0,0,0
+92,South,8_ATLANTIC_m.txt,309,310,1,0,0,0,1,0
+93,South Asian,8_ATLANTIC_m.txt,309,311,1,0,0,0,1,0
+94,South Asian Americans,8_ATLANTIC_m.txt,309,312,1,0,0,0,0,0
+95,Asian,8_ATLANTIC_m.txt,310,311,1,0,0,0,1,0
+96,Asian Americans,8_ATLANTIC_m.txt,310,312,1,0,0,0,1,0
+97,Americans,8_ATLANTIC_m.txt,311,312,1,0,0,0,1,0
+98,South,8_ATLANTIC_m.txt,324,325,1,0,0,0,1,0
+99,South Asians,8_ATLANTIC_m.txt,324,326,1,0,0,0,0,0
+100,Asians,8_ATLANTIC_m.txt,325,326,1,0,0,0,1,0
+101,Both,8_ATLANTIC_m.txt,330,331,1,0,0,0,0,0
+102,Both Davé,8_ATLANTIC_m.txt,330,332,1,0,0,0,0,0
+103,Davé,8_ATLANTIC_m.txt,331,332,1,0,0,0,1,1
+104,The,8_ATLANTIC_m.txt,333,334,1,0,0,0,1,0
+105,The Problem,8_ATLANTIC_m.txt,333,335,1,0,0,0,1,0
+106,The Problem With,8_ATLANTIC_m.txt,333,336,1,0,0,0,0,0
+107,The Problem With Apu,8_ATLANTIC_m.txt,333,337,1,0,0,0,0,0
+108,Problem,8_ATLANTIC_m.txt,334,335,1,0,0,1,1,0
+109,Problem With,8_ATLANTIC_m.txt,334,336,1,0,0,1,1,0
+110,Problem With Apu,8_ATLANTIC_m.txt,334,337,1,0,0,1,1,0
+111,With,8_ATLANTIC_m.txt,335,336,1,0,0,0,1,0
+112,With Apu,8_ATLANTIC_m.txt,335,337,1,0,0,0,1,0
+113,Apu,8_ATLANTIC_m.txt,336,337,1,0,0,0,1,1
+114,In,8_ATLANTIC_m.txt,350,351,1,0,0,0,0,0
+115,American,8_ATLANTIC_m.txt,353,354,1,0,0,0,0,0
+116,America,8_ATLANTIC_m.txt,364,365,1,0,1,0,0,0
+117,America 's,8_ATLANTIC_m.txt,364,366,1,0,0,0,0,0
+118,'s,8_ATLANTIC_m.txt,365,366,1,0,0,0,1,0
+119,This,8_ATLANTIC_m.txt,375,376,1,0,0,0,0,0
+120,In,8_ATLANTIC_m.txt,385,386,1,0,0,0,0,0
+121,The,8_ATLANTIC_m.txt,389,390,1,0,0,0,1,0
+122,The Party,8_ATLANTIC_m.txt,389,391,1,0,0,0,0,0
+123,Party,8_ATLANTIC_m.txt,390,391,1,0,0,1,1,0
+124,Peter,8_ATLANTIC_m.txt,392,393,1,0,0,0,1,0
+125,Peter Sellers,8_ATLANTIC_m.txt,392,394,1,0,0,0,0,1
+126,Sellers,8_ATLANTIC_m.txt,393,394,1,0,0,0,0,0
+127,South,8_ATLANTIC_m.txt,401,402,1,0,0,0,1,0
+128,South Asian,8_ATLANTIC_m.txt,401,403,1,0,0,0,0,0
+129,Asian,8_ATLANTIC_m.txt,402,403,1,0,0,0,1,0
+130,Indian,8_ATLANTIC_m.txt,410,411,1,0,0,0,0,0
+131,Hrundi,8_ATLANTIC_m.txt,412,413,1,1,0,0,1,0
+132,Hrundi V.,8_ATLANTIC_m.txt,412,414,1,1,0,0,1,0
+133,Hrundi V. Bakshi,8_ATLANTIC_m.txt,412,415,1,1,0,0,0,1
+134,V.,8_ATLANTIC_m.txt,413,414,1,0,0,0,1,0
+135,V. Bakshi,8_ATLANTIC_m.txt,413,415,1,0,0,0,0,0
+136,Bakshi,8_ATLANTIC_m.txt,414,415,1,0,0,0,1,0
+137,Fisher,8_ATLANTIC_m.txt,416,417,1,0,0,0,1,0
+138,Fisher Stevens,8_ATLANTIC_m.txt,416,418,1,0,0,0,0,1
+139,Stevens,8_ATLANTIC_m.txt,417,418,1,0,0,0,0,0
+140,Ben,8_ATLANTIC_m.txt,422,423,1,0,0,0,1,0
+141,Ben Jabituya,8_ATLANTIC_m.txt,422,424,1,0,0,0,0,1
+142,Jabituya,8_ATLANTIC_m.txt,423,424,1,0,0,0,0,0
+143,Short,8_ATLANTIC_m.txt,428,429,1,0,0,0,1,0
+144,Short Circuit,8_ATLANTIC_m.txt,428,430,1,0,0,0,0,0
+145,Circuit,8_ATLANTIC_m.txt,429,430,1,0,0,0,1,0
+146,More,8_ATLANTIC_m.txt,431,432,1,0,0,0,0,0
+147,Ashton,8_ATLANTIC_m.txt,434,435,1,0,0,0,1,0
+148,Ashton Kutcher,8_ATLANTIC_m.txt,434,436,1,0,0,0,0,1
+149,Kutcher,8_ATLANTIC_m.txt,435,436,1,0,0,0,0,0
+150,Raj,8_ATLANTIC_m.txt,445,446,1,0,0,0,0,1
+151,Popchips,8_ATLANTIC_m.txt,451,452,1,0,0,0,0,0
+152,As,8_ATLANTIC_m.txt,454,455,1,0,0,0,1,0
+153,As The,8_ATLANTIC_m.txt,454,456,1,0,0,0,1,0
+154,As The Problem,8_ATLANTIC_m.txt,454,457,1,0,0,0,1,0
+155,As The Problem With,8_ATLANTIC_m.txt,454,458,1,0,0,0,0,0
+156,The,8_ATLANTIC_m.txt,455,456,1,0,0,0,1,0
+157,The Problem,8_ATLANTIC_m.txt,455,457,1,0,0,0,1,0
+158,The Problem With,8_ATLANTIC_m.txt,455,458,1,0,0,0,1,0
+159,The Problem With Apu,8_ATLANTIC_m.txt,455,459,1,0,0,0,1,0
+160,Problem,8_ATLANTIC_m.txt,456,457,1,0,0,1,1,0
+161,Problem With,8_ATLANTIC_m.txt,456,458,1,0,0,1,1,0
+162,Problem With Apu,8_ATLANTIC_m.txt,456,459,1,0,0,1,1,0
+163,With,8_ATLANTIC_m.txt,457,458,1,0,0,0,1,0
+164,With Apu,8_ATLANTIC_m.txt,457,459,1,0,0,0,1,0
+165,Apu,8_ATLANTIC_m.txt,458,459,1,0,0,0,1,1
+166,Hari,8_ATLANTIC_m.txt,462,463,1,0,0,0,1,0
+167,Hari Kondabolu,8_ATLANTIC_m.txt,462,464,1,0,0,0,0,1
+168,Kondabolu,8_ATLANTIC_m.txt,463,464,1,0,0,0,0,0
+169,Apu,8_ATLANTIC_m.txt,466,467,1,0,0,0,0,1
+170,Hank,8_ATLANTIC_m.txt,473,474,1,1,0,0,1,0
+171,Hank Azaria,8_ATLANTIC_m.txt,473,475,1,1,0,0,0,1
+172,Azaria,8_ATLANTIC_m.txt,474,475,1,0,0,0,0,0
+173,'s,8_ATLANTIC_m.txt,480,481,1,0,0,0,0,0
+174,South,8_ATLANTIC_m.txt,498,499,1,0,0,0,1,0
+175,South Asian,8_ATLANTIC_m.txt,498,500,1,0,0,0,0,0
+176,Asian,8_ATLANTIC_m.txt,499,500,1,0,0,0,1,0
+177,Indian,8_ATLANTIC_m.txt,508,509,1,0,0,0,0,0
+0,Amazon,4_ATLANTIC_m.txt,0,1,1,0,1,0,0,0
+1,Amazon 's,4_ATLANTIC_m.txt,0,2,1,0,0,0,0,0
+2,'s,4_ATLANTIC_m.txt,1,2,1,0,0,0,1,0
+3,July,4_ATLANTIC_m.txt,22,23,1,0,0,1,0,0
+4,Spike,4_ATLANTIC_m.txt,28,29,1,0,0,0,1,0
+5,Spike Lee,4_ATLANTIC_m.txt,28,30,1,0,1,0,0,1
+6,Spike Lee 's,4_ATLANTIC_m.txt,28,31,1,0,0,0,1,0
+7,Spike Lee 's Chi,4_ATLANTIC_m.txt,28,32,1,0,0,0,0,0
+8,Lee,4_ATLANTIC_m.txt,29,30,1,0,1,0,0,0
+9,Lee 's,4_ATLANTIC_m.txt,29,31,1,0,0,0,1,0
+10,Lee 's Chi,4_ATLANTIC_m.txt,29,32,1,0,0,0,0,0
+11,'s,4_ATLANTIC_m.txt,30,31,1,0,0,0,1,0
+12,'s Chi,4_ATLANTIC_m.txt,30,32,1,0,0,0,1,0
+13,Chi,4_ATLANTIC_m.txt,31,32,1,0,0,0,0,0
+14,Raq,4_ATLANTIC_m.txt,33,34,1,0,0,0,0,0
+15,Amazon,4_ATLANTIC_m.txt,39,40,1,0,0,0,1,0
+16,Amazon Original,4_ATLANTIC_m.txt,39,41,1,0,0,0,1,0
+17,Amazon Original Movie,4_ATLANTIC_m.txt,39,42,1,0,0,0,0,0
+18,Original,4_ATLANTIC_m.txt,40,41,1,0,0,0,1,0
+19,Original Movie,4_ATLANTIC_m.txt,40,42,1,0,0,0,1,0
+20,Movie,4_ATLANTIC_m.txt,41,42,1,0,0,0,1,0
+21,Quickly,4_ATLANTIC_m.txt,44,45,1,0,0,0,0,0
+22,Amazon,4_ATLANTIC_m.txt,47,48,1,0,0,0,1,0
+23,Amazon Studios,4_ATLANTIC_m.txt,47,49,1,0,0,0,0,0
+24,Studios,4_ATLANTIC_m.txt,48,49,1,0,0,0,1,0
+25,Roy,4_ATLANTIC_m.txt,53,54,1,0,0,0,1,0
+26,Roy Price,4_ATLANTIC_m.txt,53,55,1,0,0,0,0,1
+27,Price,4_ATLANTIC_m.txt,54,55,1,0,0,0,0,0
+28,,4_ATLANTIC_m.txt,71,72,1,0,0,1,0,0
+29, '80s,4_ATLANTIC_m.txt,71,73,1,0,0,1,0,0
+30,'80s,4_ATLANTIC_m.txt,72,73,1,0,0,0,0,0
+31,,4_ATLANTIC_m.txt,74,75,1,0,0,0,0,0
+32, '90s,4_ATLANTIC_m.txt,74,76,1,0,0,0,0,0
+33,'90s,4_ATLANTIC_m.txt,75,76,1,0,0,0,0,0
+34,In,4_ATLANTIC_m.txt,82,83,1,0,0,0,0,0
+35,Whit,4_ATLANTIC_m.txt,87,88,1,0,0,0,1,0
+36,Whit Stillman,4_ATLANTIC_m.txt,87,89,1,0,0,0,0,1
+37,Stillman,4_ATLANTIC_m.txt,88,89,1,0,0,0,0,0
+38,Love,4_ATLANTIC_m.txt,90,91,1,0,0,0,0,0
+39,Friendship,4_ATLANTIC_m.txt,92,93,1,0,0,0,0,0
+40,Todd,4_ATLANTIC_m.txt,95,96,1,0,0,0,1,0
+41,Todd Solondz,4_ATLANTIC_m.txt,95,97,1,0,0,0,0,1
+42,Solondz,4_ATLANTIC_m.txt,96,97,1,0,0,0,0,0
+43,Wiener,4_ATLANTIC_m.txt,98,99,1,0,0,0,0,0
+44,Dog,4_ATLANTIC_m.txt,100,101,1,0,0,0,0,0
+45,Jim,4_ATLANTIC_m.txt,103,104,1,0,0,0,1,0
+46,Jim Jarmusch,4_ATLANTIC_m.txt,103,105,1,0,0,0,0,1
+47,Jarmusch,4_ATLANTIC_m.txt,104,105,1,0,0,0,0,0
+48,Paterson,4_ATLANTIC_m.txt,106,107,1,0,0,0,0,0
+49,Woody,4_ATLANTIC_m.txt,119,120,1,0,0,0,1,0
+50,Woody Allen,4_ATLANTIC_m.txt,119,121,1,0,0,0,0,1
+51,Allen,4_ATLANTIC_m.txt,120,121,1,0,0,0,0,0
+52,Allen,4_ATLANTIC_m.txt,122,123,1,0,0,0,0,1
+53,Sony,4_ATLANTIC_m.txt,132,133,1,0,0,0,1,0
+54,Sony Pictures,4_ATLANTIC_m.txt,132,134,1,0,0,0,1,0
+55,Sony Pictures Classics,4_ATLANTIC_m.txt,132,135,1,0,0,0,0,0
+56,Pictures,4_ATLANTIC_m.txt,133,134,1,0,0,0,1,0
+57,Pictures Classics,4_ATLANTIC_m.txt,133,135,1,0,0,0,1,0
+58,Classics,4_ATLANTIC_m.txt,134,135,1,0,0,0,1,0
+59,But,4_ATLANTIC_m.txt,140,141,1,0,0,0,0,0
+60,Price,4_ATLANTIC_m.txt,144,145,1,0,0,0,0,1
+61,Oscar,4_ATLANTIC_m.txt,149,150,1,0,0,1,0,0
+62,Allen,4_ATLANTIC_m.txt,162,163,1,0,1,0,0,1
+63,Allen 's,4_ATLANTIC_m.txt,162,164,1,0,0,0,0,0
+64,'s,4_ATLANTIC_m.txt,163,164,1,0,0,0,0,0
+65,Café,4_ATLANTIC_m.txt,166,167,1,0,0,0,1,0
+66,Café Society,4_ATLANTIC_m.txt,166,168,1,0,0,0,0,0
+67,Society,4_ATLANTIC_m.txt,167,168,1,0,0,0,1,0
+68,Hollywood,4_ATLANTIC_m.txt,175,176,1,0,0,0,0,0
+69,At,4_ATLANTIC_m.txt,177,178,1,0,0,0,0,0
+70,How,4_ATLANTIC_m.txt,222,223,1,0,0,0,0,0
+71,Price,4_ATLANTIC_m.txt,227,228,1,0,0,0,0,1
+72,Amazon,4_ATLANTIC_m.txt,230,231,1,0,0,0,0,0
+73,October,4_ATLANTIC_m.txt,232,233,1,0,0,0,0,0
+74,Allen,4_ATLANTIC_m.txt,243,244,1,0,1,0,0,1
+75,Allen 's,4_ATLANTIC_m.txt,243,245,1,0,0,0,0,0
+76,'s,4_ATLANTIC_m.txt,244,245,1,0,0,0,0,0
+77,A,4_ATLANTIC_m.txt,251,252,1,0,0,0,1,0
+78,A Rainy,4_ATLANTIC_m.txt,251,253,1,0,0,0,1,0
+79,A Rainy Day,4_ATLANTIC_m.txt,251,254,1,0,0,0,0,0
+80,Rainy,4_ATLANTIC_m.txt,252,253,1,0,0,0,1,0
+81,Rainy Day,4_ATLANTIC_m.txt,252,254,1,0,0,0,1,0
+82,Day,4_ATLANTIC_m.txt,253,254,1,0,0,0,1,0
+83,New,4_ATLANTIC_m.txt,255,256,1,0,0,1,1,0
+84,New York,4_ATLANTIC_m.txt,255,257,1,0,0,1,0,0
+85,York,4_ATLANTIC_m.txt,256,257,1,0,0,0,1,0
+86,As,4_ATLANTIC_m.txt,281,282,1,0,0,0,1,0
+87,As Hollywood,4_ATLANTIC_m.txt,281,283,1,0,0,0,0,0
+88,Hollywood,4_ATLANTIC_m.txt,282,283,1,0,0,0,1,0
+89,Harvey,4_ATLANTIC_m.txt,293,294,1,0,0,1,1,0
+90,Harvey Weinstein,4_ATLANTIC_m.txt,293,295,1,0,0,1,0,1
+91,Weinstein,4_ATLANTIC_m.txt,294,295,1,0,0,0,0,0
+92,Amazon,4_ATLANTIC_m.txt,310,311,1,0,0,0,0,0
+93,The,4_ATLANTIC_m.txt,334,335,1,0,0,0,0,0
+94,'s,4_ATLANTIC_m.txt,336,337,1,0,0,0,0,0
+95,Allen,4_ATLANTIC_m.txt,338,339,1,0,0,0,0,1
+96,Café,4_ATLANTIC_m.txt,341,342,1,0,0,0,1,0
+97,Café Society,4_ATLANTIC_m.txt,341,343,1,0,0,0,0,0
+98,Society,4_ATLANTIC_m.txt,342,343,1,0,0,0,1,0
+99,Wonder,4_ATLANTIC_m.txt,344,345,1,0,0,0,1,0
+100,Wonder Wheel,4_ATLANTIC_m.txt,344,346,1,0,0,0,0,0
+101,Wheel,4_ATLANTIC_m.txt,345,346,1,0,0,0,1,0
+102,TV,4_ATLANTIC_m.txt,362,363,1,0,0,1,0,0
+103,Amazon,4_ATLANTIC_m.txt,368,369,1,0,0,0,0,0
+104,Crisis,4_ATLANTIC_m.txt,370,371,1,0,0,0,0,0
+105,Six,4_ATLANTIC_m.txt,372,373,1,0,0,1,1,0
+106,Six Scenes,4_ATLANTIC_m.txt,372,374,1,0,0,1,0,0
+107,Scenes,4_ATLANTIC_m.txt,373,374,1,0,0,0,1,0
+108,Beyond,4_ATLANTIC_m.txt,386,387,1,0,0,0,0,0
+109,Amazon,4_ATLANTIC_m.txt,389,390,1,0,0,0,0,0
+110,Allen,4_ATLANTIC_m.txt,398,399,1,0,0,0,0,1
+111,A,4_ATLANTIC_m.txt,401,402,1,0,0,0,1,0
+112,A Rainy,4_ATLANTIC_m.txt,401,403,1,0,0,0,1,0
+113,A Rainy Day,4_ATLANTIC_m.txt,401,404,1,0,0,0,0,0
+114,Rainy,4_ATLANTIC_m.txt,402,403,1,0,0,0,1,0
+115,Rainy Day,4_ATLANTIC_m.txt,402,404,1,0,0,0,1,0
+116,Day,4_ATLANTIC_m.txt,403,404,1,0,0,0,1,0
+117,New,4_ATLANTIC_m.txt,405,406,1,0,0,1,1,0
+118,New York,4_ATLANTIC_m.txt,405,407,1,0,0,1,0,0
+119,York,4_ATLANTIC_m.txt,406,407,1,0,0,0,1,0
+120,Price,4_ATLANTIC_m.txt,411,412,1,0,0,0,0,1
+121,The,4_ATLANTIC_m.txt,416,417,1,0,0,0,1,0
+122,The Hollywood,4_ATLANTIC_m.txt,416,418,1,0,0,0,1,0
+123,The Hollywood Reporter,4_ATLANTIC_m.txt,416,419,1,0,0,0,0,0
+124,Hollywood,4_ATLANTIC_m.txt,417,418,1,0,0,1,1,0
+125,Hollywood Reporter,4_ATLANTIC_m.txt,417,419,1,0,0,1,1,0
+126,Reporter,4_ATLANTIC_m.txt,418,419,1,0,0,0,1,0
+127,With,4_ATLANTIC_m.txt,420,421,1,0,0,0,0,0
+128,Amazon,4_ATLANTIC_m.txt,428,429,1,0,0,0,0,0
+129,Allen,4_ATLANTIC_m.txt,435,436,1,0,0,0,0,1
+130,Price,4_ATLANTIC_m.txt,441,442,1,0,1,0,0,1
+131,Price 's,4_ATLANTIC_m.txt,441,443,1,0,0,0,0,0
+132,'s,4_ATLANTIC_m.txt,442,443,1,0,0,0,0,0
+133,Allen,4_ATLANTIC_m.txt,445,446,1,0,0,0,0,1
+134,TV,4_ATLANTIC_m.txt,458,459,1,0,0,0,0,0
+135,Hollywood,4_ATLANTIC_m.txt,470,471,1,0,0,1,0,0
+136,When,4_ATLANTIC_m.txt,479,480,1,0,0,0,1,0
+137,When Amazon,4_ATLANTIC_m.txt,479,481,1,0,0,0,0,0
+138,Amazon,4_ATLANTIC_m.txt,480,481,1,0,0,0,1,0
+139,Allen,4_ATLANTIC_m.txt,485,486,1,0,0,0,0,1
+140,Crisis,4_ATLANTIC_m.txt,492,493,1,0,0,0,0,0
+141,Six,4_ATLANTIC_m.txt,494,495,1,0,0,1,1,0
+142,Six Scenes,4_ATLANTIC_m.txt,494,496,1,0,0,1,0,0
+143,Scenes,4_ATLANTIC_m.txt,495,496,1,0,0,0,1,0
+144,Dylan,4_ATLANTIC_m.txt,511,512,1,0,0,0,1,0
+145,Dylan Farrow,4_ATLANTIC_m.txt,511,513,1,0,0,0,0,1
+146,Farrow,4_ATLANTIC_m.txt,512,513,1,0,0,0,0,0
+147,That,4_ATLANTIC_m.txt,514,515,1,0,0,0,0,0
+148,Allen,4_ATLANTIC_m.txt,540,541,1,0,0,0,0,1
+149,Farrow,4_ATLANTIC_m.txt,549,550,1,0,1,0,0,1
+150,Farrow 's,4_ATLANTIC_m.txt,549,551,1,0,0,0,0,0
+151,'s,4_ATLANTIC_m.txt,550,551,1,0,0,0,0,0
+0,Senate,136_THEHILL_m.txt,0,1,1,0,0,0,1,0
+1,Senate Minority,136_THEHILL_m.txt,0,2,1,0,0,0,1,0
+2,Senate Minority Leader,136_THEHILL_m.txt,0,3,1,0,0,0,0,0
+3,Senate Minority Leader Charles,136_THEHILL_m.txt,0,4,1,0,0,0,1,0
+4,Minority,136_THEHILL_m.txt,1,2,1,0,0,0,1,0
+5,Minority Leader,136_THEHILL_m.txt,1,3,1,0,0,0,1,0
+6,Minority Leader Charles,136_THEHILL_m.txt,1,4,1,0,0,0,1,0
+7,Minority Leader Charles Schumer,136_THEHILL_m.txt,1,5,1,0,1,0,1,0
+8,Leader,136_THEHILL_m.txt,2,3,1,0,0,0,1,0
+9,Leader Charles,136_THEHILL_m.txt,2,4,1,0,0,0,1,0
+10,Leader Charles Schumer,136_THEHILL_m.txt,2,5,1,0,1,0,1,0
+11,Leader Charles Schumer 's,136_THEHILL_m.txt,2,6,1,0,0,0,1,0
+12,Charles,136_THEHILL_m.txt,3,4,1,0,0,0,1,0
+13,Charles Schumer,136_THEHILL_m.txt,3,5,1,0,1,0,1,1
+14,Charles Schumer 's,136_THEHILL_m.txt,3,6,1,0,0,0,1,0
+15,Schumer,136_THEHILL_m.txt,4,5,1,0,1,0,0,0
+16,Schumer 's,136_THEHILL_m.txt,4,6,1,0,0,0,0,0
+17,'s,136_THEHILL_m.txt,5,6,1,0,0,0,1,0
+18,D,136_THEHILL_m.txt,7,8,1,0,0,0,0,0
+19,N,136_THEHILL_m.txt,9,10,1,0,0,0,0,0
+20,Y,136_THEHILL_m.txt,11,12,1,0,0,0,0,0
+21,New,136_THEHILL_m.txt,17,18,1,0,0,0,1,0
+22,New York,136_THEHILL_m.txt,17,19,1,0,0,0,0,0
+23,York,136_THEHILL_m.txt,18,19,1,0,0,0,1,0
+24,A,136_THEHILL_m.txt,36,37,1,0,0,0,1,0
+25,A Quinnipiac,136_THEHILL_m.txt,36,38,1,0,0,0,1,0
+26,A Quinnipiac University,136_THEHILL_m.txt,36,39,1,0,0,0,1,0
+27,A Quinnipiac University Poll,136_THEHILL_m.txt,36,40,1,0,0,0,0,0
+28,Quinnipiac,136_THEHILL_m.txt,37,38,1,0,0,0,1,0
+29,Quinnipiac University,136_THEHILL_m.txt,37,39,1,0,0,0,1,0
+30,Quinnipiac University Poll,136_THEHILL_m.txt,37,40,1,0,0,0,1,0
+31,University,136_THEHILL_m.txt,38,39,1,0,0,0,1,0
+32,University Poll,136_THEHILL_m.txt,38,40,1,0,0,0,1,0
+33,Poll,136_THEHILL_m.txt,39,40,1,0,0,0,1,0
+34,Senate,136_THEHILL_m.txt,57,58,1,0,0,1,0,0
+35,do,136_THEHILL_m.txt,62,63,1,0,0,0,0,0
+36,That,136_THEHILL_m.txt,66,67,1,0,0,0,0,0
+37,Schumer,136_THEHILL_m.txt,72,73,1,0,0,0,0,1
+38,U.S.,136_THEHILL_m.txt,87,88,1,0,0,1,1,0
+39,U.S. Senate,136_THEHILL_m.txt,87,89,1,0,0,1,0,0
+40,Senate,136_THEHILL_m.txt,88,89,1,0,0,0,1,0
+41,In,136_THEHILL_m.txt,90,91,1,0,0,0,1,0
+42,In April,136_THEHILL_m.txt,90,92,1,0,0,0,0,0
+43,April,136_THEHILL_m.txt,91,92,1,0,0,0,1,0
+44,Schumer,136_THEHILL_m.txt,103,104,1,0,0,0,0,1
+45,Proof,136_THEHILL_m.txt,118,119,1,0,0,0,0,0
+46,Senators,136_THEHILL_m.txt,127,128,1,0,0,0,0,0
+47,'s,136_THEHILL_m.txt,134,135,1,0,0,0,1,0
+48,'s Washington,136_THEHILL_m.txt,134,136,1,0,0,0,0,0
+49,Washington,136_THEHILL_m.txt,135,136,1,0,0,0,0,0
+50,Quinnipiac,136_THEHILL_m.txt,139,140,1,0,0,0,1,0
+51,Quinnipiac University,136_THEHILL_m.txt,139,141,1,0,0,0,1,0
+52,Quinnipiac University Poll,136_THEHILL_m.txt,139,142,1,0,0,0,0,0
+53,University,136_THEHILL_m.txt,140,141,1,0,0,0,1,0
+54,University Poll,136_THEHILL_m.txt,140,142,1,0,0,0,1,0
+55,Poll,136_THEHILL_m.txt,141,142,1,0,0,0,1,0
+56,Tim,136_THEHILL_m.txt,144,145,1,1,0,0,1,0
+57,Tim Malloy,136_THEHILL_m.txt,144,146,1,1,1,0,0,1
+58,Malloy,136_THEHILL_m.txt,145,146,1,0,1,0,0,0
+59,Sen.,136_THEHILL_m.txt,152,153,1,0,0,0,0,0
+60,Sen. Chuck,136_THEHILL_m.txt,152,154,1,0,0,0,1,0
+61,Sen. Chuck Schumer,136_THEHILL_m.txt,152,155,1,0,0,0,0,0
+62,Chuck,136_THEHILL_m.txt,153,154,1,1,0,0,1,0
+63,Chuck Schumer,136_THEHILL_m.txt,153,155,1,1,0,0,1,1
+64,Schumer,136_THEHILL_m.txt,154,155,1,0,0,0,0,0
+65,'s,136_THEHILL_m.txt,161,162,1,0,0,0,0,0
+66,The,136_THEHILL_m.txt,169,170,1,0,0,0,0,0
+67,'s,136_THEHILL_m.txt,187,188,1,0,0,0,0,0
+68,It,136_THEHILL_m.txt,190,191,1,0,0,0,0,0
+69,Deferred,136_THEHILL_m.txt,209,210,1,0,0,1,1,0
+70,Deferred Action,136_THEHILL_m.txt,209,211,1,0,0,1,0,0
+71,Action,136_THEHILL_m.txt,210,211,1,0,0,0,1,0
+72,Childhood,136_THEHILL_m.txt,212,213,1,0,0,0,1,0
+73,Childhood Arrivals,136_THEHILL_m.txt,212,214,1,0,0,0,0,0
+74,Arrivals,136_THEHILL_m.txt,213,214,1,0,0,0,1,0
+75,DACA,136_THEHILL_m.txt,215,216,1,0,0,0,0,0
+76,U.S.,136_THEHILL_m.txt,226,227,1,0,0,1,0,0
+77,Schumer,136_THEHILL_m.txt,233,234,1,0,0,0,0,1
+78,Senate,136_THEHILL_m.txt,242,243,1,0,0,1,0,0
+0,Excited,4_Mashable_m.txt,0,1,1,0,0,0,0,0
+1,Black,4_Mashable_m.txt,2,3,1,0,0,0,1,0
+2,Black Panther,4_Mashable_m.txt,2,4,1,0,0,0,0,0
+3,Panther,4_Mashable_m.txt,3,4,1,0,0,0,1,0
+4,So,4_Mashable_m.txt,5,6,1,0,0,0,0,0
+5,Which,4_Mashable_m.txt,9,10,1,0,0,0,0,0
+6,Black,4_Mashable_m.txt,18,19,1,0,0,0,1,0
+7,Black Panther,4_Mashable_m.txt,18,20,1,0,0,0,1,0
+8,Black Panther Week,4_Mashable_m.txt,18,21,1,0,0,0,0,0
+9,Panther,4_Mashable_m.txt,19,20,1,0,0,0,1,0
+10,Panther Week,4_Mashable_m.txt,19,21,1,0,0,0,1,0
+11,Week,4_Mashable_m.txt,20,21,1,0,0,0,1,0
+12,There,4_Mashable_m.txt,22,23,1,0,1,0,0,0
+13,There 's,4_Mashable_m.txt,22,24,1,0,0,0,0,0
+14,'s,4_Mashable_m.txt,23,24,1,0,0,0,1,0
+15,Black,4_Mashable_m.txt,30,31,1,0,0,0,1,0
+16,Black Panther,4_Mashable_m.txt,30,32,1,0,0,0,0,0
+17,Panther,4_Mashable_m.txt,31,32,1,0,0,0,1,0
+18,It,4_Mashable_m.txt,38,39,1,0,0,0,0,0
+19,King,4_Mashable_m.txt,46,47,1,0,0,0,0,0
+20,King T'Challa,4_Mashable_m.txt,46,48,1,0,0,0,0,0
+21,T'Challa,4_Mashable_m.txt,47,48,1,0,0,0,1,1
+22,It,4_Mashable_m.txt,54,55,1,0,0,0,0,0
+23,do,4_Mashable_m.txt,58,59,1,0,0,0,0,0
+24,do,4_Mashable_m.txt,66,67,1,0,0,0,0,0
+25,Marvel,4_Mashable_m.txt,77,78,1,0,0,0,0,0
+26,Vince,4_Mashable_m.txt,84,85,1,0,0,0,1,0
+27,Vince Staples,4_Mashable_m.txt,84,86,1,0,0,0,0,1
+28,Vince Staples ',4_Mashable_m.txt,84,87,1,0,0,0,0,0
+29,Staples,4_Mashable_m.txt,85,86,1,0,0,0,0,0
+30,Staples ',4_Mashable_m.txt,85,87,1,0,0,0,0,0
+31,',4_Mashable_m.txt,86,87,1,0,0,0,1,0
+32,BagBak,4_Mashable_m.txt,90,91,1,0,0,0,0,0
+33,You,4_Mashable_m.txt,93,94,1,0,0,0,0,0
+34,SEE,4_Mashable_m.txt,122,123,1,0,0,0,1,0
+35,SEE ALSO,4_Mashable_m.txt,122,124,1,0,0,0,0,0
+36,ALSO,4_Mashable_m.txt,123,124,1,0,0,0,1,0
+37,Here,4_Mashable_m.txt,125,126,1,0,1,0,0,0
+38,Here 's,4_Mashable_m.txt,125,127,1,0,0,0,0,0
+39,'s,4_Mashable_m.txt,126,127,1,0,0,0,1,0
+40,'Black,4_Mashable_m.txt,128,129,1,0,0,0,1,0
+41,'Black Panther',4_Mashable_m.txt,128,130,1,0,0,0,0,0
+42,Panther',4_Mashable_m.txt,129,130,1,0,0,0,0,0
+43,Marvel,4_Mashable_m.txt,133,134,1,0,0,0,0,0
+44,BagBak,4_Mashable_m.txt,137,138,1,0,0,0,0,0
+45,Staples,4_Mashable_m.txt,144,145,1,0,0,0,0,1
+46,Staples ',4_Mashable_m.txt,144,146,1,0,0,0,0,0
+47,',4_Mashable_m.txt,145,146,1,0,0,0,0,0
+48,It,4_Mashable_m.txt,151,152,1,0,1,0,0,0
+49,It 's,4_Mashable_m.txt,151,153,1,0,0,0,0,0
+50,'s,4_Mashable_m.txt,152,153,1,0,0,0,1,0
+51,President,4_Mashable_m.txt,173,174,1,0,0,0,0,0
+52,President Trump,4_Mashable_m.txt,173,175,1,0,0,0,0,0
+53,Trump,4_Mashable_m.txt,174,175,1,1,0,0,1,1
+54,And,4_Mashable_m.txt,179,180,1,0,0,0,0,0
+55,Listen,4_Mashable_m.txt,199,200,1,0,0,0,0,0
+56,Though,4_Mashable_m.txt,204,205,1,0,0,0,0,0
+57,It,4_Mashable_m.txt,216,217,1,0,1,0,0,0
+58,It 's,4_Mashable_m.txt,216,218,1,0,0,0,0,0
+59,'s,4_Mashable_m.txt,217,218,1,0,0,0,1,0
+60,Ryan,4_Mashable_m.txt,226,227,1,1,0,0,1,0
+61,Ryan Coogler,4_Mashable_m.txt,226,228,1,1,0,0,0,1
+62,Coogler,4_Mashable_m.txt,227,228,1,0,0,0,0,0
+63,In,4_Mashable_m.txt,241,242,1,0,0,0,0,0
+64,'s,4_Mashable_m.txt,245,246,1,0,0,0,0,0
+65,Coogler,4_Mashable_m.txt,250,251,1,0,0,0,0,1
+66,In,4_Mashable_m.txt,273,274,1,0,0,0,1,0
+67,In Black,4_Mashable_m.txt,273,275,1,0,0,0,1,0
+68,In Black Panther,4_Mashable_m.txt,273,276,1,0,0,0,0,0
+69,Black,4_Mashable_m.txt,274,275,1,0,0,0,1,0
+70,Black Panther,4_Mashable_m.txt,274,276,1,0,0,0,1,0
+71,Panther,4_Mashable_m.txt,275,276,1,0,0,0,1,0
+72,From,4_Mashable_m.txt,281,282,1,0,0,0,0,0
+73,Wakanda,4_Mashable_m.txt,303,304,1,0,0,0,0,0
+74,It,4_Mashable_m.txt,313,314,1,0,1,0,0,0
+75,It 's,4_Mashable_m.txt,313,315,1,0,0,0,0,0
+76,'s,4_Mashable_m.txt,314,315,1,0,0,0,1,0
+77,Coogler,4_Mashable_m.txt,321,322,1,0,0,0,0,1
+78,Creed,4_Mashable_m.txt,324,325,1,0,0,0,0,0
+79,Need,4_Mashable_m.txt,326,327,1,0,0,0,1,0
+80,Need I,4_Mashable_m.txt,326,328,1,0,0,0,0,0
+81,I,4_Mashable_m.txt,327,328,1,0,0,0,1,0
+82,Adonis,4_Mashable_m.txt,334,335,1,0,0,0,1,0
+83,Adonis Creed,4_Mashable_m.txt,334,336,1,0,0,0,0,1
+84,Creed,4_Mashable_m.txt,335,336,1,0,0,0,0,0
+85,Rocky,4_Mashable_m.txt,348,349,1,0,0,0,0,0
+86,Philadelphia,4_Mashable_m.txt,359,360,1,0,0,0,0,0
+87,Coogler,4_Mashable_m.txt,368,369,1,0,0,0,0,1
+88,Fruitvale,4_Mashable_m.txt,372,373,1,0,0,1,1,0
+89,Fruitvale Station,4_Mashable_m.txt,372,374,1,0,0,1,0,0
+90,Station,4_Mashable_m.txt,373,374,1,0,0,0,1,0
+91,BART,4_Mashable_m.txt,383,384,1,0,0,0,0,0
+92,'s,4_Mashable_m.txt,392,393,1,0,0,0,0,0
+93,The,4_Mashable_m.txt,396,397,1,0,0,0,0,0
+94,Black,4_Mashable_m.txt,402,403,1,0,0,0,1,0
+95,Black Panther,4_Mashable_m.txt,402,404,1,0,0,0,0,0
+96,Panther,4_Mashable_m.txt,403,404,1,0,0,0,1,0
+97,Kendrick,4_Mashable_m.txt,415,416,1,0,0,0,1,0
+98,Kendrick Lamar,4_Mashable_m.txt,415,417,1,0,0,0,0,1
+99,Lamar,4_Mashable_m.txt,416,417,1,0,0,0,0,0
+100,It,4_Mashable_m.txt,418,419,1,0,1,0,0,0
+101,It 's,4_Mashable_m.txt,418,420,1,0,0,0,0,0
+102,'s,4_Mashable_m.txt,419,420,1,0,0,0,1,0
+103,'s,4_Mashable_m.txt,437,438,1,0,0,0,0,0
+104,'s,4_Mashable_m.txt,446,447,1,0,0,0,0,0
+105,It,4_Mashable_m.txt,449,450,1,0,1,0,0,0
+106,It 's,4_Mashable_m.txt,449,451,1,0,0,0,0,0
+107,'s,4_Mashable_m.txt,450,451,1,0,0,0,1,0
+108,Lamar,4_Mashable_m.txt,460,461,1,0,0,0,0,1
+109,A,4_Mashable_m.txt,477,478,1,0,0,0,0,0
+110,Coogler,4_Mashable_m.txt,481,482,1,0,0,0,0,1
+111,Lamar,4_Mashable_m.txt,487,488,1,0,1,0,0,1
+112,Lamar 's,4_Mashable_m.txt,487,489,1,0,0,0,0,0
+113,'s,4_Mashable_m.txt,488,489,1,0,0,0,0,0
+114,Take,4_Mashable_m.txt,499,500,1,0,0,0,0,0
+115,'s,4_Mashable_m.txt,502,503,1,0,0,0,0,0
+116,Black,4_Mashable_m.txt,507,508,1,0,0,0,1,0
+117,Black Panther,4_Mashable_m.txt,507,509,1,0,0,0,0,0
+118,Panther,4_Mashable_m.txt,508,509,1,0,0,0,1,0
+119,It,4_Mashable_m.txt,514,515,1,0,0,0,0,0
+120,Kendrick,4_Mashable_m.txt,516,517,1,0,0,0,0,1
+121,T'Challa,4_Mashable_m.txt,519,520,1,0,0,0,0,1
+122,The,4_Mashable_m.txt,534,535,1,0,0,0,0,0
+123,T'Challa,4_Mashable_m.txt,553,554,1,0,0,0,0,1
+124,What,4_Mashable_m.txt,558,559,1,0,0,0,0,0
+125,What do,4_Mashable_m.txt,558,560,1,0,0,0,0,0
+126,do,4_Mashable_m.txt,559,560,1,0,0,0,1,0
+127,Are,4_Mashable_m.txt,564,565,1,0,0,0,0,0
+128,What,4_Mashable_m.txt,569,570,1,0,0,0,0,0
+129,Are,4_Mashable_m.txt,576,577,1,0,0,0,0,0
+130,Are,4_Mashable_m.txt,581,582,1,0,0,0,0,0
+131,Your,4_Mashable_m.txt,588,589,1,0,0,0,0,0
+132,Are,4_Mashable_m.txt,603,604,1,0,0,0,0,0
+133,Paramedic,4_Mashable_m.txt,624,625,1,0,0,0,0,0
+134,'s,4_Mashable_m.txt,632,633,1,0,0,0,0,0
+135,Killmonger,4_Mashable_m.txt,635,636,1,0,0,0,0,1
+136,Its,4_Mashable_m.txt,643,644,1,0,0,0,0,0
+137,Oakland,4_Mashable_m.txt,656,657,1,0,0,0,0,0
+138,Bay,4_Mashable_m.txt,661,662,1,0,0,0,1,0
+139,Bay Area,4_Mashable_m.txt,661,663,1,0,0,0,0,0
+140,Area,4_Mashable_m.txt,662,663,1,0,0,0,1,0
+141,It,4_Mashable_m.txt,669,670,1,0,0,0,0,0
+142,Hyphy,4_Mashable_m.txt,673,674,1,0,0,0,1,0
+143,Hyphy Music,4_Mashable_m.txt,673,675,1,0,0,0,0,0
+144,Music,4_Mashable_m.txt,674,675,1,0,0,0,1,0
+145,To,4_Mashable_m.txt,711,712,1,0,0,0,0,0
+146,Now,4_Mashable_m.txt,726,727,1,0,0,0,0,0
+147,Sound,4_Mashable_m.txt,736,737,1,0,0,0,0,0
+148,Paramedic,4_Mashable_m.txt,742,743,1,0,0,0,0,0
+149,Oakland,4_Mashable_m.txt,761,762,1,0,0,0,0,0
+150,And,4_Mashable_m.txt,767,768,1,0,0,0,0,0
+151,'s,4_Mashable_m.txt,769,770,1,0,0,0,0,0
+152,Black,4_Mashable_m.txt,782,783,1,0,0,0,1,0
+153,Black Panther,4_Mashable_m.txt,782,784,1,0,0,0,0,0
+154,Panther,4_Mashable_m.txt,783,784,1,0,0,0,1,0
+155,And,4_Mashable_m.txt,790,791,1,0,0,0,0,0
+156,'s,4_Mashable_m.txt,792,793,1,0,0,0,0,0
+157,Composer,4_Mashable_m.txt,799,800,1,0,0,0,0,0
+158,Composer Ludwig,4_Mashable_m.txt,799,801,1,0,0,0,1,0
+159,Composer Ludwig Goransson,4_Mashable_m.txt,799,802,1,0,0,0,0,0
+160,Ludwig,4_Mashable_m.txt,800,801,1,0,0,0,1,0
+161,Ludwig Goransson,4_Mashable_m.txt,800,802,1,0,0,0,1,1
+162,Goransson,4_Mashable_m.txt,801,802,1,0,0,0,0,0
+163,In,4_Mashable_m.txt,814,815,1,0,0,0,0,0
+164,Genius,4_Mashable_m.txt,820,821,1,0,0,0,0,0
+165,Goransson,4_Mashable_m.txt,822,823,1,0,0,0,0,1
+166,Africa,4_Mashable_m.txt,828,829,1,0,0,0,0,0
+167,Baaba,4_Mashable_m.txt,831,832,1,0,0,0,1,0
+168,Baaba Maal,4_Mashable_m.txt,831,833,1,0,0,0,0,1
+169,Maal,4_Mashable_m.txt,832,833,1,0,0,0,0,0
+170,Senegalese,4_Mashable_m.txt,838,839,1,0,0,0,0,0
+171,Maal,4_Mashable_m.txt,857,858,1,0,0,0,0,1
+172,Goransson,4_Mashable_m.txt,873,874,1,0,0,0,0,1
+173,T'Challa,4_Mashable_m.txt,888,889,1,0,0,0,0,1
+174,'s,4_Mashable_m.txt,897,898,1,0,0,0,0,0
+175,All,4_Mashable_m.txt,901,902,1,0,0,0,0,0
+176,If,4_Mashable_m.txt,916,917,1,0,0,0,0,0
+177,'s,4_Mashable_m.txt,923,924,1,0,0,0,0,0
+178,Black,4_Mashable_m.txt,932,933,1,0,0,0,1,0
+179,Black Panther,4_Mashable_m.txt,932,934,1,0,0,0,0,0
+180,Panther,4_Mashable_m.txt,933,934,1,0,0,0,1,0
+181,WATCH,4_Mashable_m.txt,936,937,1,0,0,0,0,0
+182,Black,4_Mashable_m.txt,942,943,1,0,0,0,1,0
+183,Black Panther',4_Mashable_m.txt,942,944,1,0,0,0,0,0
+184,Panther',4_Mashable_m.txt,943,944,1,0,0,0,1,0
+0,Neither,137_THEHILL_m.txt,0,1,1,0,0,0,0,0
+1,Senate,137_THEHILL_m.txt,10,11,1,0,0,1,0,0
+2,Deferred,137_THEHILL_m.txt,23,24,1,0,0,1,1,0
+3,Deferred Action,137_THEHILL_m.txt,23,25,1,0,0,1,0,0
+4,Action,137_THEHILL_m.txt,24,25,1,0,0,0,1,0
+5,Childhood,137_THEHILL_m.txt,26,27,1,0,0,0,1,0
+6,Childhood Arrivals,137_THEHILL_m.txt,26,28,1,0,0,0,0,0
+7,Arrivals,137_THEHILL_m.txt,27,28,1,0,0,0,1,0
+8,DACA,137_THEHILL_m.txt,29,30,1,0,0,0,0,0
+9,Immigration,137_THEHILL_m.txt,33,34,1,0,0,0,0,0
+10,Republicans',137_THEHILL_m.txt,39,40,1,0,0,1,0,0
+11,Senate,137_THEHILL_m.txt,44,45,1,0,0,1,0,0
+12,There,137_THEHILL_m.txt,64,65,1,0,0,0,0,0
+13,President,137_THEHILL_m.txt,77,78,1,0,0,0,0,0
+14,President Trump,137_THEHILL_m.txt,77,79,1,0,0,0,0,0
+15,Trump,137_THEHILL_m.txt,78,79,1,1,0,0,1,1
+16,Jenny,137_THEHILL_m.txt,101,102,1,0,0,0,1,0
+17,Jenny Beth,137_THEHILL_m.txt,101,103,1,0,0,0,1,0
+18,Jenny Beth Martin,137_THEHILL_m.txt,101,104,1,0,0,0,0,1
+19,Beth,137_THEHILL_m.txt,102,103,1,0,0,0,1,0
+20,Beth Martin,137_THEHILL_m.txt,102,104,1,0,0,0,0,0
+21,Martin,137_THEHILL_m.txt,103,104,1,0,0,0,1,0
+22,Tea,137_THEHILL_m.txt,108,109,1,0,0,1,1,0
+23,Tea Party,137_THEHILL_m.txt,108,110,1,0,0,1,1,0
+24,Tea Party Patriots,137_THEHILL_m.txt,108,111,1,0,0,1,1,0
+25,Tea Party Patriots Citizens,137_THEHILL_m.txt,108,112,1,0,0,1,1,0
+26,Party,137_THEHILL_m.txt,109,110,1,0,0,0,1,0
+27,Party Patriots,137_THEHILL_m.txt,109,111,1,0,0,0,1,0
+28,Party Patriots Citizens,137_THEHILL_m.txt,109,112,1,0,0,0,1,0
+29,Party Patriots Citizens Fund,137_THEHILL_m.txt,109,113,1,0,0,0,1,0
+30,Patriots,137_THEHILL_m.txt,110,111,1,0,0,0,1,0
+31,Patriots Citizens,137_THEHILL_m.txt,110,112,1,0,0,0,1,0
+32,Patriots Citizens Fund,137_THEHILL_m.txt,110,113,1,0,0,0,1,0
+33,Citizens,137_THEHILL_m.txt,111,112,1,0,0,0,1,0
+34,Citizens Fund,137_THEHILL_m.txt,111,113,1,0,0,0,1,0
+35,Fund,137_THEHILL_m.txt,112,113,1,0,0,0,1,0
+36,Hard,137_THEHILL_m.txt,114,115,1,0,0,0,0,0
+37,Senate,137_THEHILL_m.txt,119,120,1,0,0,1,0,0
+38,GOP,137_THEHILL_m.txt,123,124,1,0,0,1,0,0
+39,White,137_THEHILL_m.txt,129,130,1,0,0,1,1,0
+40,White House,137_THEHILL_m.txt,129,131,1,0,0,1,0,0
+41,House,137_THEHILL_m.txt,130,131,1,0,0,0,1,0
+42,Republicans,137_THEHILL_m.txt,137,138,1,0,0,0,0,0
+43,The,137_THEHILL_m.txt,144,145,1,0,0,0,0,0
+44,'s,137_THEHILL_m.txt,146,147,1,0,0,0,0,0
+45,It,137_THEHILL_m.txt,157,158,1,0,1,0,0,0
+46,It 's,137_THEHILL_m.txt,157,159,1,0,0,0,0,0
+47,'s,137_THEHILL_m.txt,158,159,1,0,0,0,1,0
+48,Sen.,137_THEHILL_m.txt,166,167,1,0,0,0,0,0
+49,Sen. Tom,137_THEHILL_m.txt,166,168,1,0,0,0,1,0
+50,Sen. Tom Cotton,137_THEHILL_m.txt,166,169,1,0,0,0,0,0
+51,Tom,137_THEHILL_m.txt,167,168,1,1,0,0,1,0
+52,Tom Cotton,137_THEHILL_m.txt,167,169,1,1,0,0,1,1
+53,Cotton,137_THEHILL_m.txt,168,169,1,0,0,0,0,0
+54,R,137_THEHILL_m.txt,170,171,1,0,0,0,0,0
+55,Ark,137_THEHILL_m.txt,172,173,1,0,0,0,0,0
+56,Tuesday,137_THEHILL_m.txt,176,177,1,0,0,0,0,0
+57,Fox,137_THEHILL_m.txt,178,179,1,0,0,1,1,0
+58,Fox News,137_THEHILL_m.txt,178,180,1,0,0,1,0,0
+59,News,137_THEHILL_m.txt,179,180,1,0,0,0,1,0
+60,But,137_THEHILL_m.txt,181,182,1,0,0,0,0,0
+61,DACA,137_THEHILL_m.txt,208,209,1,0,0,0,0,0
+62,Three,137_THEHILL_m.txt,236,237,1,0,0,0,0,0
+63,Democratic,137_THEHILL_m.txt,246,247,1,0,0,1,0,0
+64,Democrats,137_THEHILL_m.txt,258,259,1,0,0,0,0,0
+65,Marshall,137_THEHILL_m.txt,269,270,1,0,0,0,1,0
+66,Marshall Fitz,137_THEHILL_m.txt,269,271,1,0,0,0,0,1
+67,Fitz,137_THEHILL_m.txt,270,271,1,0,0,0,0,0
+68,Emerson,137_THEHILL_m.txt,278,279,1,0,0,1,1,0
+69,Emerson Collective,137_THEHILL_m.txt,278,280,1,0,0,1,0,0
+70,Collective,137_THEHILL_m.txt,279,280,1,0,0,0,1,0
+71,None,137_THEHILL_m.txt,287,288,1,0,0,0,0,0
+72,Republican,137_THEHILL_m.txt,290,291,1,0,0,1,0,0
+73,Conservatives,137_THEHILL_m.txt,303,304,1,0,0,0,0,0
+74,House,137_THEHILL_m.txt,306,307,1,0,0,1,0,0
+75,Rep,137_THEHILL_m.txt,313,314,1,0,0,0,0,0
+76,Bob,137_THEHILL_m.txt,315,316,1,0,0,0,1,0
+77,Bob Goodlatte,137_THEHILL_m.txt,315,317,1,0,1,0,0,1
+78,Bob Goodlatte 's,137_THEHILL_m.txt,315,318,1,0,0,0,0,0
+79,Goodlatte,137_THEHILL_m.txt,316,317,1,0,1,0,0,0
+80,Goodlatte 's,137_THEHILL_m.txt,316,318,1,0,0,0,0,0
+81,'s,137_THEHILL_m.txt,317,318,1,0,0,0,1,0
+82,R,137_THEHILL_m.txt,319,320,1,0,0,0,0,0
+83,Va,137_THEHILL_m.txt,321,322,1,0,0,0,0,0
+84,Democratic,137_THEHILL_m.txt,336,337,1,0,0,0,0,0
+85,Trump,137_THEHILL_m.txt,345,346,1,0,0,0,0,1
+86,Progressives,137_THEHILL_m.txt,347,348,1,0,0,0,0,0
+87,Senate,137_THEHILL_m.txt,354,355,1,0,0,1,0,0
+88,Majority,137_THEHILL_m.txt,360,361,1,0,0,0,1,0
+89,Majority Leader,137_THEHILL_m.txt,360,362,1,0,0,0,0,0
+90,Majority Leader Mitch,137_THEHILL_m.txt,360,363,1,0,0,0,1,0
+91,Majority Leader Mitch McConnell,137_THEHILL_m.txt,360,364,1,0,0,0,0,0
+92,Leader,137_THEHILL_m.txt,361,362,1,0,0,0,1,0
+93,Leader Mitch,137_THEHILL_m.txt,361,363,1,0,0,0,1,0
+94,Leader Mitch McConnell,137_THEHILL_m.txt,361,364,1,0,0,0,1,0
+95,Mitch,137_THEHILL_m.txt,362,363,1,0,0,0,1,0
+96,Mitch McConnell,137_THEHILL_m.txt,362,364,1,0,0,0,1,1
+97,McConnell,137_THEHILL_m.txt,363,364,1,0,0,0,0,0
+98,R,137_THEHILL_m.txt,365,366,1,0,0,0,0,0
+99,Ky,137_THEHILL_m.txt,367,368,1,0,0,0,0,0
+100,Dreamers,137_THEHILL_m.txt,380,381,1,0,0,0,0,0
+101,Speaker,137_THEHILL_m.txt,391,392,1,0,0,1,0,0
+102,Speaker Paul,137_THEHILL_m.txt,391,393,1,0,0,1,1,0
+103,Speaker Paul Ryan,137_THEHILL_m.txt,391,394,1,0,0,1,0,0
+104,Paul,137_THEHILL_m.txt,392,393,1,0,0,0,1,0
+105,Paul Ryan,137_THEHILL_m.txt,392,394,1,0,0,0,1,1
+106,Ryan,137_THEHILL_m.txt,393,394,1,0,0,0,0,0
+107,R,137_THEHILL_m.txt,395,396,1,0,0,0,0,0
+108,Wis,137_THEHILL_m.txt,397,398,1,0,0,0,0,0
+109,Trump,137_THEHILL_m.txt,401,402,1,0,0,0,0,1
+110,Senate,137_THEHILL_m.txt,405,406,1,0,0,1,0,0
+111,But,137_THEHILL_m.txt,408,409,1,0,0,0,0,0
+112,House,137_THEHILL_m.txt,414,415,1,0,0,1,0,0
+113,House,137_THEHILL_m.txt,424,425,1,0,0,1,1,0
+114,House Republicans,137_THEHILL_m.txt,424,426,1,0,0,1,0,0
+115,Republicans,137_THEHILL_m.txt,425,426,1,0,0,0,1,0
+116,It,137_THEHILL_m.txt,427,428,1,0,1,0,0,0
+117,It 's,137_THEHILL_m.txt,427,429,1,0,0,0,0,0
+118,'s,137_THEHILL_m.txt,428,429,1,0,0,0,1,0
+119,Senate,137_THEHILL_m.txt,440,441,1,0,0,1,0,0
+120,House,137_THEHILL_m.txt,444,445,1,0,0,1,0,0
+121,The,137_THEHILL_m.txt,447,448,1,0,0,0,0,0
+122,Ryan,137_THEHILL_m.txt,451,452,1,0,0,0,0,1
+123,'s,137_THEHILL_m.txt,458,459,1,0,0,0,0,0
+124,'s,137_THEHILL_m.txt,464,465,1,0,0,0,0,0
+125,This,137_THEHILL_m.txt,469,470,1,0,0,0,0,0
+126,The,137_THEHILL_m.txt,477,478,1,0,0,0,0,0
+127,Paul,137_THEHILL_m.txt,480,481,1,0,0,0,1,0
+128,Paul Ryan,137_THEHILL_m.txt,480,482,1,0,0,0,0,1
+129,Ryan,137_THEHILL_m.txt,481,482,1,0,0,0,0,0
+130,Speaker,137_THEHILL_m.txt,485,486,1,0,0,0,0,0
+131,Rep,137_THEHILL_m.txt,489,490,1,0,0,0,0,0
+132,Ruben,137_THEHILL_m.txt,491,492,1,0,0,0,1,0
+133,Ruben Gallego,137_THEHILL_m.txt,491,493,1,0,0,0,0,1
+134,Gallego,137_THEHILL_m.txt,492,493,1,0,0,0,0,0
+135,D,137_THEHILL_m.txt,494,495,1,0,0,0,0,0
+136,Ariz,137_THEHILL_m.txt,496,497,1,0,0,0,0,0
+0,Legislation,131_THEHILL_m.txt,0,1,1,0,0,0,0,0
+1,Senate,131_THEHILL_m.txt,15,16,1,0,0,1,1,0
+2,Senate Thursday,131_THEHILL_m.txt,15,17,1,0,0,1,0,0
+3,Thursday,131_THEHILL_m.txt,16,17,1,0,0,0,1,0
+4,Attorney,131_THEHILL_m.txt,18,19,1,0,0,0,1,0
+5,Attorney General,131_THEHILL_m.txt,18,20,1,0,0,0,0,0
+6,Attorney General Jeff,131_THEHILL_m.txt,18,21,1,0,0,0,1,0
+7,Attorney General Jeff Sessions,131_THEHILL_m.txt,18,22,1,0,0,0,0,0
+8,General,131_THEHILL_m.txt,19,20,1,0,0,0,1,0
+9,General Jeff,131_THEHILL_m.txt,19,21,1,0,0,0,1,0
+10,General Jeff Sessions,131_THEHILL_m.txt,19,22,1,0,0,0,1,0
+11,Jeff,131_THEHILL_m.txt,20,21,1,1,0,0,1,0
+12,Jeff Sessions,131_THEHILL_m.txt,20,22,1,1,0,0,1,1
+13,Sessions,131_THEHILL_m.txt,21,22,1,0,0,0,0,0
+14,In,131_THEHILL_m.txt,31,32,1,0,0,0,0,0
+15,Senate,131_THEHILL_m.txt,39,40,1,0,0,1,1,0
+16,Senate Judiciary,131_THEHILL_m.txt,39,41,1,0,0,1,1,0
+17,Senate Judiciary Committee,131_THEHILL_m.txt,39,42,1,0,0,1,0,0
+18,Judiciary,131_THEHILL_m.txt,40,41,1,0,0,0,1,0
+19,Judiciary Committee,131_THEHILL_m.txt,40,42,1,0,0,0,1,0
+20,Committee,131_THEHILL_m.txt,41,42,1,0,0,0,1,0
+21,Sentencing,131_THEHILL_m.txt,44,45,1,0,0,1,1,0
+22,Sentencing Reform,131_THEHILL_m.txt,44,46,1,0,0,1,0,0
+23,Reform,131_THEHILL_m.txt,45,46,1,0,0,0,1,0
+24,Corrections,131_THEHILL_m.txt,47,48,1,0,0,0,1,0
+25,Corrections Act,131_THEHILL_m.txt,47,49,1,0,0,0,0,0
+26,Act,131_THEHILL_m.txt,48,49,1,0,0,0,1,0
+27,The,131_THEHILL_m.txt,50,51,1,0,0,0,0,0
+28,Congress,131_THEHILL_m.txt,65,66,1,0,0,0,0,0
+29,Sessions,131_THEHILL_m.txt,78,79,1,0,0,0,0,1
+30,Chairman,131_THEHILL_m.txt,88,89,1,0,0,0,0,0
+31,Chairman Chuck,131_THEHILL_m.txt,88,90,1,0,0,0,1,0
+32,Chairman Chuck Grassley,131_THEHILL_m.txt,88,91,1,0,0,0,0,0
+33,Chuck,131_THEHILL_m.txt,89,90,1,0,0,0,1,0
+34,Chuck Grassley,131_THEHILL_m.txt,89,91,1,0,0,0,1,1
+35,Grassley,131_THEHILL_m.txt,90,91,1,0,0,0,0,0
+36,R,131_THEHILL_m.txt,92,93,1,0,0,0,0,0
+37,Iowa,131_THEHILL_m.txt,94,95,1,0,0,0,0,0
+38,Wednesday,131_THEHILL_m.txt,97,98,1,0,0,1,0,0
+39,In,131_THEHILL_m.txt,99,100,1,0,0,0,0,0
+40,The,131_THEHILL_m.txt,105,106,1,0,0,0,1,0
+41,The Hill,131_THEHILL_m.txt,105,107,1,0,0,0,0,0
+42,Hill,131_THEHILL_m.txt,106,107,1,0,0,1,1,0
+43,Sessions,131_THEHILL_m.txt,108,109,1,0,1,0,0,1
+44,Grassley,131_THEHILL_m.txt,139,140,1,0,0,0,0,1
+45,Sessions,131_THEHILL_m.txt,141,142,1,0,0,0,0,0
+46,Alabama,131_THEHILL_m.txt,149,150,1,0,0,0,0,0
+47,Certainly,131_THEHILL_m.txt,165,166,1,0,0,0,0,0
+48,Department,131_THEHILL_m.txt,171,172,1,0,0,1,0,0
+49,Justice,131_THEHILL_m.txt,173,174,1,0,0,0,0,0
+50,Attorney,131_THEHILL_m.txt,178,179,1,0,0,0,0,0
+51,General,131_THEHILL_m.txt,180,181,1,0,0,0,0,0
+52,General Sessions,131_THEHILL_m.txt,180,182,1,0,0,0,0,0
+53,Sessions,131_THEHILL_m.txt,181,182,1,1,0,0,1,1
+54,Republican,131_THEHILL_m.txt,203,204,1,0,0,1,1,0
+55,Republican Senate,131_THEHILL_m.txt,203,205,1,0,0,1,0,0
+56,Senate,131_THEHILL_m.txt,204,205,1,0,0,0,1,0
+57,Alabama,131_THEHILL_m.txt,207,208,1,0,0,1,0,0
+58,Grassley,131_THEHILL_m.txt,211,212,1,0,0,0,0,1
+59,Sessions,131_THEHILL_m.txt,223,224,1,0,0,1,0,1
+60,Democrat,131_THEHILL_m.txt,230,231,1,0,0,0,0,0
+61,Grassley,131_THEHILL_m.txt,232,233,1,0,1,0,0,1
+62,Sessions,131_THEHILL_m.txt,241,242,1,0,0,0,0,1
+63,Grassley,131_THEHILL_m.txt,256,257,1,0,0,0,0,1
+64,Sessions,131_THEHILL_m.txt,263,264,1,0,1,1,0,1
+65,Sessions 's,131_THEHILL_m.txt,263,265,1,0,0,1,0,0
+66,'s,131_THEHILL_m.txt,264,265,1,0,0,0,0,0
+67,Justice,131_THEHILL_m.txt,275,276,1,0,0,1,1,0
+68,Justice Department,131_THEHILL_m.txt,275,277,1,0,0,1,0,0
+69,Department,131_THEHILL_m.txt,276,277,1,0,0,0,1,0
+70,Sessions,131_THEHILL_m.txt,288,289,1,0,0,0,0,1
+71,President,131_THEHILL_m.txt,290,291,1,0,0,0,0,0
+72,President Trump,131_THEHILL_m.txt,290,292,1,0,0,0,0,0
+73,Trump,131_THEHILL_m.txt,291,292,1,1,0,0,1,1
+74,I,131_THEHILL_m.txt,298,299,1,0,0,0,0,0
+75,'s,131_THEHILL_m.txt,302,303,1,0,0,0,0,0
+76,do,131_THEHILL_m.txt,306,307,1,0,0,0,0,0
+77,The,131_THEHILL_m.txt,317,318,1,0,0,0,0,0
+78,It,131_THEHILL_m.txt,362,363,1,0,0,0,0,0
+79,It,131_THEHILL_m.txt,390,391,1,0,0,0,0,0
+80,Grassley,131_THEHILL_m.txt,407,408,1,0,0,0,0,1
+81,Sens.,131_THEHILL_m.txt,409,410,1,0,0,0,0,0
+82,Sens. Dick,131_THEHILL_m.txt,409,411,1,0,0,0,1,0
+83,Sens. Dick Dubin,131_THEHILL_m.txt,409,412,1,0,0,0,0,0
+84,Dick,131_THEHILL_m.txt,410,411,1,1,0,0,1,0
+85,Dick Dubin,131_THEHILL_m.txt,410,412,1,1,0,0,1,1
+86,Dubin,131_THEHILL_m.txt,411,412,1,0,0,0,0,0
+87,D,131_THEHILL_m.txt,413,414,1,0,0,0,0,0
+88,Ill,131_THEHILL_m.txt,415,416,1,0,0,0,0,0
+89,Mike,131_THEHILL_m.txt,419,420,1,0,0,0,1,0
+90,Mike Lee,131_THEHILL_m.txt,419,421,1,0,0,0,0,1
+91,Lee,131_THEHILL_m.txt,420,421,1,0,0,0,0,0
+92,R,131_THEHILL_m.txt,422,423,1,0,0,0,0,0
+93,Utah,131_THEHILL_m.txt,424,425,1,0,0,0,0,0
+94,But,131_THEHILL_m.txt,430,431,1,0,0,0,0,0
+95,Senate,131_THEHILL_m.txt,450,451,1,0,0,0,1,0
+96,Senate Majority,131_THEHILL_m.txt,450,452,1,0,0,0,1,0
+97,Senate Majority Whip,131_THEHILL_m.txt,450,453,1,0,0,0,0,0
+98,Senate Majority Whip John,131_THEHILL_m.txt,450,454,1,0,0,0,1,0
+99,Majority,131_THEHILL_m.txt,451,452,1,0,0,0,1,0
+100,Majority Whip,131_THEHILL_m.txt,451,453,1,0,0,0,1,0
+101,Majority Whip John,131_THEHILL_m.txt,451,454,1,0,0,0,1,0
+102,Majority Whip John Cornyn,131_THEHILL_m.txt,451,455,1,0,0,0,1,0
+103,Whip,131_THEHILL_m.txt,452,453,1,0,0,0,1,0
+104,Whip John,131_THEHILL_m.txt,452,454,1,0,0,0,1,0
+105,Whip John Cornyn,131_THEHILL_m.txt,452,455,1,0,0,0,1,0
+106,John,131_THEHILL_m.txt,453,454,1,0,0,0,1,0
+107,John Cornyn,131_THEHILL_m.txt,453,455,1,0,0,0,1,1
+108,Cornyn,131_THEHILL_m.txt,454,455,1,0,0,0,0,0
+109,R,131_THEHILL_m.txt,456,457,1,0,0,0,0,0
+110,Texas,131_THEHILL_m.txt,458,459,1,0,0,0,0,0
+111,Thursday,131_THEHILL_m.txt,476,477,1,0,0,0,0,0
+112,Cornyn,131_THEHILL_m.txt,478,479,1,0,1,0,0,1
+113,I,131_THEHILL_m.txt,500,501,1,0,0,0,0,0
+114,I,131_THEHILL_m.txt,504,505,1,0,1,0,0,0
+115,'s,131_THEHILL_m.txt,510,511,1,0,0,0,0,0
+116,I,131_THEHILL_m.txt,515,516,1,0,0,0,0,0
+117,Cornyn,131_THEHILL_m.txt,533,534,1,0,0,0,0,1
+118,Sen.,131_THEHILL_m.txt,535,536,1,0,0,0,0,0
+119,Sen. Sheldon,131_THEHILL_m.txt,535,537,1,0,0,0,1,0
+120,Sen. Sheldon Whitehouse,131_THEHILL_m.txt,535,538,1,0,0,0,0,0
+121,Sheldon,131_THEHILL_m.txt,536,537,1,1,0,0,1,0
+122,Sheldon Whitehouse,131_THEHILL_m.txt,536,538,1,1,0,0,1,1
+123,Whitehouse,131_THEHILL_m.txt,537,538,1,0,0,0,0,0
+124,D,131_THEHILL_m.txt,539,540,1,0,0,0,0,0
+125,R,131_THEHILL_m.txt,541,542,1,0,0,0,0,0
+126,I,131_THEHILL_m.txt,543,544,1,0,0,0,0,0
+127,'s,131_THEHILL_m.txt,554,555,1,0,0,0,0,0
+128,The,131_THEHILL_m.txt,561,562,1,0,0,0,0,0
+129,A,131_THEHILL_m.txt,584,585,1,0,0,0,0,0
+130,House,131_THEHILL_m.txt,593,594,1,0,0,1,0,0
+131,Rep,131_THEHILL_m.txt,595,596,1,0,0,0,0,0
+132,Doug,131_THEHILL_m.txt,597,598,1,0,0,0,1,0
+133,Doug Collins,131_THEHILL_m.txt,597,599,1,0,0,0,0,1
+134,Collins,131_THEHILL_m.txt,598,599,1,0,0,0,0,0
+135,R,131_THEHILL_m.txt,600,601,1,0,0,0,0,0
+136,Ga,131_THEHILL_m.txt,602,603,1,0,0,0,0,0
+137,When,131_THEHILL_m.txt,606,607,1,0,0,0,0,0
+138,When Trump,131_THEHILL_m.txt,606,608,1,0,0,0,0,0
+139,Trump,131_THEHILL_m.txt,607,608,1,0,0,0,1,1
+140,A,131_THEHILL_m.txt,642,643,1,0,0,0,1,0
+141,A White,131_THEHILL_m.txt,642,644,1,0,0,0,1,0
+142,A White House,131_THEHILL_m.txt,642,645,1,0,0,0,0,0
+143,White,131_THEHILL_m.txt,643,644,1,0,0,0,1,0
+144,White House,131_THEHILL_m.txt,643,645,1,0,0,0,1,0
+145,House,131_THEHILL_m.txt,644,645,1,0,0,0,1,0
+146,The,131_THEHILL_m.txt,647,648,1,0,0,0,1,0
+147,The Hill,131_THEHILL_m.txt,647,649,1,0,0,0,0,0
+148,Hill,131_THEHILL_m.txt,648,649,1,0,0,1,1,0
+149,The,131_THEHILL_m.txt,653,654,1,0,0,0,0,0
+150,Sen.,131_THEHILL_m.txt,683,684,1,0,0,0,0,0
+151,Sen. Thom,131_THEHILL_m.txt,683,685,1,0,0,0,1,0
+152,Sen. Thom Tillis,131_THEHILL_m.txt,683,686,1,0,0,0,0,0
+153,Thom,131_THEHILL_m.txt,684,685,1,1,0,0,1,0
+154,Thom Tillis,131_THEHILL_m.txt,684,686,1,1,0,0,1,1
+155,Tillis,131_THEHILL_m.txt,685,686,1,0,0,0,0,0
+156,R,131_THEHILL_m.txt,687,688,1,0,0,0,0,0
+157,N,131_THEHILL_m.txt,689,690,1,0,0,0,0,0
+158,C,131_THEHILL_m.txt,691,692,1,0,0,0,0,0
+159,Thursday,131_THEHILL_m.txt,698,699,1,0,1,0,0,0
+160,Thursday 's,131_THEHILL_m.txt,698,700,1,0,0,0,0,0
+161,'s,131_THEHILL_m.txt,699,700,1,0,0,0,1,0
+162,Congress,131_THEHILL_m.txt,706,707,1,0,0,0,0,0
+163,My,131_THEHILL_m.txt,731,732,1,0,0,0,0,0
+164,Capitol,131_THEHILL_m.txt,748,749,1,0,0,1,1,0
+165,Capitol Hill,131_THEHILL_m.txt,748,750,1,0,0,1,0,0
+166,Hill,131_THEHILL_m.txt,749,750,1,0,0,0,1,0
+167,'s,131_THEHILL_m.txt,765,766,1,0,0,0,0,0
+168,'s,131_THEHILL_m.txt,772,773,1,0,0,0,0,0
+169,I,131_THEHILL_m.txt,780,781,1,0,0,0,0,0
+170,I'm,131_THEHILL_m.txt,782,783,1,0,0,0,0,0
+171,I,131_THEHILL_m.txt,786,787,1,0,0,0,0,0
+172,do,131_THEHILL_m.txt,789,790,1,0,0,0,0,0
+173,do,131_THEHILL_m.txt,792,793,1,0,0,0,0,0
+174,Sen.,131_THEHILL_m.txt,805,806,1,0,0,0,0,0
+175,Sen. Ted,131_THEHILL_m.txt,805,807,1,0,0,0,1,0
+176,Sen. Ted Cruz,131_THEHILL_m.txt,805,808,1,0,0,0,0,0
+177,Ted,131_THEHILL_m.txt,806,807,1,1,0,0,1,0
+178,Ted Cruz,131_THEHILL_m.txt,806,808,1,1,0,0,1,1
+179,Cruz,131_THEHILL_m.txt,807,808,1,0,0,0,0,0
+180,R,131_THEHILL_m.txt,809,810,1,0,0,0,0,0
+181,Texas,131_THEHILL_m.txt,811,812,1,0,0,0,0,0
+182,Congress,131_THEHILL_m.txt,823,824,1,0,0,0,0,0
+183,He,131_THEHILL_m.txt,848,849,1,0,0,0,0,0
+184,Cruz,131_THEHILL_m.txt,857,858,1,0,1,0,0,1
+185,If,131_THEHILL_m.txt,882,883,1,0,0,0,0,0
+186,United,131_THEHILL_m.txt,907,908,1,0,0,1,1,0
+187,United States,131_THEHILL_m.txt,907,909,1,0,0,1,0,0
+188,States,131_THEHILL_m.txt,908,909,1,0,0,0,1,0
+189,Attorney,131_THEHILL_m.txt,920,921,1,0,0,0,1,0
+190,Attorney General,131_THEHILL_m.txt,920,922,1,0,1,0,0,0
+191,General,131_THEHILL_m.txt,921,922,1,0,1,0,1,0
+192,I,131_THEHILL_m.txt,929,930,1,0,0,0,0,0
+193,Its,131_THEHILL_m.txt,956,957,1,0,0,0,0,0
+194,He,131_THEHILL_m.txt,965,966,1,0,0,0,0,0
+195,Sens.,131_THEHILL_m.txt,977,978,1,0,0,0,0,0
+196,Sens. Ben,131_THEHILL_m.txt,977,979,1,0,0,0,1,0
+197,Sens. Ben Sasse,131_THEHILL_m.txt,977,980,1,0,0,0,0,0
+198,Ben,131_THEHILL_m.txt,978,979,1,1,0,0,1,0
+199,Ben Sasse,131_THEHILL_m.txt,978,980,1,1,0,0,1,1
+200,Sasse,131_THEHILL_m.txt,979,980,1,0,0,0,0,0
+201,R,131_THEHILL_m.txt,981,982,1,0,0,0,0,0
+202,Neb,131_THEHILL_m.txt,983,984,1,0,0,0,0,0
+203,John,131_THEHILL_m.txt,987,988,1,0,0,0,1,0
+204,John Kennedy,131_THEHILL_m.txt,987,989,1,0,0,0,0,1
+205,Kennedy,131_THEHILL_m.txt,988,989,1,0,0,0,0,0
+206,R,131_THEHILL_m.txt,990,991,1,0,0,0,0,0
+207,La,131_THEHILL_m.txt,992,993,1,0,0,0,0,0
+0,Lizzie,9_Guardian_m.txt,0,1,1,0,0,0,0,1
+1,PR,9_Guardian_m.txt,4,5,1,0,0,0,0,0
+2,Liam,9_Guardian_m.txt,8,9,1,0,0,0,0,1
+3,Sat,9_Guardian_m.txt,13,14,1,0,0,0,0,0
+4,Jan,9_Guardian_m.txt,15,16,1,0,0,0,0,0
+5,EST,9_Guardian_m.txt,18,19,1,0,0,0,1,0
+6,EST What,9_Guardian_m.txt,18,20,1,0,0,0,0,0
+7,What,9_Guardian_m.txt,19,20,1,0,0,0,1,0
+8,At,9_Guardian_m.txt,25,26,1,0,0,0,0,0
+9,First,9_Guardian_m.txt,37,38,1,0,0,0,0,0
+10,Confident,9_Guardian_m.txt,40,41,1,0,0,0,0,0
+11,What,9_Guardian_m.txt,46,47,1,0,0,0,0,0
+12,Music,9_Guardian_m.txt,52,53,1,0,0,0,0,0
+13,Any,9_Guardian_m.txt,78,79,1,0,0,0,0,0
+14,When,9_Guardian_m.txt,82,83,1,0,0,0,0,0
+15,I'm,9_Guardian_m.txt,112,113,1,0,0,0,0,0
+16,And,9_Guardian_m.txt,122,123,1,0,0,0,0,0
+17,Good,9_Guardian_m.txt,135,136,1,0,0,0,0,0
+18,Very,9_Guardian_m.txt,139,140,1,0,0,0,0,0
+19,Best,9_Guardian_m.txt,141,142,1,0,0,0,0,0
+20,Lizzie,9_Guardian_m.txt,144,145,1,0,0,0,0,1
+21,Really,9_Guardian_m.txt,146,147,1,0,0,0,0,0
+22,Would,9_Guardian_m.txt,158,159,1,0,0,0,0,0
+23,Yes,9_Guardian_m.txt,166,167,1,0,0,0,0,0
+24,Lizzie,9_Guardian_m.txt,171,172,1,0,0,0,0,0
+25,Describe,9_Guardian_m.txt,175,176,1,0,0,0,0,0
+26,Describe Lizzie,9_Guardian_m.txt,175,177,1,0,0,0,0,0
+27,Lizzie,9_Guardian_m.txt,176,177,1,0,0,0,1,1
+28,What,9_Guardian_m.txt,185,186,1,0,0,0,0,0
+29,What do,9_Guardian_m.txt,185,187,1,0,0,0,0,0
+30,do,9_Guardian_m.txt,186,187,1,0,0,0,1,0
+31,All,9_Guardian_m.txt,194,195,1,0,0,0,0,0
+32,Did,9_Guardian_m.txt,204,205,1,0,0,0,0,0
+33,Yes,9_Guardian_m.txt,210,211,1,0,0,0,0,0
+34,Manchester,9_Guardian_m.txt,223,224,1,0,0,0,0,0
+35,And,9_Guardian_m.txt,225,226,1,0,0,0,0,0
+36,A,9_Guardian_m.txt,233,234,1,0,0,0,0,0
+37,If,9_Guardian_m.txt,238,239,1,0,0,0,0,0
+38,For,9_Guardian_m.txt,253,254,1,0,0,0,0,0
+39,Marks,9_Guardian_m.txt,260,261,1,0,0,0,0,0
+40,Would,9_Guardian_m.txt,267,268,1,0,0,0,0,0
+41,Yes,9_Guardian_m.txt,272,273,1,0,0,0,0,0
+42,What,9_Guardian_m.txt,274,275,1,0,0,0,0,0
+43,Good,9_Guardian_m.txt,280,281,1,0,0,0,0,0
+44,If,9_Guardian_m.txt,286,287,1,0,0,0,0,0
+45,First,9_Guardian_m.txt,296,297,1,0,0,0,0,0
+46,Friendly,9_Guardian_m.txt,299,300,1,0,0,0,0,0
+47,What,9_Guardian_m.txt,304,305,1,0,0,0,0,0
+48,Trump,9_Guardian_m.txt,310,311,1,0,0,0,0,1
+49,Christmas,9_Guardian_m.txt,316,317,1,0,0,0,0,0
+50,Star,9_Guardian_m.txt,319,320,1,0,0,0,1,0
+51,Star Wars,9_Guardian_m.txt,319,321,1,0,0,0,0,0
+52,Wars,9_Guardian_m.txt,320,321,1,0,0,0,1,0
+53,Any,9_Guardian_m.txt,322,323,1,0,0,0,0,0
+54,Our,9_Guardian_m.txt,326,327,1,0,0,0,0,0
+55,I,9_Guardian_m.txt,332,333,1,0,0,0,0,0
+56,Liam,9_Guardian_m.txt,342,343,1,0,0,0,0,1
+57,A,9_Guardian_m.txt,350,351,1,0,0,0,0,0
+58,Good,9_Guardian_m.txt,366,367,1,0,0,0,0,0
+59,His,9_Guardian_m.txt,370,371,1,0,0,0,0,0
+60,I,9_Guardian_m.txt,375,376,1,0,0,0,0,0
+61,Best,9_Guardian_m.txt,381,382,1,0,0,0,0,0
+62,Liam,9_Guardian_m.txt,384,385,1,0,0,0,0,1
+63,He,9_Guardian_m.txt,386,387,1,0,1,0,0,0
+64,He 's,9_Guardian_m.txt,386,388,1,0,0,0,0,0
+65,'s,9_Guardian_m.txt,387,388,1,0,0,0,1,0
+66,Would,9_Guardian_m.txt,399,400,1,0,0,0,0,0
+67,Definitely,9_Guardian_m.txt,407,408,1,0,0,0,0,0
+68,Describe,9_Guardian_m.txt,416,417,1,0,0,0,0,0
+69,Describe Liam,9_Guardian_m.txt,416,418,1,0,0,0,0,0
+70,Liam,9_Guardian_m.txt,417,418,1,0,0,0,1,1
+71,What,9_Guardian_m.txt,428,429,1,0,0,0,0,0
+72,What do,9_Guardian_m.txt,428,430,1,0,0,0,0,0
+73,do,9_Guardian_m.txt,429,430,1,0,0,0,1,0
+74,That,9_Guardian_m.txt,437,438,1,0,0,0,1,0
+75,That I,9_Guardian_m.txt,437,439,1,0,0,0,0,0
+76,I,9_Guardian_m.txt,438,439,1,0,0,0,1,0
+77,Did,9_Guardian_m.txt,444,445,1,0,0,0,0,0
+78,For,9_Guardian_m.txt,450,451,1,0,0,0,0,0
+79,Manchester,9_Guardian_m.txt,473,474,1,0,0,0,0,0
+80,And,9_Guardian_m.txt,476,477,1,0,0,0,0,0
+81,Yes,9_Guardian_m.txt,484,485,1,0,0,0,0,0
+82,If,9_Guardian_m.txt,486,487,1,0,0,0,0,0
+83,I'd,9_Guardian_m.txt,501,502,1,0,0,0,0,0
+84,Marks,9_Guardian_m.txt,514,515,1,0,0,0,0,0
+85,Would,9_Guardian_m.txt,521,522,1,0,0,0,0,0
+86,We've,9_Guardian_m.txt,526,527,1,0,0,0,0,0
+87,Liam,9_Guardian_m.txt,531,532,1,0,0,0,0,1
+88,Lizzie,9_Guardian_m.txt,533,534,1,0,0,0,0,1
+89,Wood,9_Guardian_m.txt,536,537,1,0,0,1,1,0
+90,Wood Manchester,9_Guardian_m.txt,536,538,1,0,0,1,0,0
+91,Manchester,9_Guardian_m.txt,537,538,1,0,0,0,1,0
+92,M15,9_Guardian_m.txt,539,540,1,0,0,0,0,0
+93,Fancy,9_Guardian_m.txt,541,542,1,0,0,0,0,0
+94,Email,9_Guardian_m.txt,546,547,1,0,0,0,0,0
+95,If,9_Guardian_m.txt,555,556,1,0,0,0,0,0
+0,The,9_ATLANTIC_m.txt,0,1,1,0,0,0,0,0
+1,Orlando,9_ATLANTIC_m.txt,3,4,1,0,0,0,0,1
+2,Francisco,9_ATLANTIC_m.txt,5,6,1,0,0,0,1,0
+3,Francisco Reyes,9_ATLANTIC_m.txt,5,7,1,0,0,0,0,1
+4,Reyes,9_ATLANTIC_m.txt,6,7,1,0,0,0,0,0
+5,Marina,9_ATLANTIC_m.txt,14,15,1,0,0,0,0,1
+6,Daniela,9_ATLANTIC_m.txt,16,17,1,0,0,0,1,0
+7,Daniela Vega,9_ATLANTIC_m.txt,16,18,1,0,0,0,0,1
+8,Vega,9_ATLANTIC_m.txt,17,18,1,0,0,0,0,0
+9,A,9_ATLANTIC_m.txt,29,30,1,0,0,0,1,0
+10,A Fantastic,9_ATLANTIC_m.txt,29,31,1,0,0,0,1,0
+11,A Fantastic Woman,9_ATLANTIC_m.txt,29,32,1,0,0,0,0,0
+12,Fantastic,9_ATLANTIC_m.txt,30,31,1,0,0,0,1,0
+13,Fantastic Woman,9_ATLANTIC_m.txt,30,32,1,0,0,0,1,0
+14,Woman,9_ATLANTIC_m.txt,31,32,1,0,0,0,1,0
+15,Orlando,9_ATLANTIC_m.txt,40,41,1,0,0,0,0,1
+16,Marina,9_ATLANTIC_m.txt,55,56,1,0,0,0,0,1
+17,They,9_ATLANTIC_m.txt,62,63,1,0,0,0,0,0
+18,Chinese,9_ATLANTIC_m.txt,68,69,1,0,0,0,0,0
+19,Their,9_ATLANTIC_m.txt,78,79,1,0,0,0,0,0
+20,'s,9_ATLANTIC_m.txt,82,83,1,0,0,0,0,0
+21,'s,9_ATLANTIC_m.txt,91,92,1,0,0,0,0,0
+22,'s,9_ATLANTIC_m.txt,108,109,1,0,0,0,0,0
+23,There,9_ATLANTIC_m.txt,119,120,1,0,1,0,0,0
+24,There 's,9_ATLANTIC_m.txt,119,121,1,0,0,0,0,0
+25,'s,9_ATLANTIC_m.txt,120,121,1,0,0,0,1,0
+26,Chilean,9_ATLANTIC_m.txt,130,131,1,0,0,1,0,0
+27,Sebastián,9_ATLANTIC_m.txt,132,133,1,1,0,0,1,0
+28,Sebastián Lelio,9_ATLANTIC_m.txt,132,134,1,1,0,0,0,1
+29,Lelio,9_ATLANTIC_m.txt,133,134,1,0,0,0,0,0
+30,The,9_ATLANTIC_m.txt,141,142,1,0,0,0,0,0
+31,They're,9_ATLANTIC_m.txt,155,156,1,0,0,0,0,0
+32,Orlando,9_ATLANTIC_m.txt,161,162,1,0,0,0,0,1
+33,Iguazu,9_ATLANTIC_m.txt,172,173,1,0,0,1,1,0
+34,Iguazu Falls,9_ATLANTIC_m.txt,172,174,1,0,0,1,0,0
+35,Falls,9_ATLANTIC_m.txt,173,174,1,0,0,0,1,0
+36,Lelio,9_ATLANTIC_m.txt,176,177,1,0,0,0,0,1
+37,But,9_ATLANTIC_m.txt,187,188,1,0,0,0,0,0
+38,Orlando,9_ATLANTIC_m.txt,189,190,1,0,0,0,0,1
+39,Are,9_ATLANTIC_m.txt,217,218,1,0,0,0,0,0
+40,Mr.,9_ATLANTIC_m.txt,222,223,1,0,0,0,0,0
+41,Mr. Orlando,9_ATLANTIC_m.txt,222,224,1,0,1,0,0,0
+42,Mr. Orlando 's,9_ATLANTIC_m.txt,222,225,1,0,0,0,0,0
+43,Orlando,9_ATLANTIC_m.txt,223,224,1,1,1,0,1,1
+44,Orlando 's,9_ATLANTIC_m.txt,223,225,1,1,0,0,1,0
+45,'s,9_ATLANTIC_m.txt,224,225,1,0,0,0,0,0
+46,ER,9_ATLANTIC_m.txt,229,230,1,0,0,1,0,0
+47,Marina,9_ATLANTIC_m.txt,232,233,1,0,0,0,0,1
+48,Yes,9_ATLANTIC_m.txt,235,236,1,0,0,0,0,0
+49,Are,9_ATLANTIC_m.txt,239,240,1,0,0,0,0,0
+50,Yes,9_ATLANTIC_m.txt,246,247,1,0,0,0,0,0
+51,Sorry,9_ATLANTIC_m.txt,256,257,1,0,0,0,0,0
+52,Marina,9_ATLANTIC_m.txt,265,266,1,0,0,0,1,0
+53,Marina Vidal,9_ATLANTIC_m.txt,265,267,1,0,0,0,0,1
+54,Vidal,9_ATLANTIC_m.txt,266,267,1,0,0,0,0,0
+55,A,9_ATLANTIC_m.txt,269,270,1,0,0,0,0,0
+56,But,9_ATLANTIC_m.txt,274,275,1,0,0,0,0,0
+57,'s,9_ATLANTIC_m.txt,277,278,1,0,0,0,0,0
+58,The,9_ATLANTIC_m.txt,282,283,1,0,0,0,0,0
+59,Lelio,9_ATLANTIC_m.txt,285,286,1,0,0,0,0,1
+60,Marina,9_ATLANTIC_m.txt,297,298,1,0,0,0,0,1
+61,A,9_ATLANTIC_m.txt,313,314,1,0,0,0,1,0
+62,A Fantastic,9_ATLANTIC_m.txt,313,315,1,0,0,0,1,0
+63,A Fantastic Woman,9_ATLANTIC_m.txt,313,316,1,0,0,0,0,0
+64,Fantastic,9_ATLANTIC_m.txt,314,315,1,0,0,0,1,0
+65,Fantastic Woman,9_ATLANTIC_m.txt,314,316,1,0,0,0,1,0
+66,Woman,9_ATLANTIC_m.txt,315,316,1,0,0,0,1,0
+67,Best,9_ATLANTIC_m.txt,320,321,1,0,0,1,1,0
+68,Best Foreign,9_ATLANTIC_m.txt,320,322,1,0,0,1,1,0
+69,Best Foreign Language,9_ATLANTIC_m.txt,320,323,1,0,0,1,1,0
+70,Best Foreign Language Film,9_ATLANTIC_m.txt,320,324,1,0,0,1,0,0
+71,Foreign,9_ATLANTIC_m.txt,321,322,1,0,0,0,1,0
+72,Foreign Language,9_ATLANTIC_m.txt,321,323,1,0,0,0,1,0
+73,Foreign Language Film,9_ATLANTIC_m.txt,321,324,1,0,0,0,1,0
+74,Language,9_ATLANTIC_m.txt,322,323,1,0,0,0,1,0
+75,Language Film,9_ATLANTIC_m.txt,322,324,1,0,0,0,1,0
+76,Film,9_ATLANTIC_m.txt,323,324,1,0,0,0,1,0
+77,'s,9_ATLANTIC_m.txt,328,329,1,0,0,0,1,0
+78,'s Academy,9_ATLANTIC_m.txt,328,330,1,0,0,0,1,0
+79,'s Academy Awards,9_ATLANTIC_m.txt,328,331,1,0,0,0,0,0
+80,Academy,9_ATLANTIC_m.txt,329,330,1,0,0,0,1,0
+81,Academy Awards,9_ATLANTIC_m.txt,329,331,1,0,0,0,0,0
+82,Awards,9_ATLANTIC_m.txt,330,331,1,0,0,0,1,0
+83,It,9_ATLANTIC_m.txt,341,342,1,0,1,0,0,0
+84,It 's,9_ATLANTIC_m.txt,341,343,1,0,0,0,0,0
+85,'s,9_ATLANTIC_m.txt,342,343,1,0,0,0,1,0
+86,Vega,9_ATLANTIC_m.txt,348,349,1,0,0,0,0,1
+87,'s,9_ATLANTIC_m.txt,356,357,1,0,0,0,0,0
+88,'s,9_ATLANTIC_m.txt,367,368,1,0,0,0,0,0
+89,This,9_ATLANTIC_m.txt,380,381,1,0,0,0,0,0
+90,Lelio,9_ATLANTIC_m.txt,385,386,1,0,0,0,0,1
+91,Marina,9_ATLANTIC_m.txt,391,392,1,0,0,0,0,1
+92,Chilean,9_ATLANTIC_m.txt,396,397,1,0,0,0,0,0
+93,Her,9_ATLANTIC_m.txt,399,400,1,0,0,0,0,0
+94,Orlando,9_ATLANTIC_m.txt,413,414,1,0,0,0,0,1
+95,I,9_ATLANTIC_m.txt,430,431,1,0,0,0,0,0
+96,I'm,9_ATLANTIC_m.txt,445,446,1,0,0,0,0,0
+97,'s,9_ATLANTIC_m.txt,461,462,1,0,0,0,0,0
+98,Marina,9_ATLANTIC_m.txt,470,471,1,0,0,0,0,1
+99,Orlando,9_ATLANTIC_m.txt,491,492,1,0,1,0,0,1
+100,Orlando 's,9_ATLANTIC_m.txt,491,493,1,0,0,0,0,0
+101,'s,9_ATLANTIC_m.txt,492,493,1,0,0,0,0,0
+102,Leilo,9_ATLANTIC_m.txt,496,497,1,0,1,0,0,1
+103,Leilo 's,9_ATLANTIC_m.txt,496,498,1,0,0,0,0,0
+104,'s,9_ATLANTIC_m.txt,497,498,1,0,0,0,0,0
+0,Sen.,138_THEHILL_m.txt,0,1,1,0,0,0,0,0
+1,Sen. Kirsten,138_THEHILL_m.txt,0,2,1,0,0,0,1,0
+2,Sen. Kirsten Gillibrand,138_THEHILL_m.txt,0,3,1,0,0,0,0,0
+3,Kirsten,138_THEHILL_m.txt,1,2,1,1,0,0,1,0
+4,Kirsten Gillibrand,138_THEHILL_m.txt,1,3,1,1,0,0,1,1
+5,Gillibrand,138_THEHILL_m.txt,2,3,1,0,0,0,0,0
+6,D,138_THEHILL_m.txt,4,5,1,0,0,0,0,0
+7,N,138_THEHILL_m.txt,6,7,1,0,0,0,0,0
+8,Y,138_THEHILL_m.txt,8,9,1,0,0,0,0,0
+9,Senate,138_THEHILL_m.txt,13,14,1,0,0,0,1,0
+10,Senate Democrats,138_THEHILL_m.txt,13,15,1,0,0,0,0,0
+11,Democrats,138_THEHILL_m.txt,14,15,1,0,0,0,1,0
+12,White,138_THEHILL_m.txt,19,20,1,0,0,0,1,0
+13,White House,138_THEHILL_m.txt,19,21,1,0,0,0,0,0
+14,House,138_THEHILL_m.txt,20,21,1,0,0,0,1,0
+15,She,138_THEHILL_m.txt,38,39,1,0,0,0,0,0
+16,CBS,138_THEHILL_m.txt,43,44,1,0,1,0,0,0
+17,CBS 's,138_THEHILL_m.txt,43,45,1,0,0,0,0,0
+18,'s,138_THEHILL_m.txt,44,45,1,0,0,0,1,0
+19,Minutes,138_THEHILL_m.txt,47,48,1,0,0,0,0,0
+20,Sunday,138_THEHILL_m.txt,52,53,1,0,0,1,0,0
+21,MeToo,138_THEHILL_m.txt,69,70,1,0,0,0,0,0
+22,The,138_THEHILL_m.txt,73,74,1,0,0,0,0,0
+23,President,138_THEHILL_m.txt,87,88,1,0,0,0,0,0
+24,President Clinton,138_THEHILL_m.txt,87,89,1,0,0,0,0,0
+25,Clinton,138_THEHILL_m.txt,88,89,1,1,0,0,1,1
+26,Sen.,138_THEHILL_m.txt,92,93,1,0,0,0,0,0
+27,Sen. Al,138_THEHILL_m.txt,92,94,1,0,0,0,1,0
+28,Sen. Al Franken,138_THEHILL_m.txt,92,95,1,0,0,0,0,0
+29,Al,138_THEHILL_m.txt,93,94,1,1,0,0,1,0
+30,Al Franken,138_THEHILL_m.txt,93,95,1,1,0,0,1,1
+31,Franken,138_THEHILL_m.txt,94,95,1,0,0,0,0,0
+32,D,138_THEHILL_m.txt,96,97,1,0,0,0,0,0
+33,Minn,138_THEHILL_m.txt,98,99,1,0,0,0,0,0
+34,Senate,138_THEHILL_m.txt,108,109,1,0,0,0,1,0
+35,Senate Democrats,138_THEHILL_m.txt,108,110,1,0,0,0,0,0
+36,Democrats,138_THEHILL_m.txt,109,110,1,0,0,0,1,0
+37,Her,138_THEHILL_m.txt,119,120,1,0,0,0,0,0
+38,Democrats,138_THEHILL_m.txt,125,126,1,0,0,0,0,0
+39,Washington,138_THEHILL_m.txt,132,133,1,0,0,1,0,0
+40,Sunday,138_THEHILL_m.txt,146,147,1,0,1,0,0,0
+41,Sunday 's,138_THEHILL_m.txt,146,148,1,0,0,0,0,0
+42,'s,138_THEHILL_m.txt,147,148,1,0,0,0,1,0
+43,Minutes,138_THEHILL_m.txt,150,151,1,0,0,0,0,0
+44,Gillibrand,138_THEHILL_m.txt,154,155,1,0,0,0,0,1
+45,Clinton,138_THEHILL_m.txt,163,164,1,0,0,0,0,1
+46,White,138_THEHILL_m.txt,166,167,1,0,0,0,1,0
+47,White House,138_THEHILL_m.txt,166,168,1,0,0,0,0,0
+48,House,138_THEHILL_m.txt,167,168,1,0,0,0,1,0
+49,Franken,138_THEHILL_m.txt,177,178,1,0,0,0,0,1
+50,Congress,138_THEHILL_m.txt,180,181,1,0,0,0,0,0
+51,Some,138_THEHILL_m.txt,187,188,1,0,0,0,1,0
+52,Some Democratic,138_THEHILL_m.txt,187,189,1,0,0,0,0,0
+53,Democratic,138_THEHILL_m.txt,188,189,1,0,0,0,1,0
+54,Gillibrand,138_THEHILL_m.txt,191,192,1,0,1,0,0,1
+55,Gillibrand 's,138_THEHILL_m.txt,191,193,1,0,0,0,0,0
+56,'s,138_THEHILL_m.txt,192,193,1,0,0,0,0,0
+57,Clinton,138_THEHILL_m.txt,197,198,1,0,0,0,0,1
+58,Monica,138_THEHILL_m.txt,203,204,1,0,0,1,1,0
+59,Monica Lewinsky,138_THEHILL_m.txt,203,205,1,0,0,1,0,1
+60,Lewinsky,138_THEHILL_m.txt,204,205,1,0,0,0,0,0
+61,The,138_THEHILL_m.txt,213,214,1,0,0,0,0,0
+62,Democratic,138_THEHILL_m.txt,220,221,1,0,0,1,0,0
+63,Allida,138_THEHILL_m.txt,223,224,1,0,0,0,1,0
+64,Allida Black,138_THEHILL_m.txt,223,225,1,0,0,0,0,1
+65,Black,138_THEHILL_m.txt,224,225,1,0,0,0,0,0
+66,Clinton,138_THEHILL_m.txt,232,233,1,0,0,1,0,1
+67,PAC,138_THEHILL_m.txt,234,235,1,0,0,0,1,0
+68,PAC Ready,138_THEHILL_m.txt,234,236,1,0,0,0,0,0
+69,Ready,138_THEHILL_m.txt,235,236,1,0,0,0,1,0
+70,Hillary,138_THEHILL_m.txt,237,238,1,0,1,0,0,1
+71,Gillibrand,138_THEHILL_m.txt,242,243,1,0,0,0,0,1
+72,She,138_THEHILL_m.txt,252,253,1,0,0,0,0,0
+73,Gillibrand,138_THEHILL_m.txt,256,257,1,0,0,0,0,1
+74,Bill,138_THEHILL_m.txt,267,268,1,0,0,0,1,0
+75,Bill Clinton,138_THEHILL_m.txt,267,269,1,0,0,0,0,1
+76,Clinton,138_THEHILL_m.txt,268,269,1,0,0,0,0,0
+77,The,138_THEHILL_m.txt,284,285,1,0,0,0,1,0
+78,The Hill,138_THEHILL_m.txt,284,286,1,0,0,0,0,0
+79,Hill,138_THEHILL_m.txt,285,286,1,0,0,1,1,0
+80,But,138_THEHILL_m.txt,288,289,1,0,0,0,0,0
+81,Even,138_THEHILL_m.txt,303,304,1,0,0,0,0,0
+82,Gillibrand,138_THEHILL_m.txt,314,315,1,0,0,0,0,1
+83,Clinton,138_THEHILL_m.txt,319,320,1,0,0,0,0,1
+84,When,138_THEHILL_m.txt,330,331,1,0,0,0,0,0
+85,Minutes,138_THEHILL_m.txt,335,336,1,0,0,0,0,0
+86,Clintons,138_THEHILL_m.txt,342,343,1,0,0,1,0,1
+87,Gillibrand,138_THEHILL_m.txt,344,345,1,0,0,0,0,1
+0,A,27_GUARDIAN_m.txt,0,1,1,0,0,0,0,0
+1,'s,27_GUARDIAN_m.txt,2,3,1,0,0,0,0,0
+2,Andrey,27_GUARDIAN_m.txt,15,16,1,0,0,1,1,0
+3,Andrey Zvyagintsev,27_GUARDIAN_m.txt,15,17,1,0,1,1,0,1
+4,Andrey Zvyagintsev 's,27_GUARDIAN_m.txt,15,18,1,0,0,1,0,0
+5,Zvyagintsev,27_GUARDIAN_m.txt,16,17,1,0,1,0,0,0
+6,Zvyagintsev 's,27_GUARDIAN_m.txt,16,18,1,0,0,0,0,0
+7,'s,27_GUARDIAN_m.txt,17,18,1,0,0,0,1,0
+8,Oscar,27_GUARDIAN_m.txt,20,21,1,0,0,0,0,0
+9,Mark,27_GUARDIAN_m.txt,24,25,1,0,0,0,1,0
+10,Mark Kermode,27_GUARDIAN_m.txt,24,26,1,0,0,0,0,1
+11,Kermode,27_GUARDIAN_m.txt,25,26,1,0,0,0,0,0
+12,Observer,27_GUARDIAN_m.txt,27,28,1,0,0,0,0,0
+13,Sun,27_GUARDIAN_m.txt,30,31,1,0,0,0,0,0
+14,Feb,27_GUARDIAN_m.txt,32,33,1,0,0,0,0,0
+15,EST,27_GUARDIAN_m.txt,35,36,1,0,0,0,1,0
+16,EST There,27_GUARDIAN_m.txt,35,37,1,0,0,0,0,0
+17,There,27_GUARDIAN_m.txt,36,37,1,0,0,0,1,0
+18,Russian,27_GUARDIAN_m.txt,42,43,1,0,0,1,0,0
+19,Andrey,27_GUARDIAN_m.txt,44,45,1,1,0,0,1,0
+20,Andrey Zvyagintsev,27_GUARDIAN_m.txt,44,46,1,1,1,0,0,1
+21,Andrey Zvyagintsev 's,27_GUARDIAN_m.txt,44,47,1,1,0,0,1,0
+22,Andrey Zvyagintsev 's Oscar,27_GUARDIAN_m.txt,44,48,1,1,0,0,0,0
+23,Zvyagintsev,27_GUARDIAN_m.txt,45,46,1,0,1,0,0,0
+24,Zvyagintsev 's,27_GUARDIAN_m.txt,45,47,1,0,0,0,1,0
+25,Zvyagintsev 's Oscar,27_GUARDIAN_m.txt,45,48,1,0,0,0,0,0
+26,'s,27_GUARDIAN_m.txt,46,47,1,0,0,0,1,0
+27,'s Oscar,27_GUARDIAN_m.txt,46,48,1,0,0,0,1,0
+28,Oscar,27_GUARDIAN_m.txt,47,48,1,0,0,0,0,0
+29,Loveless,27_GUARDIAN_m.txt,50,51,1,0,0,0,0,0
+30,I,27_GUARDIAN_m.txt,56,57,1,0,0,0,0,0
+31,A,27_GUARDIAN_m.txt,62,63,1,0,0,0,0,0
+32,As,27_GUARDIAN_m.txt,95,96,1,0,0,0,0,0
+33,It,27_GUARDIAN_m.txt,140,141,1,0,1,0,0,0
+34,It 's,27_GUARDIAN_m.txt,140,142,1,0,0,0,0,0
+35,'s,27_GUARDIAN_m.txt,141,142,1,0,0,0,1,0
+36,It,27_GUARDIAN_m.txt,172,173,1,0,0,0,0,0
+37,Zvyagintsev,27_GUARDIAN_m.txt,200,201,1,0,0,0,0,1
+38,Loveless,27_GUARDIAN_m.txt,203,204,1,0,0,0,0,0
+39,Ingmar,27_GUARDIAN_m.txt,205,206,1,0,0,0,1,0
+40,Ingmar Bergman,27_GUARDIAN_m.txt,205,207,1,0,1,0,0,1
+41,Ingmar Bergman 's,27_GUARDIAN_m.txt,205,208,1,0,0,0,1,0
+42,Ingmar Bergman 's Swedish,27_GUARDIAN_m.txt,205,209,1,0,0,0,0,0
+43,Bergman,27_GUARDIAN_m.txt,206,207,1,0,1,0,0,0
+44,Bergman 's,27_GUARDIAN_m.txt,206,208,1,0,0,0,1,0
+45,Bergman 's Swedish,27_GUARDIAN_m.txt,206,209,1,0,0,0,0,0
+46,'s,27_GUARDIAN_m.txt,207,208,1,0,0,0,1,0
+47,'s Swedish,27_GUARDIAN_m.txt,207,209,1,0,0,0,1,0
+48,Swedish,27_GUARDIAN_m.txt,208,209,1,0,0,0,0,0
+49,Scenes,27_GUARDIAN_m.txt,210,211,1,0,0,0,1,0
+50,Scenes From,27_GUARDIAN_m.txt,210,212,1,0,0,0,0,0
+51,From,27_GUARDIAN_m.txt,211,212,1,0,0,0,1,0
+52,Marriage,27_GUARDIAN_m.txt,213,214,1,0,0,0,0,0
+53,Michelangelo,27_GUARDIAN_m.txt,222,223,1,0,0,0,1,0
+54,Michelangelo Antonioni,27_GUARDIAN_m.txt,222,224,1,0,1,0,0,1
+55,Michelangelo Antonioni 's,27_GUARDIAN_m.txt,222,225,1,0,0,0,1,0
+56,Antonioni,27_GUARDIAN_m.txt,223,224,1,0,1,0,0,0
+57,Antonioni 's,27_GUARDIAN_m.txt,223,225,1,0,0,0,1,0
+58,'s,27_GUARDIAN_m.txt,224,225,1,0,0,0,1,0
+59,I,27_GUARDIAN_m.txt,226,227,1,0,0,0,1,0
+60,Let,27_GUARDIAN_m.txt,232,233,1,0,0,0,0,0
+61,Right,27_GUARDIAN_m.txt,234,235,1,0,0,1,1,0
+62,Right One,27_GUARDIAN_m.txt,234,236,1,0,0,1,1,0
+63,Right One In,27_GUARDIAN_m.txt,234,237,1,0,0,1,0,0
+64,One,27_GUARDIAN_m.txt,235,236,1,0,0,0,1,0
+65,One In,27_GUARDIAN_m.txt,235,237,1,0,0,0,1,0
+66,In,27_GUARDIAN_m.txt,236,237,1,0,0,0,1,0
+67,Bergman,27_GUARDIAN_m.txt,242,243,1,0,1,0,0,1
+68,Bergman 's,27_GUARDIAN_m.txt,242,244,1,0,0,0,0,0
+69,'s,27_GUARDIAN_m.txt,243,244,1,0,0,0,0,0
+70,Tomas,27_GUARDIAN_m.txt,246,247,1,0,0,0,1,0
+71,Tomas Alfredson,27_GUARDIAN_m.txt,246,248,1,0,0,0,0,1
+72,Alfredson,27_GUARDIAN_m.txt,247,248,1,0,0,0,0,0
+73,Twelve,27_GUARDIAN_m.txt,249,250,1,0,0,0,0,0
+74,Alyosha,27_GUARDIAN_m.txt,254,255,1,0,0,0,0,1
+75,Matvey,27_GUARDIAN_m.txt,256,257,1,0,0,0,1,0
+76,Matvey Novikov,27_GUARDIAN_m.txt,256,258,1,0,0,0,0,1
+77,Novikov,27_GUARDIAN_m.txt,257,258,1,0,0,0,0,0
+78,Zvyagintsev,27_GUARDIAN_m.txt,276,277,1,0,0,0,0,1
+79,Oleg,27_GUARDIAN_m.txt,282,283,1,0,0,0,1,0
+80,Oleg Negin,27_GUARDIAN_m.txt,282,284,1,0,0,0,0,1
+81,Negin,27_GUARDIAN_m.txt,283,284,1,0,0,0,0,0
+82,Alyosha,27_GUARDIAN_m.txt,285,286,1,0,1,0,0,1
+83,Alyosha 's,27_GUARDIAN_m.txt,285,287,1,0,0,0,0,0
+84,'s,27_GUARDIAN_m.txt,286,287,1,0,0,0,0,0
+85,Grimm,27_GUARDIAN_m.txt,318,319,1,0,0,0,0,0
+86,Alyosha,27_GUARDIAN_m.txt,321,322,1,0,1,0,0,1
+87,Alyosha 's,27_GUARDIAN_m.txt,321,323,1,0,0,0,0,0
+88,'s,27_GUARDIAN_m.txt,322,323,1,0,0,0,0,0
+89,Boris,27_GUARDIAN_m.txt,325,326,1,0,0,0,0,1
+90,Aleksey,27_GUARDIAN_m.txt,327,328,1,0,0,0,1,0
+91,Aleksey Rozin,27_GUARDIAN_m.txt,327,329,1,0,0,0,0,1
+92,Rozin,27_GUARDIAN_m.txt,328,329,1,0,0,0,0,0
+93,Meanwhile,27_GUARDIAN_m.txt,345,346,1,0,0,0,0,0
+94,Zhenya,27_GUARDIAN_m.txt,349,350,1,0,0,0,0,1
+95,Maryana,27_GUARDIAN_m.txt,351,352,1,0,0,0,1,0
+96,Maryana Spivak,27_GUARDIAN_m.txt,351,353,1,0,0,0,0,1
+97,Spivak,27_GUARDIAN_m.txt,352,353,1,0,0,0,0,0
+98,I,27_GUARDIAN_m.txt,380,381,1,0,0,0,0,0
+99,Zhenya,27_GUARDIAN_m.txt,387,388,1,0,0,0,0,1
+100,And,27_GUARDIAN_m.txt,406,407,1,0,0,0,0,0
+101,Ian,27_GUARDIAN_m.txt,410,411,1,0,0,0,1,0
+102,Ian McEwan,27_GUARDIAN_m.txt,410,412,1,0,1,0,0,1
+103,Ian McEwan 's,27_GUARDIAN_m.txt,410,413,1,0,0,0,0,0
+104,McEwan,27_GUARDIAN_m.txt,411,412,1,0,1,0,0,0
+105,McEwan 's,27_GUARDIAN_m.txt,411,413,1,0,0,0,0,0
+106,'s,27_GUARDIAN_m.txt,412,413,1,0,0,0,1,0
+107,Alyosha,27_GUARDIAN_m.txt,417,418,1,0,0,0,0,1
+108,The,27_GUARDIAN_m.txt,434,435,1,0,0,0,0,0
+109,Zvyagintsev,27_GUARDIAN_m.txt,445,446,1,0,1,0,0,0
+110,Zvyagintsev 's,27_GUARDIAN_m.txt,445,447,1,0,0,0,0,0
+111,'s,27_GUARDIAN_m.txt,446,447,1,0,0,0,1,0
+112,'s,27_GUARDIAN_m.txt,452,453,1,0,0,0,0,0
+113,Missing,27_GUARDIAN_m.txt,476,477,1,0,0,0,0,0
+114,The,27_GUARDIAN_m.txt,480,481,1,0,0,0,0,0
+115,As,27_GUARDIAN_m.txt,500,501,1,0,0,0,0,0
+116,In,27_GUARDIAN_m.txt,535,536,1,0,0,0,0,0
+117,The,27_GUARDIAN_m.txt,540,541,1,0,0,0,1,0
+118,The Return,27_GUARDIAN_m.txt,540,542,1,0,0,0,0,0
+119,Return,27_GUARDIAN_m.txt,541,542,1,0,0,1,1,0
+120,Zvyagintsev,27_GUARDIAN_m.txt,546,547,1,0,0,0,0,1
+121,With,27_GUARDIAN_m.txt,571,572,1,0,0,0,1,0
+122,With Elena,27_GUARDIAN_m.txt,571,573,1,0,0,0,0,0
+123,Elena,27_GUARDIAN_m.txt,572,573,1,0,0,0,1,0
+124,And,27_GUARDIAN_m.txt,598,599,1,0,0,0,0,0
+125,'s,27_GUARDIAN_m.txt,601,602,1,0,0,0,1,0
+126,'s Leviathan,27_GUARDIAN_m.txt,601,603,1,0,0,0,0,0
+127,Leviathan,27_GUARDIAN_m.txt,602,603,1,0,0,0,0,0
+128,Loveless,27_GUARDIAN_m.txt,607,608,1,0,0,0,0,0
+129,Oscar,27_GUARDIAN_m.txt,617,618,1,0,0,0,0,0
+130,Zvyagintsev,27_GUARDIAN_m.txt,620,621,1,0,0,0,0,1
+131,Russia,27_GUARDIAN_m.txt,627,628,1,0,0,0,0,0
+132,All,27_GUARDIAN_m.txt,641,642,1,0,0,0,0,0
+133,In,27_GUARDIAN_m.txt,665,666,1,0,0,0,0,0
+134,To,27_GUARDIAN_m.txt,676,677,1,0,0,0,0,0
+135,Boris,27_GUARDIAN_m.txt,684,685,1,0,0,0,0,1
+136,Zhenya,27_GUARDIAN_m.txt,686,687,1,0,0,0,0,1
+137,Zvyagintsev,27_GUARDIAN_m.txt,691,692,1,0,0,0,0,1
+138,In,27_GUARDIAN_m.txt,712,713,1,0,0,0,0,0
+139,Absurdly,27_GUARDIAN_m.txt,736,737,1,0,0,0,0,0
+140,Boris,27_GUARDIAN_m.txt,738,739,1,0,1,0,0,1
+141,Boris 's,27_GUARDIAN_m.txt,738,740,1,0,0,0,0,0
+142,'s,27_GUARDIAN_m.txt,739,740,1,0,0,0,0,0
+143,Christian,27_GUARDIAN_m.txt,747,748,1,0,0,0,0,0
+144,Meanwhile,27_GUARDIAN_m.txt,774,775,1,0,0,0,0,0
+145,As,27_GUARDIAN_m.txt,798,799,1,0,0,0,0,0
+146,All,27_GUARDIAN_m.txt,851,852,1,0,0,0,0,0
+147,Mikhail,27_GUARDIAN_m.txt,856,857,1,0,0,0,1,0
+148,Mikhail Krichman,27_GUARDIAN_m.txt,856,858,1,0,1,0,0,1
+149,Mikhail Krichman 's,27_GUARDIAN_m.txt,856,859,1,0,0,0,0,0
+150,Krichman,27_GUARDIAN_m.txt,857,858,1,0,1,0,0,0
+151,Krichman 's,27_GUARDIAN_m.txt,857,859,1,0,0,0,0,0
+152,'s,27_GUARDIAN_m.txt,858,859,1,0,0,0,1,0
+153,It,27_GUARDIAN_m.txt,884,885,1,0,1,0,0,0
+154,It 's,27_GUARDIAN_m.txt,884,886,1,0,0,0,0,0
+155,'s,27_GUARDIAN_m.txt,885,886,1,0,0,0,1,0
+0,Three,30_ATLANTIC_m.txt,0,1,1,0,0,0,1,0
+1,Three Billboards,30_ATLANTIC_m.txt,0,2,1,0,0,0,1,0
+2,Three Billboards Outside,30_ATLANTIC_m.txt,0,3,1,0,0,0,1,0
+3,Three Billboards Outside Ebbing,30_ATLANTIC_m.txt,0,4,1,0,0,0,0,0
+4,Billboards,30_ATLANTIC_m.txt,1,2,1,0,0,0,1,0
+5,Billboards Outside,30_ATLANTIC_m.txt,1,3,1,0,0,0,1,0
+6,Billboards Outside Ebbing,30_ATLANTIC_m.txt,1,4,1,0,0,0,1,0
+7,Outside,30_ATLANTIC_m.txt,2,3,1,0,0,0,1,0
+8,Outside Ebbing,30_ATLANTIC_m.txt,2,4,1,0,0,0,1,0
+9,Ebbing,30_ATLANTIC_m.txt,3,4,1,0,0,0,1,0
+10,Missouri,30_ATLANTIC_m.txt,5,6,1,0,0,0,0,0
+11,Oscar,30_ATLANTIC_m.txt,10,11,1,0,0,0,0,0
+12,Golden,30_ATLANTIC_m.txt,15,16,1,0,0,0,1,0
+13,Golden Globes,30_ATLANTIC_m.txt,15,17,1,0,0,0,0,0
+14,Globes,30_ATLANTIC_m.txt,16,17,1,0,0,0,1,0
+15,Best,30_ATLANTIC_m.txt,18,19,1,0,0,0,1,0
+16,Best Picture,30_ATLANTIC_m.txt,18,20,1,0,0,0,0,0
+17,Picture,30_ATLANTIC_m.txt,19,20,1,0,0,0,1,0
+18,Drama,30_ATLANTIC_m.txt,21,22,1,0,0,0,0,0
+19,Actress,30_ATLANTIC_m.txt,23,24,1,0,0,0,0,0
+20,Drama,30_ATLANTIC_m.txt,25,26,1,0,0,0,0,0
+21,Supporting,30_ATLANTIC_m.txt,27,28,1,0,0,0,1,0
+22,Supporting Actor,30_ATLANTIC_m.txt,27,29,1,0,0,0,0,0
+23,Actor,30_ATLANTIC_m.txt,28,29,1,0,0,0,1,0
+24,Screenplay,30_ATLANTIC_m.txt,31,32,1,0,0,0,0,0
+25,Hollywood,30_ATLANTIC_m.txt,41,42,1,0,1,0,0,0
+26,Hollywood 's,30_ATLANTIC_m.txt,41,43,1,0,0,0,0,0
+27,'s,30_ATLANTIC_m.txt,42,43,1,0,0,0,1,0
+28,MeToo,30_ATLANTIC_m.txt,48,49,1,0,0,0,0,0
+29,Though,30_ATLANTIC_m.txt,51,52,1,0,0,0,0,0
+30,Lady,30_ATLANTIC_m.txt,54,55,1,0,0,0,1,0
+31,Lady Bird,30_ATLANTIC_m.txt,54,56,1,0,0,0,0,0
+32,Bird,30_ATLANTIC_m.txt,55,56,1,1,0,0,1,0
+33,The,30_ATLANTIC_m.txt,57,58,1,0,0,0,1,0
+34,The Shape,30_ATLANTIC_m.txt,57,59,1,0,0,0,0,0
+35,Shape,30_ATLANTIC_m.txt,58,59,1,0,0,1,1,0
+36,Water,30_ATLANTIC_m.txt,60,61,1,0,0,0,0,0
+37,Big,30_ATLANTIC_m.txt,68,69,1,0,0,0,1,0
+38,Big Little,30_ATLANTIC_m.txt,68,70,1,0,0,0,1,0
+39,Big Little Lies,30_ATLANTIC_m.txt,68,71,1,0,0,0,0,0
+40,Little,30_ATLANTIC_m.txt,69,70,1,0,0,0,1,0
+41,Little Lies,30_ATLANTIC_m.txt,69,71,1,0,0,0,1,0
+42,Lies,30_ATLANTIC_m.txt,70,71,1,0,0,0,1,0
+43,The,30_ATLANTIC_m.txt,72,73,1,0,0,0,1,0
+44,The Handmaid,30_ATLANTIC_m.txt,72,74,1,0,1,0,0,0
+45,The Handmaid 's,30_ATLANTIC_m.txt,72,75,1,0,0,0,1,0
+46,The Handmaid 's Tale,30_ATLANTIC_m.txt,72,76,1,0,0,0,0,0
+47,Handmaid,30_ATLANTIC_m.txt,73,74,1,0,1,1,1,0
+48,Handmaid 's,30_ATLANTIC_m.txt,73,75,1,0,0,1,1,0
+49,Handmaid 's Tale,30_ATLANTIC_m.txt,73,76,1,0,0,1,1,0
+50,'s,30_ATLANTIC_m.txt,74,75,1,0,0,0,1,0
+51,'s Tale,30_ATLANTIC_m.txt,74,76,1,0,0,0,1,0
+52,Tale,30_ATLANTIC_m.txt,75,76,1,0,0,0,0,0
+53,The,30_ATLANTIC_m.txt,78,79,1,0,0,0,1,0
+54,The Marvelous,30_ATLANTIC_m.txt,78,80,1,0,0,0,1,0
+55,The Marvelous Mrs.,30_ATLANTIC_m.txt,78,81,1,0,0,0,0,0
+56,The Marvelous Mrs. Maisel,30_ATLANTIC_m.txt,78,82,1,0,0,0,0,0
+57,Marvelous,30_ATLANTIC_m.txt,79,80,1,0,0,1,1,0
+58,Marvelous Mrs.,30_ATLANTIC_m.txt,79,81,1,0,0,1,1,0
+59,Marvelous Mrs. Maisel,30_ATLANTIC_m.txt,79,82,1,0,0,1,1,0
+60,Mrs.,30_ATLANTIC_m.txt,80,81,1,0,0,0,1,0
+61,Mrs. Maisel,30_ATLANTIC_m.txt,80,82,1,0,0,0,1,0
+62,Maisel,30_ATLANTIC_m.txt,81,82,1,1,0,0,1,1
+63,TV,30_ATLANTIC_m.txt,86,87,1,0,0,1,0,0
+64,'s,30_ATLANTIC_m.txt,91,92,1,0,0,0,0,0
+65,Oprah,30_ATLANTIC_m.txt,101,102,1,0,0,0,1,0
+66,Oprah Winfrey,30_ATLANTIC_m.txt,101,103,1,0,0,0,0,1
+67,Winfrey,30_ATLANTIC_m.txt,102,103,1,0,0,0,0,0
+68,'s,30_ATLANTIC_m.txt,110,111,1,0,0,0,0,0
+69,Hollywood,30_ATLANTIC_m.txt,125,126,1,0,1,1,0,0
+70,Hollywood 's,30_ATLANTIC_m.txt,125,127,1,0,0,1,0,0
+71,'s,30_ATLANTIC_m.txt,126,127,1,0,0,0,1,0
+72,The,30_ATLANTIC_m.txt,131,132,1,0,0,0,1,0
+73,The Globes,30_ATLANTIC_m.txt,131,133,1,0,0,0,0,0
+74,Globes,30_ATLANTIC_m.txt,132,133,1,0,0,1,1,0
+75,Hollywood,30_ATLANTIC_m.txt,137,138,1,0,0,1,1,0
+76,Hollywood Foreign,30_ATLANTIC_m.txt,137,139,1,0,0,1,1,0
+77,Hollywood Foreign Press,30_ATLANTIC_m.txt,137,140,1,0,0,1,1,0
+78,Hollywood Foreign Press Association,30_ATLANTIC_m.txt,137,141,1,0,0,1,0,0
+79,Foreign,30_ATLANTIC_m.txt,138,139,1,0,0,0,1,0
+80,Foreign Press,30_ATLANTIC_m.txt,138,140,1,0,0,0,1,0
+81,Foreign Press Association,30_ATLANTIC_m.txt,138,141,1,0,0,0,1,0
+82,Press,30_ATLANTIC_m.txt,139,140,1,0,0,0,1,0
+83,Press Association,30_ATLANTIC_m.txt,139,141,1,0,0,0,1,0
+84,Association,30_ATLANTIC_m.txt,140,141,1,0,0,0,1,0
+85,Oscars,30_ATLANTIC_m.txt,156,157,1,0,0,1,0,0
+86,But,30_ATLANTIC_m.txt,174,175,1,0,0,0,0,0
+87,Harvey,30_ATLANTIC_m.txt,210,211,1,0,0,0,1,0
+88,Harvey Weinstein,30_ATLANTIC_m.txt,210,212,1,0,0,0,0,1
+89,Weinstein,30_ATLANTIC_m.txt,211,212,1,0,0,0,0,0
+90,Kevin,30_ATLANTIC_m.txt,213,214,1,0,0,0,1,0
+91,Kevin Spacey,30_ATLANTIC_m.txt,213,215,1,0,0,0,0,1
+92,Spacey,30_ATLANTIC_m.txt,214,215,1,0,0,0,0,0
+93,Frances,30_ATLANTIC_m.txt,216,217,1,0,0,0,1,0
+94,Frances McDormand,30_ATLANTIC_m.txt,216,218,1,0,0,0,0,1
+95,McDormand,30_ATLANTIC_m.txt,217,218,1,0,0,0,0,0
+96,Best,30_ATLANTIC_m.txt,220,221,1,0,0,0,1,0
+97,Best Actress,30_ATLANTIC_m.txt,220,222,1,0,0,0,0,0
+98,Actress,30_ATLANTIC_m.txt,221,222,1,0,0,0,1,0
+99,Motion,30_ATLANTIC_m.txt,224,225,1,0,0,0,1,0
+100,Motion Picture,30_ATLANTIC_m.txt,224,226,1,0,0,0,0,0
+101,Picture,30_ATLANTIC_m.txt,225,226,1,0,0,0,1,0
+102,Drama,30_ATLANTIC_m.txt,227,228,1,0,0,0,0,0
+103,Mildred,30_ATLANTIC_m.txt,234,235,1,0,0,0,0,1
+104,Martin,30_ATLANTIC_m.txt,236,237,1,0,0,1,1,0
+105,Martin McDonagh,30_ATLANTIC_m.txt,236,238,1,0,1,1,0,1
+106,Martin McDonagh 's,30_ATLANTIC_m.txt,236,239,1,0,0,1,1,0
+107,Martin McDonagh 's Three,30_ATLANTIC_m.txt,236,240,1,0,0,1,1,0
+108,McDonagh,30_ATLANTIC_m.txt,237,238,1,0,1,0,0,0
+109,McDonagh 's,30_ATLANTIC_m.txt,237,239,1,0,0,0,1,0
+110,McDonagh 's Three,30_ATLANTIC_m.txt,237,240,1,0,0,0,1,0
+111,McDonagh 's Three Billboards,30_ATLANTIC_m.txt,237,241,1,0,0,0,0,0
+112,'s,30_ATLANTIC_m.txt,238,239,1,0,0,0,1,0
+113,'s Three,30_ATLANTIC_m.txt,238,240,1,0,0,0,1,0
+114,'s Three Billboards,30_ATLANTIC_m.txt,238,241,1,0,0,0,1,0
+115,Three,30_ATLANTIC_m.txt,239,240,1,0,0,0,1,0
+116,Three Billboards,30_ATLANTIC_m.txt,239,241,1,0,0,0,0,0
+117,Billboards,30_ATLANTIC_m.txt,240,241,1,0,0,0,1,0
+118,It,30_ATLANTIC_m.txt,251,252,1,0,0,0,0,0
+119,'s,30_ATLANTIC_m.txt,273,274,1,0,0,0,0,0
+120,Trust,30_ATLANTIC_m.txt,282,283,1,0,0,0,0,0
+121,We,30_ATLANTIC_m.txt,298,299,1,0,0,0,0,0
+122,Thank,30_ATLANTIC_m.txt,305,306,1,0,0,0,0,0
+123,Three,30_ATLANTIC_m.txt,309,310,1,0,0,0,1,0
+124,Three Billboards,30_ATLANTIC_m.txt,309,311,1,0,0,0,0,0
+125,Billboards,30_ATLANTIC_m.txt,310,311,1,0,0,0,1,0
+126,'s,30_ATLANTIC_m.txt,331,332,1,0,0,0,0,0
+127,Globes,30_ATLANTIC_m.txt,336,337,1,0,0,0,0,0
+128,The,30_ATLANTIC_m.txt,339,340,1,0,0,0,0,0
+129,Lady,30_ATLANTIC_m.txt,348,349,1,0,0,0,1,0
+130,Lady Bird,30_ATLANTIC_m.txt,348,350,1,0,0,0,0,0
+131,Bird,30_ATLANTIC_m.txt,349,350,1,1,0,0,1,0
+132,Greta,30_ATLANTIC_m.txt,351,352,1,0,0,0,1,0
+133,Greta Gerwig,30_ATLANTIC_m.txt,351,353,1,0,1,0,0,1
+134,Greta Gerwig 's,30_ATLANTIC_m.txt,351,354,1,0,0,0,0,0
+135,Gerwig,30_ATLANTIC_m.txt,352,353,1,0,1,0,0,0
+136,Gerwig 's,30_ATLANTIC_m.txt,352,354,1,0,0,0,0,0
+137,'s,30_ATLANTIC_m.txt,353,354,1,0,0,0,1,0
+138,Sacramento,30_ATLANTIC_m.txt,365,366,1,0,0,0,0,0
+139,Best,30_ATLANTIC_m.txt,369,370,1,0,0,0,1,0
+140,Best Motion,30_ATLANTIC_m.txt,369,371,1,0,0,0,1,0
+141,Best Motion Picture,30_ATLANTIC_m.txt,369,372,1,0,0,0,0,0
+142,Motion,30_ATLANTIC_m.txt,370,371,1,0,0,0,1,0
+143,Motion Picture,30_ATLANTIC_m.txt,370,372,1,0,0,0,1,0
+144,Picture,30_ATLANTIC_m.txt,371,372,1,0,0,0,1,0
+145,Comedy,30_ATLANTIC_m.txt,373,374,1,0,0,0,0,0
+146,Musical,30_ATLANTIC_m.txt,375,376,1,0,0,0,0,0
+147,Best,30_ATLANTIC_m.txt,377,378,1,0,0,0,1,0
+148,Best Actress,30_ATLANTIC_m.txt,377,379,1,0,0,0,0,0
+149,Actress,30_ATLANTIC_m.txt,378,379,1,0,0,0,1,0
+150,Motion,30_ATLANTIC_m.txt,381,382,1,0,0,0,1,0
+151,Motion Picture,30_ATLANTIC_m.txt,381,383,1,0,0,0,0,0
+152,Picture,30_ATLANTIC_m.txt,382,383,1,0,0,0,1,0
+153,Comedy,30_ATLANTIC_m.txt,384,385,1,0,0,0,0,0
+154,Musical,30_ATLANTIC_m.txt,386,387,1,0,0,0,0,0
+155,Saoirse,30_ATLANTIC_m.txt,388,389,1,0,0,0,1,0
+156,Saoirse Ronan,30_ATLANTIC_m.txt,388,390,1,0,0,0,0,1
+157,Ronan,30_ATLANTIC_m.txt,389,390,1,0,0,0,0,0
+158,Worlds,30_ATLANTIC_m.txt,391,392,1,0,0,0,0,0
+159,Three,30_ATLANTIC_m.txt,394,395,1,0,0,0,1,0
+160,Three Billboards,30_ATLANTIC_m.txt,394,396,1,0,0,0,0,0
+161,Billboards,30_ATLANTIC_m.txt,395,396,1,0,0,0,1,0
+162,Oscars,30_ATLANTIC_m.txt,412,413,1,0,0,1,0,0
+163,March,30_ATLANTIC_m.txt,414,415,1,0,0,1,0,0
+164,'s,30_ATLANTIC_m.txt,418,419,1,0,0,0,0,0
+165,Natalie,30_ATLANTIC_m.txt,436,437,1,0,0,0,1,0
+166,Natalie Portman,30_ATLANTIC_m.txt,436,438,1,0,0,0,0,1
+167,Portman,30_ATLANTIC_m.txt,437,438,1,0,0,0,0,0
+168,Best,30_ATLANTIC_m.txt,444,445,1,0,0,0,1,0
+169,Best Director,30_ATLANTIC_m.txt,444,446,1,0,0,0,0,0
+170,Director,30_ATLANTIC_m.txt,445,446,1,0,0,0,1,0
+171,Barbra,30_ATLANTIC_m.txt,450,451,1,0,0,0,1,0
+172,Barbra Streisand,30_ATLANTIC_m.txt,450,452,1,0,0,0,0,1
+173,Streisand,30_ATLANTIC_m.txt,451,452,1,0,0,0,0,0
+174,Best,30_ATLANTIC_m.txt,454,455,1,0,0,0,1,0
+175,Best Motion,30_ATLANTIC_m.txt,454,456,1,0,0,0,1,0
+176,Best Motion Picture,30_ATLANTIC_m.txt,454,457,1,0,0,0,0,0
+177,Motion,30_ATLANTIC_m.txt,455,456,1,0,0,0,1,0
+178,Motion Picture,30_ATLANTIC_m.txt,455,457,1,0,0,0,1,0
+179,Picture,30_ATLANTIC_m.txt,456,457,1,0,0,0,1,0
+180,Drama,30_ATLANTIC_m.txt,458,459,1,0,0,0,0,0
+181,Globes,30_ATLANTIC_m.txt,474,475,1,0,0,1,0,0
+0,The,14_ATLANTIC_m.txt,0,1,1,0,0,0,0,0
+1,Doug,14_ATLANTIC_m.txt,3,4,1,0,0,0,1,0
+2,Doug Kenney,14_ATLANTIC_m.txt,3,5,1,0,0,0,0,1
+3,Kenney,14_ATLANTIC_m.txt,4,5,1,0,0,0,0,0
+4,National,14_ATLANTIC_m.txt,11,12,1,0,0,0,1,0
+5,National Lampoon,14_ATLANTIC_m.txt,11,13,1,0,0,0,0,0
+6,Lampoon,14_ATLANTIC_m.txt,12,13,1,0,0,0,1,0
+7,Animal,14_ATLANTIC_m.txt,21,22,1,0,0,0,1,0
+8,Animal House,14_ATLANTIC_m.txt,21,23,1,0,0,0,0,0
+9,House,14_ATLANTIC_m.txt,22,23,1,0,0,0,1,0
+10,Caddyshack,14_ATLANTIC_m.txt,24,25,1,0,0,0,0,0
+11,Here,14_ATLANTIC_m.txt,38,39,1,0,0,0,0,0
+12,America,14_ATLANTIC_m.txt,49,50,1,0,1,0,0,0
+13,America 's,14_ATLANTIC_m.txt,49,51,1,0,0,0,0,0
+14,'s,14_ATLANTIC_m.txt,50,51,1,0,0,0,1,0
+15,Saturday,14_ATLANTIC_m.txt,59,60,1,0,0,0,1,0
+16,Saturday Night,14_ATLANTIC_m.txt,59,61,1,0,0,0,1,0
+17,Saturday Night Live,14_ATLANTIC_m.txt,59,62,1,0,0,0,0,0
+18,Night,14_ATLANTIC_m.txt,60,61,1,0,0,0,1,0
+19,Night Live,14_ATLANTIC_m.txt,60,62,1,0,0,0,1,0
+20,Live,14_ATLANTIC_m.txt,61,62,1,0,0,0,1,0
+21,David,14_ATLANTIC_m.txt,74,75,1,0,0,0,1,0
+22,David Wain,14_ATLANTIC_m.txt,74,76,1,0,1,0,0,1
+23,David Wain 's,14_ATLANTIC_m.txt,74,77,1,0,0,0,0,0
+24,Wain,14_ATLANTIC_m.txt,75,76,1,0,1,0,0,0
+25,Wain 's,14_ATLANTIC_m.txt,75,77,1,0,0,0,0,0
+26,'s,14_ATLANTIC_m.txt,76,77,1,0,0,0,1,0
+27,A,14_ATLANTIC_m.txt,78,79,1,0,0,0,1,0
+28,A Futile,14_ATLANTIC_m.txt,78,80,1,0,0,0,0,0
+29,Futile,14_ATLANTIC_m.txt,79,80,1,0,0,0,1,0
+30,Stupid,14_ATLANTIC_m.txt,81,82,1,0,0,0,1,0
+31,Stupid Gesture,14_ATLANTIC_m.txt,81,83,1,0,0,0,0,0
+32,Gesture,14_ATLANTIC_m.txt,82,83,1,0,0,0,1,0
+33,Friday,14_ATLANTIC_m.txt,85,86,1,0,0,0,0,0
+34,Netflix,14_ATLANTIC_m.txt,87,88,1,0,0,1,0,0
+35,Kenney,14_ATLANTIC_m.txt,99,100,1,0,1,1,0,1
+36,Kenney 's,14_ATLANTIC_m.txt,99,101,1,0,0,1,0,0
+37,'s,14_ATLANTIC_m.txt,100,101,1,0,0,0,0,0
+38,'s,14_ATLANTIC_m.txt,111,112,1,0,0,0,0,0
+39,Unfortunately,14_ATLANTIC_m.txt,122,123,1,0,0,0,0,0
+40,Kenney,14_ATLANTIC_m.txt,140,141,1,0,0,0,0,1
+41,Will,14_ATLANTIC_m.txt,144,145,1,0,0,0,1,0
+42,Will Forte,14_ATLANTIC_m.txt,144,146,1,0,0,0,0,1
+43,Forte,14_ATLANTIC_m.txt,145,146,1,0,0,0,0,0
+44,Harvard,14_ATLANTIC_m.txt,149,150,1,0,0,0,0,0
+45,The,14_ATLANTIC_m.txt,154,155,1,0,0,0,1,0
+46,The Harvard,14_ATLANTIC_m.txt,154,156,1,0,0,0,1,0
+47,The Harvard Lampoon,14_ATLANTIC_m.txt,154,157,1,0,0,0,0,0
+48,Harvard,14_ATLANTIC_m.txt,155,156,1,0,0,1,1,0
+49,Harvard Lampoon,14_ATLANTIC_m.txt,155,157,1,0,0,1,1,0
+50,Lampoon,14_ATLANTIC_m.txt,156,157,1,0,0,0,1,0
+51,Bored,14_ATLANTIC_m.txt,162,163,1,0,0,0,0,0
+52,Rings,14_ATLANTIC_m.txt,165,166,1,0,0,1,0,0
+53,Henry,14_ATLANTIC_m.txt,169,170,1,0,0,0,1,0
+54,Henry Beard,14_ATLANTIC_m.txt,169,171,1,0,0,0,0,1
+55,Beard,14_ATLANTIC_m.txt,170,171,1,0,0,0,0,0
+56,Domhnall,14_ATLANTIC_m.txt,172,173,1,0,0,0,1,0
+57,Domhnall Gleeson,14_ATLANTIC_m.txt,172,174,1,0,0,0,0,1
+58,Gleeson,14_ATLANTIC_m.txt,173,174,1,0,0,0,0,0
+59,Together,14_ATLANTIC_m.txt,176,177,1,0,0,0,0,0
+60,National,14_ATLANTIC_m.txt,181,182,1,0,0,1,1,0
+61,National Lampoon,14_ATLANTIC_m.txt,181,183,1,0,0,1,0,0
+62,Lampoon,14_ATLANTIC_m.txt,182,183,1,0,0,0,1,0
+63,Mad,14_ATLANTIC_m.txt,197,198,1,0,0,0,0,0
+64,Kenney,14_ATLANTIC_m.txt,207,208,1,0,1,0,0,1
+65,Kenney 's,14_ATLANTIC_m.txt,207,209,1,0,0,0,0,0
+66,'s,14_ATLANTIC_m.txt,208,209,1,0,0,0,0,0
+67,Animal,14_ATLANTIC_m.txt,215,216,1,0,0,0,1,0
+68,Animal House,14_ATLANTIC_m.txt,215,217,1,0,0,0,0,0
+69,House,14_ATLANTIC_m.txt,216,217,1,0,0,0,1,0
+70,Caddyshack,14_ATLANTIC_m.txt,225,226,1,0,0,0,0,0
+71,Wain,14_ATLANTIC_m.txt,235,236,1,0,0,0,0,1
+72,Kenney,14_ATLANTIC_m.txt,242,243,1,0,1,0,0,1
+73,Kenney 's,14_ATLANTIC_m.txt,242,244,1,0,0,0,0,0
+74,'s,14_ATLANTIC_m.txt,243,244,1,0,0,0,0,0
+75,Bill,14_ATLANTIC_m.txt,258,259,1,0,0,0,1,0
+76,Bill Murray,14_ATLANTIC_m.txt,258,260,1,0,0,0,0,1
+77,Murray,14_ATLANTIC_m.txt,259,260,1,0,0,0,0,0
+78,Chevy,14_ATLANTIC_m.txt,261,262,1,0,0,0,1,0
+79,Chevy Chase,14_ATLANTIC_m.txt,261,263,1,0,0,0,0,1
+80,Chase,14_ATLANTIC_m.txt,262,263,1,0,0,0,0,0
+81,Gilda,14_ATLANTIC_m.txt,265,266,1,0,0,0,1,0
+82,Gilda Radner,14_ATLANTIC_m.txt,265,267,1,0,0,0,0,1
+83,Radner,14_ATLANTIC_m.txt,266,267,1,0,0,0,0,0
+84,Kenney,14_ATLANTIC_m.txt,272,273,1,0,0,0,0,1
+85,But,14_ATLANTIC_m.txt,277,278,1,0,0,0,0,0
+86,But Wain,14_ATLANTIC_m.txt,277,279,1,0,0,0,0,0
+87,Wain,14_ATLANTIC_m.txt,278,279,1,0,0,0,1,1
+88,The,14_ATLANTIC_m.txt,298,299,1,0,0,0,1,0
+89,The State,14_ATLANTIC_m.txt,298,300,1,0,0,0,0,0
+90,State,14_ATLANTIC_m.txt,299,300,1,0,0,1,1,0
+91,Wet,14_ATLANTIC_m.txt,308,309,1,0,0,0,1,0
+92,Wet Hot,14_ATLANTIC_m.txt,308,310,1,0,0,0,1,0
+93,Wet Hot American,14_ATLANTIC_m.txt,308,311,1,0,0,0,1,0
+94,Wet Hot American Summer,14_ATLANTIC_m.txt,308,312,1,0,0,0,0,0
+95,Hot,14_ATLANTIC_m.txt,309,310,1,0,0,0,1,0
+96,Hot American,14_ATLANTIC_m.txt,309,311,1,0,0,0,1,0
+97,Hot American Summer,14_ATLANTIC_m.txt,309,312,1,0,0,0,1,0
+98,American,14_ATLANTIC_m.txt,310,311,1,0,0,0,1,0
+99,American Summer,14_ATLANTIC_m.txt,310,312,1,0,0,0,1,0
+100,Summer,14_ATLANTIC_m.txt,311,312,1,0,0,0,1,0
+101,A,14_ATLANTIC_m.txt,325,326,1,0,0,0,1,0
+102,A Futile,14_ATLANTIC_m.txt,325,327,1,0,0,0,0,0
+103,Futile,14_ATLANTIC_m.txt,326,327,1,0,0,0,1,0
+104,Stupid,14_ATLANTIC_m.txt,328,329,1,0,0,0,1,0
+105,Stupid Gesture,14_ATLANTIC_m.txt,328,330,1,0,0,0,0,0
+106,Gesture,14_ATLANTIC_m.txt,329,330,1,0,0,0,1,0
+107,'s,14_ATLANTIC_m.txt,338,339,1,0,0,0,0,0
+108,Yes,14_ATLANTIC_m.txt,358,359,1,0,0,0,0,0
+109,Kenney,14_ATLANTIC_m.txt,360,361,1,0,0,0,0,1
+110,American,14_ATLANTIC_m.txt,368,369,1,0,0,1,0,0
+111,The,14_ATLANTIC_m.txt,381,382,1,0,0,0,0,0
+112,Wain,14_ATLANTIC_m.txt,386,387,1,0,0,0,0,1
+113,'s,14_ATLANTIC_m.txt,391,392,1,0,0,0,0,0
+114,John,14_ATLANTIC_m.txt,397,398,1,0,0,0,1,0
+115,John Aboud,14_ATLANTIC_m.txt,397,399,1,0,0,0,0,1
+116,Aboud,14_ATLANTIC_m.txt,398,399,1,0,0,0,0,0
+117,Michael,14_ATLANTIC_m.txt,400,401,1,0,0,0,1,0
+118,Michael Colton,14_ATLANTIC_m.txt,400,402,1,0,0,0,0,1
+119,Colton,14_ATLANTIC_m.txt,401,402,1,0,0,0,0,0
+120,Kenney,14_ATLANTIC_m.txt,412,413,1,0,0,0,0,1
+121,Martin,14_ATLANTIC_m.txt,416,417,1,0,0,0,1,0
+122,Martin Mull,14_ATLANTIC_m.txt,416,418,1,0,0,0,0,1
+123,Mull,14_ATLANTIC_m.txt,417,418,1,0,0,0,0,0
+124,Mull,14_ATLANTIC_m.txt,429,430,1,0,0,0,0,1
+125,'s,14_ATLANTIC_m.txt,443,444,1,0,0,0,0,0
+126,Lampoon,14_ATLANTIC_m.txt,458,459,1,0,0,1,0,0
+127,Kenney,14_ATLANTIC_m.txt,463,464,1,0,0,0,0,1
+0,The,6_ATLANTIC_m.txt,0,1,1,0,0,0,1,0
+1,The Cloverfield,6_ATLANTIC_m.txt,0,2,1,0,0,0,1,0
+2,The Cloverfield Paradox,6_ATLANTIC_m.txt,0,3,1,0,0,0,0,0
+3,Cloverfield,6_ATLANTIC_m.txt,1,2,1,0,0,1,1,0
+4,Cloverfield Paradox,6_ATLANTIC_m.txt,1,3,1,0,0,1,1,0
+5,Paradox,6_ATLANTIC_m.txt,2,3,1,0,0,0,1,0
+6,First,6_ATLANTIC_m.txt,16,17,1,0,0,0,0,0
+7,God,6_ATLANTIC_m.txt,21,22,1,0,0,0,1,0
+8,God Particle,6_ATLANTIC_m.txt,21,23,1,0,0,0,0,0
+9,Particle,6_ATLANTIC_m.txt,22,23,1,0,0,0,1,0
+10,Julius,6_ATLANTIC_m.txt,32,33,1,0,0,0,1,0
+11,Julius Onah,6_ATLANTIC_m.txt,32,34,1,0,0,0,0,1
+12,Onah,6_ATLANTIC_m.txt,33,34,1,0,0,0,0,0
+13,In,6_ATLANTIC_m.txt,47,48,1,0,0,0,1,0
+14,In January,6_ATLANTIC_m.txt,47,49,1,0,0,0,0,0
+15,January,6_ATLANTIC_m.txt,48,49,1,0,0,0,1,0
+16,Netflix,6_ATLANTIC_m.txt,53,54,1,0,0,0,0,0
+17,Paramount,6_ATLANTIC_m.txt,64,65,1,0,0,0,0,0
+18,Netflix,6_ATLANTIC_m.txt,74,75,1,0,0,0,0,0
+19,Annihilation,6_ATLANTIC_m.txt,85,86,1,0,0,0,0,0
+20,Just,6_ATLANTIC_m.txt,105,106,1,0,0,0,0,0
+21,Super,6_ATLANTIC_m.txt,116,117,1,0,0,1,1,0
+22,Super Bowl,6_ATLANTIC_m.txt,116,118,1,0,0,1,0,0
+23,Bowl,6_ATLANTIC_m.txt,117,118,1,0,0,0,1,0
+24,Netflix,6_ATLANTIC_m.txt,119,120,1,0,0,0,0,0
+25,This,6_ATLANTIC_m.txt,128,129,1,0,0,0,0,0
+26,The,6_ATLANTIC_m.txt,133,134,1,0,0,0,1,0
+27,The Cloverfield,6_ATLANTIC_m.txt,133,135,1,0,0,0,1,0
+28,The Cloverfield Paradox,6_ATLANTIC_m.txt,133,136,1,0,0,0,0,0
+29,Cloverfield,6_ATLANTIC_m.txt,134,135,1,0,0,1,1,0
+30,Cloverfield Paradox,6_ATLANTIC_m.txt,134,136,1,0,0,1,1,0
+31,Paradox,6_ATLANTIC_m.txt,135,136,1,0,0,0,1,0
+32,When,6_ATLANTIC_m.txt,148,149,1,0,0,0,1,0
+33,When Paramount,6_ATLANTIC_m.txt,148,150,1,0,0,0,0,0
+34,Paramount,6_ATLANTIC_m.txt,149,150,1,0,0,0,1,0
+35,Annihilation,6_ATLANTIC_m.txt,156,157,1,0,0,0,0,0
+36,But,6_ATLANTIC_m.txt,202,203,1,0,0,0,0,0
+37,'s,6_ATLANTIC_m.txt,204,205,1,0,0,0,0,0
+38,The,6_ATLANTIC_m.txt,212,213,1,0,0,0,1,0
+39,The Cloverfield,6_ATLANTIC_m.txt,212,214,1,0,0,0,1,0
+40,The Cloverfield Paradox,6_ATLANTIC_m.txt,212,215,1,0,0,0,0,0
+41,Cloverfield,6_ATLANTIC_m.txt,213,214,1,0,0,1,1,0
+42,Cloverfield Paradox,6_ATLANTIC_m.txt,213,215,1,0,0,1,1,0
+43,Paradox,6_ATLANTIC_m.txt,214,215,1,0,0,0,1,0
+44,Not,6_ATLANTIC_m.txt,216,217,1,0,0,0,0,0
+45,'s,6_ATLANTIC_m.txt,230,231,1,0,0,0,0,0
+46,J,6_ATLANTIC_m.txt,237,238,1,0,0,0,0,0
+47,J.,6_ATLANTIC_m.txt,239,240,1,0,0,0,1,0
+48,J. Abrams,6_ATLANTIC_m.txt,239,241,1,0,1,0,0,0
+49,J. Abrams 's,6_ATLANTIC_m.txt,239,242,1,0,0,0,0,0
+50,Abrams,6_ATLANTIC_m.txt,240,241,1,0,1,0,1,0
+51,Abrams 's,6_ATLANTIC_m.txt,240,242,1,0,0,0,1,0
+52,'s,6_ATLANTIC_m.txt,241,242,1,0,0,0,1,0
+53,Cloverfield,6_ATLANTIC_m.txt,243,244,1,0,0,0,0,0
+54,There,6_ATLANTIC_m.txt,266,267,1,0,1,0,0,0
+55,There 's,6_ATLANTIC_m.txt,266,268,1,0,0,0,0,0
+56,'s,6_ATLANTIC_m.txt,267,268,1,0,0,0,1,0
+57,But,6_ATLANTIC_m.txt,308,309,1,0,0,0,0,0
+58,'s,6_ATLANTIC_m.txt,310,311,1,0,0,0,0,0
+59,Onah,6_ATLANTIC_m.txt,328,329,1,0,0,0,0,1
+60,Nigerian,6_ATLANTIC_m.txt,331,332,1,0,0,0,1,0
+61,Nigerian American,6_ATLANTIC_m.txt,331,333,1,0,0,0,0,0
+62,American,6_ATLANTIC_m.txt,332,333,1,0,0,0,1,0
+63,The,6_ATLANTIC_m.txt,340,341,1,0,0,0,1,0
+64,The Girl,6_ATLANTIC_m.txt,340,342,1,0,0,0,1,0
+65,The Girl Is,6_ATLANTIC_m.txt,340,343,1,0,0,0,0,0
+66,Girl,6_ATLANTIC_m.txt,341,342,1,0,0,1,1,0
+67,Girl Is,6_ATLANTIC_m.txt,341,343,1,0,0,1,1,0
+68,Is,6_ATLANTIC_m.txt,342,343,1,0,0,0,1,0
+69,Trouble,6_ATLANTIC_m.txt,344,345,1,0,0,1,0,0
+70,But,6_ATLANTIC_m.txt,364,365,1,0,0,0,0,0
+71,The,6_ATLANTIC_m.txt,375,376,1,0,0,0,1,0
+72,The Cloverfield,6_ATLANTIC_m.txt,375,377,1,0,0,0,1,0
+73,The Cloverfield Paradox,6_ATLANTIC_m.txt,375,378,1,0,0,0,0,0
+74,Cloverfield,6_ATLANTIC_m.txt,376,377,1,0,0,1,1,0
+75,Cloverfield Paradox,6_ATLANTIC_m.txt,376,378,1,0,0,1,1,0
+76,Paradox,6_ATLANTIC_m.txt,377,378,1,0,0,0,1,0
+77,Earth,6_ATLANTIC_m.txt,385,386,1,0,0,0,0,0
+78,'s,6_ATLANTIC_m.txt,408,409,1,0,0,0,0,0
+79,The,6_ATLANTIC_m.txt,418,419,1,0,0,0,0,0
+80,Brit,6_ATLANTIC_m.txt,422,423,1,0,0,0,0,0
+81,Ava,6_ATLANTIC_m.txt,424,425,1,0,0,0,0,1
+82,Gugu,6_ATLANTIC_m.txt,426,427,1,0,0,0,1,0
+83,Gugu Mbatha-Raw,6_ATLANTIC_m.txt,426,428,1,0,0,0,0,1
+84,Mbatha-Raw,6_ATLANTIC_m.txt,427,428,1,0,0,0,0,0
+85,American,6_ATLANTIC_m.txt,431,432,1,0,0,0,0,0
+86,Kiel,6_ATLANTIC_m.txt,433,434,1,0,0,0,0,1
+87,David,6_ATLANTIC_m.txt,435,436,1,0,0,0,1,0
+88,David Oyelowo,6_ATLANTIC_m.txt,435,437,1,0,0,0,0,1
+89,Oyelowo,6_ATLANTIC_m.txt,436,437,1,0,0,0,0,0
+90,Irishman,6_ATLANTIC_m.txt,440,441,1,0,0,0,0,0
+91,Mundy,6_ATLANTIC_m.txt,442,443,1,0,0,0,0,1
+92,Chris,6_ATLANTIC_m.txt,444,445,1,0,0,0,1,0
+93,Chris O'Dowd,6_ATLANTIC_m.txt,444,446,1,0,0,0,0,1
+94,O'Dowd,6_ATLANTIC_m.txt,445,446,1,0,0,0,0,0
+95,Chinese,6_ATLANTIC_m.txt,449,450,1,0,0,1,0,0
+96,Tam,6_ATLANTIC_m.txt,451,452,1,0,0,0,0,1
+97,Zhang,6_ATLANTIC_m.txt,453,454,1,0,0,0,1,0
+98,Zhang Ziyi,6_ATLANTIC_m.txt,453,455,1,0,0,0,0,1
+99,Ziyi,6_ATLANTIC_m.txt,454,455,1,0,0,0,0,0
+100,German,6_ATLANTIC_m.txt,460,461,1,0,0,0,0,0
+101,Schmidt,6_ATLANTIC_m.txt,462,463,1,0,0,0,0,1
+102,Daniel,6_ATLANTIC_m.txt,464,465,1,0,0,0,1,0
+103,Daniel Brühl,6_ATLANTIC_m.txt,464,466,1,0,0,0,0,1
+104,Brühl,6_ATLANTIC_m.txt,465,466,1,0,0,0,0,0
+105,Their,6_ATLANTIC_m.txt,483,484,1,0,0,0,0,0
+106,Earth,6_ATLANTIC_m.txt,516,517,1,0,0,0,0,0
+0,For,2_ATLANTIC_m.txt,0,1,1,0,0,0,0,0
+1,I,2_ATLANTIC_m.txt,17,18,1,0,0,0,0,0
+2,Fifty,2_ATLANTIC_m.txt,19,20,1,0,0,0,1,0
+3,Fifty Shades,2_ATLANTIC_m.txt,19,21,1,0,0,0,0,0
+4,Shades,2_ATLANTIC_m.txt,20,21,1,0,0,0,1,0
+5,Grey,2_ATLANTIC_m.txt,22,23,1,0,0,0,0,0
+6,American,2_ATLANTIC_m.txt,28,29,1,0,0,1,0,0
+7,I,2_ATLANTIC_m.txt,41,42,1,0,0,0,0,0
+8,I,2_ATLANTIC_m.txt,45,46,1,0,0,0,0,0
+9,'s,2_ATLANTIC_m.txt,51,52,1,0,0,0,0,0
+10,I,2_ATLANTIC_m.txt,55,56,1,0,0,0,0,0
+11,Suffice,2_ATLANTIC_m.txt,64,65,1,0,0,0,0,0
+12,I,2_ATLANTIC_m.txt,68,69,1,0,0,0,0,0
+13,But,2_ATLANTIC_m.txt,92,93,1,0,0,0,0,0
+14,I'm,2_ATLANTIC_m.txt,98,99,1,0,0,0,0,0
+15,do,2_ATLANTIC_m.txt,101,102,1,0,0,0,0,0
+16,This,2_ATLANTIC_m.txt,115,116,1,0,0,0,0,0
+17,Fifty,2_ATLANTIC_m.txt,124,125,1,0,0,0,1,0
+18,Fifty Shades,2_ATLANTIC_m.txt,124,126,1,0,0,0,1,0
+19,Fifty Shades Freed,2_ATLANTIC_m.txt,124,127,1,0,0,0,0,0
+20,Shades,2_ATLANTIC_m.txt,125,126,1,0,0,0,1,0
+21,Shades Freed,2_ATLANTIC_m.txt,125,127,1,0,0,0,1,0
+22,Freed,2_ATLANTIC_m.txt,126,127,1,0,0,0,1,0
+23,The,2_ATLANTIC_m.txt,128,129,1,0,0,0,0,0
+24,'s,2_ATLANTIC_m.txt,134,135,1,0,0,0,0,0
+25,Erika,2_ATLANTIC_m.txt,154,155,1,0,0,0,1,0
+26,Erika Mitchell,2_ATLANTIC_m.txt,154,156,1,0,0,0,0,1
+27,Mitchell,2_ATLANTIC_m.txt,155,156,1,0,0,0,0,0
+28,E.L.,2_ATLANTIC_m.txt,160,161,1,0,0,0,1,0
+29,E.L. James,2_ATLANTIC_m.txt,160,162,1,0,0,0,0,1
+30,James,2_ATLANTIC_m.txt,161,162,1,0,0,0,0,0
+31,Fifty,2_ATLANTIC_m.txt,164,165,1,0,0,0,1,0
+32,Fifty Shades,2_ATLANTIC_m.txt,164,166,1,0,0,0,1,0
+33,Fifty Shades Freed,2_ATLANTIC_m.txt,164,167,1,0,0,0,0,0
+34,Shades,2_ATLANTIC_m.txt,165,166,1,0,0,0,1,0
+35,Shades Freed,2_ATLANTIC_m.txt,165,167,1,0,0,0,1,0
+36,Freed,2_ATLANTIC_m.txt,166,167,1,0,0,0,1,0
+37,Which,2_ATLANTIC_m.txt,176,177,1,0,0,0,0,0
+38,Citizen,2_ATLANTIC_m.txt,199,200,1,0,0,0,1,0
+39,Citizen Kane,2_ATLANTIC_m.txt,199,201,1,0,0,0,0,0
+40,Kane,2_ATLANTIC_m.txt,200,201,1,0,0,0,1,0
+41,I'd,2_ATLANTIC_m.txt,209,210,1,0,0,0,0,0
+42,Fifty,2_ATLANTIC_m.txt,225,226,1,0,0,0,1,0
+43,Fifty Shades,2_ATLANTIC_m.txt,225,227,1,0,0,0,1,0
+44,Fifty Shades Darker,2_ATLANTIC_m.txt,225,228,1,0,0,0,0,0
+45,Shades,2_ATLANTIC_m.txt,226,227,1,0,0,0,1,0
+46,Shades Darker,2_ATLANTIC_m.txt,226,228,1,0,0,0,1,0
+47,Darker,2_ATLANTIC_m.txt,227,228,1,0,0,0,1,0
+48,James,2_ATLANTIC_m.txt,242,243,1,0,0,0,1,0
+49,James Foley,2_ATLANTIC_m.txt,242,244,1,0,0,0,0,1
+50,Foley,2_ATLANTIC_m.txt,243,244,1,0,0,0,0,0
+51,Glengarry,2_ATLANTIC_m.txt,252,253,1,0,0,0,1,0
+52,Glengarry Glen,2_ATLANTIC_m.txt,252,254,1,0,0,0,1,0
+53,Glengarry Glen Ross,2_ATLANTIC_m.txt,252,255,1,0,0,0,0,1
+54,Glen,2_ATLANTIC_m.txt,253,254,1,0,0,0,1,0
+55,Glen Ross,2_ATLANTIC_m.txt,253,255,1,0,0,0,0,0
+56,Ross,2_ATLANTIC_m.txt,254,255,1,0,0,0,1,0
+57,Niall,2_ATLANTIC_m.txt,266,267,1,0,0,0,1,0
+58,Niall Leonard,2_ATLANTIC_m.txt,266,268,1,0,0,0,0,1
+59,Leonard,2_ATLANTIC_m.txt,267,268,1,0,0,0,0,0
+60,Erika,2_ATLANTIC_m.txt,278,279,1,0,0,0,1,0
+61,Erika Mitchell,2_ATLANTIC_m.txt,278,280,1,0,0,0,0,1
+62,Mitchell,2_ATLANTIC_m.txt,279,280,1,0,0,0,0,0
+63,The,2_ATLANTIC_m.txt,282,283,1,0,0,0,0,0
+64,'s,2_ATLANTIC_m.txt,300,301,1,0,0,0,0,0
+65,Fifty,2_ATLANTIC_m.txt,308,309,1,0,0,0,1,0
+66,Fifty Shades,2_ATLANTIC_m.txt,308,310,1,0,0,0,1,0
+67,Fifty Shades Freed,2_ATLANTIC_m.txt,308,311,1,0,0,0,0,0
+68,Shades,2_ATLANTIC_m.txt,309,310,1,0,0,0,1,0
+69,Shades Freed,2_ATLANTIC_m.txt,309,311,1,0,0,0,1,0
+70,Freed,2_ATLANTIC_m.txt,310,311,1,0,0,0,1,0
+71,Fifty,2_ATLANTIC_m.txt,318,319,1,0,0,0,1,0
+72,Fifty Shades,2_ATLANTIC_m.txt,318,320,1,0,0,0,1,0
+73,Fifty Shades Darker,2_ATLANTIC_m.txt,318,321,1,0,0,0,0,0
+74,Shades,2_ATLANTIC_m.txt,319,320,1,0,0,0,1,0
+75,Shades Darker,2_ATLANTIC_m.txt,319,321,1,0,0,0,1,0
+76,Darker,2_ATLANTIC_m.txt,320,321,1,0,0,0,1,0
+77,The,2_ATLANTIC_m.txt,322,323,1,0,0,0,0,0
+78,In,2_ATLANTIC_m.txt,342,343,1,0,0,0,0,0
+79,I,2_ATLANTIC_m.txt,375,376,1,0,0,0,0,0
+80,Other,2_ATLANTIC_m.txt,387,388,1,0,0,0,0,0
+81,Lucy,2_ATLANTIC_m.txt,394,395,1,0,0,0,0,1
+82,Fantastic,2_ATLANTIC_m.txt,396,397,1,0,0,0,1,0
+83,Fantastic Four,2_ATLANTIC_m.txt,396,398,1,0,0,0,0,0
+84,Four,2_ATLANTIC_m.txt,397,398,1,0,0,0,1,0
+85,The,2_ATLANTIC_m.txt,399,400,1,0,0,0,1,0
+86,The Happening,2_ATLANTIC_m.txt,399,401,1,0,0,0,0,0
+87,Happening,2_ATLANTIC_m.txt,400,401,1,0,0,1,1,0
+88,The,2_ATLANTIC_m.txt,403,404,1,0,0,0,1,0
+89,The Gunman,2_ATLANTIC_m.txt,403,405,1,0,0,0,0,0
+90,Gunman,2_ATLANTIC_m.txt,404,405,1,0,0,1,1,0
+91,To,2_ATLANTIC_m.txt,407,408,1,0,0,0,0,0
+92,What,2_ATLANTIC_m.txt,411,412,1,0,0,0,0,0
+93,But,2_ATLANTIC_m.txt,438,439,1,0,0,0,1,0
+94,But I,2_ATLANTIC_m.txt,438,440,1,0,0,0,0,0
+95,I,2_ATLANTIC_m.txt,439,440,1,0,0,0,1,0
+96,So,2_ATLANTIC_m.txt,472,473,1,0,0,0,0,0
+0,He,8_Mashable_m.txt,0,1,1,0,0,0,0,0
+1,America,8_Mashable_m.txt,5,6,1,0,0,0,0,0
+2,Sterling,8_Mashable_m.txt,14,15,1,0,0,0,1,0
+3,Sterling K.,8_Mashable_m.txt,14,16,1,0,0,0,1,0
+4,Sterling K. Brown,8_Mashable_m.txt,14,17,1,0,0,0,0,1
+5,K.,8_Mashable_m.txt,15,16,1,0,0,0,1,0
+6,K. Brown,8_Mashable_m.txt,15,17,1,0,0,0,0,0
+7,Brown,8_Mashable_m.txt,16,17,1,0,0,0,1,0
+8,Saturday,8_Mashable_m.txt,19,20,1,0,0,0,1,0
+9,Saturday Night,8_Mashable_m.txt,19,21,1,0,0,0,1,0
+10,Saturday Night Live,8_Mashable_m.txt,19,22,1,0,0,0,0,0
+11,Night,8_Mashable_m.txt,20,21,1,0,0,0,1,0
+12,Night Live,8_Mashable_m.txt,20,22,1,0,0,0,1,0
+13,Live,8_Mashable_m.txt,21,22,1,0,0,0,1,0
+14,March,8_Mashable_m.txt,23,24,1,0,0,1,0,0
+15,Black,8_Mashable_m.txt,30,31,1,0,0,0,1,0
+16,Black Panther,8_Mashable_m.txt,30,32,1,0,1,0,0,0
+17,Black Panther 's,8_Mashable_m.txt,30,33,1,0,0,0,0,0
+18,Panther,8_Mashable_m.txt,31,32,1,0,1,0,1,0
+19,Panther 's,8_Mashable_m.txt,31,33,1,0,0,0,1,0
+20,'s,8_Mashable_m.txt,32,33,1,0,0,0,1,0
+21,America,8_Mashable_m.txt,36,37,1,0,1,0,0,0
+22,America 's,8_Mashable_m.txt,36,38,1,0,0,0,0,0
+23,'s,8_Mashable_m.txt,37,38,1,0,0,0,1,0
+24,This,8_Mashable_m.txt,41,42,1,0,0,0,1,0
+25,This Is,8_Mashable_m.txt,41,43,1,0,0,0,1,0
+26,This Is Us,8_Mashable_m.txt,41,44,1,0,0,0,0,0
+27,Is,8_Mashable_m.txt,42,43,1,0,0,0,1,0
+28,Is Us,8_Mashable_m.txt,42,44,1,0,0,0,1,0
+29,Us,8_Mashable_m.txt,43,44,1,0,0,0,1,0
+30,SEE,8_Mashable_m.txt,45,46,1,0,0,0,1,0
+31,SEE ALSO,8_Mashable_m.txt,45,47,1,0,0,0,0,0
+32,ALSO,8_Mashable_m.txt,46,47,1,0,0,0,1,0
+33,Why,8_Mashable_m.txt,48,49,1,0,0,0,0,0
+34,,8_Mashable_m.txt,54,55,1,0,0,0,0,0
+35, 'This,8_Mashable_m.txt,54,56,1,0,0,0,0,0
+36,'This,8_Mashable_m.txt,55,56,1,0,0,0,0,0
+37,Us',8_Mashable_m.txt,57,58,1,0,0,0,0,0
+38,Brown,8_Mashable_m.txt,60,61,1,0,0,0,0,1
+39,James,8_Mashable_m.txt,67,68,1,0,0,0,1,0
+40,James Bay,8_Mashable_m.txt,67,69,1,0,0,0,0,1
+41,Bay,8_Mashable_m.txt,68,69,1,0,0,0,0,0
+42,He,8_Mashable_m.txt,70,71,1,0,1,0,0,0
+43,He 's,8_Mashable_m.txt,70,72,1,0,0,0,0,0
+44,'s,8_Mashable_m.txt,71,72,1,0,0,0,1,0
+45,SNL,8_Mashable_m.txt,77,78,1,0,0,0,0,0
+46,Tuesday,8_Mashable_m.txt,80,81,1,0,0,1,0,0
+47,NBA,8_Mashable_m.txt,85,86,1,0,0,0,0,0
+48,Charles,8_Mashable_m.txt,87,88,1,0,0,0,1,0
+49,Charles Barkley,8_Mashable_m.txt,87,89,1,0,0,0,0,1
+50,Barkley,8_Mashable_m.txt,88,89,1,0,0,0,0,0
+51,SNL,8_Mashable_m.txt,91,92,1,0,0,0,0,0
+52,Bill,8_Mashable_m.txt,94,95,1,0,0,0,1,0
+53,Bill Hader,8_Mashable_m.txt,94,96,1,0,0,0,0,1
+54,Hader,8_Mashable_m.txt,95,96,1,0,0,0,0,0
+55,Migos,8_Mashable_m.txt,99,100,1,0,0,0,0,1
+56,Arcade,8_Mashable_m.txt,101,102,1,0,0,0,1,0
+57,Arcade Fire,8_Mashable_m.txt,101,103,1,0,0,0,0,0
+58,Fire,8_Mashable_m.txt,102,103,1,0,0,0,1,0
+59,Yes,8_Mashable_m.txt,104,105,1,0,0,0,0,0
+60,Kv5IchHx8p,8_Mashable_m.txt,120,121,1,0,0,0,0,0
+61,Saturday,8_Mashable_m.txt,122,123,1,0,0,0,1,0
+62,Saturday Night,8_Mashable_m.txt,122,124,1,0,0,0,1,0
+63,Saturday Night Live,8_Mashable_m.txt,122,125,1,0,0,0,0,0
+64,Night,8_Mashable_m.txt,123,124,1,0,0,0,1,0
+65,Night Live,8_Mashable_m.txt,123,125,1,0,0,0,1,0
+66,Live,8_Mashable_m.txt,124,125,1,0,0,0,1,0
+67,SNL,8_Mashable_m.txt,126,127,1,0,0,0,0,0
+68,February,8_Mashable_m.txt,131,132,1,0,0,0,0,0
+69,The,8_Mashable_m.txt,135,136,1,0,0,0,0,0
+70,Brown,8_Mashable_m.txt,142,143,1,0,0,0,0,1
+71,'s,8_Mashable_m.txt,145,146,1,0,0,0,0,0
+72,Black,8_Mashable_m.txt,155,156,1,0,0,0,1,0
+73,Black Panther,8_Mashable_m.txt,155,157,1,0,0,0,0,0
+74,Panther,8_Mashable_m.txt,156,157,1,0,0,0,1,0
+75,This,8_Mashable_m.txt,158,159,1,0,0,0,1,0
+76,This Is,8_Mashable_m.txt,158,160,1,0,0,0,1,0
+77,This Is Us,8_Mashable_m.txt,158,161,1,0,0,0,0,0
+78,Is,8_Mashable_m.txt,159,160,1,0,0,0,1,0
+79,Is Us,8_Mashable_m.txt,159,161,1,0,0,0,1,0
+80,Us,8_Mashable_m.txt,160,161,1,0,0,0,1,0
+81,NBC,8_Mashable_m.txt,171,172,1,0,0,1,0,0
+82,American,8_Mashable_m.txt,176,177,1,0,0,0,1,0
+83,American Crime,8_Mashable_m.txt,176,178,1,0,0,0,1,0
+84,American Crime Story,8_Mashable_m.txt,176,179,1,0,0,0,0,0
+85,Crime,8_Mashable_m.txt,177,178,1,0,0,0,1,0
+86,Crime Story,8_Mashable_m.txt,177,179,1,0,0,0,1,0
+87,Story,8_Mashable_m.txt,178,179,1,0,0,0,1,0
+88,SNL,8_Mashable_m.txt,180,181,1,0,0,0,0,0
+89,NBC,8_Mashable_m.txt,184,185,1,0,0,0,0,0
+90,Winter,8_Mashable_m.txt,193,194,1,0,0,1,1,0
+91,Winter Olympics,8_Mashable_m.txt,193,195,1,0,0,1,0,0
+92,Olympics,8_Mashable_m.txt,194,195,1,0,0,0,1,0
+93,March,8_Mashable_m.txt,198,199,1,0,0,0,0,0
+94,WATCH,8_Mashable_m.txt,200,201,1,0,0,0,0,0
+95,Here,8_Mashable_m.txt,202,203,1,0,1,0,0,0
+96,Here 's,8_Mashable_m.txt,202,204,1,0,0,0,0,0
+97,'s,8_Mashable_m.txt,203,204,1,0,0,0,1,0
+98,,8_Mashable_m.txt,205,206,1,0,0,0,0,0
+99, 'This,8_Mashable_m.txt,205,207,1,0,0,0,1,0
+100, 'This Is,8_Mashable_m.txt,205,208,1,0,0,0,1,0
+101, 'This Is Us',8_Mashable_m.txt,205,209,1,0,0,0,0,0
+102,'This,8_Mashable_m.txt,206,207,1,0,0,0,1,0
+103,'This Is,8_Mashable_m.txt,206,208,1,0,0,0,1,0
+104,'This Is Us',8_Mashable_m.txt,206,209,1,0,0,0,0,0
+105,Is,8_Mashable_m.txt,207,208,1,0,0,0,1,0
+106,Is Us',8_Mashable_m.txt,207,209,1,0,0,0,0,0
+107,Us',8_Mashable_m.txt,208,209,1,0,0,0,1,0
+0,North,130_THEHILL_m.txt,0,1,1,0,0,0,1,0
+1,North Dakota,130_THEHILL_m.txt,0,2,1,0,0,0,1,0
+2,North Dakota Rep,130_THEHILL_m.txt,0,3,1,0,0,0,0,0
+3,Dakota,130_THEHILL_m.txt,1,2,1,0,0,0,1,0
+4,Dakota Rep,130_THEHILL_m.txt,1,3,1,0,0,0,1,0
+5,Rep,130_THEHILL_m.txt,2,3,1,0,0,0,1,0
+6,Kevin,130_THEHILL_m.txt,4,5,1,0,0,0,1,0
+7,Kevin Cramer,130_THEHILL_m.txt,4,6,1,0,0,0,0,1
+8,Cramer,130_THEHILL_m.txt,5,6,1,0,0,0,0,0
+9,R,130_THEHILL_m.txt,7,8,1,0,0,0,0,0
+10,Friday,130_THEHILL_m.txt,13,14,1,0,0,0,0,0
+11,'s,130_THEHILL_m.txt,17,18,1,0,0,0,0,0
+12,Senate,130_THEHILL_m.txt,21,22,1,0,0,1,0,0
+13,Republicans,130_THEHILL_m.txt,24,25,1,0,0,0,0,0
+14,Sen.,130_THEHILL_m.txt,32,33,1,0,0,0,0,0
+15,Sen. Heidi,130_THEHILL_m.txt,32,34,1,0,0,0,1,0
+16,Sen. Heidi Heitkamp,130_THEHILL_m.txt,32,35,1,0,0,0,0,0
+17,Heidi,130_THEHILL_m.txt,33,34,1,1,0,0,1,0
+18,Heidi Heitkamp,130_THEHILL_m.txt,33,35,1,1,0,0,1,1
+19,Heitkamp,130_THEHILL_m.txt,34,35,1,0,0,0,0,0
+20,D,130_THEHILL_m.txt,36,37,1,0,0,0,0,0
+21,N,130_THEHILL_m.txt,38,39,1,0,0,0,0,0
+22,D,130_THEHILL_m.txt,40,41,1,0,0,0,0,0
+23,The,130_THEHILL_m.txt,44,45,1,0,0,0,1,0
+24,The Associated,130_THEHILL_m.txt,44,46,1,0,0,0,1,0
+25,The Associated Press,130_THEHILL_m.txt,44,47,1,0,0,0,0,0
+26,Associated,130_THEHILL_m.txt,45,46,1,0,0,1,1,0
+27,Associated Press,130_THEHILL_m.txt,45,47,1,0,0,1,1,0
+28,Press,130_THEHILL_m.txt,46,47,1,0,0,0,1,0
+29,Senate,130_THEHILL_m.txt,53,54,1,0,0,0,1,0
+30,Senate Majority,130_THEHILL_m.txt,53,55,1,0,0,0,1,0
+31,Senate Majority Leader,130_THEHILL_m.txt,53,56,1,0,0,0,0,0
+32,Senate Majority Leader Mitch,130_THEHILL_m.txt,53,57,1,0,0,0,1,0
+33,Majority,130_THEHILL_m.txt,54,55,1,0,0,0,1,0
+34,Majority Leader,130_THEHILL_m.txt,54,56,1,0,0,0,1,0
+35,Majority Leader Mitch,130_THEHILL_m.txt,54,57,1,0,0,0,1,0
+36,Majority Leader Mitch McConnell,130_THEHILL_m.txt,54,58,1,0,0,0,1,0
+37,Leader,130_THEHILL_m.txt,55,56,1,0,0,0,1,0
+38,Leader Mitch,130_THEHILL_m.txt,55,57,1,0,0,0,1,0
+39,Leader Mitch McConnell,130_THEHILL_m.txt,55,58,1,0,0,0,1,0
+40,Mitch,130_THEHILL_m.txt,56,57,1,0,0,0,1,0
+41,Mitch McConnell,130_THEHILL_m.txt,56,58,1,0,0,0,1,1
+42,McConnell,130_THEHILL_m.txt,57,58,1,0,0,0,0,0
+43,R,130_THEHILL_m.txt,59,60,1,0,0,0,0,0
+44,Ky,130_THEHILL_m.txt,61,62,1,0,0,0,0,0
+45,Cramer,130_THEHILL_m.txt,69,70,1,0,0,0,0,1
+46,Cramer,130_THEHILL_m.txt,85,86,1,0,1,0,0,1
+47,Cramer 's,130_THEHILL_m.txt,85,87,1,0,0,0,0,0
+48,'s,130_THEHILL_m.txt,86,87,1,0,0,0,0,0
+49,Senate,130_THEHILL_m.txt,94,95,1,0,0,0,0,0
+50,A,130_THEHILL_m.txt,99,100,1,0,0,0,1,0
+51,A Facebook,130_THEHILL_m.txt,99,101,1,0,0,0,0,0
+52,Facebook,130_THEHILL_m.txt,100,101,1,0,0,0,1,0
+53,Kevin,130_THEHILL_m.txt,104,105,1,0,0,0,1,0
+54,Kevin Cramer,130_THEHILL_m.txt,104,106,1,0,0,0,0,1
+55,Cramer,130_THEHILL_m.txt,105,106,1,0,0,0,0,0
+56,US,130_THEHILL_m.txt,107,108,1,0,0,0,1,0
+57,US Senate,130_THEHILL_m.txt,107,109,1,0,0,0,0,0
+58,Senate,130_THEHILL_m.txt,108,109,1,0,0,0,1,0
+59,Cramer,130_THEHILL_m.txt,112,113,1,0,0,0,0,1
+60,Bismarck,130_THEHILL_m.txt,121,122,1,0,0,1,0,0
+61,Friday,130_THEHILL_m.txt,123,124,1,0,0,1,0,0
+62,Cramer,130_THEHILL_m.txt,126,127,1,0,1,0,0,1
+63,Cramer 's,130_THEHILL_m.txt,126,128,1,0,0,0,0,0
+64,'s,130_THEHILL_m.txt,127,128,1,0,0,0,0,0
+65,Republicans,130_THEHILL_m.txt,131,132,1,0,0,0,0,0
+66,Heitkamp,130_THEHILL_m.txt,138,139,1,0,0,0,0,1
+67,'s,130_THEHILL_m.txt,141,142,1,0,0,0,0,0
+68,Republicans,130_THEHILL_m.txt,148,149,1,0,0,0,0,0
+69,North,130_THEHILL_m.txt,150,151,1,0,0,0,1,0
+70,North Dakota,130_THEHILL_m.txt,150,152,1,0,0,0,0,0
+71,Dakota,130_THEHILL_m.txt,151,152,1,0,0,0,1,0
+72,Senate,130_THEHILL_m.txt,160,161,1,0,0,0,0,0
+73,President,130_THEHILL_m.txt,168,169,1,0,0,0,0,0
+74,President Trump,130_THEHILL_m.txt,168,170,1,0,0,0,0,0
+75,Trump,130_THEHILL_m.txt,169,170,1,1,0,0,1,1
+76,Cramer,130_THEHILL_m.txt,175,176,1,0,0,0,0,1
+77,Senate,130_THEHILL_m.txt,179,180,1,0,0,1,0,0
+78,North,130_THEHILL_m.txt,183,184,1,0,0,0,1,0
+79,North Dakota,130_THEHILL_m.txt,183,185,1,0,0,0,0,0
+80,Dakota,130_THEHILL_m.txt,184,185,1,0,0,0,1,0
+81,Cramer,130_THEHILL_m.txt,194,195,1,0,0,0,0,1
+82,Republican,130_THEHILL_m.txt,198,199,1,0,0,1,0,0
+83,'s,130_THEHILL_m.txt,205,206,1,0,0,0,0,0
+84,State,130_THEHILL_m.txt,221,222,1,0,0,0,1,0
+85,State Sen.,130_THEHILL_m.txt,221,223,1,0,0,0,0,0
+86,State Sen. Tom,130_THEHILL_m.txt,221,224,1,0,0,0,1,0
+87,State Sen. Tom Campbell,130_THEHILL_m.txt,221,225,1,0,0,0,0,0
+88,Sen.,130_THEHILL_m.txt,222,223,1,0,0,0,1,0
+89,Sen. Tom,130_THEHILL_m.txt,222,224,1,0,0,0,1,0
+90,Sen. Tom Campbell,130_THEHILL_m.txt,222,225,1,0,0,0,1,0
+91,Tom,130_THEHILL_m.txt,223,224,1,1,0,0,1,0
+92,Tom Campbell,130_THEHILL_m.txt,223,225,1,1,0,0,1,1
+93,Campbell,130_THEHILL_m.txt,224,225,1,0,0,0,0,0
+94,Republicans,130_THEHILL_m.txt,229,230,1,0,0,0,0,0
+95,Democrats,130_THEHILL_m.txt,242,243,1,0,0,0,0,0
+96,But,130_THEHILL_m.txt,252,253,1,0,0,0,0,0
+97,Senate,130_THEHILL_m.txt,255,256,1,0,0,0,0,0
+98,Republicans,130_THEHILL_m.txt,259,260,1,0,0,0,0,0
+99,Democrats,130_THEHILL_m.txt,267,268,1,0,0,0,0,0
+100,Trump,130_THEHILL_m.txt,284,285,1,0,0,0,0,1
+101,Amid,130_THEHILL_m.txt,288,289,1,0,0,0,0,0
+102,Cramer,130_THEHILL_m.txt,291,292,1,0,0,0,0,1
+103,North,130_THEHILL_m.txt,295,296,1,0,0,0,1,0
+104,North Dakota,130_THEHILL_m.txt,295,297,1,0,0,0,1,0
+105,North Dakota Democrats,130_THEHILL_m.txt,295,298,1,0,0,0,0,0
+106,Dakota,130_THEHILL_m.txt,296,297,1,0,0,0,1,0
+107,Dakota Democrats,130_THEHILL_m.txt,296,298,1,0,0,0,1,0
+108,Democrats,130_THEHILL_m.txt,297,298,1,0,0,0,1,0
+109,Republicans,130_THEHILL_m.txt,309,310,1,0,0,0,0,0
+110,Following,130_THEHILL_m.txt,321,322,1,0,0,0,0,0
+111,Cramer,130_THEHILL_m.txt,325,326,1,0,1,0,0,1
+112,Cramer 's,130_THEHILL_m.txt,325,327,1,0,0,0,0,0
+113,'s,130_THEHILL_m.txt,326,327,1,0,0,0,0,0
+114,Democratic,130_THEHILL_m.txt,329,330,1,0,0,0,0,0
+115,PAC,130_THEHILL_m.txt,331,332,1,0,0,0,1,0
+116,PAC American,130_THEHILL_m.txt,331,333,1,0,0,0,1,0
+117,PAC American Bridge,130_THEHILL_m.txt,331,334,1,0,0,0,0,0
+118,American,130_THEHILL_m.txt,332,333,1,0,0,0,1,0
+119,American Bridge,130_THEHILL_m.txt,332,334,1,0,0,0,1,0
+120,Bridge,130_THEHILL_m.txt,333,334,1,0,0,0,1,0
+121,Republicans,130_THEHILL_m.txt,340,341,1,0,0,0,0,0
+122,Mitch,130_THEHILL_m.txt,350,351,1,0,0,0,1,0
+123,Mitch McConnell,130_THEHILL_m.txt,350,352,1,0,0,0,0,1
+124,McConnell,130_THEHILL_m.txt,351,352,1,0,0,0,0,0
+125,Washington,130_THEHILL_m.txt,353,354,1,0,0,0,1,0
+126,Washington Republicans,130_THEHILL_m.txt,353,355,1,0,0,0,0,0
+127,Republicans,130_THEHILL_m.txt,354,355,1,0,0,0,1,0
+128,North,130_THEHILL_m.txt,369,370,1,0,0,1,1,0
+129,North Dakota,130_THEHILL_m.txt,369,371,1,0,0,1,0,0
+130,Dakota,130_THEHILL_m.txt,370,371,1,0,0,0,1,0
+131,Kevin,130_THEHILL_m.txt,382,383,1,0,0,0,1,0
+132,Kevin Cramer,130_THEHILL_m.txt,382,384,1,0,0,0,0,1
+133,Cramer,130_THEHILL_m.txt,383,384,1,0,0,0,0,0
+134,American,130_THEHILL_m.txt,387,388,1,0,0,0,1,0
+135,American Bridge,130_THEHILL_m.txt,387,389,1,0,0,0,0,0
+136,Bridge,130_THEHILL_m.txt,388,389,1,0,0,0,1,0
+137,Joshua,130_THEHILL_m.txt,390,391,1,0,0,0,1,0
+138,Joshua Karp,130_THEHILL_m.txt,390,392,1,0,0,0,0,1
+139,Karp,130_THEHILL_m.txt,391,392,1,0,0,0,0,0
+140,Republicans,130_THEHILL_m.txt,394,395,1,0,0,0,0,0
+141,Cramer,130_THEHILL_m.txt,398,399,1,0,1,0,0,1
+142,Cramer 's,130_THEHILL_m.txt,398,400,1,0,0,0,0,0
+143,'s,130_THEHILL_m.txt,399,400,1,0,0,0,0,0
+144,',130_THEHILL_m.txt,402,403,1,0,0,0,0,0
+145,' Akin,130_THEHILL_m.txt,402,404,1,0,0,0,0,0
+146,Akin,130_THEHILL_m.txt,403,404,1,0,0,0,0,1
+147,But,130_THEHILL_m.txt,417,418,1,0,0,0,0,0
+148,North,130_THEHILL_m.txt,423,424,1,0,0,0,1,0
+149,North Dakota,130_THEHILL_m.txt,423,425,1,0,0,0,0,0
+150,Dakota,130_THEHILL_m.txt,424,425,1,0,0,0,1,0
+151,Mitch,130_THEHILL_m.txt,431,432,1,0,0,0,1,0
+152,Mitch McConnell,130_THEHILL_m.txt,431,433,1,0,0,0,0,1
+153,McConnell,130_THEHILL_m.txt,432,433,1,0,0,0,0,0
+154,Karp,130_THEHILL_m.txt,439,440,1,0,1,0,0,1
+155,Todd,130_THEHILL_m.txt,444,445,1,0,0,0,1,0
+156,Todd Akin,130_THEHILL_m.txt,444,446,1,0,0,0,0,1
+157,Akin,130_THEHILL_m.txt,445,446,1,0,0,0,0,0
+158,GOP,130_THEHILL_m.txt,449,450,1,0,0,0,1,0
+159,GOP Senate,130_THEHILL_m.txt,449,451,1,0,0,0,0,0
+160,Senate,130_THEHILL_m.txt,450,451,1,0,0,0,1,0
+161,Missouri,130_THEHILL_m.txt,453,454,1,0,0,1,0,0
+162,Updated,130_THEHILL_m.txt,472,473,1,0,0,0,0,0
+0,How,10_Guardian_m.txt,0,1,1,0,0,0,0,0
+1,Thom,10_Guardian_m.txt,7,8,1,0,0,0,0,1
+2,Grace,10_Guardian_m.txt,13,14,1,0,0,0,0,1
+3,Sat,10_Guardian_m.txt,22,23,1,0,0,0,0,0
+4,Jan,10_Guardian_m.txt,24,25,1,0,0,0,0,0
+5,EST,10_Guardian_m.txt,27,28,1,0,0,0,1,0
+6,EST What,10_Guardian_m.txt,27,29,1,0,0,0,0,0
+7,What,10_Guardian_m.txt,28,29,1,0,0,0,1,0
+8,Interesting,10_Guardian_m.txt,34,35,1,0,0,0,0,0
+9,First,10_Guardian_m.txt,37,38,1,0,0,0,0,0
+10,She,10_Guardian_m.txt,40,41,1,0,0,0,0,0
+11,What,10_Guardian_m.txt,71,72,1,0,0,0,0,0
+12,Stranger,10_Guardian_m.txt,77,78,1,0,0,0,1,0
+13,Stranger Things,10_Guardian_m.txt,77,79,1,0,0,0,0,0
+14,Things,10_Guardian_m.txt,78,79,1,0,0,0,1,0
+15,Jamaican,10_Guardian_m.txt,81,82,1,0,0,0,0,0
+16,India,10_Guardian_m.txt,84,85,1,0,0,0,0,0
+17,Any,10_Guardian_m.txt,97,98,1,0,0,0,0,0
+18,None,10_Guardian_m.txt,101,102,1,0,0,0,0,0
+19,Maybe,10_Guardian_m.txt,106,107,1,0,0,0,0,0
+20,Good,10_Guardian_m.txt,116,117,1,0,0,0,0,0
+21,Faultless,10_Guardian_m.txt,120,121,1,0,0,0,0,0
+22,Best,10_Guardian_m.txt,122,123,1,0,0,0,0,0
+23,Grace,10_Guardian_m.txt,125,126,1,0,0,0,0,1
+24,She,10_Guardian_m.txt,127,128,1,0,0,0,0,0
+25,Would,10_Guardian_m.txt,143,144,1,0,0,0,0,0
+26,They'd,10_Guardian_m.txt,151,152,1,0,0,0,0,0
+27,Describe,10_Guardian_m.txt,156,157,1,0,0,0,0,0
+28,Describe Grace,10_Guardian_m.txt,156,158,1,0,0,0,0,0
+29,Grace,10_Guardian_m.txt,157,158,1,0,0,0,1,1
+30,Adventurous,10_Guardian_m.txt,161,162,1,0,0,0,0,0
+31,What,10_Guardian_m.txt,167,168,1,0,0,0,0,0
+32,What do,10_Guardian_m.txt,167,169,1,0,0,0,0,0
+33,do,10_Guardian_m.txt,168,169,1,0,0,0,1,0
+34,Seemingly,10_Guardian_m.txt,176,177,1,0,0,0,0,0
+35,Aperol,10_Guardian_m.txt,186,187,1,0,0,0,0,0
+36,Did,10_Guardian_m.txt,190,191,1,0,0,0,0,0
+37,We,10_Guardian_m.txt,196,197,1,0,0,0,0,0
+38,I,10_Guardian_m.txt,199,200,1,0,0,0,0,0
+39,And,10_Guardian_m.txt,208,209,1,0,0,0,0,0
+40,A,10_Guardian_m.txt,216,217,1,0,0,0,0,0
+41,If,10_Guardian_m.txt,219,220,1,0,0,0,0,0
+42,While,10_Guardian_m.txt,234,235,1,0,0,0,0,0
+43,Tuesday,10_Guardian_m.txt,252,253,1,0,0,0,0,0
+44,Marks,10_Guardian_m.txt,256,257,1,0,0,0,0,0
+45,Would,10_Guardian_m.txt,263,264,1,0,0,0,0,0
+46,I,10_Guardian_m.txt,268,269,1,0,0,0,0,0
+47,What,10_Guardian_m.txt,276,277,1,0,0,0,0,0
+48,A,10_Guardian_m.txt,282,283,1,0,0,0,0,0
+49,And,10_Guardian_m.txt,286,287,1,0,0,0,0,0
+50,First,10_Guardian_m.txt,296,297,1,0,0,0,0,0
+51,Phew,10_Guardian_m.txt,299,300,1,0,0,0,0,0
+52,Tall,10_Guardian_m.txt,301,302,1,0,0,0,0,0
+53,What,10_Guardian_m.txt,307,308,1,0,0,0,0,0
+54,Thom,10_Guardian_m.txt,313,314,1,0,0,0,0,1
+55,America,10_Guardian_m.txt,321,322,1,0,0,0,0,0
+56,Trump,10_Guardian_m.txt,326,327,1,0,0,0,0,0
+57,Mormon,10_Guardian_m.txt,342,343,1,0,0,0,0,0
+58,I,10_Guardian_m.txt,345,346,1,0,0,0,0,0
+59,Glastonbury,10_Guardian_m.txt,354,355,1,0,0,0,0,0
+60,Any,10_Guardian_m.txt,358,359,1,0,0,0,0,0
+61,Maybe,10_Guardian_m.txt,362,363,1,0,0,0,0,0
+62,But,10_Guardian_m.txt,372,373,1,0,0,0,0,0
+63,Good,10_Guardian_m.txt,377,378,1,0,0,0,0,0
+64,I,10_Guardian_m.txt,381,382,1,0,0,0,0,0
+65,Best,10_Guardian_m.txt,391,392,1,0,0,0,0,0
+66,Thom,10_Guardian_m.txt,394,395,1,0,0,0,0,1
+67,Totally,10_Guardian_m.txt,396,397,1,0,0,0,0,0
+68,Would,10_Guardian_m.txt,401,402,1,0,0,0,0,0
+69,Yes,10_Guardian_m.txt,409,410,1,0,0,0,0,0
+70,Describe,10_Guardian_m.txt,411,412,1,0,0,0,0,0
+71,Describe Thom,10_Guardian_m.txt,411,413,1,0,0,0,0,0
+72,Thom,10_Guardian_m.txt,412,413,1,0,0,0,1,1
+73,What,10_Guardian_m.txt,421,422,1,0,0,0,0,0
+74,What do,10_Guardian_m.txt,421,423,1,0,0,0,0,0
+75,do,10_Guardian_m.txt,422,423,1,0,0,0,1,0
+76,I,10_Guardian_m.txt,430,431,1,0,0,0,0,0
+77,I'm,10_Guardian_m.txt,437,438,1,0,0,0,0,0
+78,I,10_Guardian_m.txt,439,440,1,0,0,0,0,0
+79,Did,10_Guardian_m.txt,445,446,1,0,0,0,0,0
+80,For,10_Guardian_m.txt,451,452,1,0,0,0,0,0
+81,And,10_Guardian_m.txt,465,466,1,0,0,0,0,0
+82,Maybe,10_Guardian_m.txt,473,474,1,0,0,0,0,0
+83,If,10_Guardian_m.txt,477,478,1,0,0,0,0,0
+84,Nothing,10_Guardian_m.txt,492,493,1,0,0,0,0,0
+85,Maybe,10_Guardian_m.txt,498,499,1,0,0,0,0,0
+86,Aperol,10_Guardian_m.txt,501,502,1,0,0,0,0,0
+87,Marks,10_Guardian_m.txt,507,508,1,0,0,0,0,0
+88,Would,10_Guardian_m.txt,516,517,1,0,0,0,0,0
+89,We,10_Guardian_m.txt,521,522,1,0,0,0,0,0
+90,I'd,10_Guardian_m.txt,526,527,1,0,0,0,0,0
+91,Thom,10_Guardian_m.txt,533,534,1,0,0,0,0,1
+92,Grace,10_Guardian_m.txt,535,536,1,0,0,0,0,1
+93,Lampery,10_Guardian_m.txt,539,540,1,0,0,1,0,0
+94,London,10_Guardian_m.txt,541,542,1,0,0,0,1,0
+95,London EC3,10_Guardian_m.txt,541,543,1,0,0,0,0,0
+96,EC3,10_Guardian_m.txt,542,543,1,0,0,0,1,0
+97,Fancy,10_Guardian_m.txt,544,545,1,0,0,0,0,0
+98,Email,10_Guardian_m.txt,549,550,1,0,0,0,0,0
+99,If,10_Guardian_m.txt,558,559,1,0,0,0,0,0
+0,The,5_ATLANTIC_m.txt,0,1,1,0,0,0,0,0
+1,Solo,5_ATLANTIC_m.txt,6,7,1,0,0,0,0,1
+2,A,5_ATLANTIC_m.txt,8,9,1,0,0,0,1,0
+3,A Star,5_ATLANTIC_m.txt,8,10,1,0,0,0,1,0
+4,A Star Wars,5_ATLANTIC_m.txt,8,11,1,0,0,0,1,0
+5,A Star Wars Story,5_ATLANTIC_m.txt,8,12,1,0,0,0,0,0
+6,Star,5_ATLANTIC_m.txt,9,10,1,0,0,0,1,0
+7,Star Wars,5_ATLANTIC_m.txt,9,11,1,0,0,0,1,0
+8,Star Wars Story,5_ATLANTIC_m.txt,9,12,1,0,0,0,1,0
+9,Wars,5_ATLANTIC_m.txt,10,11,1,0,0,0,1,0
+10,Wars Story,5_ATLANTIC_m.txt,10,12,1,0,0,0,1,0
+11,Story,5_ATLANTIC_m.txt,11,12,1,0,0,0,1,0
+12,Han,5_ATLANTIC_m.txt,23,24,1,0,0,0,1,0
+13,Han Solo,5_ATLANTIC_m.txt,23,25,1,0,0,0,0,1
+14,Solo,5_ATLANTIC_m.txt,24,25,1,0,0,0,0,0
+15,Alden,5_ATLANTIC_m.txt,30,31,1,0,0,0,1,0
+16,Alden Ehrenreich,5_ATLANTIC_m.txt,30,32,1,0,0,0,0,1
+17,Ehrenreich,5_ATLANTIC_m.txt,31,32,1,0,0,0,0,0
+18,There,5_ATLANTIC_m.txt,44,45,1,0,1,0,0,0
+19,There 's,5_ATLANTIC_m.txt,44,46,1,0,0,0,0,0
+20,'s,5_ATLANTIC_m.txt,45,46,1,0,0,0,1,0
+21,Jurassic,5_ATLANTIC_m.txt,50,51,1,0,0,1,1,0
+22,Jurassic Park,5_ATLANTIC_m.txt,50,52,1,0,0,1,0,0
+23,Park,5_ATLANTIC_m.txt,51,52,1,0,0,0,1,0
+24,Dr.,5_ATLANTIC_m.txt,53,54,1,0,0,0,0,0
+25,Dr. Ian,5_ATLANTIC_m.txt,53,55,1,0,0,0,1,0
+26,Dr. Ian Malcolm,5_ATLANTIC_m.txt,53,56,1,0,0,0,0,0
+27,Ian,5_ATLANTIC_m.txt,54,55,1,1,0,0,1,0
+28,Ian Malcolm,5_ATLANTIC_m.txt,54,56,1,1,0,0,1,1
+29,Malcolm,5_ATLANTIC_m.txt,55,56,1,0,0,0,0,0
+30,Jeff,5_ATLANTIC_m.txt,57,58,1,0,0,0,1,0
+31,Jeff Goldblum,5_ATLANTIC_m.txt,57,59,1,0,0,0,0,1
+32,Goldblum,5_ATLANTIC_m.txt,58,59,1,0,0,0,0,0
+33,'s,5_ATLANTIC_m.txt,63,64,1,0,0,0,0,0
+34,Your,5_ATLANTIC_m.txt,73,74,1,0,0,0,0,0
+35,The,5_ATLANTIC_m.txt,101,102,1,0,0,0,0,0
+36,Han,5_ATLANTIC_m.txt,115,116,1,0,0,0,1,0
+37,Han Solo,5_ATLANTIC_m.txt,115,117,1,0,0,0,0,1
+38,Solo,5_ATLANTIC_m.txt,116,117,1,0,0,0,0,0
+39,Harrison,5_ATLANTIC_m.txt,118,119,1,0,0,0,1,0
+40,Harrison Ford,5_ATLANTIC_m.txt,118,120,1,0,0,0,0,1
+41,Ford,5_ATLANTIC_m.txt,119,120,1,0,0,0,0,0
+42,Sure,5_ATLANTIC_m.txt,125,126,1,0,0,0,0,0
+43,Disney,5_ATLANTIC_m.txt,131,132,1,0,1,0,0,0
+44,Disney 's,5_ATLANTIC_m.txt,131,133,1,0,0,0,0,0
+45,'s,5_ATLANTIC_m.txt,132,133,1,0,0,0,1,0
+46,Lucasfilm,5_ATLANTIC_m.txt,136,137,1,0,0,0,0,0
+47,Kathleen,5_ATLANTIC_m.txt,140,141,1,1,0,0,1,0
+48,Kathleen Kennedy,5_ATLANTIC_m.txt,140,142,1,1,0,0,0,1
+49,Kennedy,5_ATLANTIC_m.txt,141,142,1,0,0,0,0,0
+50,do,5_ATLANTIC_m.txt,143,144,1,0,0,0,0,0
+51,Star,5_ATLANTIC_m.txt,149,150,1,0,0,1,1,0
+52,Star Wars,5_ATLANTIC_m.txt,149,151,1,0,0,1,0,0
+53,Wars,5_ATLANTIC_m.txt,150,151,1,0,0,0,1,0
+54,But,5_ATLANTIC_m.txt,153,154,1,0,0,0,0,0
+55,But Solo,5_ATLANTIC_m.txt,153,155,1,0,0,0,0,0
+56,Solo,5_ATLANTIC_m.txt,154,155,1,0,0,0,1,1
+57,The,5_ATLANTIC_m.txt,164,165,1,0,0,0,0,0
+58,July,5_ATLANTIC_m.txt,171,172,1,0,0,1,0,0
+59,Jump,5_ATLANTIC_m.txt,177,178,1,0,0,0,1,0
+60,Jump Street,5_ATLANTIC_m.txt,177,179,1,0,0,0,0,0
+61,Street,5_ATLANTIC_m.txt,178,179,1,0,0,0,1,0
+62,The,5_ATLANTIC_m.txt,180,181,1,0,0,0,1,0
+63,The Lego,5_ATLANTIC_m.txt,180,182,1,0,0,0,1,0
+64,The Lego Movie,5_ATLANTIC_m.txt,180,183,1,0,0,0,0,0
+65,Lego,5_ATLANTIC_m.txt,181,182,1,0,0,1,1,0
+66,Lego Movie,5_ATLANTIC_m.txt,181,183,1,0,0,1,1,0
+67,Movie,5_ATLANTIC_m.txt,182,183,1,0,0,0,1,0
+68,Phil,5_ATLANTIC_m.txt,184,185,1,0,0,0,1,0
+69,Phil Lord,5_ATLANTIC_m.txt,184,186,1,0,0,0,0,1
+70,Lord,5_ATLANTIC_m.txt,185,186,1,0,0,0,0,0
+71,Christopher,5_ATLANTIC_m.txt,187,188,1,0,0,0,1,0
+72,Christopher Miller,5_ATLANTIC_m.txt,187,189,1,0,0,0,0,1
+73,Miller,5_ATLANTIC_m.txt,188,189,1,0,0,0,0,0
+74,Lawrence,5_ATLANTIC_m.txt,201,202,1,0,0,0,0,1
+75,Jon,5_ATLANTIC_m.txt,203,204,1,0,0,0,1,0
+76,Jon Kasdan,5_ATLANTIC_m.txt,203,205,1,0,0,0,0,1
+77,Kasdan,5_ATLANTIC_m.txt,204,205,1,0,0,0,0,0
+78,Lord,5_ATLANTIC_m.txt,206,207,1,0,0,0,0,1
+79,Miller,5_ATLANTIC_m.txt,208,209,1,0,0,0,0,1
+80,June,5_ATLANTIC_m.txt,212,213,1,0,0,1,0,0
+81,Kennedy,5_ATLANTIC_m.txt,218,219,1,0,0,0,0,1
+82,From,5_ATLANTIC_m.txt,230,231,1,0,0,0,0,0
+83,Monday,5_ATLANTIC_m.txt,238,239,1,0,0,0,0,0
+84,Solo,5_ATLANTIC_m.txt,259,260,1,0,0,0,0,1
+85,Star,5_ATLANTIC_m.txt,267,268,1,0,0,0,1,0
+86,Star Wars,5_ATLANTIC_m.txt,267,269,1,0,0,0,0,0
+87,Wars,5_ATLANTIC_m.txt,268,269,1,0,0,0,1,0
+88,Disney,5_ATLANTIC_m.txt,274,275,1,0,1,0,0,0
+89,Disney 's,5_ATLANTIC_m.txt,274,276,1,0,0,0,0,0
+90,'s,5_ATLANTIC_m.txt,275,276,1,0,0,0,1,0
+91,Lord,5_ATLANTIC_m.txt,297,298,1,0,0,0,0,1
+92,Miller,5_ATLANTIC_m.txt,299,300,1,0,0,0,0,1
+93,Ron,5_ATLANTIC_m.txt,304,305,1,0,0,0,1,0
+94,Ron Howard,5_ATLANTIC_m.txt,304,306,1,0,0,0,0,1
+95,Howard,5_ATLANTIC_m.txt,305,306,1,0,0,0,0,0
+96,Oscar,5_ATLANTIC_m.txt,308,309,1,0,0,0,0,0
+97,Hollywood,5_ATLANTIC_m.txt,311,312,1,0,0,0,0,0
+98,Given,5_ATLANTIC_m.txt,314,315,1,0,0,0,0,0
+99,'s,5_ATLANTIC_m.txt,348,349,1,0,0,0,0,0
+100,By,5_ATLANTIC_m.txt,354,355,1,0,0,0,0,0
+101,Howard,5_ATLANTIC_m.txt,358,359,1,0,0,0,0,1
+102,Solo,5_ATLANTIC_m.txt,362,363,1,0,0,0,0,1
+103,Memorial,5_ATLANTIC_m.txt,371,372,1,0,0,0,1,0
+104,Memorial Day,5_ATLANTIC_m.txt,371,373,1,0,0,0,0,0
+105,Day,5_ATLANTIC_m.txt,372,373,1,0,0,0,1,0
+106,Everything,5_ATLANTIC_m.txt,375,376,1,0,0,0,0,0
+107,The,5_ATLANTIC_m.txt,385,386,1,0,0,0,0,0
+108,Han,5_ATLANTIC_m.txt,394,395,1,0,0,0,1,0
+109,Han Solo,5_ATLANTIC_m.txt,394,396,1,0,0,0,0,1
+110,Solo,5_ATLANTIC_m.txt,395,396,1,0,0,0,0,0
+111,Empire,5_ATLANTIC_m.txt,411,412,1,0,0,1,0,0
+112,We,5_ATLANTIC_m.txt,431,432,1,0,0,0,0,0
+113,Woody,5_ATLANTIC_m.txt,444,445,1,0,0,0,1,0
+114,Woody Harrelson,5_ATLANTIC_m.txt,444,446,1,0,0,0,0,1
+115,Harrelson,5_ATLANTIC_m.txt,445,446,1,0,0,0,0,0
+116,Emilia,5_ATLANTIC_m.txt,447,448,1,0,0,0,1,0
+117,Emilia Clarke,5_ATLANTIC_m.txt,447,449,1,0,0,0,0,1
+118,Clarke,5_ATLANTIC_m.txt,448,449,1,0,0,0,0,0
+119,Thandie,5_ATLANTIC_m.txt,450,451,1,0,0,0,1,0
+120,Thandie Newton,5_ATLANTIC_m.txt,450,452,1,0,0,0,0,1
+121,Newton,5_ATLANTIC_m.txt,451,452,1,0,0,0,0,0
+122,Donald,5_ATLANTIC_m.txt,454,455,1,0,0,0,1,0
+123,Donald Glover,5_ATLANTIC_m.txt,454,456,1,0,0,0,0,1
+124,Glover,5_ATLANTIC_m.txt,455,456,1,0,0,0,0,0
+125,Lando,5_ATLANTIC_m.txt,462,463,1,0,0,0,1,0
+126,Lando Calrissian,5_ATLANTIC_m.txt,462,464,1,0,0,0,0,1
+127,Calrissian,5_ATLANTIC_m.txt,463,464,1,0,0,0,0,0
+128,Chewbacca,5_ATLANTIC_m.txt,465,466,1,0,0,0,0,1
+129,Han,5_ATLANTIC_m.txt,467,468,1,0,1,0,0,1
+130,Han 's,5_ATLANTIC_m.txt,467,469,1,0,0,0,0,0
+131,'s,5_ATLANTIC_m.txt,468,469,1,0,0,0,0,0
+132,There,5_ATLANTIC_m.txt,480,481,1,0,0,0,0,0
+133,Star,5_ATLANTIC_m.txt,487,488,1,0,0,0,1,0
+134,Star Destroyers,5_ATLANTIC_m.txt,487,489,1,0,0,0,0,0
+135,Destroyers,5_ATLANTIC_m.txt,488,489,1,0,0,0,1,0
+136,It,5_ATLANTIC_m.txt,499,500,1,0,1,0,0,0
+137,It 's,5_ATLANTIC_m.txt,499,501,1,0,0,0,0,0
+138,'s,5_ATLANTIC_m.txt,500,501,1,0,0,0,1,0
+139,This,5_ATLANTIC_m.txt,510,511,1,0,0,0,0,0
+140,Star,5_ATLANTIC_m.txt,513,514,1,0,0,0,1,0
+141,Star Wars,5_ATLANTIC_m.txt,513,515,1,0,0,0,0,0
+142,Wars,5_ATLANTIC_m.txt,514,515,1,0,0,0,1,0
+143,Then,5_ATLANTIC_m.txt,517,518,1,0,0,0,0,0
+144,'s,5_ATLANTIC_m.txt,519,520,1,0,0,0,0,0
+145,'s Han,5_ATLANTIC_m.txt,519,521,1,0,0,0,1,0
+146,'s Han Solo,5_ATLANTIC_m.txt,519,522,1,0,0,0,0,0
+147,Han,5_ATLANTIC_m.txt,520,521,1,0,0,0,1,0
+148,Han Solo,5_ATLANTIC_m.txt,520,522,1,0,0,0,0,1
+149,Solo,5_ATLANTIC_m.txt,521,522,1,0,0,0,0,0
+150,Well,5_ATLANTIC_m.txt,523,524,1,0,0,0,0,0
+151,Mostly,5_ATLANTIC_m.txt,530,531,1,0,0,0,0,0
+152,Aside,5_ATLANTIC_m.txt,546,547,1,0,0,0,0,0
+153,I,5_ATLANTIC_m.txt,588,589,1,0,0,0,0,0
+154,'s,5_ATLANTIC_m.txt,601,602,1,0,0,0,0,0
+155,We're,5_ATLANTIC_m.txt,604,605,1,0,0,0,0,0
+156,The,5_ATLANTIC_m.txt,611,612,1,0,0,0,0,0
+157,Han,5_ATLANTIC_m.txt,616,617,1,0,0,0,1,0
+158,Han Solo,5_ATLANTIC_m.txt,616,618,1,0,0,0,0,1
+159,Solo,5_ATLANTIC_m.txt,617,618,1,0,0,0,0,0
+160,'s,5_ATLANTIC_m.txt,622,623,1,0,0,0,0,0
+161,But,5_ATLANTIC_m.txt,632,633,1,0,0,0,0,0
+0,A,135_THEHILL_m.txt,0,1,1,0,0,0,0,0
+1,Jimmy,135_THEHILL_m.txt,4,5,1,0,0,0,1,0
+2,Jimmy Kimmel,135_THEHILL_m.txt,4,6,1,0,0,0,1,1
+3,Jimmy Kimmel Live,135_THEHILL_m.txt,4,7,1,0,0,0,0,0
+4,Kimmel,135_THEHILL_m.txt,5,6,1,0,0,0,1,0
+5,Kimmel Live,135_THEHILL_m.txt,5,7,1,0,0,0,0,0
+6,Live,135_THEHILL_m.txt,6,7,1,0,0,0,1,0
+7,National,135_THEHILL_m.txt,20,21,1,0,0,1,1,0
+8,National Rifle,135_THEHILL_m.txt,20,22,1,0,0,1,1,0
+9,National Rifle Association,135_THEHILL_m.txt,20,23,1,0,0,1,0,0
+10,Rifle,135_THEHILL_m.txt,21,22,1,0,0,0,1,0
+11,Rifle Association,135_THEHILL_m.txt,21,23,1,0,0,0,1,0
+12,Association,135_THEHILL_m.txt,22,23,1,0,0,0,1,0
+13,NRA,135_THEHILL_m.txt,24,25,1,0,0,0,0,0
+14,South,135_THEHILL_m.txt,35,36,1,0,0,0,1,0
+15,South Florida,135_THEHILL_m.txt,35,37,1,0,0,0,0,0
+16,Florida,135_THEHILL_m.txt,36,37,1,0,0,0,1,0
+17,Bess,135_THEHILL_m.txt,40,41,1,0,0,0,1,0
+18,Bess Kalb,135_THEHILL_m.txt,40,42,1,0,0,0,0,1
+19,Kalb,135_THEHILL_m.txt,41,42,1,0,0,0,0,0
+20,Wednesday,135_THEHILL_m.txt,43,44,1,0,0,1,0,0
+21,GOP,135_THEHILL_m.txt,49,50,1,0,0,0,0,0
+22,NRA,135_THEHILL_m.txt,70,71,1,0,0,1,0,0
+23,The,135_THEHILL_m.txt,72,73,1,0,0,0,1,0
+24,The Huffington,135_THEHILL_m.txt,72,74,1,0,0,0,1,0
+25,The Huffington Post,135_THEHILL_m.txt,72,75,1,0,0,0,0,0
+26,Huffington,135_THEHILL_m.txt,73,74,1,0,0,1,1,0
+27,Huffington Post,135_THEHILL_m.txt,73,75,1,0,0,1,1,0
+28,Post,135_THEHILL_m.txt,74,75,1,0,0,0,1,0
+29,This,135_THEHILL_m.txt,78,79,1,0,0,0,0,0
+30,This,135_THEHILL_m.txt,85,86,1,0,0,0,0,0
+31,Constitutional,135_THEHILL_m.txt,89,90,1,0,0,0,0,0
+32,This,135_THEHILL_m.txt,92,93,1,0,0,0,0,0
+33,'s,135_THEHILL_m.txt,97,98,1,0,0,0,0,0
+34,Wednesday,135_THEHILL_m.txt,104,105,1,0,0,0,0,0
+35,And,135_THEHILL_m.txt,107,108,1,0,0,0,0,0
+36,'s,135_THEHILL_m.txt,109,110,1,0,0,0,0,0
+37,'life',135_THEHILL_m.txt,118,119,1,0,0,0,0,0
+38,In,135_THEHILL_m.txt,131,132,1,0,0,0,0,0
+39,NRA,135_THEHILL_m.txt,145,146,1,0,0,0,0,0
+40,God,135_THEHILL_m.txt,148,149,1,0,0,0,0,0
+41,NRA,135_THEHILL_m.txt,153,154,1,0,0,0,0,0
+42,Richard,135_THEHILL_m.txt,158,159,1,0,0,0,1,0
+43,Richard Burr,135_THEHILL_m.txt,158,160,1,0,0,0,0,1
+44,Burr,135_THEHILL_m.txt,159,160,1,0,0,0,0,0
+45,Roy,135_THEHILL_m.txt,166,167,1,0,0,0,1,0
+46,Roy Blunt,135_THEHILL_m.txt,166,168,1,0,0,0,0,1
+47,Blunt,135_THEHILL_m.txt,167,168,1,0,0,0,0,0
+48,Thom,135_THEHILL_m.txt,174,175,1,0,0,0,1,0
+49,Thom Tillis,135_THEHILL_m.txt,174,176,1,0,0,0,0,1
+50,Tillis,135_THEHILL_m.txt,175,176,1,0,0,0,0,0
+51,Cory,135_THEHILL_m.txt,182,183,1,0,0,0,1,0
+52,Cory Gardner,135_THEHILL_m.txt,182,184,1,0,0,0,0,1
+53,Gardner,135_THEHILL_m.txt,183,184,1,0,0,0,0,0
+54,Marco,135_THEHILL_m.txt,190,191,1,0,0,0,1,0
+55,Marco Rubio,135_THEHILL_m.txt,190,192,1,0,0,0,0,1
+56,Rubio,135_THEHILL_m.txt,191,192,1,0,0,0,0,0
+57,Joni,135_THEHILL_m.txt,198,199,1,0,0,0,1,0
+58,Joni Ernst,135_THEHILL_m.txt,198,200,1,0,0,0,0,1
+59,Ernst,135_THEHILL_m.txt,199,200,1,0,0,0,0,0
+60,Rob,135_THEHILL_m.txt,206,207,1,0,0,0,1,0
+61,Rob Portman,135_THEHILL_m.txt,206,208,1,0,0,0,0,1
+62,Portman,135_THEHILL_m.txt,207,208,1,0,0,0,0,0
+63,Todd,135_THEHILL_m.txt,214,215,1,0,0,0,1,0
+64,Todd Young,135_THEHILL_m.txt,214,216,1,0,0,0,0,1
+65,Young,135_THEHILL_m.txt,215,216,1,0,0,0,0,0
+66,Bill,135_THEHILL_m.txt,222,223,1,0,0,0,1,0
+67,Bill Cassidy,135_THEHILL_m.txt,222,224,1,0,0,0,0,1
+68,Cassidy,135_THEHILL_m.txt,223,224,1,0,0,0,0,0
+69,Bess,135_THEHILL_m.txt,240,241,1,0,0,0,1,0
+70,Bess Kalb,135_THEHILL_m.txt,240,242,1,0,0,0,0,1
+71,Kalb,135_THEHILL_m.txt,241,242,1,0,0,0,0,0
+72,February,135_THEHILL_m.txt,246,247,1,0,0,0,0,0
+73,She,135_THEHILL_m.txt,250,251,1,0,0,0,0,0
+74,Sens.,135_THEHILL_m.txt,260,261,1,0,0,0,0,0
+75,Sens. Marco,135_THEHILL_m.txt,260,262,1,0,0,0,1,0
+76,Sens. Marco Rubio,135_THEHILL_m.txt,260,263,1,0,0,0,0,0
+77,Marco,135_THEHILL_m.txt,261,262,1,1,0,0,1,0
+78,Marco Rubio,135_THEHILL_m.txt,261,263,1,1,0,0,1,1
+79,Rubio,135_THEHILL_m.txt,262,263,1,0,0,0,0,0
+80,R,135_THEHILL_m.txt,264,265,1,0,0,0,0,0
+81,Fla,135_THEHILL_m.txt,266,267,1,0,0,0,0,0
+82,Cory,135_THEHILL_m.txt,270,271,1,0,0,0,1,0
+83,Cory Gardner,135_THEHILL_m.txt,270,272,1,0,0,0,0,1
+84,Gardner,135_THEHILL_m.txt,271,272,1,0,0,0,0,0
+85,R,135_THEHILL_m.txt,273,274,1,0,0,0,0,0
+86,Colo,135_THEHILL_m.txt,275,276,1,0,0,0,0,0
+87,NRA,135_THEHILL_m.txt,287,288,1,0,0,1,0,0
+88,She,135_THEHILL_m.txt,289,290,1,0,0,0,0,0
+89,Republican,135_THEHILL_m.txt,293,294,1,0,0,0,1,0
+90,Republican National,135_THEHILL_m.txt,293,295,1,0,0,0,1,0
+91,Republican National Committee,135_THEHILL_m.txt,293,296,1,0,0,0,1,0
+92,Republican National Committee Chairwoman,135_THEHILL_m.txt,293,297,1,0,0,0,0,0
+93,National,135_THEHILL_m.txt,294,295,1,0,0,0,1,0
+94,National Committee,135_THEHILL_m.txt,294,296,1,0,0,0,1,0
+95,National Committee Chairwoman,135_THEHILL_m.txt,294,297,1,0,0,0,1,0
+96,National Committee Chairwoman Ronna,135_THEHILL_m.txt,294,298,1,0,0,0,1,0
+97,Committee,135_THEHILL_m.txt,295,296,1,0,0,0,1,0
+98,Committee Chairwoman,135_THEHILL_m.txt,295,297,1,0,0,0,1,0
+99,Committee Chairwoman Ronna,135_THEHILL_m.txt,295,298,1,0,0,0,1,0
+100,Committee Chairwoman Ronna Romney,135_THEHILL_m.txt,295,299,1,0,0,0,1,0
+101,Chairwoman,135_THEHILL_m.txt,296,297,1,0,0,0,1,0
+102,Chairwoman Ronna,135_THEHILL_m.txt,296,298,1,0,0,0,1,0
+103,Chairwoman Ronna Romney,135_THEHILL_m.txt,296,299,1,0,0,0,1,0
+104,Chairwoman Ronna Romney McDaniel,135_THEHILL_m.txt,296,300,1,0,0,0,1,0
+105,Ronna,135_THEHILL_m.txt,297,298,1,0,0,0,1,0
+106,Ronna Romney,135_THEHILL_m.txt,297,299,1,0,0,0,1,0
+107,Ronna Romney McDaniel,135_THEHILL_m.txt,297,300,1,0,0,0,1,1
+108,Romney,135_THEHILL_m.txt,298,299,1,0,0,0,1,0
+109,Romney McDaniel,135_THEHILL_m.txt,298,300,1,0,0,0,0,0
+110,McDaniel,135_THEHILL_m.txt,299,300,1,0,0,0,1,0
+111,Florida,135_THEHILL_m.txt,312,313,1,0,0,1,0,0
+112,In,135_THEHILL_m.txt,316,317,1,0,0,0,0,0
+113,GOP,135_THEHILL_m.txt,325,326,1,0,0,0,0,0
+114,NRA,135_THEHILL_m.txt,336,337,1,0,0,1,0,0
+115,This,135_THEHILL_m.txt,343,344,1,0,0,0,0,0
+116,NOT,135_THEHILL_m.txt,345,346,1,0,0,0,0,0
+117,President,135_THEHILL_m.txt,353,354,1,0,0,0,0,0
+118,President Trump,135_THEHILL_m.txt,353,355,1,0,0,0,0,0
+119,Trump,135_THEHILL_m.txt,354,355,1,1,0,0,1,1
+120,Kalb,135_THEHILL_m.txt,364,365,1,0,1,0,0,1
+121,Kalb 's,135_THEHILL_m.txt,364,366,1,0,0,0,0,0
+122,'s,135_THEHILL_m.txt,365,366,1,0,0,0,0,0
+123,The,135_THEHILL_m.txt,372,373,1,0,0,0,1,0
+124,The New,135_THEHILL_m.txt,372,374,1,0,0,0,1,0
+125,The New York,135_THEHILL_m.txt,372,375,1,0,0,0,1,0
+126,The New York Daily,135_THEHILL_m.txt,372,376,1,0,0,0,1,0
+127,New,135_THEHILL_m.txt,373,374,1,0,0,1,1,0
+128,New York,135_THEHILL_m.txt,373,375,1,0,0,1,1,0
+129,New York Daily,135_THEHILL_m.txt,373,376,1,0,0,1,1,0
+130,New York Daily News,135_THEHILL_m.txt,373,377,1,0,0,1,1,0
+131,York,135_THEHILL_m.txt,374,375,1,0,0,0,1,0
+132,York Daily,135_THEHILL_m.txt,374,376,1,0,0,0,1,0
+133,York Daily News,135_THEHILL_m.txt,374,377,1,0,0,0,1,0
+134,Daily,135_THEHILL_m.txt,375,376,1,0,0,0,1,0
+135,Daily News,135_THEHILL_m.txt,375,377,1,0,0,0,1,0
+136,News,135_THEHILL_m.txt,376,377,1,0,0,0,1,0
+137,Rubio,135_THEHILL_m.txt,386,387,1,0,0,0,0,1
+138,Rob,135_THEHILL_m.txt,388,389,1,0,0,0,1,0
+139,Rob Portman,135_THEHILL_m.txt,388,390,1,0,0,0,0,1
+140,Portman,135_THEHILL_m.txt,389,390,1,0,0,0,0,0
+141,R,135_THEHILL_m.txt,391,392,1,0,0,0,0,0
+142,Ohio,135_THEHILL_m.txt,393,394,1,0,0,0,0,0
+143,NRA,135_THEHILL_m.txt,400,401,1,0,0,1,0,0
+144,Wednesday,135_THEHILL_m.txt,409,410,1,0,0,0,0,0
+145,At,135_THEHILL_m.txt,412,413,1,0,0,0,0,0
+146,Wednesday,135_THEHILL_m.txt,423,424,1,0,0,1,0,0
+147,Marjory,135_THEHILL_m.txt,428,429,1,0,0,1,1,0
+148,Marjory Stoneman,135_THEHILL_m.txt,428,430,1,0,0,1,1,0
+149,Marjory Stoneman Douglas,135_THEHILL_m.txt,428,431,1,0,0,1,1,0
+150,Marjory Stoneman Douglas High,135_THEHILL_m.txt,428,432,1,0,0,1,1,0
+151,Stoneman,135_THEHILL_m.txt,429,430,1,0,0,0,1,0
+152,Stoneman Douglas,135_THEHILL_m.txt,429,431,1,0,0,0,1,0
+153,Stoneman Douglas High,135_THEHILL_m.txt,429,432,1,0,0,0,1,0
+154,Stoneman Douglas High School,135_THEHILL_m.txt,429,433,1,0,0,0,1,0
+155,Douglas,135_THEHILL_m.txt,430,431,1,0,0,0,1,0
+156,Douglas High,135_THEHILL_m.txt,430,432,1,0,0,0,1,0
+157,Douglas High School,135_THEHILL_m.txt,430,433,1,0,0,0,1,0
+158,High,135_THEHILL_m.txt,431,432,1,0,0,0,1,0
+159,High School,135_THEHILL_m.txt,431,433,1,0,0,0,1,0
+160,School,135_THEHILL_m.txt,432,433,1,0,0,0,1,0
+161,Parkland,135_THEHILL_m.txt,434,435,1,0,0,1,0,0
+162,Fla,135_THEHILL_m.txt,436,437,1,0,0,0,0,0
+163,President,135_THEHILL_m.txt,438,439,1,0,0,0,0,0
+164,President Trump,135_THEHILL_m.txt,438,440,1,0,0,0,0,0
+165,Trump,135_THEHILL_m.txt,439,440,1,1,0,0,1,1
+166,Wednesday,135_THEHILL_m.txt,445,446,1,0,0,1,0,0
+167,Multiple,135_THEHILL_m.txt,455,456,1,0,0,0,1,0
+168,Multiple Democratic,135_THEHILL_m.txt,455,457,1,0,0,0,0,0
+169,Democratic,135_THEHILL_m.txt,456,457,1,0,0,0,1,0
+170,Congress,135_THEHILL_m.txt,462,463,1,0,0,0,0,0
+0,If,27_ATLANTIC_m.txt,0,1,1,0,0,0,1,0
+1,If Hollywood,27_ATLANTIC_m.txt,0,2,1,0,0,0,0,0
+2,Hollywood,27_ATLANTIC_m.txt,1,2,1,0,0,0,1,0
+3,do,27_ATLANTIC_m.txt,16,17,1,0,0,0,0,0
+4,Paddington,27_ATLANTIC_m.txt,19,20,1,0,0,0,1,0
+5,Paddington Bear,27_ATLANTIC_m.txt,19,21,1,0,0,0,0,1
+6,Bear,27_ATLANTIC_m.txt,20,21,1,0,0,0,0,0
+7,CGI,27_ATLANTIC_m.txt,24,25,1,0,0,0,0,0
+8,British,27_ATLANTIC_m.txt,29,30,1,0,0,0,0,0
+9,'s,27_ATLANTIC_m.txt,31,32,1,0,0,0,0,0
+10,He,27_ATLANTIC_m.txt,34,35,1,0,1,0,0,0
+11,He 's,27_ATLANTIC_m.txt,34,36,1,0,0,0,0,0
+12,'s,27_ATLANTIC_m.txt,35,36,1,0,0,0,1,0
+13,Ben,27_ATLANTIC_m.txt,38,39,1,0,0,0,1,0
+14,Ben Whishaw,27_ATLANTIC_m.txt,38,40,1,0,0,0,0,1
+15,Whishaw,27_ATLANTIC_m.txt,39,40,1,0,0,0,0,0
+16,Peru,27_ATLANTIC_m.txt,45,46,1,0,0,0,0,0
+17,Henry,27_ATLANTIC_m.txt,68,69,1,0,0,0,0,1
+18,Hugh,27_ATLANTIC_m.txt,70,71,1,0,0,0,1,0
+19,Hugh Bonneville,27_ATLANTIC_m.txt,70,72,1,0,0,0,0,1
+20,Bonneville,27_ATLANTIC_m.txt,71,72,1,0,0,0,0,0
+21,He,27_ATLANTIC_m.txt,77,78,1,0,0,0,0,0
+22,The,27_ATLANTIC_m.txt,92,93,1,0,0,0,0,0
+23,Paddington,27_ATLANTIC_m.txt,104,105,1,0,0,1,0,0
+24,Paddington,27_ATLANTIC_m.txt,119,120,1,0,0,0,0,1
+25,Michael,27_ATLANTIC_m.txt,127,128,1,0,0,0,1,0
+26,Michael Bond,27_ATLANTIC_m.txt,127,129,1,0,0,0,0,1
+27,Bond,27_ATLANTIC_m.txt,128,129,1,0,0,0,0,0
+28,Paul,27_ATLANTIC_m.txt,151,152,1,0,0,0,1,0
+29,Paul King,27_ATLANTIC_m.txt,151,153,1,0,0,0,0,1
+30,King,27_ATLANTIC_m.txt,152,153,1,0,0,0,0,0
+31,The,27_ATLANTIC_m.txt,154,155,1,0,0,0,0,0
+32,Paddington,27_ATLANTIC_m.txt,156,157,1,0,0,0,0,1
+33,U.S.,27_ATLANTIC_m.txt,161,162,1,0,0,1,0,0
+34,British,27_ATLANTIC_m.txt,173,174,1,0,0,0,0,0
+35,Paddington,27_ATLANTIC_m.txt,196,197,1,0,0,0,0,1
+36,British,27_ATLANTIC_m.txt,207,208,1,0,0,0,0,0
+37,World,27_ATLANTIC_m.txt,213,214,1,0,0,1,1,0
+38,World War,27_ATLANTIC_m.txt,213,215,1,0,0,1,1,0
+39,World War II,27_ATLANTIC_m.txt,213,216,1,0,0,1,0,0
+40,War,27_ATLANTIC_m.txt,214,215,1,0,0,0,1,0
+41,War II,27_ATLANTIC_m.txt,214,216,1,0,0,0,1,0
+42,II,27_ATLANTIC_m.txt,215,216,1,0,0,0,1,0
+43,Britain,27_ATLANTIC_m.txt,220,221,1,0,0,0,0,0
+44,Brexit,27_ATLANTIC_m.txt,223,224,1,0,0,0,0,0
+45,In,27_ATLANTIC_m.txt,234,235,1,0,0,0,0,0
+46,In Paddington,27_ATLANTIC_m.txt,234,236,1,0,0,0,0,0
+47,Paddington,27_ATLANTIC_m.txt,235,236,1,0,0,0,1,1
+48,Henry,27_ATLANTIC_m.txt,258,259,1,0,0,0,0,1
+49,Paddington,27_ATLANTIC_m.txt,262,263,1,0,1,0,0,1
+50,Paddington 's,27_ATLANTIC_m.txt,262,264,1,0,0,0,0,0
+51,'s,27_ATLANTIC_m.txt,263,264,1,0,0,0,0,0
+52,'s,27_ATLANTIC_m.txt,270,271,1,0,0,0,0,0
+53,It,27_ATLANTIC_m.txt,273,274,1,0,1,0,0,0
+54,It 's,27_ATLANTIC_m.txt,273,275,1,0,0,0,0,0
+55,'s,27_ATLANTIC_m.txt,274,275,1,0,0,0,1,0
+56,'s,27_ATLANTIC_m.txt,278,279,1,0,0,0,0,0
+57,King,27_ATLANTIC_m.txt,301,302,1,0,0,0,0,1
+58,'s,27_ATLANTIC_m.txt,322,323,1,0,0,0,0,0
+59,King,27_ATLANTIC_m.txt,327,328,1,0,0,0,0,1
+60,British,27_ATLANTIC_m.txt,334,335,1,0,0,1,0,0
+61,TV,27_ATLANTIC_m.txt,346,347,1,0,0,0,0,0
+62,The,27_ATLANTIC_m.txt,348,349,1,0,0,0,1,0
+63,The Mighty,27_ATLANTIC_m.txt,348,350,1,0,0,0,1,0
+64,The Mighty Boosh,27_ATLANTIC_m.txt,348,351,1,0,0,0,0,0
+65,Mighty,27_ATLANTIC_m.txt,349,350,1,0,0,1,1,0
+66,Mighty Boosh,27_ATLANTIC_m.txt,349,351,1,0,0,1,1,0
+67,Boosh,27_ATLANTIC_m.txt,350,351,1,0,0,0,1,0
+68,Every,27_ATLANTIC_m.txt,366,367,1,0,0,0,0,0
+69,The,27_ATLANTIC_m.txt,378,379,1,0,0,0,1,0
+70,The London,27_ATLANTIC_m.txt,378,380,1,0,0,0,0,0
+71,London,27_ATLANTIC_m.txt,379,380,1,0,0,1,1,0
+72,Paddington,27_ATLANTIC_m.txt,381,382,1,0,0,0,0,1
+73,Paddington,27_ATLANTIC_m.txt,403,404,1,0,0,0,0,1
+74,Notting,27_ATLANTIC_m.txt,407,408,1,0,0,0,1,0
+75,Notting Hill,27_ATLANTIC_m.txt,407,409,1,0,0,0,0,0
+76,Hill,27_ATLANTIC_m.txt,408,409,1,0,0,0,1,0
+77,Peter,27_ATLANTIC_m.txt,421,422,1,0,0,0,1,0
+78,Peter Capaldi,27_ATLANTIC_m.txt,421,423,1,0,0,0,0,1
+79,Capaldi,27_ATLANTIC_m.txt,422,423,1,0,0,0,0,0
+0,Another,26_ATLANTIC_m.txt,0,1,1,0,0,0,0,0
+1,Hollywood,26_ATLANTIC_m.txt,11,12,1,0,0,0,0,0
+2,From,26_ATLANTIC_m.txt,20,21,1,0,0,0,1,0
+3,From Black,26_ATLANTIC_m.txt,20,22,1,0,0,0,1,0
+4,From Black Panther,26_ATLANTIC_m.txt,20,23,1,0,0,0,0,0
+5,Black,26_ATLANTIC_m.txt,21,22,1,0,0,0,1,0
+6,Black Panther,26_ATLANTIC_m.txt,21,23,1,0,0,0,1,0
+7,Panther,26_ATLANTIC_m.txt,22,23,1,0,0,0,1,0
+8,A,26_ATLANTIC_m.txt,24,25,1,0,0,0,1,0
+9,A Wrinkle,26_ATLANTIC_m.txt,24,26,1,0,0,0,0,0
+10,Wrinkle,26_ATLANTIC_m.txt,25,26,1,0,0,0,1,0
+11,Time,26_ATLANTIC_m.txt,27,28,1,0,0,1,0,0
+12,Mary,26_ATLANTIC_m.txt,32,33,1,0,0,0,1,0
+13,Mary Poppins,26_ATLANTIC_m.txt,32,34,1,0,0,0,0,0
+14,Poppins,26_ATLANTIC_m.txt,33,34,1,0,0,0,1,0
+15,'s,26_ATLANTIC_m.txt,37,38,1,0,0,0,0,0
+16,Here,26_ATLANTIC_m.txt,66,67,1,0,1,0,0,0
+17,Here 's,26_ATLANTIC_m.txt,66,68,1,0,0,0,0,0
+18,'s,26_ATLANTIC_m.txt,67,68,1,0,0,0,1,0
+19,'s,26_ATLANTIC_m.txt,74,75,1,0,0,0,0,0
+20,Carl,26_ATLANTIC_m.txt,79,80,1,0,0,0,1,0
+21,Carl Costas,26_ATLANTIC_m.txt,79,81,1,0,0,0,0,1
+22,Costas,26_ATLANTIC_m.txt,80,81,1,0,0,0,0,0
+23,AP,26_ATLANTIC_m.txt,82,83,1,0,0,0,1,0
+24,AP The,26_ATLANTIC_m.txt,82,84,1,0,0,0,0,0
+25,The,26_ATLANTIC_m.txt,83,84,1,0,0,0,1,0
+26,Paris,26_ATLANTIC_m.txt,88,89,1,0,0,0,0,0
+27,Feb,26_ATLANTIC_m.txt,90,91,1,0,0,0,0,0
+28,What,26_ATLANTIC_m.txt,94,95,1,0,0,0,1,0
+29,What It,26_ATLANTIC_m.txt,94,96,1,0,0,0,1,0
+30,What It Is,26_ATLANTIC_m.txt,94,97,1,0,0,0,0,0
+31,It,26_ATLANTIC_m.txt,95,96,1,0,0,0,1,0
+32,It Is,26_ATLANTIC_m.txt,95,97,1,0,0,0,1,0
+33,Is,26_ATLANTIC_m.txt,96,97,1,0,0,0,1,0
+34,Clint,26_ATLANTIC_m.txt,98,99,1,0,0,0,1,0
+35,Clint Eastwood,26_ATLANTIC_m.txt,98,100,1,0,1,0,0,1
+36,Clint Eastwood 's,26_ATLANTIC_m.txt,98,101,1,0,0,0,0,0
+37,Eastwood,26_ATLANTIC_m.txt,99,100,1,0,1,0,0,0
+38,Eastwood 's,26_ATLANTIC_m.txt,99,101,1,0,0,0,0,0
+39,'s,26_ATLANTIC_m.txt,100,101,1,0,0,0,1,0
+40,American,26_ATLANTIC_m.txt,116,117,1,0,0,0,1,0
+41,American Sniper,26_ATLANTIC_m.txt,116,118,1,0,0,0,0,0
+42,Sniper,26_ATLANTIC_m.txt,117,118,1,0,0,0,1,0
+43,Sully,26_ATLANTIC_m.txt,119,120,1,0,0,0,0,0
+44,But,26_ATLANTIC_m.txt,121,122,1,0,0,0,0,0
+45,Tom,26_ATLANTIC_m.txt,132,133,1,0,0,0,1,0
+46,Tom Hanks,26_ATLANTIC_m.txt,132,134,1,0,0,0,0,1
+47,Hanks,26_ATLANTIC_m.txt,133,134,1,0,0,0,0,0
+48,Bradley,26_ATLANTIC_m.txt,135,136,1,0,0,0,1,0
+49,Bradley Cooper,26_ATLANTIC_m.txt,135,137,1,0,0,0,0,1
+50,Cooper,26_ATLANTIC_m.txt,136,137,1,0,0,0,0,0
+51,Eastwood,26_ATLANTIC_m.txt,138,139,1,0,0,0,0,1
+52,Spencer,26_ATLANTIC_m.txt,146,147,1,0,0,0,1,0
+53,Spencer Stone,26_ATLANTIC_m.txt,146,148,1,0,0,0,0,1
+54,Stone,26_ATLANTIC_m.txt,147,148,1,0,0,0,0,0
+55,Anthony,26_ATLANTIC_m.txt,149,150,1,0,0,0,1,0
+56,Anthony Sadler,26_ATLANTIC_m.txt,149,151,1,0,0,0,0,1
+57,Sadler,26_ATLANTIC_m.txt,150,151,1,0,0,0,0,0
+58,Alek,26_ATLANTIC_m.txt,153,154,1,0,0,0,1,0
+59,Alek Skarlatos,26_ATLANTIC_m.txt,153,155,1,0,0,0,0,1
+60,Skarlatos,26_ATLANTIC_m.txt,154,155,1,0,0,0,0,0
+61,Americans,26_ATLANTIC_m.txt,157,158,1,0,1,0,0,0
+62,French,26_ATLANTIC_m.txt,165,166,1,0,0,0,0,0
+63,The,26_ATLANTIC_m.txt,169,170,1,0,0,0,0,0
+64,Judy,26_ATLANTIC_m.txt,176,177,1,0,0,0,1,0
+65,Judy Greer,26_ATLANTIC_m.txt,176,178,1,0,0,0,0,1
+66,Greer,26_ATLANTIC_m.txt,177,178,1,0,0,0,0,0
+67,Jenna,26_ATLANTIC_m.txt,179,180,1,0,0,0,1,0
+68,Jenna Fischer,26_ATLANTIC_m.txt,179,181,1,0,0,0,0,1
+69,Fischer,26_ATLANTIC_m.txt,180,181,1,0,0,0,0,0
+70,Jaleel,26_ATLANTIC_m.txt,183,184,1,0,0,0,1,0
+71,Jaleel White,26_ATLANTIC_m.txt,183,185,1,0,0,0,0,1
+72,White,26_ATLANTIC_m.txt,184,185,1,0,0,0,0,0
+73,'s,26_ATLANTIC_m.txt,191,192,1,0,0,0,0,0
+0,Excited,0_Mashable_m.txt,0,1,1,0,0,0,0,0
+1,Black,0_Mashable_m.txt,2,3,1,0,0,0,1,0
+2,Black Panther,0_Mashable_m.txt,2,4,1,0,0,0,0,0
+3,Panther,0_Mashable_m.txt,3,4,1,0,0,0,1,0
+4,So,0_Mashable_m.txt,5,6,1,0,0,0,0,0
+5,Which,0_Mashable_m.txt,9,10,1,0,0,0,0,0
+6,Black,0_Mashable_m.txt,18,19,1,0,0,0,1,0
+7,Black Panther,0_Mashable_m.txt,18,20,1,0,0,0,1,0
+8,Black Panther Week,0_Mashable_m.txt,18,21,1,0,0,0,0,0
+9,Panther,0_Mashable_m.txt,19,20,1,0,0,0,1,0
+10,Panther Week,0_Mashable_m.txt,19,21,1,0,0,0,1,0
+11,Week,0_Mashable_m.txt,20,21,1,0,0,0,1,0
+12,Will,0_Mashable_m.txt,22,23,1,0,0,0,1,0
+13,Will Smith,0_Mashable_m.txt,22,24,1,0,0,0,0,0
+14,Smith,0_Mashable_m.txt,23,24,1,0,0,0,1,0
+15,'s,0_Mashable_m.txt,30,31,1,0,0,0,0,0
+16,Black,0_Mashable_m.txt,35,36,1,0,0,0,1,0
+17,Black Panther,0_Mashable_m.txt,35,37,1,0,0,0,0,0
+18,Panther,0_Mashable_m.txt,36,37,1,0,0,0,1,0
+19,SEE,0_Mashable_m.txt,40,41,1,0,0,0,1,0
+20,SEE ALSO,0_Mashable_m.txt,40,42,1,0,0,0,0,0
+21,ALSO,0_Mashable_m.txt,41,42,1,0,0,0,1,0
+22,'Black,0_Mashable_m.txt,43,44,1,0,0,0,1,0
+23,'Black Panther',0_Mashable_m.txt,43,45,1,0,0,0,0,0
+24,Panther',0_Mashable_m.txt,44,45,1,0,0,0,0,0
+25,After,0_Mashable_m.txt,53,54,1,0,0,0,0,0
+26,Black,0_Mashable_m.txt,58,59,1,0,0,0,1,0
+27,Black Panther,0_Mashable_m.txt,58,60,1,0,1,0,0,0
+28,Black Panther 's,0_Mashable_m.txt,58,61,1,0,0,0,0,0
+29,Panther,0_Mashable_m.txt,59,60,1,0,1,0,1,0
+30,Panther 's,0_Mashable_m.txt,59,61,1,0,0,0,1,0
+31,'s,0_Mashable_m.txt,60,61,1,0,0,0,1,0
+32,Will,0_Mashable_m.txt,64,65,1,0,0,0,1,0
+33,Will Smith,0_Mashable_m.txt,64,66,1,0,0,0,0,1
+34,Smith,0_Mashable_m.txt,65,66,1,0,0,0,0,0
+35,Instagram,0_Mashable_m.txt,68,69,1,0,0,0,0,0
+36,Nelson,0_Mashable_m.txt,78,79,1,0,0,0,1,0
+37,Nelson Mandela,0_Mashable_m.txt,78,80,1,0,0,0,0,1
+38,Mandela,0_Mashable_m.txt,79,80,1,0,0,0,0,0
+39,Black,0_Mashable_m.txt,89,90,1,0,0,0,1,0
+40,Black Panther,0_Mashable_m.txt,89,91,1,0,0,0,0,0
+41,Panther,0_Mashable_m.txt,90,91,1,0,0,0,1,0
+42,Marvel,0_Mashable_m.txt,97,98,1,0,1,1,0,0
+43,Marvel 's,0_Mashable_m.txt,97,99,1,0,0,1,0,0
+44,'s,0_Mashable_m.txt,98,99,1,0,0,0,1,0
+45,I,0_Mashable_m.txt,102,103,1,0,0,0,0,0
+46,Nelson,0_Mashable_m.txt,108,109,1,0,0,0,1,0
+47,Nelson Mandela,0_Mashable_m.txt,108,110,1,0,1,0,0,1
+48,Mandela,0_Mashable_m.txt,109,110,1,0,1,0,0,0
+49,He,0_Mashable_m.txt,115,116,1,0,1,0,0,0
+50,With,0_Mashable_m.txt,119,120,1,0,0,0,0,0
+51,Reach,0_Mashable_m.txt,139,140,1,0,0,0,1,0
+52,Reach Your,0_Mashable_m.txt,139,141,1,0,0,0,1,0
+53,Reach Your Hand,0_Mashable_m.txt,139,142,1,0,0,0,1,0
+54,Reach Your Hand Out,0_Mashable_m.txt,139,143,1,0,0,0,0,0
+55,Your,0_Mashable_m.txt,140,141,1,0,0,0,1,0
+56,Your Hand,0_Mashable_m.txt,140,142,1,0,0,0,1,0
+57,Your Hand Out,0_Mashable_m.txt,140,143,1,0,0,0,1,0
+58,Hand,0_Mashable_m.txt,141,142,1,0,0,0,1,0
+59,Hand Out,0_Mashable_m.txt,141,143,1,0,0,0,1,0
+60,Out,0_Mashable_m.txt,142,143,1,0,0,0,1,0
+61,Feel,0_Mashable_m.txt,146,147,1,0,0,0,1,0
+62,Feel Your,0_Mashable_m.txt,146,148,1,0,0,0,1,0
+63,Feel Your Flesh,0_Mashable_m.txt,146,149,1,0,0,0,0,0
+64,Your,0_Mashable_m.txt,147,148,1,0,0,0,1,0
+65,Your Flesh,0_Mashable_m.txt,147,149,1,0,0,0,1,0
+66,Flesh,0_Mashable_m.txt,148,149,1,0,0,0,1,0
+67,You,0_Mashable_m.txt,150,151,1,0,0,0,0,0
+68,REAL,0_Mashable_m.txt,159,160,1,0,0,0,0,0
+69,do,0_Mashable_m.txt,169,170,1,0,0,0,0,0
+70,Real,0_Mashable_m.txt,173,174,1,0,0,0,0,0
+71,So,0_Mashable_m.txt,177,178,1,0,0,0,1,0
+72,So I,0_Mashable_m.txt,177,179,1,0,0,0,0,0
+73,I,0_Mashable_m.txt,178,179,1,0,0,0,1,0
+74,Congratulations,0_Mashable_m.txt,183,184,1,0,0,0,0,0
+75,Enjoy,0_Mashable_m.txt,185,186,1,0,0,0,0,0
+76,Transcendent,0_Mashable_m.txt,187,188,1,0,0,0,1,0
+77,Transcendent Moment,0_Mashable_m.txt,187,189,1,0,0,0,0,0
+78,Moment,0_Mashable_m.txt,188,189,1,0,0,0,1,0
+79,Go,0_Mashable_m.txt,190,191,1,0,0,0,0,0
+80,Touch,0_Mashable_m.txt,197,198,1,0,0,0,0,0
+81,Let,0_Mashable_m.txt,202,203,1,0,0,0,0,0
+82,With,0_Mashable_m.txt,245,246,1,0,0,0,1,0
+83,With Pure,0_Mashable_m.txt,245,247,1,0,0,0,1,0
+84,With Pure Delight,0_Mashable_m.txt,245,248,1,0,0,0,1,0
+85,With Pure Delight WILL,0_Mashable_m.txt,245,249,1,0,0,0,0,0
+86,Pure,0_Mashable_m.txt,246,247,1,0,0,0,1,0
+87,Pure Delight,0_Mashable_m.txt,246,248,1,0,0,0,1,0
+88,Pure Delight WILL,0_Mashable_m.txt,246,249,1,0,0,0,1,0
+89,Delight,0_Mashable_m.txt,247,248,1,0,0,0,1,0
+90,Delight WILL,0_Mashable_m.txt,247,249,1,0,0,0,1,0
+91,WILL,0_Mashable_m.txt,248,249,1,0,0,0,1,0
+92,A,0_Mashable_m.txt,252,253,1,0,0,0,0,0
+93,Will,0_Mashable_m.txt,256,257,1,0,0,0,1,0
+94,Will Smith,0_Mashable_m.txt,256,258,1,0,0,0,0,1
+95,Smith,0_Mashable_m.txt,257,258,1,0,0,0,0,0
+96,Feb,0_Mashable_m.txt,263,264,1,0,0,1,0,0
+97,PST,0_Mashable_m.txt,271,272,1,0,0,0,0,0
+98,What,0_Mashable_m.txt,273,274,1,0,0,0,0,0
+99,Smith,0_Mashable_m.txt,281,282,1,0,1,0,0,1
+100,I,0_Mashable_m.txt,288,289,1,0,0,0,0,0
+101,You,0_Mashable_m.txt,306,307,1,0,0,0,0,0
+102,Hollywood,0_Mashable_m.txt,325,326,1,0,0,0,0,0
+103,I,0_Mashable_m.txt,330,331,1,0,0,0,0,0
+104,I'm,0_Mashable_m.txt,339,340,1,0,0,0,0,0
+105,I'm,0_Mashable_m.txt,342,343,1,0,0,0,0,0
+106,Congrats,0_Mashable_m.txt,350,351,1,0,0,0,0,0
+107,He,0_Mashable_m.txt,357,358,1,0,0,0,0,0
+108,Wakandan,0_Mashable_m.txt,367,368,1,0,0,1,0,0
+109,Along,0_Mashable_m.txt,370,371,1,0,0,0,0,0
+110,Smith,0_Mashable_m.txt,375,376,1,0,0,0,0,1
+111,Mandela,0_Mashable_m.txt,377,378,1,0,0,0,0,1
+112,Instagram,0_Mashable_m.txt,380,381,1,0,0,0,0,0
+113,do,0_Mashable_m.txt,398,399,1,0,0,0,0,0
+114,Go,0_Mashable_m.txt,413,414,1,0,0,0,0,0
+115,Touch,0_Mashable_m.txt,420,421,1,0,0,0,0,0
+116,Let,0_Mashable_m.txt,425,426,1,0,0,0,0,0
+117,Smith,0_Mashable_m.txt,434,435,1,0,1,0,0,1
+118,Black,0_Mashable_m.txt,437,438,1,0,0,0,1,0
+119,Black Panther,0_Mashable_m.txt,437,439,1,0,0,0,0,0
+120,Panther,0_Mashable_m.txt,438,439,1,0,0,0,1,0
+121,WATCH,0_Mashable_m.txt,472,473,1,0,0,0,0,0
+122,Here,0_Mashable_m.txt,474,475,1,0,1,0,0,0
+123,Here 's,0_Mashable_m.txt,474,476,1,0,0,0,0,0
+124,'s,0_Mashable_m.txt,475,476,1,0,0,0,1,0
+125,'Black,0_Mashable_m.txt,477,478,1,0,0,0,1,0
+126,'Black Panther',0_Mashable_m.txt,477,479,1,0,0,0,0,0
+127,Panther',0_Mashable_m.txt,478,479,1,0,0,0,0,0
+128,Marvel,0_Mashable_m.txt,482,483,1,0,0,0,0,0
+0,Excited,3_Mashable_m.txt,0,1,1,0,0,0,0,0
+1,Black,3_Mashable_m.txt,2,3,1,0,0,0,1,0
+2,Black Panther,3_Mashable_m.txt,2,4,1,0,0,0,0,0
+3,Panther,3_Mashable_m.txt,3,4,1,0,0,0,1,0
+4,So,3_Mashable_m.txt,5,6,1,0,0,0,0,0
+5,Which,3_Mashable_m.txt,9,10,1,0,0,0,0,0
+6,Black,3_Mashable_m.txt,18,19,1,0,0,0,1,0
+7,Black Panther,3_Mashable_m.txt,18,20,1,0,0,0,1,0
+8,Black Panther Week,3_Mashable_m.txt,18,21,1,0,0,0,0,0
+9,Panther,3_Mashable_m.txt,19,20,1,0,0,0,1,0
+10,Panther Week,3_Mashable_m.txt,19,21,1,0,0,0,1,0
+11,Week,3_Mashable_m.txt,20,21,1,0,0,0,1,0
+12,Although,3_Mashable_m.txt,22,23,1,0,0,0,0,0
+13,Black,3_Mashable_m.txt,27,28,1,0,0,1,1,0
+14,Black Panther,3_Mashable_m.txt,27,29,1,0,0,1,0,0
+15,Panther,3_Mashable_m.txt,28,29,1,0,0,0,1,0
+16,Donald,3_Mashable_m.txt,32,33,1,0,0,0,1,0
+17,Donald Glover,3_Mashable_m.txt,32,34,1,0,0,0,0,1
+18,Glover,3_Mashable_m.txt,33,34,1,0,0,0,0,0
+19,Marvel,3_Mashable_m.txt,42,43,1,0,1,1,0,0
+20,Marvel 's,3_Mashable_m.txt,42,44,1,0,0,1,0,0
+21,'s,3_Mashable_m.txt,43,44,1,0,0,0,1,0
+22,During,3_Mashable_m.txt,48,49,1,0,0,0,0,0
+23,Entertainment,3_Mashable_m.txt,52,53,1,0,0,0,1,0
+24,Entertainment Tonight,3_Mashable_m.txt,52,54,1,0,0,0,0,0
+25,Tonight,3_Mashable_m.txt,53,54,1,0,0,0,1,0
+26,Tuesday,3_Mashable_m.txt,55,56,1,0,0,1,0,0
+27,Glover,3_Mashable_m.txt,57,58,1,0,0,0,0,1
+28,Ryan,3_Mashable_m.txt,61,62,1,1,0,0,1,0
+29,Ryan Coogler,3_Mashable_m.txt,61,63,1,1,0,0,0,1
+30,Coogler,3_Mashable_m.txt,62,63,1,0,0,0,0,0
+31,Glover,3_Mashable_m.txt,64,65,1,0,0,0,0,1
+32,Black,3_Mashable_m.txt,71,72,1,0,0,1,1,0
+33,Black Panther,3_Mashable_m.txt,71,73,1,0,0,1,0,0
+34,Panther,3_Mashable_m.txt,72,73,1,0,0,0,1,0
+35,SEE,3_Mashable_m.txt,91,92,1,0,0,0,1,0
+36,SEE ALSO,3_Mashable_m.txt,91,93,1,0,0,0,0,0
+37,ALSO,3_Mashable_m.txt,92,93,1,0,0,0,1,0
+38,'Black,3_Mashable_m.txt,94,95,1,0,0,0,1,0
+39,'Black Panther',3_Mashable_m.txt,94,96,1,0,0,0,0,0
+40,Panther',3_Mashable_m.txt,95,96,1,0,0,0,0,0
+41,Marvel,3_Mashable_m.txt,106,107,1,0,0,0,0,0
+42,Glover,3_Mashable_m.txt,109,110,1,0,0,0,0,1
+43,Stephen,3_Mashable_m.txt,115,116,1,0,0,0,0,1
+44,We,3_Mashable_m.txt,136,137,1,0,0,0,0,0
+45,Glover,3_Mashable_m.txt,157,158,1,0,0,0,0,1
+46,Entertainment,3_Mashable_m.txt,159,160,1,0,0,0,1,0
+47,Entertainment Tonight,3_Mashable_m.txt,159,161,1,0,0,0,0,0
+48,Tonight,3_Mashable_m.txt,160,161,1,0,0,0,1,0
+49,It,3_Mashable_m.txt,163,164,1,0,0,0,0,0
+50,In,3_Mashable_m.txt,195,196,1,0,0,0,0,0
+51,Collider,3_Mashable_m.txt,199,200,1,0,0,0,0,0
+52,Coogler,3_Mashable_m.txt,205,206,1,0,1,0,0,1
+53,Glover,3_Mashable_m.txt,208,209,1,0,0,1,0,1
+54,Shur,3_Mashable_m.txt,235,236,1,0,0,0,0,1
+55,T'Challa,3_Mashable_m.txt,248,249,1,0,0,0,0,1
+56,Black,3_Mashable_m.txt,256,257,1,0,0,0,1,0
+57,Black Panther,3_Mashable_m.txt,256,258,1,0,0,0,0,1
+58,Panther,3_Mashable_m.txt,257,258,1,0,0,0,0,0
+59,Donald,3_Mashable_m.txt,261,262,1,0,1,0,0,1
+60,Donald 's,3_Mashable_m.txt,261,263,1,0,0,0,0,0
+61,'s,3_Mashable_m.txt,262,263,1,0,0,0,0,0
+62,I,3_Mashable_m.txt,269,270,1,0,0,0,0,0
+63,Stephen,3_Mashable_m.txt,278,279,1,0,1,0,0,1
+64,Stephen 's,3_Mashable_m.txt,278,280,1,0,0,0,0,0
+65,'s,3_Mashable_m.txt,279,280,1,0,0,0,0,0
+66,The,3_Mashable_m.txt,286,287,1,0,0,0,0,0
+67,The Glovers,3_Mashable_m.txt,286,288,1,0,0,0,0,0
+68,Glovers,3_Mashable_m.txt,287,288,1,0,0,1,1,1
+69,FX,3_Mashable_m.txt,295,296,1,0,0,0,0,0
+70,Atlanta,3_Mashable_m.txt,297,298,1,0,0,0,0,0
+71,Donald,3_Mashable_m.txt,305,306,1,0,0,0,1,0
+72,Donald Glover,3_Mashable_m.txt,305,307,1,0,0,0,0,1
+73,Glover,3_Mashable_m.txt,306,307,1,0,0,0,0,0
+74,Atlanta,3_Mashable_m.txt,311,312,1,0,0,1,0,0
+75,Community,3_Mashable_m.txt,323,324,1,0,0,0,0,0
+76,Donald,3_Mashable_m.txt,332,333,1,0,0,0,0,1
+77,Coogler,3_Mashable_m.txt,339,340,1,0,1,0,0,1
+78,Coogler 's,3_Mashable_m.txt,339,341,1,0,0,0,0,0
+79,'s,3_Mashable_m.txt,340,341,1,0,0,0,0,0
+80,Creed,3_Mashable_m.txt,344,345,1,0,0,0,0,0
+81,WATCH,3_Mashable_m.txt,346,347,1,0,0,0,0,0
+82,Black,3_Mashable_m.txt,352,353,1,0,0,0,1,0
+83,Black Panther',3_Mashable_m.txt,352,354,1,0,0,0,0,0
+84,Panther',3_Mashable_m.txt,353,354,1,0,0,0,1,0
