@@ -104,6 +104,16 @@ def get_hardcoded_dev_and_test_data():
         ]
     return dev_data, dev_labels, test_data, test_labels
 
+def convert_to_binary(list):
+    new_list = []
+    for n in list:
+        if n < 0.5:
+            new_list.append(0)
+        else:
+            new_list.append(1)
+
+    return new_list
+
 def main():
     dev_data, dev_labels, test_data, test_labels = get_dev_and_test_data()
     # Fit, predict, and compute precision & recall scores for several classifiers.
@@ -127,7 +137,7 @@ def main():
     print('Decision Tree Recall score: {0:0.2f}'.format(recall))
 
     # Random forest
-    clf = RandomForestClassifier(max_depth=2, random_state=0)
+    clf = RandomForestClassifier(n_estimators=10, max_depth=50, random_state=0)
     clf.fit(dev_data, dev_labels)
     test_predict = clf.predict(test_data)
     precision = precision_score(test_labels, test_predict)
@@ -136,6 +146,7 @@ def main():
     print('RandomForest Recall score: {0:0.2f}'.format(recall))
 
     # Support vector machine
+    clf = svm.SVC()
     clf.fit(dev_data, dev_labels)
     test_predict = clf.predict(test_data)
     precision = precision_score(test_labels, test_predict)
@@ -144,16 +155,20 @@ def main():
     print('SVM Recall score: {0:0.2f}'.format(recall))
 
     # Linear regression
+    clf = LinearRegression()
     clf.fit(dev_data, dev_labels)
     test_predict = clf.predict(test_data)
+    test_predict = convert_to_binary(test_predict)
     precision = precision_score(test_labels, test_predict)
     recall = recall_score(test_labels, test_predict)
     print('LinearRegression Precision score: {0:0.2f}'.format(precision))
     print('LinearRegression Recall score: {0:0.2f}'.format(recall))
 
     # Logistic regression
+    clf = LogisticRegression()
     clf.fit(dev_data, dev_labels)
     test_predict = clf.predict(test_data)
+    test_predict = convert_to_binary(test_predict)
     precision = precision_score(test_labels, test_predict)
     recall = recall_score(test_labels, test_predict)
     print('LogisticRegression Precision score: {0:0.2f}'.format(precision))
