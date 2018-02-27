@@ -24,7 +24,6 @@ import string
 import re
 import pandas as pd
 import random
-from functools import reduce
 
 # list directory paths        
 MarkedUp = 'stage1_docs/Data/MarkedUp/'
@@ -34,11 +33,13 @@ Features = 'stage1_docs/Data/Features/'
 
 # Global feature names that will be shared between modules
 LOCATION_FEATURES = ['document_id', 'start_index', 'end_index']
-OTHER_FEATURES = ['prefixed', 'suffixed', 'otherEntity', 'near_capitalized', 'name_suffix', 'common_word', 'title']
+OTHER_FEATURES = ['prefixed', 'suffixed', 'otherEntity', 'near_capitalized', 'name_suffix', 'common_word', 'title', 'first_name']
 TITLES_DICT = {}
+FIRST_NAMES_DICT = {}
 TRAIN_CSV = DATA + 'train_data.csv'
 TEST_CSV = DATA + 'test_data.csv'
 TITLES_CSV = DATA + 'titles.csv'
+FIRST_NAMES_CSV = DATA + 'census-derived-all-first.txt'
 
 def clean_file(filename):
     # remove extra newlines in file
@@ -125,11 +126,14 @@ def data_generator(filename, text):
                 common_word = contains_common_word(word_string)
                 # checks to see if string matches a title
                 title = is_title(word_string)
+                # checks to see if string contains a first name from the name dictionary
+                first_name = contains_first_name(word_string)
                 # if word is not capitalized, throw it away
                 if capitalized != 1 or punctuation or is_common_word(word_string):
                     continue
                 # create data instance
-                data_instance = [string_id, word_string, filename, start, end, prefix, suffix, otherEntity, near_capitalized, name_suffix, common_word, title, class_label]
+                data_instance = [string_id, word_string, filename, start, end, prefix, suffix, otherEntity,
+                                 near_capitalized, name_suffix, common_word, title, first_name, class_label]
                 data.append(data_instance)
                 string_id = string_id + 1
 
@@ -137,6 +141,36 @@ def data_generator(filename, text):
     if num_of_labels(data) != count:
         print("Error: A label did not make it through! Check file {} for potential errors.".format(filename))
     return data       
+
+
+def contains_first_name(word_string):
+    for word in word_string.split():
+        if word in FIRST_NAMES_DICT:
+            return 1
+
+    return 0
+
+
+def generate_names():
+    names = {}
+    with open(FIRST_NAMES_CSV, 'r') as file:
+        for line in file:
+            words = line.split()
+            if len(words) > 0:
+                names[capitalize_as_name(words[0])] = 1
+    return names
+
+
+def capitalize_as_name(name):
+    capitalized_name = ""
+
+    for i in range(0, len(name)):
+        if i == 0:
+            capitalized_name += name[i]
+        else:
+            capitalized_name += name[i].lower()
+
+    return capitalized_name
 
 
 def is_title(word):
@@ -183,7 +217,7 @@ def contains_common_word(word_string):
     stopwords = ['\'s', 'I', 'A', 'An', 'The', 'But', 'If', 'So', 'He', 'She', 'They', 'There', 'Are', 'Is', 'Be',
                  'You', 'Able', 'About',
                  'Across', 'After', 'All', 'Almost', 'Also', 'Am', 'Among', 'And', 'Any', 'As', 'At', 'Because', 'Been',
-                 'By', 'Can',
+                 'By', 'Best', 'Can',
                  'Cannot', 'Could', 'Dear', 'Did', 'Do', 'Does', 'Either', 'Else', 'Ever', 'Every', 'For', 'From',
                  'Get', 'Got',
                  'Had', 'Has', 'Have', 'He', 'Her', 'Hers', 'Him', 'His', 'How', 'However', 'In', 'Into', 'It', 'Its',
@@ -193,7 +227,7 @@ def contains_common_word(word_string):
                  'Of', 'Off', 'Often', 'On', 'Only', 'Or', 'Other', 'Our', 'Own', 'Rather', 'Said', 'Say', 'Says',
                  'She', 'Should',
                  'Since', 'Some', 'Than', 'That', 'Their', 'Then', 'These', 'This', 'To', 'Too', 'Us', 'Wants', 'Was',
-                 'Who', 'Whom',
+                 'Who', 'Whom', 'We', 'When',
                  'Why', 'What', 'Will', 'With', 'Would', 'Yet', 'Your']
     for word in word_string.split():
         if word in stopwords:
@@ -413,7 +447,8 @@ def checkPrefix(word):
                 'Vice-President', 'Dean', 'Pope', 'Rabbi', 'Prince', 'Queen', 'Princess', 'Leader',
                 'Whip', 'Representative', 'Congressman', 'Congresswoman', 'representative', 'congressman', 'congresswoman',
                 'director', 'composer', 'actor', 'actress', 'chief', 'detective', 'screenwriter',
-                'producer', 'writer', 'by']
+                'producer', 'writer', 'by', 'Actor', 'Actress', 'Director', 'Composer', 'Chief',
+                'Detective', 'Screenwriter', 'Producer', 'Writer', 'By']
     if word in prefixes:
         return 1
     else:
@@ -456,6 +491,7 @@ def createDevAndTestFileSet():
     random.shuffle(file_names)
     return file_names[ : int(len(file_names) * 0.66)], file_names[int(len(file_names) * 0.66) : ]
 
+'''
 def writeToCSV(filename):
     global LOCATION_FEATURES
     global OTHER_FEATURES
@@ -466,6 +502,7 @@ def writeToCSV(filename):
         data = data_generator(filename, text)
         df = pd.DataFrame(data, columns=headers)
         df.to_csv(csv_file, encoding='utf-8', header=True, index=False)
+'''
 
 def extractAndCreateCSV(file_names, csv_file):
     """Scan all the files in file_names and produces a single CSV file that
@@ -501,7 +538,9 @@ def main():
     global TEST_CSV
     global TRAIN_CSV
     global TITLES_DICT
+    global FIRST_NAMES_DICT
     TITLES_DICT = generate_titles()
+    FIRST_NAMES_DICT = generate_names()
     train_input_files, test_input_files = createDevAndTestFileSet()
     print(train_input_files)
     print(test_input_files)
