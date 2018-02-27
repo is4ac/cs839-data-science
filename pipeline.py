@@ -32,8 +32,8 @@ def get_feature_and_label_from_file(input_csv_file):
 
 def get_dev_and_test_data():
     """Returns 'dev_data', 'dev_label', 'test_data', 'test_label'."""
-    dev_data, dev_labels =  get_feature_and_label_from_file(TRAIN_CSV)
-    test_data, test_labels =  get_feature_and_label_from_file(TRAIN_CSV)
+    dev_data, dev_labels = get_feature_and_label_from_file(TRAIN_CSV)
+    test_data, test_labels = get_feature_and_label_from_file(TEST_CSV)
     return dev_data, dev_labels, test_data, test_labels
     
 def get_hardcoded_dev_and_test_data():
@@ -128,10 +128,10 @@ def main():
     # for debugging purposes
     with open('test_predict.txt', 'w') as file:
         for n in test_predict:
-            file.write(str(int(n)) + " ")
+            file.write(str(int(n)) + "\n")
     with open('test_labels.txt', 'w') as file:
         for n in test_labels:
-            file.write(str(int(n)) + " ")
+            file.write(str(int(n)) + "\n")
 
     print('Decision Tree Precision score: {0:0.2f}'.format(precision))
     print('Decision Tree Recall score: {0:0.2f}'.format(recall))
