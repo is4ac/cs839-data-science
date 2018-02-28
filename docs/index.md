@@ -5,9 +5,9 @@ description: Project Stage 1 of CS 839. Name entity information extraction from 
 ---
 # Documents
 
-- [All marked up documents](../stage1_docs/Data/Cleaned_MarkedUp/)
-- [Set I documents](../stage1_docs/Data/)
-- [Set J documents](../stage1_docs/Data/)
+- [All marked up documents](https://github.com/is4ac/cs839-data-science/tree/master/stage1_docs/Data/Cleaned_MarkedUp)
+- [Set I documents](https://github.com/is4ac/cs839-data-science/tree/master/stage1_docs/Data/Cleaned_MarkedUp)
+- [Set J documents](https://github.com/is4ac/cs839-data-science/tree/master/stage1_docs/Data/Cleaned_MarkedUp)
 
 # Code Repository
 
