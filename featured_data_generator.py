@@ -23,6 +23,7 @@ import os
 import string
 import re
 import pandas as pd
+import collections
 import random
 
 # list directory paths        
@@ -32,8 +33,8 @@ DATA = 'stage1_docs/Data/'
 Features = 'stage1_docs/Data/Features/'
 
 # Global feature names that will be shared between modules
-LOCATION_FEATURES = ['document_id', 'start_index', 'end_index']
-OTHER_FEATURES = ['prefixed', 'suffixed', 'otherEntity', 'near_capitalized', 'name_suffix', 'common_word', 'title', 'first_name']
+LOCATION_FEATURES = ['documentID', 'start_index', 'end_index']
+OTHER_FEATURES = ['frequency', 'prefixed', 'suffixed', 'otherEntity', 'near_capitalized', 'name_suffix', 'common_word', 'title', 'first_name']
 TITLES_DICT = {}
 FIRST_NAMES_DICT = {}
 TRAIN_CSV = DATA + 'train_data.csv'
@@ -43,9 +44,9 @@ FIRST_NAMES_CSV = DATA + 'census-derived-all-first.txt'
 
 def clean_file(filename):
     # remove extra newlines in file
-    # replace weird apostrophe by single quote
+    # replace weird apostrophes by single quote
     # check if number of end_tags == number of star_tags
-    with open(MarkedUp+filename, encoding = 'utf8') as inputfile:
+    with open(MarkedUp+filename, encoding = 'utf-8') as inputfile:
         oneline_text = ''
         for text in inputfile:
             text = text.rstrip('\n')
@@ -60,11 +61,11 @@ def clean_file(filename):
         print ('Tags are mismatched! Check markedup file: ' + filename)
     else:
         cleaned_filename = 'cleaned_' + filename
-        with open(CleanedMarkedUp+cleaned_filename, 'w') as outputfile:
+        with open(CleanedMarkedUp+cleaned_filename, 'w', encoding = 'utf-8') as outputfile:
             outputfile.write(oneline_text)
     return oneline_text
         
-def data_generator(filename, text):
+def data_generator(fileID, filename, text):
     start_tag = '<pname>'
     end_tag = '</pname>'
     # split text by space
@@ -73,10 +74,14 @@ def data_generator(filename, text):
     words = []
     for word in words_by_space:
         new_word = split_string(word)
-        words.extend(new_word)
-
-    #print(words)
-
+        if new_word != None:
+            words.extend(new_word)
+        else:
+            print('Can not split string: ', word)
+            print('Check name labels in file: ', filename)
+    
+    # get word frequency
+    word_frequency = collections.Counter(words)
     # generate list of strings of words
     data = []
     string_id = 0
@@ -89,6 +94,10 @@ def data_generator(filename, text):
                 #print (word_string)
                 start = index
                 end = index + num_words
+                # get word_string frequency
+                frequency = 1
+                if word_string in word_frequency.keys():
+                    frequency = word_frequency[word_string]
                 # check if preceding word is a special prefix
                 prefix = 0
                 if start > 0:
@@ -132,14 +141,14 @@ def data_generator(filename, text):
                 if capitalized != 1 or punctuation or is_common_word(word_string):
                     continue
                 # create data instance
-                data_instance = [string_id, word_string, filename, start, end, prefix, suffix, otherEntity,
+                data_instance = [string_id, word_string, filename, fileID, start, end, frequency, prefix, suffix, otherEntity,
                                  near_capitalized, name_suffix, common_word, title, first_name, class_label]
                 data.append(data_instance)
                 string_id = string_id + 1
 
     # sanity check: make sure no marked up tags were accidentally thrown out
     if num_of_labels(data) != count:
-        print("Error: A label did not make it through! Check file {} for potential errors.".format(filename))
+        print("Error: A label did not make it through! Check file {} for potential errors.".format(fileID))
     return data       
 
 
@@ -182,7 +191,7 @@ def is_title(word):
 
 def generate_titles():
     titles = {}
-    with open(TITLES_CSV, 'r') as file:
+    with open(TITLES_CSV, encoding = 'utf8') as file:
         for line in file:
             titles[line.strip()] = 1
     return titles
@@ -199,13 +208,14 @@ def is_name_suffix(word):
 
 
 def is_common_word(word):
-    stopwords = ['\'s', 'I', 'A', 'An', 'The', 'But', 'If', 'So', 'He', 'She', 'They', 'There', 'Are', 'Is', 'Be', 'You', 'Able', 'About',
-                 'Across', 'After', 'All', 'Almost', 'Also', 'Am', 'Among', 'And', 'Any', 'As', 'At', 'Because', 'Been', 'By', 'Can',
-                 'Cannot', 'Could', 'Dear', 'Did', 'Do', 'Does', 'Either', 'Else', 'Ever', 'Every', 'For', 'From', 'Get', 'Got',
-                 'Had', 'Has', 'Have', 'He', 'Her', 'Hers', 'Him', 'His', 'How', 'However', 'In', 'Into', 'It', 'Its', 'Just',
-                 'Least', 'Let', 'Like', 'Likely', 'May', 'Me', 'Might', 'Most', 'Must', 'My', 'Neither', 'No', 'Nor', 'Not',
-                 'Of', 'Off', 'Often', 'On', 'Only', 'Or', 'Other', 'Our', 'Own', 'Rather', 'Said', 'Say', 'Says', 'She', 'Should',
-                 'Since', 'Some', 'Than', 'That', 'Their', 'Then', 'These', 'This', 'To', 'Too', 'Us', 'Wants', 'Was', 'Who', 'Whom',
+    stopwords = ['\'s', 'I', 'A', 'An', 'The', 'But', 'If', 'So', 'He', 'She', 'They', 'There', 'Are', 'Is', 'Be',
+                 'You', 'Able', 'About','Across', 'After', 'All', 'Almost', 'Also', 'Am', 'Among', 'And', 'Any', 'As',
+                 'At', 'Because', 'Been', 'By', 'Best', 'Can', 'Cannot', 'Could', 'Dear', 'Did', 'Do', 'Does', 'Either',
+                 'Else', 'Ever', 'Every', 'For', 'From', 'Get', 'Got', 'Had', 'Has', 'Have', 'He', 'Her', 'Hers', 'Him',
+                 'His', 'How', 'However', 'In', 'Into', 'It', 'Its', 'Just', 'Least', 'Let', 'Like', 'Likely', 'May',
+                 'Me', 'Might', 'Most', 'Must', 'My', 'Neither', 'No', 'Nor', 'Not', 'Of', 'Off', 'Often', 'On', 'Only',
+                 'Or', 'Other', 'Our', 'Own', 'Rather', 'Said', 'Say', 'Says', 'She', 'Should', 'Since', 'Some', 'Than',
+                 'That', 'Their', 'Then', 'These', 'This', 'To', 'Too', 'Us', 'Wants', 'Was', 'Who', 'Whom', 'We', 'When',
                  'Why', 'What', 'Will', 'With', 'Would', 'Yet', 'Your']
     if word in stopwords:
         return 1
@@ -215,25 +225,20 @@ def is_common_word(word):
 
 def contains_common_word(word_string):
     stopwords = ['\'s', 'I', 'A', 'An', 'The', 'But', 'If', 'So', 'He', 'She', 'They', 'There', 'Are', 'Is', 'Be',
-                 'You', 'Able', 'About',
-                 'Across', 'After', 'All', 'Almost', 'Also', 'Am', 'Among', 'And', 'Any', 'As', 'At', 'Because', 'Been',
-                 'By', 'Best', 'Can',
-                 'Cannot', 'Could', 'Dear', 'Did', 'Do', 'Does', 'Either', 'Else', 'Ever', 'Every', 'For', 'From',
-                 'Get', 'Got',
-                 'Had', 'Has', 'Have', 'He', 'Her', 'Hers', 'Him', 'His', 'How', 'However', 'In', 'Into', 'It', 'Its',
-                 'Just',
-                 'Least', 'Let', 'Like', 'Likely', 'May', 'Me', 'Might', 'Most', 'Must', 'My', 'Neither', 'No', 'Nor',
-                 'Not',
-                 'Of', 'Off', 'Often', 'On', 'Only', 'Or', 'Other', 'Our', 'Own', 'Rather', 'Said', 'Say', 'Says',
-                 'She', 'Should',
-                 'Since', 'Some', 'Than', 'That', 'Their', 'Then', 'These', 'This', 'To', 'Too', 'Us', 'Wants', 'Was',
-                 'Who', 'Whom', 'We', 'When',
+                 'You', 'Able', 'About','Across', 'After', 'All', 'Almost', 'Also', 'Am', 'Among', 'And', 'Any', 'As',
+                 'At', 'Because', 'Been', 'By', 'Best', 'Can', 'Cannot', 'Could', 'Dear', 'Did', 'Do', 'Does', 'Either',
+                 'Else', 'Ever', 'Every', 'For', 'From', 'Get', 'Got', 'Had', 'Has', 'Have', 'He', 'Her', 'Hers', 'Him',
+                 'His', 'How', 'However', 'In', 'Into', 'It', 'Its', 'Just', 'Least', 'Let', 'Like', 'Likely', 'May',
+                 'Me', 'Might', 'Most', 'Must', 'My', 'Neither', 'No', 'Nor', 'Not', 'Of', 'Off', 'Often', 'On', 'Only',
+                 'Or', 'Other', 'Our', 'Own', 'Rather', 'Said', 'Say', 'Says', 'She', 'Should', 'Since', 'Some', 'Than',
+                 'That', 'Their', 'Then', 'These', 'This', 'To', 'Too', 'Us', 'Wants', 'Was', 'Who', 'Whom', 'We', 'When',
                  'Why', 'What', 'Will', 'With', 'Would', 'Yet', 'Your']
     for word in word_string.split():
         if word in stopwords:
             return 1
 
     return 0
+
 
 
 def is_near_capitalized(words, start, end):
@@ -415,16 +420,27 @@ def isNumber(word):
     except ValueError:
         return False
 
+def containUppercase(word):
+    retval = False
+    for char in word:
+        if char.isupper():
+            retval = True
+            break
+    return retval
+
 def isCapitalized(word_string):
     #print (word_string)
     # nobiliary particles that aren't always capitalized (from Wikipedia: nobiliary particles)
-    particles = ['de', 'del', 'van', 'von', 'af', 'du', 'd', 'des', 'zu', 'do', 'dos', 'da', 'das', 'di', 'der']
-
-    # check if the first letter in each word of a string is capitalized
+    particles = ['de', 'del', 'van', 'von', 'af', 'du', 'd', 'des', 'zu',
+                 'do', 'dos', 'da', 'das', 'di', 'der']
+    
     word_string = word_string.split()
     flag = 1 # capitalized
+    # some names like Neil deGrasse Tyson might be thrown out by this rule
+    # if only check first letter
+    # check if each word contains at least one capitalized letter
     for word in word_string:
-        if not word[0].isupper() and not (word in particles or word[0] == '\''):
+        if not containUppercase(word) and not (word in particles or word[0] == '\''):
             flag = 0 # not capitalized
             break
     return flag
@@ -439,35 +455,46 @@ def removeTags(word_string, start_tag, end_tag):
 
 def checkPrefix(word):
     # check if word_string has a title
-    prefixes = ['Dr.', 'Esq.', 'Hon.', 'Jr.', 'Mr.', 'Mrs.', 'Ms.', 'Prof.', 'Rev.',
+    title_prefixes = ['Dr.', 'Esq.', 'Hon.', 'Jr.', 'Mr.', 'Mrs.', 'Ms.', 'Prof.', 'Rev.',
                 'Sr.', 'St.', 'Dr', 'Esq', 'Hon', 'Jr', 'Mr', 'Mrs', 'Ms', 'Prof', 'Rev',
                 'Sr', 'St', 'Sen.', 'Sen', 'Sens.', 'Sens', 'Lady', 'Lord', 'Captain', 'President',
                 'General', 'Doctor', 'Professor', 'Senator', 'Senators',
                 'Father', 'Reverend', 'Earl', 'Mister', 'Miss', 'Madam', 'Chancellor',
                 'Vice-President', 'Dean', 'Pope', 'Rabbi', 'Prince', 'Queen', 'Princess', 'Leader',
-                'Whip', 'Representative', 'Congressman', 'Congresswoman', 'representative', 'congressman', 'congresswoman',
+                'Whip', 'Bishop', 'Chairman', 'CEO', 'DJ', 'GM']
+    occupational_prefixes = ['representative', 'congressman', 'congresswoman',
                 'director', 'composer', 'actor', 'actress', 'chief', 'detective', 'screenwriter',
-                'producer', 'writer', 'by', 'Actor', 'Actress', 'Director', 'Composer', 'Chief',
-                'Detective', 'Screenwriter', 'Producer', 'Writer', 'By']
-    if word in prefixes:
+                'producer', 'writer', 'by', 'screenwriter', 'investigator',
+                'couturier', 'musician', 'artist', 'photographer', 'keyboardist',
+                'bassist', 'drummer', 'singer', 'biologist', 'guitarist',
+                'surgeon', 'secretary', 'curator', 'archivist', 'diva', 'publicist',
+                'painter', 'designer', 'reporter', 'prodigy', 'medalist',
+                'pilot', 'brakewoman', 'manager', 'goalkeeper']
+    verbs = ['said', 'wrote', 'explained', 'added', 'admitted', 'claimed']
+    
+    if word in title_prefixes or word.lower() in occupational_prefixes or word.lower() in verbs:
         return 1
     else:
         return 0
 
 def checkSuffix(word):
-    # check if word_string followed by 
-    verbs = ['says', 'said', 'talk', 'talked', 'writes', 'wrote', 'plays', 'played',
-             'believes', 'believed', 'explains', 'explained', '\'s', 'who', 'starred']
-    if word in verbs:
+    # check if word_string followed by
+    suffixes = ['says', 'said', 'talk', 'talked', 'writes', 'wrote', 'plays', 'played',
+                'believes', 'believed', 'explains', 'explained', '\'s', 'who', 'starred',
+                'whose', 'the', 'added', 'claims', 'claimed']
+    
+    word = word.lower()
+    if word in suffixes:
         return 1
     else:
         return 0
         
 def checkOthers(words, before_index, after_index):
-    # check if word_string maybe a location name or movie name
-    preceeding_words = ['the', 'The', 'in', 'on', 'at']
+    # check if word_string maybe a location name, movie name, or an organization
+    preceeding_words = ['the', 'in', 'on', 'at']
     succeeding_words = ['avenue', 'city', 'street', 'st', 'ave', 'town', 'village']
-    if words[before_index] in preceeding_words or words[after_index] in succeeding_words:
+    
+    if words[before_index].lower in preceeding_words or words[after_index].lower in succeeding_words:
         return 1
     else:
         return 0
@@ -488,6 +515,7 @@ def createDevAndTestFileSet():
     for file_name in os.listdir(MarkedUp):
         file_names.append(file_name)
     # shuffle the list, and create training and testing list
+    random.seed(1) # fix the seed for debugging purposes
     random.shuffle(file_names)
     return file_names[ : int(len(file_names) * 0.66)], file_names[int(len(file_names) * 0.66) : ]
 
@@ -509,19 +537,22 @@ def extractAndCreateCSV(file_names, csv_file):
     containing strings, feature vectors, and class_label."""
     global LOCATION_FEATURES
     global OTHER_FEATURES
-    headers = ['string_id', 'string'] + LOCATION_FEATURES + OTHER_FEATURES + ['class_label']
+    headers = ['string_id', 'string', 'filename'] + LOCATION_FEATURES + OTHER_FEATURES + ['class_label']
     print('creating csv file:' + csv_file)
     # open MarkedUp folder and process all files
+    fileID = 0
     for filename in file_names:
+        print ("processing file.. ", filename)
         if os.path.isfile(MarkedUp + filename):
             text = clean_file(filename)
-            data = data_generator(filename, text)
+            data = data_generator(fileID, filename, text)
             df = pd.DataFrame(data, columns = headers)
+            fileID = fileID + 1
             # if csv_file is already exist, open it and append new data
             if os.path.isfile(csv_file):
                 # check if filename is already processed:
                 existing_df = pd.read_csv(csv_file)
-                file_list = list(existing_df['document_id'])
+                file_list = list(existing_df['filename'])
                 if filename in file_list:
                     print ('Skip file: ', filename)
                     continue
@@ -542,8 +573,8 @@ def main():
     TITLES_DICT = generate_titles()
     FIRST_NAMES_DICT = generate_names()
     train_input_files, test_input_files = createDevAndTestFileSet()
-    print(train_input_files)
-    print(test_input_files)
+    #print(train_input_files)
+    #print(test_input_files)
     extractAndCreateCSV(train_input_files, TRAIN_CSV)
     extractAndCreateCSV(test_input_files, TEST_CSV)
                 
