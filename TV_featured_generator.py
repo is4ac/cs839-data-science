@@ -151,9 +151,10 @@ def data_generator(fileID, filename, text):
                                  otherEntity, near_capitalized, name_suffix, common_word, first_name, actor_name,
                                  legislator_name, class_label]
                 data.append(data_instance)
+
                 string_id = string_id + 1
 
-    return data       
+    return data
 
 def prune_data(data):
     # apply pruning rules to prune away obvious negative instances
@@ -172,7 +173,7 @@ def prune_data(data):
         # check if word is a common word
         common = is_common_word(word_string)
         # throw away instances that satisfy prunning rules
-        if capitalized != 1  or punctuation or is_common_word(word_string):
+        if capitalized != 1 or punctuation or is_common_word(word_string):
             continue
         else:
             reduced_set.append(instance)
@@ -530,7 +531,10 @@ def num_of_labels(data):
     '''
     sum = 0
     for instance in data:
+        #print(instance)
         sum += instance[-1]
+
+    print('num_of_labels = ' + str(sum))
     return sum
 
 

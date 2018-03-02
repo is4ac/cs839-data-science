@@ -127,8 +127,9 @@ def main():
     # split data into folds
     train_data, train_labels, test_data, test_labels, train_ids, test_ids =\
                 split_data(data, labels, ids, FOLDS)
-    classifiers = ['dt', 'rf', 'svm', 'linReg', 'logReg']
-    #classifiers = ['dt', 'rf', 'linReg', 'logReg'] 
+    # don't do svm, takes too long and inaccurate
+    #classifiers = ['dt', 'rf', 'svm', 'linReg', 'logReg']
+    classifiers = ['dt', 'rf', 'linReg', 'logReg']
     precisions = [] # list of precisions from classifiers
     recalls = [] # list of recalls from classifiers
     F1scores = [] 

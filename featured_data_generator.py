@@ -165,7 +165,7 @@ def data_generator(fileID, filename, text):
 
     # sanity check: make sure no marked up tags were accidentally thrown out
     if num_of_labels(data) != count:
-        print("Error: A label did not make it through! Check file {} for potential errors.".format(fileID))
+        print("Error: A label did not make it through! Check file {} for potential errors.".format(filename))
     return data       
 
 
@@ -284,7 +284,7 @@ def is_common_word(word):
                  'Me', 'Might', 'Most', 'Must', 'My', 'Neither', 'No', 'Nor', 'Not', 'Of', 'Off', 'Often', 'On', 'Only',
                  'Or', 'Other', 'Our', 'Own', 'Rather', 'Said', 'Say', 'Says', 'She', 'Should', 'Since', 'Some', 'Than',
                  'That', 'Their', 'Then', 'These', 'This', 'To', 'Too', 'Us', 'Wants', 'Was', 'Who', 'Whom', 'We', 'When',
-                 'Why', 'What', 'Will', 'With', 'Would', 'Yet', 'Your']
+                 'Why', 'What', 'With', 'Would', 'Yet', 'Your']
     if word in stopwords:
         return 1
     else:
@@ -353,12 +353,17 @@ def split_string(word_string):
     start_tag_id = word_string.find(start_tag)
     end_tag_id = word_string.find(end_tag)
     split_words = []
+    word_string_frequency = collections.Counter(word_string)
     # if word_string only has 1 character, return it
     if len(word_string) < 2:
         split_words.append(word_string)
         return split_words
     # if word_string is all alphabets, or all digits, or can be convert to a float, or alphanumeric, return it
     elif word_string.isalpha() or word_string.isdigit() or word_string.isalnum() or isNumber(word_string):
+        split_words.append(word_string)
+        return split_words
+        # if word_string starts and ends with alphabetic character but has a hyphen in the middle
+    elif word_string[0].isalpha and word_string[-1].isalpha and word_string_frequency['-'] == 1 and containUppercase(word_string):
         split_words.append(word_string)
         return split_words
     # if word_string starts or ends with tags, return it
@@ -491,7 +496,7 @@ def isCapitalized(word_string):
     #print (word_string)
     # nobiliary particles that aren't always capitalized (from Wikipedia: nobiliary particles)
     particles = ['de', 'del', 'van', 'von', 'af', 'du', 'd', 'des', 'zu',
-                 'do', 'dos', 'da', 'das', 'di', 'der']
+                 'do', 'dos', 'da', 'das', 'di', 'der', 'bin', 'al', 'la']
     
     word_string = word_string.split()
     flag = 1 # capitalized
@@ -605,6 +610,8 @@ def extractAndCreateCSV(file_names, csv_file):
     fileID = 0
     for filename in file_names:
         #print ("processing file.. ", filename)
+        if filename == '.DS_Store':
+            continue
         if os.path.isfile(MarkedUp + filename):
             text = clean_file(filename)
             data = data_generator(fileID, filename, text)
