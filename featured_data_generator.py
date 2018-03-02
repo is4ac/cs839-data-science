@@ -15,6 +15,9 @@ __author__ = 'Trang Vu'
         name_suffix: the word ends with a common name suffix, like Jr. or Sr.
         common_word: the word string contains a common stop word (e.g. The, A, etc)
         title: 1 if it matches the title of a movie or TV show
+        first_name: at least one word in the string matches a first name dictionary
+        actor_name: at least one word in the string matches at least one part of an actor's name (first or last name)
+        legislator_name: at least one word in the string matches at least one part of a legislator's name
         class label: binary with 1  or 0 being the string is or is not a person name, respectively 
 '''        
 
@@ -25,6 +28,7 @@ import re
 import pandas as pd
 import collections
 import random
+import csv
 
 # list directory paths        
 MarkedUp = 'stage1_docs/Data/MarkedUp/'
@@ -34,13 +38,21 @@ Features = 'stage1_docs/Data/Features/'
 
 # Global feature names that will be shared between modules
 LOCATION_FEATURES = ['documentID', 'start_index', 'end_index']
-OTHER_FEATURES = ['frequency', 'prefixed', 'suffixed', 'otherEntity', 'near_capitalized', 'name_suffix', 'common_word', 'title', 'first_name']
+OTHER_FEATURES = ['frequency', 'prefixed', 'suffixed', 'otherEntity', 'near_capitalized', 'name_suffix',
+                  'common_word', 'title', 'first_name', 'actor_name', 'legislator_name']
 TITLES_DICT = {}
 FIRST_NAMES_DICT = {}
+ACTOR_NAMES_DICT = {}
+LEGISLATORS_NAMES_DICT = {}
 TRAIN_CSV = DATA + 'train_data.csv'
 TEST_CSV = DATA + 'test_data.csv'
 TITLES_CSV = DATA + 'titles.csv'
 FIRST_NAMES_CSV = DATA + 'census-derived-all-first.txt'
+ACTOR_NAMES1_CSV = DATA + 'actor_names1.csv'
+ACTOR_NAMES2_CSV = DATA + 'actor_names2.csv'
+
+LEGISLATORS_CURRENT_CSV = DATA + 'legislators-current.csv'
+LEGISLATORS_HISTORICAL_CSV = DATA + 'legislators-historical.csv'
 
 def clean_file(filename):
     # remove extra newlines in file
@@ -137,12 +149,17 @@ def data_generator(fileID, filename, text):
                 title = is_title(word_string)
                 # checks to see if string contains a first name from the name dictionary
                 first_name = contains_first_name(word_string)
-                # if word is not capitalized, throw it away
+                # checks to see if string contains part of an actor's name from dictionary
+                actor_name = contains_actor_name(word_string)
+                # checks to see if string contains part of a legislator's name from dictionary
+                legislator_name = contains_legislator_name(word_string)
+                # if word is not capitalized, throw it away: pruning
                 if capitalized != 1 or punctuation or is_common_word(word_string):
                     continue
                 # create data instance
-                data_instance = [string_id, word_string, filename, fileID, start, end, frequency, prefix, suffix, otherEntity,
-                                 near_capitalized, name_suffix, common_word, title, first_name, class_label]
+                data_instance = [string_id, word_string, filename, fileID, start, end, frequency, prefix, suffix,
+                                 otherEntity, near_capitalized, name_suffix, common_word, title, first_name, actor_name,
+                                 legislator_name, class_label]
                 data.append(data_instance)
                 string_id = string_id + 1
 
@@ -150,6 +167,57 @@ def data_generator(fileID, filename, text):
     if num_of_labels(data) != count:
         print("Error: A label did not make it through! Check file {} for potential errors.".format(fileID))
     return data       
+
+
+def contains_legislator_name(word_string):
+    for word in word_string.split():
+        if word in LEGISLATORS_NAMES_DICT:
+            return 1
+
+    return 0
+
+
+def generate_legislator_names():
+    names = {}
+    with open(LEGISLATORS_CURRENT_CSV, 'r') as file:
+        rd = csv.reader(file, delimiter=",", quotechar='"')
+        for row in rd:
+            if len(row) > 0:
+                names[row[0]] = 1
+                names[row[1]] = 1
+
+    with open(LEGISLATORS_HISTORICAL_CSV, 'r') as file:
+        rd = csv.reader(file, delimiter=",", quotechar='"')
+        for row in rd:
+            if len(row) > 0:
+                names[row[0]] = 1
+                names[row[1]] = 1
+
+    return names
+
+
+def contains_actor_name(word_string):
+    for word in word_string.split():
+        if word in ACTOR_NAMES_DICT:
+            return 1
+
+    return 0
+
+
+def generate_actor_names():
+    names = {}
+    with open(ACTOR_NAMES1_CSV, 'r') as file:
+        for line in file:
+            name_parts = line.split()
+            for name in name_parts:
+                names[name] = 1
+
+    with open(ACTOR_NAMES2_CSV, 'r') as file:
+        for line in file:
+            name_parts = line.split()
+            for name in name_parts:
+                names[name] = 1
+    return names
 
 
 def contains_first_name(word_string):
@@ -160,7 +228,7 @@ def contains_first_name(word_string):
     return 0
 
 
-def generate_names():
+def generate_first_names():
     names = {}
     with open(FIRST_NAMES_CSV, 'r') as file:
         for line in file:
@@ -198,8 +266,8 @@ def generate_titles():
 
 
 def is_name_suffix(word):
-    suffixes = ['Sr', 'Sr.', 'Jr', 'Jr.', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X',
-                'sr', 'sr.', 'jr', 'jr.', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x']
+    suffixes = ['Sr', 'Sr.', 'Jr', 'Jr.', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII', 'XIII', 'XIV', 'XV', 'XVI', 'XVII', 'XVIII', 'XIX', 'XX',
+                'sr', 'sr.', 'jr', 'jr.', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x', 'xi', 'xii', 'xiii', 'xiv', 'xv', 'xvi', 'xvii', 'xviii', 'xix', 'xx']
     words = word.split()
     if len(words) > 0 and words[-1] in suffixes:
         return 1
@@ -224,17 +292,8 @@ def is_common_word(word):
 
 
 def contains_common_word(word_string):
-    stopwords = ['\'s', 'I', 'A', 'An', 'The', 'But', 'If', 'So', 'He', 'She', 'They', 'There', 'Are', 'Is', 'Be',
-                 'You', 'Able', 'About','Across', 'After', 'All', 'Almost', 'Also', 'Am', 'Among', 'And', 'Any', 'As',
-                 'At', 'Because', 'Been', 'By', 'Best', 'Can', 'Cannot', 'Could', 'Dear', 'Did', 'Do', 'Does', 'Either',
-                 'Else', 'Ever', 'Every', 'For', 'From', 'Get', 'Got', 'Had', 'Has', 'Have', 'He', 'Her', 'Hers', 'Him',
-                 'His', 'How', 'However', 'In', 'Into', 'It', 'Its', 'Just', 'Least', 'Let', 'Like', 'Likely', 'May',
-                 'Me', 'Might', 'Most', 'Must', 'My', 'Neither', 'No', 'Nor', 'Not', 'Of', 'Off', 'Often', 'On', 'Only',
-                 'Or', 'Other', 'Our', 'Own', 'Rather', 'Said', 'Say', 'Says', 'She', 'Should', 'Since', 'Some', 'Than',
-                 'That', 'Their', 'Then', 'These', 'This', 'To', 'Too', 'Us', 'Wants', 'Was', 'Who', 'Whom', 'We', 'When',
-                 'Why', 'What', 'Will', 'With', 'Would', 'Yet', 'Your']
     for word in word_string.split():
-        if word in stopwords:
+        if is_common_word(word) == 1:
             return 1
 
     return 0
@@ -461,7 +520,8 @@ def checkPrefix(word):
                 'General', 'Doctor', 'Professor', 'Senator', 'Senators',
                 'Father', 'Reverend', 'Earl', 'Mister', 'Miss', 'Madam', 'Chancellor',
                 'Vice-President', 'Dean', 'Pope', 'Rabbi', 'Prince', 'Queen', 'Princess', 'Leader',
-                'Whip', 'Bishop', 'Chairman', 'CEO', 'DJ', 'GM']
+                'Whip', 'Bishop', 'Chairman', 'CEO', 'DJ', 'GM', 'Democrat', 'Republican', 'Democratic',
+                'Independent', 'Candidate']
     occupational_prefixes = ['representative', 'congressman', 'congresswoman',
                 'director', 'composer', 'actor', 'actress', 'chief', 'detective', 'screenwriter',
                 'producer', 'writer', 'by', 'screenwriter', 'investigator',
@@ -470,6 +530,8 @@ def checkPrefix(word):
                 'surgeon', 'secretary', 'curator', 'archivist', 'diva', 'publicist',
                 'painter', 'designer', 'reporter', 'prodigy', 'medalist',
                 'pilot', 'brakewoman', 'manager', 'goalkeeper']
+    family_prefixes = ['son', 'daughter', 'father', 'mother', 'grandmother', 'cousin', 'grandfather',
+                       'nephew', 'niece', 'sister', 'brother', 'uncle', 'aunt', 'law']
     verbs = ['said', 'wrote', 'explained', 'added', 'admitted', 'claimed']
     
     if word in title_prefixes or word.lower() in occupational_prefixes or word.lower() in verbs:
@@ -481,7 +543,7 @@ def checkSuffix(word):
     # check if word_string followed by
     suffixes = ['says', 'said', 'talk', 'talked', 'writes', 'wrote', 'plays', 'played',
                 'believes', 'believed', 'explains', 'explained', '\'s', 'who', 'starred',
-                'whose', 'the', 'added', 'claims', 'claimed']
+                'whose', 'the', 'added', 'claims', 'claimed', 'Esq.']
     
     word = word.lower()
     if word in suffixes:
@@ -542,7 +604,7 @@ def extractAndCreateCSV(file_names, csv_file):
     # open MarkedUp folder and process all files
     fileID = 0
     for filename in file_names:
-        print ("processing file.. ", filename)
+        #print ("processing file.. ", filename)
         if os.path.isfile(MarkedUp + filename):
             text = clean_file(filename)
             data = data_generator(fileID, filename, text)
@@ -570,8 +632,12 @@ def main():
     global TRAIN_CSV
     global TITLES_DICT
     global FIRST_NAMES_DICT
+    global ACTOR_NAMES_DICT
+    global LEGISLATORS_NAMES_DICT
     TITLES_DICT = generate_titles()
-    FIRST_NAMES_DICT = generate_names()
+    FIRST_NAMES_DICT = generate_first_names()
+    ACTOR_NAMES_DICT = generate_actor_names()
+    LEGISLATORS_NAMES_DICT = generate_legislator_names()
     train_input_files, test_input_files = createDevAndTestFileSet()
     #print(train_input_files)
     #print(test_input_files)
