@@ -24,7 +24,7 @@ import string
 import re
 import pandas as pd
 import collections
-import random
+import nltk
 import csv
 
 # list directory paths        
@@ -38,7 +38,8 @@ TestSet = DATA + 'testSet/'
 # Global feature names that will be shared between modules
 LOCATION_FEATURES = ['documentID', 'start_index', 'end_index']
 OTHER_FEATURES = ['frequency', 'prefixed', 'suffixed', 'otherEntity', 'near_capitalized', 'name_suffix',
-                  'common_word', 'first_name', 'actor_legislator_name', 'in_name_list', 'near_parentheses']
+                  'common_word', 'first_name', 'actor_legislator_name', 'in_name_list', 'near_parentheses', 'near_verb',
+                  'near_adj', 'is_proper_noun']
 TITLES_DICT = {}
 FIRST_NAMES_DICT = {}
 ACTOR_NAMES_DICT = {}
@@ -79,13 +80,20 @@ def clean_file(filename):
 def data_generator(fileID, filename, text):
     start_tag = '<pname>'
     end_tag = '</pname>'
+
+    pos_words = nltk.sent_tokenize(text)
+    pos_words = [nltk.word_tokenize(sent) for sent in pos_words]
+    pos_words = [nltk.pos_tag(sent) for sent in pos_words]
+    # flatten list of lists
+    pos_words = [item for sublist in pos_words for item in sublist]
+
     # split text by space
     words_by_space = text.split()
     # split words further by punctuations
     words = []
     for word in words_by_space:
         new_word = split_string(word)
-        if new_word != None:
+        if new_word is not None:
             words.extend(new_word)
         else:
             print('Can not split string: ', word)
@@ -93,6 +101,9 @@ def data_generator(fileID, filename, text):
     
     # get word frequency
     word_frequency, untagged_words = get_word_frequency(words, start_tag, end_tag)
+    # get part of speech of words
+    pos_words = match_words(untagged_words, pos_words)
+
     # generate list of strings of words
     data = []
     string_id = 0
@@ -157,13 +168,18 @@ def data_generator(fileID, filename, text):
                 in_name_list = inNamelist(untagged_words, start, end, ws)
                 # checks to see if candidate is near parentheses
                 near_parentheses = isNearParentheses(untagged_words, start, end, ws)
+                # pos checking: check for verbs/adjectives (starts with 'VB' or 'JJ') before/after,
+                near_verb = isNearVerb(pos_words, start, end)
+                near_adj = isNearAdj(pos_words, start, end)
+                # check to see if all the words in a string are NNP (proper noun)
+                is_proper_noun = isProperNoun(pos_words, start, end)
                 # if word is not capitalized, throw it away: pruning
                 if capitalized != 1 or punctuation or is_common_word(ws) or in_blacklist(ws):
                     continue
                 # create data instance
                 data_instance = [string_id, ws, filename, fileID, start, end, frequency, prefix, suffix,
                                  otherEntity, near_capitalized, name_suffix, common_word, first_name, actor_legislator_name,
-                                 in_name_list, near_parentheses, class_label]
+                                 in_name_list, near_parentheses, near_verb, near_adj, is_proper_noun, class_label]
                 data.append(data_instance)
                 string_id = string_id + 1
 
@@ -171,6 +187,54 @@ def data_generator(fileID, filename, text):
     if num_of_labels(data) != count:
         print("Error: A label did not make it through! Check file {} for potential errors.".format(filename))
     return data       
+
+
+def isNearVerb(pos_words, start, end):
+    if start > 0:
+        if pos_words[start-1][1].startswith('VB'):
+            return 1
+
+    if end < len(pos_words):
+        if pos_words[end][1].startswith('VB'):
+            return 1
+
+    return 0
+
+
+def isNearAdj(pos_words, start, end):
+    if start > 0:
+        if pos_words[start-1][1].startswith('JJ'):
+            return 1
+
+    if end < len(pos_words):
+        if pos_words[end][1].startswith('JJ'):
+            return 1
+
+    return 0
+
+
+def isProperNoun(pos_words, start, end):
+    for word in pos_words[start:end]:
+        if word[1] != 'NNP':
+            return 0
+
+    return 1
+
+
+def match_words(words, pos):
+    matched_words = []
+    ind = 0
+    for word in words:
+        flag = 0
+        for i in range(ind, len(pos)):
+            if word == pos[i][0]:
+                matched_words.append((word, pos[i][1]))
+                flag = 1
+                break
+        if flag == 0:
+            matched_words.append((word, ''))
+
+    return matched_words
 
 
 def in_blacklist(word_string):
