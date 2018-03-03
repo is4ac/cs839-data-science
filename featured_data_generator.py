@@ -38,7 +38,8 @@ TestSet = DATA + 'testSet/'
 # Global feature names that will be shared between modules
 LOCATION_FEATURES = ['documentID', 'start_index', 'end_index']
 OTHER_FEATURES = ['frequency', 'prefixed', 'suffixed', 'otherEntity', 'near_capitalized', 'name_suffix',
-                  'common_word', 'first_name', 'actor_legislator_name', 'in_name_list', 'near_parentheses']
+                  'common_word', 'first_name', 'actor_legislator_name', 'in_name_list', 'near_parentheses',
+                  'whitelisted']
 TITLES_DICT = {}
 FIRST_NAMES_DICT = {}
 ACTOR_NAMES_DICT = {}
@@ -166,7 +167,7 @@ def data_generator(fileID, filename, text):
                 # create data instance
                 data_instance = [string_id, ws, filename, fileID, start, end, frequency, prefix, suffix,
                                  otherEntity, near_capitalized, name_suffix, common_word, first_name, actor_legislator_name,
-                                 in_name_list, near_parentheses, class_label]
+                                 in_name_list, near_parentheses, in_whitelist(ws), class_label]
                 data.append(data_instance)
                 string_id = string_id + 1
 
@@ -175,6 +176,45 @@ def data_generator(fileID, filename, text):
         print("Error: A label did not make it through! Check file {} for potential errors.".format(filename))
     return data       
 
+def in_whitelist(word_string):
+    """Returns 1 if the word must be a person name (in whitelist), 0 otherwise."""
+    white_list = set([
+            'Paul','SETH MEYERS','Jen','De Niro','Sade','Chastain','Ben Bradlee','Nixon','André Aciman',
+            'Angela','Woody Harrelson','Jones','Anne','Washington','Peele','Taika Waititi','Laura',
+            'Chalamet','J.J. Abrams','Neville Chamberlain','Cameron','Cousins','James Corden','Colin Farrell',
+            'Dean','Haneke','Hamill','Mitt Romney','Matt Damon','Wain','Kylo','Kyle','Spielberg',
+            'Marco Rubio','Didion','Colin Kaepernick','Nicole Kidman','Oprah Winfrey','Saoirse Ronan',
+            "O'Neill",'Selznick','Loki','Boylston','Michael B. Jordan','Reuben','Azar','Obama',
+            'Duckworth','Martin Crane','Kylo Ren','Terajima','Uma Thurman','Michael Stuhlbarg','Brian De Los Santos',
+            'Schuchat','Ava DuVernay','Bowersox','Willoughby','Kennedy','Lindsey Graham','Donald Glover','Cyril',
+            'Domhnall Gleeson','Serkis','Spacey','Rockwell','Price','Peter Bradshaw','Martin Scorsese','Woody Allen',
+            'Michelle','Ted Cruz','Daisy Ridley','Tommy Wiseau','Agu','Cavill','Bill Spann','Luke','Miller','Frank','Bob',
+            'Trevor Noah','Essaid','Jennifer Lawrence','McDonagh','Agnès Varda','Nelson Mandela','Winston Churchill',
+            'Mildred','Harrison Ford','Daniels','Ta-Nehisi Coates','Tina Fey','Laurie Metcalf','Henry Cavill',
+            'Marion','Ives','Rian Johnson','Ensa Cosby','Witherspoon','Shuri','Susan Collins','Ennis','Hayley',
+            'Erik Killmonger','Andy Serkis','Cory Gardner','Kahn','Alix Fox','Ted','Hanna','Stewart','Joe Wright','Jack',
+            'Salinas','Sorkin','Christopher Nolan','Armie Hammer','Moore','John','Hale','Guadagnino','Romney','Apu','Kidman',
+            'Luke Skywalker','Fisher','Tonya','James Franco','Earn','Kaepernick','Martin McDonagh','Brees','Guillermo del Toro',
+            'Iweala','Jordan Peele','Bradley Cooper','Haynes','Letts',"Nyong'o",'Killmonger','Andy','Portman',
+            'Jeff','Wilkerson','Scott','Payne','Branagh','Kenneth Branagh','Mitch McConnell','Wiseau',
+            'Wertenbaker','Julie','Robert De Niro','Kevin Spacey','Ryozo','Caine','Quentin Tarantino',
+            'Natalie Portman','Peter Rabbit','Christian','Waititi','Morris','Christine','Rey','Pascall','Stephen',
+            'Will Smith','Mahoney','Alfred','Clooney','Naomi','Niles','Gurira','Hondros','Foy','Nick','Smith',
+            'Weinstein','Donald','Robbie','Wiggins','Paddington','Timothée Chalamet','Gary Oldman','Donald Trump',
+            'Sam Rockwell','Chadwick Boseman','Ford','Perry','Paul Thomas Anderson','Ryan Coogler','Cosby',
+            'Harvey Weinstein','Linklater','Denis','Luca Guadagnino','Kenney','Day-Lewis','Ball','Sessions',
+            'Anna','Foster','Han Solo','Meryl Streep','Frasier','Garland','Schenkkan','Picasso','Tom Hanks',
+            'Wright','Froman','Peter','Raffo','Kaja','Garfield','Steven','Greta Gerwig','Cruz','Allen','Noah',
+            'Martin','Tendi','Fergie','Anderson','Thurman','Churchill','Liam','Jefferson','Gilbert','Lanthimos',
+            'Hardy','Steven Spielberg','Tarantino','Grassley','Setsuko','Niru','Glover','Rose','Graham',
+            'Coogler','Lady Bird','Johnson','Seacrest','Chris','Oliver','Varda','Boyega','Lawrence','Elio',"T'Challa",'Trump',
+            'Henry','Thomas','Rob McClure','Bess Kalb','Barry Keoghan','Lamar','Ted Kennedy','Spencer Stone','Robert Mueller',
+            'Marcus Henderson','Susannah','Lord','Paul King','Olson','Harris','Nakia','Oldman','George Lucas','Moonee',
+            'John Hughes',"Lupita Nyong'o",'Poitier','Tom Hiddleston','JIMMY FALLON','Lucy','Rosemary','Bond','Tim Burton','Colbert','Richwine','James Cameron','Eunice Bae','Washington','Goransson','Danai Gurira','Etta','John McCain','S.E. Branch','Reynolds Woodcock','Abrams','Tracy Letts','McConnell','Peter Sarsgaard','Chuck Grassley','Darth Vader','Garrett','Leo','Nicholson','Frances McDormand','Captain America','Cameron','Thomas More','P.T. Barnum','Martha','Daniel Day-Lewis','Nick Bottom','Lily James','Tonya Harding','Sia','Julia Cho','Jess','Poppe','Nyasha','Bruce','Oluminde','Paul Walter Hauser','Jeff Daniels','Gleeson','Sarah Huckabee Sanders','Dowd','Walter','Tsujimoto','David Ives','Roman J. Israel','Cho','Pruitt','Rachel Morrison','John Williams','Ben Whishaw','Conte','Cranston','Stone','Dick Durbin','Jennifer Jason Leigh','Jennifer Beals','A.A. Milne','Bill Camp','Audrey','Chamberlain','Gerwig','Auggie','Helena','Peck','Benjamin','Betty Gabriel','Carter Burwell','Hartl','Ben Affleck','Molly Ringwald','Glovers','Raffey Cassidy','Kian Lawley','Carell','Heron','Missy','Jeff VanderMeer','Tahar Rahim','Crano','Margaret','Froome','Vicky Krieps','Hugh Bonneville','Magnus','Nanjiani','Fisher Stevens','Reese Witherspoon','Anthony Sadler','Brown','Ivania Stack','Coens','Terajima','Gwen','Ava DuVernay','James Toback','Allison Janney','Bowersox','Sidney Poitier','Yorgos Lanthimos','Kelly','Matt Hill','Derren Brown','Dias','Lizzie','Ricca','Ray','Zelda','Sally Hemings','Ross','Mira','Donald Glover','Martin Freeman','Adam Driver','Grace Bauer','Kenzo Tsujimoto','Larry','Timberlake Wertenbaker','Ahmad Kamal','Sterling K. Brown','Elisa','Michelle Williams','Kim','Halling','Reynolds','Pooh','Alan Moore','Dane','Heather Raffo','Denzel Washington','Caitlin Carver','Walters','Gillibrand','Rachel McAdams','Kamal','Demi Lovato','STEPHEN COLBERT','Barack Obama','Gruber','Brando','Nick Henderson','Wes Anderson','Martha Kelner','Tony Stark','Frank','Tupac Shakur','Bonnaire','Singleton','Zac Efron','Alex Garland','Harmony Korine','Snoke','Max','Flicker','Bradley Whitford','Agnès Varda','Haruhiro','Hirayanagi','Poirot','Alan','Tucker','Georgina','Jessica Chastain','Silverstone','Robert Schenkkan','Pat Toomey','Deneuve','Halifax','Rosie','Trebia','Molly','Ryan','Clint Eastwood','Judi Dench','Brooks','Toback','Tom Tancredo','Sam','Orrin Hatch','Fran','Huppert','Meredith','Ensa Cosby','Schumer','Eastwood','Hughes','Jeff Sessions','Shur','Everett K. Ross','Mark Hamill','Christopher Plummer','Frank Olson','Nataki Garrett','Annalisa Dias','Jackman','Margot Robbie','Ron Howard','David Sims','Denis Villeneuve','Jimmy Kimmel','Joanna Lumley','Rebecca Hall','Danny','Alma','Gloria','Mary J. Blige','Oscar Isaac','Nicholaw','Dorsey','Ryozo Tsujimoto','Booker','Guardiola','Mike Lee','Jords','Alix Fox','Cate Blanchett','Todd Haynes','Diana','Jacqui Gab',"T'Chaka",'Sean Connery'
+            ])
+    if word_string in white_list:
+        return 1
+    return 0
 
 def in_blacklist(word_string):
     organizations = ['Capcom', 'New York Times', 'NFL', 'NASA', 'JPL', 'Malin Space Science Systems',

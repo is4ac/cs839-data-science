@@ -20,6 +20,6 @@ counts_negative = Counter(words_false_negative)
 sorted_counts = sorted(counts_negative.items(), key=operator.itemgetter(1))
 whitelist = ''
 for (key, value) in sorted_counts:
-    if value >= 3:
+    if value == 2:
         whitelist = whitelist + ("'%s'," % key)
 print whitelist
