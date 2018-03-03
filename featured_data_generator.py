@@ -9,15 +9,12 @@ __author__ = 'Trang Vu'
         start position of the string: integer
         end position of the string: integer
         ## I don't think we need capitalized anymore since we get rid of non-capitalized ones
-        capitalized: binary with 1 or 0 being all first letters are or are not capitalized respectively 
         otherEntity: is capitalized but is probably a location/other entity
         near_capitalized: words before or after it are capitalized
         name_suffix: the word ends with a common name suffix, like Jr. or Sr.
         common_word: the word string contains a common stop word (e.g. The, A, etc)
-        title: 1 if it matches the title of a movie or TV show
         first_name: at least one word in the string matches a first name dictionary
-        actor_name: at least one word in the string matches at least one part of an actor's name (first or last name)
-        legislator_name: at least one word in the string matches at least one part of a legislator's name
+        actor_legislator_name: at least one word in the string matches at least one part of an actor's name (first or last name)
         class label: binary with 1  or 0 being the string is or is not a person name, respectively 
 '''        
 
@@ -35,11 +32,13 @@ MarkedUp = 'stage1_docs/Data/MarkedUp/'
 CleanedMarkedUp = 'stage1_docs/Data/Cleaned_MarkedUp/'
 DATA = 'stage1_docs/Data/'
 Features = 'stage1_docs/Data/Features/'
+TrainingSet = DATA + 'trainingSet/'
+TestSet = DATA + 'testSet/'
 
 # Global feature names that will be shared between modules
 LOCATION_FEATURES = ['documentID', 'start_index', 'end_index']
 OTHER_FEATURES = ['frequency', 'prefixed', 'suffixed', 'otherEntity', 'near_capitalized', 'name_suffix',
-                  'common_word', 'title', 'first_name', 'actor_name', 'legislator_name']
+                  'common_word', 'first_name', 'actor_legislator_name', 'in_name_list', 'near_parentheses']
 TITLES_DICT = {}
 FIRST_NAMES_DICT = {}
 ACTOR_NAMES_DICT = {}
@@ -92,101 +91,190 @@ def data_generator(fileID, filename, text):
             print('Can not split string: ', word)
             print('Check name labels in file: ', filename)
     
-    # get word frequency
-    word_frequency = collections.Counter(words)
-    # generate list of strings of words
-    data = []
-    string_id = 0
-    count = 0
+    strings = [] # list of strings of 1, 2, 3, and 4 words
     for index in range(0, len(words)):
         for num_words in range(1, 5):
             if index + num_words <= len(words): 
                 word_string = words[index:index+num_words]
                 word_string = ' '.join(word_string)
-                #print (word_string)
-                start = index
-                end = index + num_words
-                # get word_string frequency
-                frequency = 1
-                if word_string in word_frequency.keys():
-                    frequency = word_frequency[word_string]
-                # check if preceding word is a special prefix
-                prefix = 0
-                if start > 0:
-                    prefix = checkPrefix(words[start - 1])
-                    if prefix == 0 and start > 1:
-                        prefix = checkPrefix(words[start - 2])
-                # check if succeding word is a special suffix
-                suffix = 0
-                if end < len(words):
-                    suffix = checkSuffix(words[end])
-                    if suffix == 0 and end < len(words)-1:
-                        suffix = checkSuffix(words[end+1])
-                otherEntity = 0
-                if start > 0 and end < len(words):
-                    otherEntity = checkOthers(words, start - 1, end)
+                strings.append(word_string)
+    
+    word_frequency, untagged_words = get_word_frequency(words, start_tag, end_tag)
+    # generate list of strings of words
+    data = []
+    string_id = 0
+    count = 0
+    
+    for index in range(0, len(words)):
+        for num_words in range(1, 5):
+            if index + num_words <= len(words): 
+                word_string = words[index:index+num_words]
+                word_string = ' '.join(word_string)
 
                 # find class label
                 class_label = findClassLabel(word_string, start_tag, end_tag)
+
+                #print (word_string)
+                start = index
+                end = index + num_words
+
+                # remove markedup tags
+                ws = removeTags(word_string, start_tag, end_tag)
+
+                # get word_string frequency
+                frequency = 1
+                if ws in word_frequency.keys():
+                    frequency = word_frequency[ws]
+                # check if preceding word is a special prefix
+                prefix = 0
+                if start > 0:
+                    prefix = checkPrefix(untagged_words[start - 1])
+                    if prefix == 0 and start > 1:
+                        prefix = checkPrefix(untagged_words[start - 2])
+                # check if succeding word is a special suffix
+                suffix = 0
+                if end < len(untagged_words):
+                    suffix = checkSuffix(untagged_words[end])
+                    if suffix == 0 and end < len(untagged_words)-1:
+                        suffix = checkSuffix(untagged_words[end+1])
+                otherEntity = 0
+                if start > 0 and end < len(untagged_words):
+                    otherEntity = checkOthers(untagged_words, start - 1, end)
+
+
                 if class_label == 1:
                     count = count + 1
-                # remove markedup tags
-                word_string = removeTags(word_string, start_tag, end_tag)
                 # is another entity if it's a title
                 if otherEntity == 0:
-                    otherEntity = is_title(word_string)
+                    otherEntity = is_title(ws)
                 # check if words in string all capitalized (or is a word in a special dictionary like 'van' or 'del')
-                capitalized = isCapitalized(word_string)
+                capitalized = isCapitalized(ws)
                 # check if word contains punctuation besides .
-                punctuation = contains_punctuation_except_some(word_string)
+                punctuation = contains_punctuation_except_some(ws)
                 # check if previous or next word in document is capitalized
-                near_capitalized = is_near_capitalized(words, start, end)
+                near_capitalized = is_near_capitalized(untagged_words, start, end)
                 # checks if the word string ends with a name suffix, like Sr. or Jr.
-                name_suffix = is_name_suffix(word_string)
+                name_suffix = is_name_suffix(ws)
                 # checks to see if the word string contains a common stop word
-                common_word = contains_common_word(word_string)
-                # checks to see if string matches a title
-                title = is_title(word_string)
+                common_word = contains_common_word(ws)
                 # checks to see if string contains a first name from the name dictionary
-                first_name = contains_first_name(word_string)
-                # checks to see if string contains part of an actor's name from dictionary
-                actor_name = contains_actor_name(word_string)
-                # checks to see if string contains part of a legislator's name from dictionary
-                legislator_name = contains_legislator_name(word_string)
+                first_name = contains_first_name(ws)
+                # checks to see if string contains part of an actor's or legislator's name from dictionary
+                actor_legislator_name = contains_actor_name(ws) + contains_legislator_name(ws)
+                # checks to see if name is in a list
+                in_name_list = inNamelist(untagged_words, start, end, ws)
+                # checks to see if candidate is near parentheses
+                near_parentheses = isNearParentheses(untagged_words, start, end, ws)
                 # if word is not capitalized, throw it away: pruning
-                if capitalized != 1 or punctuation or is_common_word(word_string):
+                if capitalized != 1 or punctuation or is_common_word(ws) or in_blacklist(ws):
                     continue
                 # create data instance
-                data_instance = [string_id, word_string, filename, fileID, start, end, frequency, prefix, suffix,
-                                 otherEntity, near_capitalized, name_suffix, common_word, title, first_name, actor_name,
-                                 legislator_name, class_label]
+                data_instance = [string_id, ws, filename, fileID, start, end, frequency, prefix, suffix,
+                                 otherEntity, near_capitalized, name_suffix, common_word, first_name, actor_legislator_name,
+                                 in_name_list, near_parentheses, class_label]
                 data.append(data_instance)
                 string_id = string_id + 1
 
     # sanity check: make sure no marked up tags were accidentally thrown out
     if num_of_labels(data) != count:
-        print("Error: A label did not make it through! Check file {} for potential errors.".format(fileID))
+        print (num_of_labels(data))
+        print (count)
+        print("Error: A label did not make it through! Check file {} for potential errors.".format(filename))
     return data       
+
+
+def in_blacklist(word_string):
+    organizations = ['Capcom', 'New York Times', 'NFL', 'NASA', 'JPL', 'Malin Space Science Systems',
+                     'SpaceX', 'White House', 'Sony', 'Disney', 'Walt Disney', 'Touchstone', 'Oscars',
+                     'Sundance', 'Variety', 'Atlantic', 'Instagram', 'Facebook', 'Twitter']
+    clubs = ['West Bromwich Albion', 'Manchester City', 'Crystal Palace', 'Sevilla', 'Östersund', 'Arsenal',
+             'Liverpool', 'Norwich City', 'Red Star Belgrade', 'St Johnstone', 'Patriots', 'Seahawks',
+             'Oakland Raiders','Dallas Cowboys', 'New York Giants', 'Eagles']
+    locations = ['Seattle', 'Philadelphia', 'New Orleans', 'Minnesota', 'San Francisco', 'Cleveland', 'Arizona',
+                 'Denver', 'Pyeongchang', 'Seoul', 'Tokyo', 'Cannes', 'Festival',
+                 'Washington DC', 'America', 'Britain', 'Ireland', 'California', 'Galapagos', 'Galapagos Islands']
+    nationalities = ['British', 'Irish', 'American', 'Chinese', 'Japanese', 'Korean']
+
+    for word in organizations:
+        if word.lower() == word_string.lower():
+            return 1
+
+    for word in clubs:
+        if word.lower() == word_string.lower():
+            return 1
+
+    for word in locations:
+        if word.lower() == word_string.lower():
+            return 1
+
+    return 0
+
+def isNearParentheses(words, start, end, word_string):
+    # check if the candidate name is next to a ( or )
+    keys = ['(', ')']
+    flag = 0
+
+    if not isCapitalized(word_string):
+        return flag
+
+    if start > 0:
+        preceding_str = words[start - 1]
+        if preceding_str in keys:
+            flag = 1
+    if end < len(words):
+        succeeding_str = words[end]
+        if succeeding_str in keys:
+            flag = 1
+
+    return flag
+
+def inNamelist(words, start, end, word_string):
+   # check if candidate name is in a list of names in the documents
+   # eg: Trang, Hoai, and Isaac, or Trang/Hoai/Isaac
+   keys = [',', 'and', 'or', '/']
+   flag = 0
+   if not isCapitalized(word_string):
+       flag = 0
+   elif start > 0 and end < len(words):
+       preceeding_str = words[start - 1]
+       succeeding_str = words[end]
+       if preceeding_str in keys:
+           if start > 1 and isCapitalized(words[start - 2]):
+               flag = 1
+       if succeeding_str in keys:
+           if end < len(words) - 1 and isCapitalized(words[end + 1]):
+               flag = 1
+   return flag
+
+
+def get_word_frequency(words, start_tag, end_tag):
+    # return a dictionary of word in words
+    untagged_words = []
+    for word  in words:
+        untagged_word = removeTags(word, start_tag, end_tag)
+        untagged_words.append(untagged_word)
+    word_frequency = collections.Counter(untagged_words)
+    return word_frequency, untagged_words
 
 
 def contains_legislator_name(word_string):
     for word in word_string.split():
         if word in LEGISLATORS_NAMES_DICT:
-            return 1
+            return 2
 
     return 0
 
 
 def generate_legislator_names():
     names = {}
-    with open(LEGISLATORS_CURRENT_CSV, 'r') as file:
+    with open(LEGISLATORS_CURRENT_CSV, 'r', encoding = 'utf-8') as file:
         rd = csv.reader(file, delimiter=",", quotechar='"')
         for row in rd:
             if len(row) > 0:
                 names[row[0]] = 1
                 names[row[1]] = 1
 
-    with open(LEGISLATORS_HISTORICAL_CSV, 'r') as file:
+    with open(LEGISLATORS_HISTORICAL_CSV, 'r', encoding = 'utf-8') as file:
         rd = csv.reader(file, delimiter=",", quotechar='"')
         for row in rd:
             if len(row) > 0:
@@ -199,20 +287,20 @@ def generate_legislator_names():
 def contains_actor_name(word_string):
     for word in word_string.split():
         if word in ACTOR_NAMES_DICT:
-            return 1
+            return 2
 
     return 0
 
 
 def generate_actor_names():
     names = {}
-    with open(ACTOR_NAMES1_CSV, 'r') as file:
+    with open(ACTOR_NAMES1_CSV, 'r', encoding = 'utf-8') as file:
         for line in file:
             name_parts = line.split()
             for name in name_parts:
                 names[name] = 1
 
-    with open(ACTOR_NAMES2_CSV, 'r') as file:
+    with open(ACTOR_NAMES2_CSV, 'r', encoding = 'utf-8') as file:
         for line in file:
             name_parts = line.split()
             for name in name_parts:
@@ -223,14 +311,14 @@ def generate_actor_names():
 def contains_first_name(word_string):
     for word in word_string.split():
         if word in FIRST_NAMES_DICT:
-            return 1
+            return 2
 
     return 0
 
 
 def generate_first_names():
     names = {}
-    with open(FIRST_NAMES_CSV, 'r') as file:
+    with open(FIRST_NAMES_CSV, 'r', encoding = 'utf-8') as file:
         for line in file:
             words = line.split()
             if len(words) > 0:
@@ -259,7 +347,7 @@ def is_title(word):
 
 def generate_titles():
     titles = {}
-    with open(TITLES_CSV, encoding = 'utf8') as file:
+    with open(TITLES_CSV, encoding = 'utf-8') as file:
         for line in file:
             titles[line.strip()] = 1
     return titles
@@ -284,7 +372,7 @@ def is_common_word(word):
                  'Me', 'Might', 'Most', 'Must', 'My', 'Neither', 'No', 'Nor', 'Not', 'Of', 'Off', 'Often', 'On', 'Only',
                  'Or', 'Other', 'Our', 'Own', 'Rather', 'Said', 'Say', 'Says', 'She', 'Should', 'Since', 'Some', 'Than',
                  'That', 'Their', 'Then', 'These', 'This', 'To', 'Too', 'Us', 'Wants', 'Was', 'Who', 'Whom', 'We', 'When',
-                 'Why', 'What', 'Will', 'With', 'Would', 'Yet', 'Your']
+                 'Why', 'What', 'With', 'Would', 'Yet', 'Your']
     if word in stopwords:
         return 1
     else:
@@ -316,18 +404,65 @@ def is_near_capitalized(words, start, end):
 
     return near_capitalized
 
+def checkTitlePrefix(word):
+    title_words = ['Dr.', 'Esq.', 'Hon.', 'Jr.', 'Mr.', 'Mrs.', 'Ms.', 'Messrs.',
+                   'Mmes.', 'Msgr.', 'Prof.', 'Rev.', 'Rt. Hon.', 'Sr.', 'St.', 'Sen.', 'Sens.']
+    # check if word is a title prefix
+    if word in title_words:
+        return True
+    else:
+        return False
+        
+def checkHyphen(word):
+    # return true if string has punctuations in cases like Billings-Lads
+    character_frequency = collections.Counter(word)
+    if word[0].isalpha() and word[-1].isalpha() and character_frequency['-'] == 1 and containUppercase(word):
+        return True
+    else:
+        return False
 
+def checkApostrophe(word):
+    # return true if string is name with apostrophe lik O'Dowd
+    character_frequency = collections.Counter(word)
+    if character_frequency['\''] == 1 and containUppercase(word):
+        return True
+    else:
+        return False
+    
+def contains_punctuation(word):
+    
+    retval = False
+    for char in word:
+        if char in string.punctuation:
+            retval = True
+            break
+    return retval
+    
 def contains_punctuation_except_some(word):
     '''
     Returns true if the word contains a punctuation besides . or ' or - (a name might contain a . or ' or -, e.g. O'Dowd or J.F. Billings-Ladson)
     '''
+    retval = False
+    words = word.split() # split string by space
     punctuation = [c for c in string.punctuation if c != '.' and c != '\'' and c != '-']
-    for char in word:
-        if char in punctuation:
-            return True
-    return False
-
-
+    if is_name_suffix(word):
+        retval = False # do not get rid of string with name suffix
+    else:
+        for word in words:
+            if checkTitlePrefix(word):
+                retval = True # get rid of this
+                break
+            elif contains_punctuation(word):
+                if checkHyphen(word) or checkApostrophe(word):
+                    retval = False
+                    break
+                else:
+                    for char in word:
+                        if char in punctuation:
+                            retval = True
+                            break
+    return retval
+                
 def num_of_labels(data):
     '''
     Returns the number of positive labels in the data
@@ -353,12 +488,17 @@ def split_string(word_string):
     start_tag_id = word_string.find(start_tag)
     end_tag_id = word_string.find(end_tag)
     split_words = []
+    word_string_frequency = collections.Counter(word_string)
     # if word_string only has 1 character, return it
     if len(word_string) < 2:
         split_words.append(word_string)
         return split_words
     # if word_string is all alphabets, or all digits, or can be convert to a float, or alphanumeric, return it
     elif word_string.isalpha() or word_string.isdigit() or word_string.isalnum() or isNumber(word_string):
+        split_words.append(word_string)
+        return split_words
+    # if word_string starts and ends with alphabetic character but has a hyphen in the middle
+    elif word_string[0].isalpha() and word_string[-1].isalpha() and word_string_frequency['-'] == 1 and containUppercase(word_string):
         split_words.append(word_string)
         return split_words
     # if word_string starts or ends with tags, return it
@@ -433,14 +573,30 @@ def split_string(word_string):
                             return split_word3
             # if first_nonalnum character is an apostrophe, make sure it's not part of the 's
             elif word_string[first_nonalnum] == '\'':
-                if len(word_string) == 2 and word_string[-1] == 's':
+                if word_string == '\'s':
                     split_words.append(word_string)
                     return split_words
-                elif len(word_string) > 2 and word_string[-1] == 's':
+                elif len(word_string) > 2 and word_string[-2:] == '\'s':
                     word1 = word_string[0:first_nonalnum]
                     word2 = word_string[first_nonalnum:]
                     split_words.append(word1)
                     split_words.append(word2)
+                    return split_words
+                elif len(word_string) > 2 and word_string[-2:] != '\'s' and '\'s' in word_string:
+                    word1 = word_string[0:first_nonalnum]
+                    word2 = word_string[first_nonalnum: first_nonalnum + 2] # word2 = '\'s'
+                    word3 = word_string[first_nonalnum + 2:]
+                    if len(word1) > 0:
+                        split_words.append(word1)
+                        split_words.append(word2)
+                        if len(word3) > 0:
+                            split_word3 = split_string(word3)
+                            split_words.extend(split_word3)
+                    else:
+                        split_words.append(word2)
+                        if len(word3) > 0:
+                            split_word3 = split_string(word3)
+                            split_words.extend(split_word3)
                     return split_words
                 else:
                     split_words.append(word_string)
@@ -491,7 +647,7 @@ def isCapitalized(word_string):
     #print (word_string)
     # nobiliary particles that aren't always capitalized (from Wikipedia: nobiliary particles)
     particles = ['de', 'del', 'van', 'von', 'af', 'du', 'd', 'des', 'zu',
-                 'do', 'dos', 'da', 'das', 'di', 'der']
+                 'do', 'dos', 'da', 'das', 'di', 'der', 'bin', 'al', 'la']
     
     word_string = word_string.split()
     flag = 1 # capitalized
@@ -499,7 +655,7 @@ def isCapitalized(word_string):
     # if only check first letter
     # check if each word contains at least one capitalized letter
     for word in word_string:
-        if not containUppercase(word) and not (word in particles or word[0] == '\''):
+        if not containUppercase(word) and not (word in particles or (word[0] == '\'' and word != '\'s')):
             flag = 0 # not capitalized
             break
     return flag
@@ -555,10 +711,15 @@ def checkOthers(words, before_index, after_index):
     # check if word_string maybe a location name, movie name, or an organization
     preceeding_words = ['the', 'in', 'on', 'at']
     succeeding_words = ['avenue', 'city', 'street', 'st', 'ave', 'town', 'village']
+    other_words = ['theater', 'theaters', 'theatre', 'theatres', 'studio', 'studios', 'hotel', 'bank', 'cinema', 'cinemas',
+                   'west', 'east', 'north', 'south', 'western', 'eastern', 'northern', 'southern', 'conference', 'festival']
     
-    if words[before_index].lower in preceeding_words or words[after_index].lower in succeeding_words:
+    if words[before_index].lower() in preceeding_words or words[after_index].lower() in succeeding_words:
         return 1
     else:
+        for word in words[before_index+1:after_index]:
+            if word.lower() in other_words:
+                return 1
         return 0
 
 def findClassLabel(word_string, start_tag, end_tag):
@@ -573,13 +734,19 @@ def findClassLabel(word_string, start_tag, end_tag):
 def createDevAndTestFileSet():
     """ Shuffles the marked-up file set and divide it into two for training and testing.
     Returns 'train_file_names' and 'test_file_names'."""
-    file_names = []
-    for file_name in os.listdir(MarkedUp):
-        file_names.append(file_name)
+    train_file_names = []
+    test_file_names = []
+    for file_name in os.listdir(TrainingSet):
+        train_file_names.append(file_name)
+    for file_name in os.listdir(TestSet):
+        test_file_names.append(file_name)
+    '''
     # shuffle the list, and create training and testing list
     random.seed(1) # fix the seed for debugging purposes
     random.shuffle(file_names)
     return file_names[ : int(len(file_names) * 0.66)], file_names[int(len(file_names) * 0.66) : ]
+    '''
+    return train_file_names, test_file_names
 
 '''
 def writeToCSV(filename):
@@ -594,7 +761,16 @@ def writeToCSV(filename):
         df.to_csv(csv_file, encoding='utf-8', header=True, index=False)
 '''
 
-def extractAndCreateCSV(file_names, csv_file):
+def copyFile(fromPath, toPath):
+    '''
+    Copies the file from fromPath to toPath
+    '''
+    with open(fromPath, 'r') as inFile:
+        with open(toPath, 'w') as outFile:
+            data = inFile.read()
+            outFile.write(data)
+
+def extractAndCreateCSV(file_names, csv_file, directory):
     """Scan all the files in file_names and produces a single CSV file that
     containing strings, feature vectors, and class_label."""
     global LOCATION_FEATURES
@@ -605,7 +781,10 @@ def extractAndCreateCSV(file_names, csv_file):
     fileID = 0
     for filename in file_names:
         #print ("processing file.. ", filename)
+        if filename == '.DS_Store':
+            continue
         if os.path.isfile(MarkedUp + filename):
+            #copyFile(MarkedUp + filename, directory + filename)
             text = clean_file(filename)
             data = data_generator(fileID, filename, text)
             df = pd.DataFrame(data, columns = headers)
@@ -641,8 +820,8 @@ def main():
     train_input_files, test_input_files = createDevAndTestFileSet()
     #print(train_input_files)
     #print(test_input_files)
-    extractAndCreateCSV(train_input_files, TRAIN_CSV)
-    extractAndCreateCSV(test_input_files, TEST_CSV)
+    extractAndCreateCSV(train_input_files, TRAIN_CSV, DATA + 'trainingSet/')
+    extractAndCreateCSV(test_input_files, TEST_CSV, DATA + 'testSet/')
                 
 if __name__ == "__main__":
     main()
