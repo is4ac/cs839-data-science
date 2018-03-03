@@ -38,7 +38,7 @@ TestSet = DATA + 'testSet/'
 # Global feature names that will be shared between modules
 LOCATION_FEATURES = ['documentID', 'start_index', 'end_index']
 OTHER_FEATURES = ['frequency', 'prefixed', 'suffixed', 'otherEntity', 'near_capitalized', 'name_suffix',
-                  'common_word', 'first_name', 'actor_legislator_name']
+                  'common_word', 'first_name', 'actor_legislator_name', 'in_name_list', 'near_parentheses']
 TITLES_DICT = {}
 FIRST_NAMES_DICT = {}
 ACTOR_NAMES_DICT = {}
@@ -153,13 +153,17 @@ def data_generator(fileID, filename, text):
                 first_name = contains_first_name(ws)
                 # checks to see if string contains part of an actor's or legislator's name from dictionary
                 actor_legislator_name = contains_actor_name(ws) + contains_legislator_name(ws)
+                # checks to see if name is in a list
+                in_name_list = inNamelist(untagged_words, start, end, ws)
+                # checks to see if candidate is near parentheses
+                near_parentheses = isNearParentheses(untagged_words, start, end, ws)
                 # if word is not capitalized, throw it away: pruning
-                if capitalized != 1 or punctuation or is_common_word(ws):
+                if capitalized != 1 or punctuation or is_common_word(ws) or in_blacklist(ws):
                     continue
                 # create data instance
                 data_instance = [string_id, ws, filename, fileID, start, end, frequency, prefix, suffix,
                                  otherEntity, near_capitalized, name_suffix, common_word, first_name, actor_legislator_name,
-                                 class_label]
+                                 in_name_list, near_parentheses, class_label]
                 data.append(data_instance)
                 string_id = string_id + 1
 
@@ -167,6 +171,71 @@ def data_generator(fileID, filename, text):
     if num_of_labels(data) != count:
         print("Error: A label did not make it through! Check file {} for potential errors.".format(filename))
     return data       
+
+
+def in_blacklist(word_string):
+    organizations = ['Capcom', 'New York Times', 'NFL', 'NASA', 'JPL', 'Malin Space Science Systems',
+                     'SpaceX', 'White House', 'Marvel', 'Sony', 'Disney', 'Walt Disney', 'Touchstone', 'Oscars',
+                     'Sundance', 'Variety', 'Atlantic', 'Instagram', 'Facebook', 'Twitter']
+    clubs = ['West Bromwich Albion', 'Manchester City', 'Crystal Palace', 'Sevilla', 'Östersund', 'Arsenal',
+             'Liverpool', 'Norwich City', 'Red Star Belgrade', 'St Johnstone', 'Patriots', 'Seahawks',
+             'Oakland Raiders',
+             'Dallas Cowboys', 'New York Giants', 'Eagles']
+    locations = ['Seattle', 'Philadelphia', 'New Orleans', 'Minnesota', 'San Francisco', 'Cleveland', 'Arizona',
+                 'Denver', 'Pyeongchang', 'Seoul', 'Tokyo', 'Cannes', 'Festival',
+                 'Washington DC', 'America', 'Britain', 'Ireland', 'California', 'Galapagos', 'Galapagos Islands']
+    nationalities = ['British', 'Irish', 'American', 'Chinese', 'Japanese', 'Korean']
+
+    for word in organizations:
+        if word.lower == word_string.lower:
+            return 1
+
+    for word in clubs:
+        if word.lower == word_string.lower:
+            return 1
+
+    for word in locations:
+        if word.lower == word_string.lower:
+            return 1
+
+    return 0
+
+def isNearParentheses(words, start, end, word_string):
+    # check if the candidate name is next to a ( or )
+    keys = ['(', ')']
+    flag = 0
+
+    if not isCapitalized(word_string):
+        return flag
+
+    if start > 0:
+        preceding_str = words[start - 1]
+        if preceding_str in keys:
+            flag = 1
+    if end < len(words):
+        succeeding_str = words[end]
+        if succeeding_str in keys:
+            flag = 1
+
+    return flag
+
+def inNamelist(words, start, end, word_string):
+   # check if candidate name is in a list of names in the documents
+   # eg: Trang, Hoai, and Isaac, or Trang/Hoai/Isaac
+   keys = [',', 'and', 'or', '/']
+   flag = 0
+   if not isCapitalized(word_string):
+       flag = 0
+   elif start > 0 and end < len(words):
+       preceeding_str = words[start - 1]
+       succeeding_str = words[end]
+       if preceeding_str in keys:
+           if start > 1 and isCapitalized(words[start - 2]):
+               flag = 1
+       if succeeding_str in keys:
+           if end < len(words) - 1 and isCapitalized(words[end + 1]):
+               flag = 1
+   return flag
 
 
 def get_word_frequency(words, start_tag, end_tag):
@@ -570,10 +639,15 @@ def checkOthers(words, before_index, after_index):
     # check if word_string maybe a location name, movie name, or an organization
     preceeding_words = ['the', 'in', 'on', 'at']
     succeeding_words = ['avenue', 'city', 'street', 'st', 'ave', 'town', 'village']
+    other_words = ['theater', 'theaters', 'theatre', 'theatres', 'studio', 'studios', 'hotel', 'bank', 'cinema', 'cinemas',
+                   'west', 'east', 'north', 'south', 'western', 'eastern', 'northern', 'southern', 'conference', 'festival']
     
     if words[before_index].lower in preceeding_words or words[after_index].lower in succeeding_words:
         return 1
     else:
+        for word in words[before_index+1:after_index]:
+            if word.lower in other_words:
+                return 1
         return 0
 
 def findClassLabel(word_string, start_tag, end_tag):
