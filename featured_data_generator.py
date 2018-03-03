@@ -81,6 +81,7 @@ def data_generator(fileID, filename, text):
     start_tag = '<pname>'
     end_tag = '</pname>'
 
+    # tokenize the document and generate part of speech tags for each sentence
     pos_words = nltk.sent_tokenize(text)
     pos_words = [nltk.word_tokenize(sent) for sent in pos_words]
     pos_words = [nltk.pos_tag(sent) for sent in pos_words]
@@ -224,6 +225,10 @@ def isProperNoun(pos_words, start, end):
 
 
 def match_words(words, pos):
+    '''
+    Generates a new list based on the match ups of the words and the part of speech tags.
+    Ex: [('blue', 'JJ'), ('running', 'VB')]
+    '''
     matched_words = []
     ind = 0
     for word in words:
@@ -241,7 +246,7 @@ def match_words(words, pos):
 
 def in_blacklist(word_string):
     organizations = ['Capcom', 'New York Times', 'NFL', 'NASA', 'JPL', 'Malin Space Science Systems',
-                     'SpaceX', 'White House', 'Marvel', 'Sony', 'Disney', 'Walt Disney', 'Touchstone', 'Oscars',
+                     'SpaceX', 'White House', 'Sony', 'Disney', 'Walt Disney', 'Touchstone', 'Oscars',
                      'Sundance', 'Variety', 'Atlantic', 'Instagram', 'Facebook', 'Twitter']
     clubs = ['West Bromwich Albion', 'Manchester City', 'Crystal Palace', 'Sevilla', 'Östersund', 'Arsenal',
              'Liverpool', 'Norwich City', 'Red Star Belgrade', 'St Johnstone', 'Patriots', 'Seahawks',
@@ -252,7 +257,7 @@ def in_blacklist(word_string):
     others = set([
             # old stuff,
             'Capcom', 'New York Times', 'NFL', 'NASA', 'JPL', 'Malin Space Science Systems',
-            'SpaceX', 'White House', 'Marvel', 'Sony', 'Disney', 'Walt Disney', 'Touchstone', 'Oscars',
+            'SpaceX', 'White House', 'Sony', 'Disney', 'Walt Disney', 'Touchstone', 'Oscars',
             'Sundance', 'Variety', 'Atlantic', 'Instagram', 'Facebook', 'Twitter',
             'West Bromwich Albion', 'Manchester City', 'Crystal Palace', 'Sevilla', 'Östersund', 'Arsenal',
              'Liverpool', 'Norwich City', 'Red Star Belgrade', 'St Johnstone', 'Patriots', 'Seahawks',
@@ -266,7 +271,7 @@ def in_blacklist(word_string):
             'Saturday', 'Sunday',  'Week', 'Year',
             # Countries, Locations, Organization, etc
             'Greek', 'Galapagos Islands', 'Capitol Hill', 'American', 'Britain', 'West Antarctic', 
-            'British', 'Irish', 'American', 'Chinese', 'Japanese', 'Korean', 'Atlanta', 'America', 'Marvel',
+            'British', 'Irish', 'American', 'Chinese', 'Japanese', 'Korean', 'Atlanta', 'America',
             'White House', 'Americans', 'Theatre', 'New York', 'Film Festival', 'NASA', 'Amazon', 'Senate',
             'Chicago', 'London', 'U.S.', 'Vietnam', 'Los Angeles', 'Oslo', 'Academy Award', 'Super Bowl',
             'US', 'Sydney', 'Japan', 'Western', 'Book', 'Paramount', 'Washington Post', 'NRA', 'French',
@@ -276,30 +281,30 @@ def in_blacklist(word_string):
             'Sacramento', 'Manchester', 'United States', 'Russians', 'The Atlantic', 
             # General words
             'Actress', 'Women', 'Director', 'President', 'Sen.', 'Justice', 'Even', 'First', 'Good',
-            'Discovery', 'More', 'Get Out', 'Perhaps', 'Bird', 'Original', 'Solo', 'Up', 'Supporting',
-            'Instead', 'Before', 'Democratic', 'World', 'Night', 'Post', 'National', 'Which', 'Maybe',
+            'Discovery', 'Get Out', 'Perhaps', 'Original', 'Up', 'Supporting',
+            'Instead', 'Before', 'Democratic', 'World', 'Post', 'National', 'Which', 'Maybe',
             'Name', 'While', 'Golden', 'Earth', 'Out', 'Theater', 'Picture', 'United', 'Six', 'Empire',
             'Cinematography', 'Best Original', 'Original Screenplay', 'Studios', 'Area', 'Last', 'Far',
             'Another', 'Day', 'Awakends', 'SEE', 'SEE ALSO', 'Best Supporting', 'Where', 'Once', 'Live',
-            'Democrats', 'Nation', 'Entertainment', 'Boys', 'Actor', 'Hunter', 'Screenplay', 'Reporter', 
+            'Democrats', 'Nation', 'Entertainment', 'Boys', 'Actor', 'Screenplay', 'Reporter',
             'Super', 'Republicans', 'Given', 'Best Director', 'Room', 'Image', 'Brexit', 'Rep', 'Episode', 
             'Supporting Actress', 'Fahrenheit', 'Christmas', 'PlayStation', 'Visual', 'Express', 'Stay',
             'Meets', 'General', 'Still', 'Episode', 'City', 'Best Picture', 'League', 'World War',
             'During', 'Best Supporting Actress', 'Many', 'Hour', 'Club', 'Under', 'Darkest',
             'Saturday Night Live', 'Excited', 'Best Actor', 'Scene', 'Voices', 'Leave', 'Whether',
             'Republican', 'International', 'Very', 'Go', 'Center', 'Want', 'Opening', 'Wonder', 'Beyond',
-            'King', 'Design', 'Eye', 'News', 'Leader', 'Dreamers', 'Call', 'Hotel', 'Something', 'Moon',
+            'Design', 'Eye', 'News', 'Leader', 'Dreamers', 'Call', 'Hotel', 'Something', 'Moon',
             'Pride', 'According', 'Both', 'Network', 'Next', 'Stage', 'Well', 'R', 'Everything', 'Seconds',
             # Others
             'Women Project', 'Constitution', 'EPA', 'Environmental Protection Agency', 'Billboards', 'Academy',
-            'Outside', 'Mr.', 'Hollywood', 'Black', 'EST', 'Wars', 'Ms.', 'Star Wars', 'Star', 'Now', 'Last',
-            'Here', 'do', 'Panther', 'Black Panther', "I'm", 'New', 'The Last', 'Award', 'War', 'Water', 'Awards',
-            'Monster', 'Film', 'Trailer', 'WATCH', 'Netflix', 'House', 'Will', 'Though', 'One', 'Times', 
+            'Outside', 'Mr.', 'Hollywood', 'EST', 'Wars', 'Ms.', 'Star Wars', 'Now', 'Last',
+            'Here', 'do', 'Panther', "I'm", 'New', 'The Last', 'Award', 'War', 'Water', 'Awards',
+            'Monster', 'Film', 'Trailer', 'WATCH', 'Netflix', 'House', 'Though', 'One', 'Times',
             'York', 'Oscars', 'Oscar',  'Over', 'Lady', 'Time', 'Three', 'ALSO', 'Yes', 
             'Best Pictures', 'Game', 'TV', 
             # Special,
             "'", "'Black", "I'd", "'Black Panther'", 'Jedi', 'Your Name', 'Last Jedi', 'The Last Jedi',
-            "Panther'", "I've", 'Outside Ebbing', 'Justice League', 'Monster Hunter', "We're", "A.", 'Superman',
+            "Panther'", "I've", 'Outside Ebbing', 'Justice League', 'Monster Hunter', "We're", "A.",
             'Darkest Hour', 'The Post', 'Call Me', 'MoviePass', 'Panther Week', 'Three Billboards Outside', 
             'The Force Awakens', "I'll", 'Three Billboards', 'Three Billboards Outside Ebbing', 'II',
             'The New York', 'X', 'York Times', "We've", 'Night Live', 'Black Panther Week', "You'll"
