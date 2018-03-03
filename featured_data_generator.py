@@ -90,9 +90,11 @@ def data_generator(fileID, filename, text):
         else:
             print('Can not split string: ', word)
             print('Check name labels in file: ', filename)
-    
+
+    # text that we remove all <pname> and </pname>.
     # get word frequency
     word_frequency, untagged_words = get_word_frequency(words, start_tag, end_tag)
+
     # generate list of strings of words
     data = []
     string_id = 0
@@ -160,6 +162,7 @@ def data_generator(fileID, filename, text):
                 # if word is not capitalized, throw it away: pruning
                 if capitalized != 1 or punctuation or is_common_word(ws) or in_blacklist(ws):
                     continue
+                frequency = text.count(ws)
                 # create data instance
                 data_instance = [string_id, ws, filename, fileID, start, end, frequency, prefix, suffix,
                                  otherEntity, near_capitalized, name_suffix, common_word, first_name, actor_legislator_name,
@@ -179,24 +182,81 @@ def in_blacklist(word_string):
                      'Sundance', 'Variety', 'Atlantic', 'Instagram', 'Facebook', 'Twitter']
     clubs = ['West Bromwich Albion', 'Manchester City', 'Crystal Palace', 'Sevilla', 'Östersund', 'Arsenal',
              'Liverpool', 'Norwich City', 'Red Star Belgrade', 'St Johnstone', 'Patriots', 'Seahawks',
-             'Oakland Raiders',
-             'Dallas Cowboys', 'New York Giants', 'Eagles']
+             'Oakland Raiders', 'Dallas Cowboys', 'New York Giants', 'Eagles']
     locations = ['Seattle', 'Philadelphia', 'New Orleans', 'Minnesota', 'San Francisco', 'Cleveland', 'Arizona',
-                 'Denver', 'Pyeongchang', 'Seoul', 'Tokyo', 'Cannes', 'Festival',
+                 'Denver', 'Pyeongchang', 'Seoul', 'Tokyo', 'Cannes', 'Festival', 'New York',
                  'Washington DC', 'America', 'Britain', 'Ireland', 'California', 'Galapagos', 'Galapagos Islands']
-    nationalities = ['British', 'Irish', 'American', 'Chinese', 'Japanese', 'Korean']
-
+    others = set([
+            # old stuff,
+            'Capcom', 'New York Times', 'NFL', 'NASA', 'JPL', 'Malin Space Science Systems',
+            'SpaceX', 'White House', 'Marvel', 'Sony', 'Disney', 'Walt Disney', 'Touchstone', 'Oscars',
+            'Sundance', 'Variety', 'Atlantic', 'Instagram', 'Facebook', 'Twitter',
+            'West Bromwich Albion', 'Manchester City', 'Crystal Palace', 'Sevilla', 'Östersund', 'Arsenal',
+             'Liverpool', 'Norwich City', 'Red Star Belgrade', 'St Johnstone', 'Patriots', 'Seahawks',
+             'Oakland Raiders', 'Dallas Cowboys', 'New York Giants', 'Eagles',
+            'Seattle', 'Philadelphia', 'New Orleans', 'Minnesota', 'San Francisco', 'Cleveland', 'Arizona',
+            'Denver', 'Pyeongchang', 'Seoul', 'Tokyo', 'Cannes', 'Festival', 'New York',
+            'Washington DC', 'America', 'Britain', 'Ireland', 'California', 'Galapagos', 'Galapagos Islands',
+            # Month, day, date
+            'January' , 'Jan', 'February', 'Feb', 'March', 'October', 'November', 'December',
+            'Tuesday', 'Wednesday', 'Thursday', 'Tue', 'Friday', 'Wed', 'Today', 'August', 'Monday',
+            'Saturday', 'Sunday',  'Week', 'Year',
+            # Countries, Locations, Organization, etc
+            'Greek', 'Galapagos Islands', 'Capitol Hill', 'American', 'Britain', 'West Antarctic', 
+            'British', 'Irish', 'American', 'Chinese', 'Japanese', 'Korean', 'Atlanta', 'America', 'Marvel',
+            'White House', 'Americans', 'Theatre', 'New York', 'Film Festival', 'NASA', 'Amazon', 'Senate',
+            'Chicago', 'London', 'U.S.', 'Vietnam', 'Los Angeles', 'Oslo', 'Academy Award', 'Super Bowl',
+            'US', 'Sydney', 'Japan', 'Western', 'Book', 'Paramount', 'Washington Post', 'NRA', 'French',
+            'African', 'Cannes Film Festival', 'South', 'East', 'Asian', 'Texas', 'Ukraine', 'Congress',
+            'Paris', 'Italian', 'Hungarian', 'Alabama', 'African-American', 'Berlin', 'European',
+            'Pentagon', 'English', 'Iraq', 'Florida', 'North Korea', 'CDC', 'East Coast', 'Missouri', 
+            'Sacramento', 'Manchester', 'United States', 'Russians', 'The Atlantic', 
+            # General words
+            'Actress', 'Women', 'Director', 'President', 'Sen.', 'Justice', 'Even', 'First', 'Good',
+            'Discovery', 'More', 'Get Out', 'Perhaps', 'Bird', 'Original', 'Solo', 'Up', 'Supporting',
+            'Instead', 'Before', 'Democratic', 'World', 'Night', 'Post', 'National', 'Which', 'Maybe',
+            'Name', 'While', 'Golden', 'Earth', 'Out', 'Theater', 'Picture', 'United', 'Six', 'Empire',
+            'Cinematography', 'Best Original', 'Original Screenplay', 'Studios', 'Area', 'Last', 'Far',
+            'Another', 'Day', 'Awakends', 'SEE', 'SEE ALSO', 'Best Supporting', 'Where', 'Once', 'Live',
+            'Democrats', 'Nation', 'Entertainment', 'Boys', 'Actor', 'Hunter', 'Screenplay', 'Reporter', 
+            'Super', 'Republicans', 'Given', 'Best Director', 'Room', 'Image', 'Brexit', 'Rep', 'Episode', 
+            'Supporting Actress', 'Fahrenheit', 'Christmas', 'PlayStation', 'Visual', 'Express', 'Stay',
+            'Meets', 'General', 'Still', 'Episode', 'City', 'Best Picture', 'League', 'World War',
+            'During', 'Best Supporting Actress', 'Many', 'Hour', 'Club', 'Under', 'Darkest',
+            'Saturday Night Live', 'Excited', 'Best Actor', 'Scene', 'Voices', 'Leave', 'Whether',
+            'Republican', 'International', 'Very', 'Go', 'Center', 'Want', 'Opening', 'Wonder', 'Beyond',
+            'King', 'Design', 'Eye', 'News', 'Leader', 'Dreamers', 'Call', 'Hotel', 'Something', 'Moon',
+            'Pride', 'According', 'Both', 'Network', 'Next', 'Stage', 'Well', 'R', 'Everything', 'Seconds',
+            # Others
+            'Women Project', 'Constitution', 'EPA', 'Environmental Protection Agency', 'Billboards', 'Academy',
+            'Outside', 'Mr.', 'Hollywood', 'Black', 'EST', 'Wars', 'Ms.', 'Star Wars', 'Star', 'Now', 'Last',
+            'Here', 'do', 'Panther', 'Black Panther', "I'm", 'New', 'The Last', 'Award', 'War', 'Water', 'Awards',
+            'Monster', 'Film', 'Trailer', 'WATCH', 'Netflix', 'House', 'Will', 'Though', 'One', 'Times', 
+            'York', 'Oscars', 'Oscar',  'Over', 'Lady', 'Time', 'Three', 'ALSO', 'Yes', 
+            'Best Pictures', 'Game', 'TV', 
+            # Special,
+            "'", "'Black", "I'd", "'Black Panther'", 'Jedi', 'Your Name', 'Last Jedi', 'The Last Jedi',
+            "Panther'", "I've", 'Outside Ebbing', 'Justice League', 'Monster Hunter', "We're", "A.", 'Superman',
+            'Darkest Hour', 'The Post', 'Call Me', 'MoviePass', 'Panther Week', 'Three Billboards Outside', 
+            'The Force Awakens', "I'll", 'Three Billboards', 'Three Billboards Outside Ebbing', 'II',
+            'The New York', 'X', 'York Times', "We've", 'Night Live', 'Black Panther Week', "You'll"
+            ])
+                  
     for word in organizations:
-        if word.lower == word_string.lower:
+        if word.lower == word_string.lower():
             return 1
 
     for word in clubs:
-        if word.lower == word_string.lower:
+        if word.lower == word_string.lower():
             return 1
 
     for word in locations:
-        if word.lower == word_string.lower:
+        if word.lower == word_string.lower():
             return 1
+    
+    if word_string in others:
+        # print('in others = ' + word_string)
+        return 1
 
     return 0
 
@@ -747,9 +807,13 @@ def main():
     LEGISLATORS_NAMES_DICT = generate_legislator_names()
     train_input_files, test_input_files = createDevAndTestFileSet()
     #print(train_input_files)
-    #print(test_input_files)
+    #print(test_input_files)    
     extractAndCreateCSV(train_input_files, TRAIN_CSV, DATA + 'trainingSet/')
     extractAndCreateCSV(test_input_files, TEST_CSV, DATA + 'testSet/')
+    #extractAndCreateCSV(['stage1_docs/Data/Cleaned_MarkedUp/cleaned_hl_105_m.txt',
+    #                     '/tmp/result.csv', "");
+    #extractAndCreateCSV(['test.txt'], '/tmp/result.csv', '')
+
                 
 if __name__ == "__main__":
     main()
