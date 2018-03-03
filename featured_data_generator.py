@@ -484,7 +484,7 @@ def is_name_suffix(word):
 
 def is_common_word(word):
     stopwords = ['\'s', 'I', 'A', 'An', 'The', 'But', 'If', 'So', 'He', 'She', 'They', 'There', 'Are', 'Is', 'Be',
-                 'You', 'Able', 'About','Across', 'After', 'All', 'Almost', 'Also', 'Am', 'Among', 'And', 'Any', 'As',
+                 'You', 'Able', 'About', 'Across', 'After', 'All', 'Almost', 'Also', 'Am', 'Among', 'And', 'Any', 'As',
                  'At', 'Because', 'Been', 'By', 'Best', 'Can', 'Cannot', 'Could', 'Dear', 'Did', 'Do', 'Does', 'Either',
                  'Else', 'Ever', 'Every', 'For', 'From', 'Get', 'Got', 'Had', 'Has', 'Have', 'He', 'Her', 'Hers', 'Him',
                  'His', 'How', 'However', 'In', 'Into', 'It', 'Its', 'Just', 'Least', 'Let', 'Like', 'Likely', 'May',
