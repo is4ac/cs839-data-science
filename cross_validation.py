@@ -56,7 +56,7 @@ def split_data(data, labels, ids, folds):
            test_labels_list, train_id_list, test_id_list
     
 def cross_validation(train_data_list, train_labels_list, test_data_list,\
-                     test_labels_list, classifier, folds):
+                     test_labels_list, test_ids_list, classifier, folds):
     if classifier == 'dt':
         # use decision tree 
         clf = tree.DecisionTreeClassifier()
@@ -75,20 +75,45 @@ def cross_validation(train_data_list, train_labels_list, test_data_list,\
     precisions = []
     recalls = []
     predictions = []
+    actual_labels = []
     for i in range(0, folds):
         train_data, test_data = train_data_list[i], test_data_list[i]
         train_labels, test_labels = train_labels_list[i], test_labels_list[i]
+        test_ids = test_ids_list[i]
         features = train_data.columns[3:-1]
         
         clf.fit(train_data, train_labels)
         test_predict = clf.predict(test_data)
         test_predict = convert_to_binary(test_predict)
+
+        test_predict = post_processing(test_predict, test_data, test_ids)
+
         precisions.append(precision_score(test_labels, test_predict))
         recalls.append(recall_score(test_labels, test_predict))
         predictions.append(test_predict)
+        actual_labels.append(test_labels)
     avg_P = numpy.mean(precisions)
     avg_R = numpy.mean(recalls)
-    return avg_P, avg_R, predictions
+    return avg_P, avg_R, predictions, actual_labels
+
+def post_processing(predicted_labels, data, ids):
+    new_predicted_labels = list(predicted_labels)
+
+    superset = [-1, -1, -1] # start, end, index
+    for i in range(0, len(predicted_labels)):
+        if predicted_labels[i] == 1:
+            # check to see if a prediction falls within a superset (e.g. Will vs Will Smith)
+            start, end = data.iloc[i].iloc[1], data.iloc[i].iloc[2]
+            if start == superset[0] and end > superset[1]:
+                if superset[2] != -1:
+                    new_predicted_labels[superset[2]] = 0
+                superset[0], superset[1], superset[2] = start, end, i
+            elif start > superset[0] and end <= superset[1]:
+                new_predicted_labels[i] = 0
+            elif start > superset[0] and end > superset[1]:
+                superset[0], superset[1], superset[2] = start, end, i
+
+    return new_predicted_labels
 
 def convert_to_binary(list):
     new_list = []
@@ -116,9 +141,11 @@ def write_to_file(test_data, test_labels, test_ids, test_predictions, filename):
         for i in range(0, FOLDS):
             predictions.extend(test_predictions[classifier][i])
         predictions = pd.DataFrame({classifier: predictions}) 
-        dfs.append(predictions)    
+        dfs.append(predictions)
     df = pd.concat(dfs, axis = 1)
     df.to_csv(filename, index = False)
+    df = df[(df.class_label != df.dt) | (df.class_label != df.rf)]
+    df.to_csv('stage1_docs/Data/results.csv', index = False)
     
     
 def main():
@@ -129,17 +156,20 @@ def main():
                 split_data(data, labels, ids, FOLDS)
     # don't do svm, takes too long and inaccurate
     #classifiers = ['dt', 'rf', 'svm', 'linReg', 'logReg']
-    classifiers = ['dt', 'rf', 'linReg', 'logReg']
+    #classifiers = ['dt', 'rf', 'linReg', 'logReg']
+    classifiers = ['dt', 'rf']
     precisions = [] # list of precisions from classifiers
     recalls = [] # list of recalls from classifiers
     F1scores = [] 
     predictions = {}
+    classifier_labels = {}
     for classifier in classifiers:
-        P, R, preds = cross_validation(train_data, train_labels, test_data,\
-                                 test_labels, classifier, FOLDS)
+        P, R, preds, actual = cross_validation(train_data, train_labels, test_data,\
+                                 test_labels, test_ids, classifier, FOLDS)
         precisions.append(P)
         recalls.append(R)
         predictions[classifier] = preds
+        classifier_labels[classifier] = actual
         F1 = 2*P*R/(P+R)
         F1scores.append(F1)
         print ('P, R, and F1 scores for classifier {} are: '.format(classifier), P, R, F1) 
@@ -153,8 +183,9 @@ def main():
     #print('%s has the highest precision score %s' % (bestP_clf, max(precisions)))
     #print('%s has the highest recall score %s' % (bestR_clf, max(recalls)))
     print('%s has the highest F1 score %s' % (bestF1_clf, max(F1scores)))
-    write_to_file(test_data, test_labels, test_ids, predictions, DATA+'results.csv')
-    
+
+    write_to_file(test_data, test_labels, test_ids, predictions, DATA+'results2.csv')
+
 ##   
 ### debugging
 ##df = pd.read_csv(DATA + 'train_data.csv')
@@ -165,5 +196,4 @@ def main():
 ##df = pd.DataFrame((data, labels, predictions)
 
 if __name__ == "__main__":
-    df = main()
-    
+    main()
