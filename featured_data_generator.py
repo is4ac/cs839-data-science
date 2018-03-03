@@ -311,15 +311,15 @@ def in_blacklist(word_string):
             ])
                   
     for word in organizations:
-        if word.lower == word_string.lower():
+        if word.lower() == word_string.lower():
             return 1
 
     for word in clubs:
-        if word.lower == word_string.lower():
+        if word.lower() == word_string.lower():
             return 1
 
     for word in locations:
-        if word.lower == word_string.lower():
+        if word.lower() == word_string.lower():
             return 1
     
     if word_string in others:
@@ -506,7 +506,6 @@ def contains_common_word(word_string):
     return 0
 
 
-
 def is_near_capitalized(words, start, end):
     '''
     Checks to see if the words are near another capitalized word (that could be part of the name) but not counting
@@ -524,15 +523,67 @@ def is_near_capitalized(words, start, end):
     return near_capitalized
 
 
+def checkTitlePrefix(word):
+    title_words = ['Dr.', 'Esq.', 'Hon.', 'Jr.', 'Mr.', 'Mrs.', 'Ms.', 'Messrs.',
+                   'Mmes.', 'Msgr.', 'Prof.', 'Rev.', 'Rt. Hon.', 'Sr.', 'St.', 'Sen.', 'Sens.']
+    # check if word is a title prefix
+    if word in title_words:
+        return True
+    else:
+        return False
+
+
+def checkHyphen(word):
+    # return true if string has punctuations in cases like Billings-Lads
+    character_frequency = collections.Counter(word)
+    if word[0].isalpha() and word[-1].isalpha() and character_frequency['-'] == 1 and containUppercase(word):
+        return True
+    else:
+        return False
+
+
+def checkApostrophe(word):
+    # return true if string is name with apostrophe lik O'Dowd
+    character_frequency = collections.Counter(word)
+    if character_frequency['\''] == 1 and containUppercase(word):
+        return True
+    else:
+        return False
+
+
+def contains_punctuation(word):
+    retval = False
+    for char in word:
+        if char in string.punctuation:
+            retval = True
+            break
+    return retval
+
+
 def contains_punctuation_except_some(word):
     '''
     Returns true if the word contains a punctuation besides . or ' or - (a name might contain a . or ' or -, e.g. O'Dowd or J.F. Billings-Ladson)
     '''
+    retval = False
+    words = word.split()  # split string by space
     punctuation = [c for c in string.punctuation if c != '.' and c != '\'' and c != '-']
-    for char in word:
-        if char in punctuation:
-            return True
-    return False
+    if is_name_suffix(word):
+        retval = False  # do not get rid of string with name suffix
+    else:
+        for word in words:
+            if checkTitlePrefix(word):
+                retval = True  # get rid of this
+                break
+            elif contains_punctuation(word):
+                if checkHyphen(word) or checkApostrophe(word):
+                    retval = False
+                    break
+                else:
+                    for char in word:
+                        if char in punctuation:
+                            retval = True
+                            break
+    return retval
 
 
 def num_of_labels(data):
@@ -570,7 +621,7 @@ def split_string(word_string):
         split_words.append(word_string)
         return split_words
         # if word_string starts and ends with alphabetic character but has a hyphen in the middle
-    elif word_string[0].isalpha and word_string[-1].isalpha and word_string_frequency['-'] == 1 and containUppercase(word_string):
+    elif word_string[0].isalpha() and word_string[-1].isalpha() and word_string_frequency['-'] == 1 and containUppercase(word_string):
         split_words.append(word_string)
         return split_words
     # if word_string starts or ends with tags, return it
@@ -770,11 +821,11 @@ def checkOthers(words, before_index, after_index):
     other_words = ['theater', 'theaters', 'theatre', 'theatres', 'studio', 'studios', 'hotel', 'bank', 'cinema', 'cinemas',
                    'west', 'east', 'north', 'south', 'western', 'eastern', 'northern', 'southern', 'conference', 'festival']
     
-    if words[before_index].lower in preceeding_words or words[after_index].lower in succeeding_words:
+    if words[before_index].lower() in preceeding_words or words[after_index].lower() in succeeding_words:
         return 1
     else:
         for word in words[before_index+1:after_index]:
-            if word.lower in other_words:
+            if word.lower() in other_words:
                 return 1
         return 0
 
