@@ -1,7 +1,7 @@
 # cs839-data-science
 Team Big HIT for CS 839: Data Sciences.
 
-*H*oai Nguyen, *I*saac Sung, and *T*rang Vu.
+**H**oai Nguyen, **I**saac Sung, and **T**rang Vu.
 
 Information Extraction of person names from various news articles.
 
