@@ -26,6 +26,7 @@ import pandas as pd
 import collections
 import nltk
 import csv
+import random
 
 # list directory paths        
 MarkedUp = 'stage1_docs/Data/MarkedUp/'
@@ -843,15 +844,24 @@ def createDevAndTestFileSet():
     Returns 'train_file_names' and 'test_file_names'."""
     train_file_names = []
     test_file_names = []
+
+    #file_names = []
+
+    '''
+    for file_name in os.listdir(MarkedUp):
+        if file_name != '.DS_Store':
+            file_names.append(file_name)
+    '''
+
     for file_name in os.listdir(TrainingSet):
         train_file_names.append(file_name)
     for file_name in os.listdir(TestSet):
         test_file_names.append(file_name)
     '''
-    # shuffle the list, and create training and testing list
+     shuffle the list, and create training and testing list
     random.seed(1) # fix the seed for debugging purposes
     random.shuffle(file_names)
-    return file_names[ : int(len(file_names) * 0.66)], file_names[int(len(file_names) * 0.66) : ]
+    return file_names[0:int(len(file_names) * 0.66)], file_names[int(len(file_names) * 0.66):]
     '''
     return train_file_names, test_file_names
 

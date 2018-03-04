@@ -146,18 +146,34 @@ def write_to_file(test_data, test_labels, test_ids, test_predictions, filename):
     df.to_csv(filename, index = False)
     df = df[(df.class_label != df.dt) | (df.class_label != df.rf)]
     df.to_csv('stage1_docs/Data/results.csv', index = False)
-    
-    
+
+def testSetJ():
+    train_data, train_labels, train_ids = read_data('train_data.csv')
+    test_data, test_labels, test_ids = read_data('test_data.csv')
+
+    clf = RandomForestClassifier()
+    clf.fit(train_data, train_labels)
+    test_predict = clf.predict(test_data)
+    test_predict = post_processing(test_predict, test_data, test_ids)
+
+    P = precision_score(test_labels, test_predict)
+    R = recall_score(test_labels, test_predict)
+    F1 = 2 * P * R / (P + R)
+    print('P, R, and F1 scores for classifier rf are: ', P, R, F1)
+
 def main():
+    #testSetJ()
+
     # get train data and labels:
     data, labels, ids = read_data('train_data.csv')
+
     # split data into folds
     train_data, train_labels, test_data, test_labels, train_ids, test_ids =\
                 split_data(data, labels, ids, FOLDS)
     # don't do svm, takes too long and inaccurate
     #classifiers = ['dt', 'rf', 'svm', 'linReg', 'logReg']
     #classifiers = ['dt', 'rf', 'linReg', 'logReg']
-    classifiers = ['dt', 'rf']
+    classifiers = ['rf']
     precisions = [] # list of precisions from classifiers
     recalls = [] # list of recalls from classifiers
     F1scores = [] 
