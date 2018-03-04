@@ -1,6 +1,8 @@
 # cs839-data-science
 Team Big HIT for CS 839: Data Sciences.
+
 Hoai Nguyen, Isaac Sung, and Trang Vu.
+
 Information Extraction of person names from various news articles.
 
 ## How to run using Make
