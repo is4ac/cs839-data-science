@@ -7,6 +7,7 @@ description: Project CS 839. Name entity information extraction from text docume
 # Stage 1
 
 - [All marked up documents](https://github.com/is4ac/cs839-data-science/tree/master/stage1_docs/Data/Cleaned_MarkedUp)
+  - [README](https://github.com/is4ac/cs839-data-science/blob/master/stage1_docs/Data/Cleaned_MarkedUp/README.txt)
 - [Set I documents](https://github.com/is4ac/cs839-data-science/tree/master/stage1_docs/Data/trainingSet)
 - [Set J documents](https://github.com/is4ac/cs839-data-science/tree/master/stage1_docs/Data/testSet)
 - [Code for this project](https://github.com/is4ac/cs839-data-science)
