@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Team Big HIT CS 839
-description: Project CS 839. Name entity information extraction from text documents.
+description: Project CS 839. Name entity information extraction from various news articles covering movies, entertainment, and politics.
 ---
 
 # Stage 1
@@ -12,4 +12,4 @@ description: Project CS 839. Name entity information extraction from text docume
 - [Set J documents](https://github.com/is4ac/cs839-data-science/tree/master/stage1_docs/Data/testSet)
 - [Code for this project](https://github.com/is4ac/cs839-data-science)
 - [Zip file of all of the above](../)
-- [PDF report](../)
+- [PDF report](https://github.com/is4ac/cs839-data-science/blob/master/CS839_Stage1_Report.pdf)
