@@ -83,7 +83,7 @@ def cross_validation(train_data_list, train_labels_list, test_data_list,\
         features = train_data.columns[3:-1]
         
         clf.fit(train_data, train_labels)
-        test_predict = clf.predict(test_data)
+        test_predict = clf.predict_proba(test_data)
         test_predict = convert_to_binary(test_predict)
 
         test_predict = post_processing(test_predict, test_data, test_ids)
@@ -118,7 +118,7 @@ def post_processing(predicted_labels, data, ids):
 def convert_to_binary(list):
     new_list = []
     for n in list:
-        if n < 0.5:
+        if n[1] < 0.75:
             new_list.append(0)
         else:
             new_list.append(1)
@@ -153,17 +153,16 @@ def testSetJ():
 
     clf = RandomForestClassifier()
     clf.fit(train_data, train_labels)
-    test_predict = clf.predict(test_data)
+    test_predict = clf.predict_proba(test_data)
+    test_predict = convert_to_binary(test_predict)
     test_predict = post_processing(test_predict, test_data, test_ids)
 
     P = precision_score(test_labels, test_predict)
     R = recall_score(test_labels, test_predict)
     F1 = 2 * P * R / (P + R)
-    print('P, R, and F1 scores for classifier rf are: ', P, R, F1)
+    print('P, R, and F1 scores for classifier rf on the test set J are: ', P, R, F1)
 
 def main():
-    #testSetJ()
-
     # get train data and labels:
     data, labels, ids = read_data('train_data.csv')
 
@@ -173,7 +172,7 @@ def main():
     # don't do svm, takes too long and inaccurate
     #classifiers = ['dt', 'rf', 'svm', 'linReg', 'logReg']
     #classifiers = ['dt', 'rf', 'linReg', 'logReg']
-    classifiers = ['rf']
+    classifiers = ['dt', 'rf']
     precisions = [] # list of precisions from classifiers
     recalls = [] # list of recalls from classifiers
     F1scores = [] 
@@ -213,3 +212,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    testSetJ()
