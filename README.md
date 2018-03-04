@@ -7,5 +7,5 @@ Information Extraction of person names from various news articles.
 
 ## How to run using Make
 1. Clone / download the repository.
-2. Run `make`.
+2. Run `make` from the main directory of the repository.
 3. This will present the results of the cross validation of the decision tree and random forest classifier on our training data.
