@@ -48,9 +48,6 @@ def extract_info_from_page(link):
     # extract Movie Title
     title = bs.select_one('div#ratingWidget p strong').string
 
-    # extract Director Name
-    director = bs.select_one('span[itemprop="director"] a span').string
-
     # extract content rating (G, PG, PG-13, etc)
     content_rating = bs.select_one('span[itemprop="contentRating"]')
     if content_rating is None:
@@ -66,22 +63,68 @@ def extract_info_from_page(link):
     else:
         running_time = bs.select('time[itemprop="duration"]')[1].string
         running_time = running_time.split()[0]
-    print(running_time)
+    #print(running_time)
 
     # extract release year
-    year = bs.select_one('')
-
-
+    #year = bs.select_one('')
+    
+    # extract countries, languages, alternative titles, production companies:
+    details = bs.select('div.txt-block')
+    countries = []
+    languages = []
+    alternative_titles = [] # contains at most 1 alternative title
+    production_companies = []
+    for info in details:
+        # extract countries
+        if info.h4 is None:
+            continue
+        else:
+            if info.h4.text == 'Country:':
+                countries = [country.text for country in info.select('a[itemprop=\'url\']')]
+            # extract languages
+            if info.h4.text == 'Language:':
+                languages = [language.text for language in info.select('a[itemprop=\'url\']')]
+            # extract alternative titles
+            if info.h4.text == 'Also Known As:':
+                strings = [string for string in info.stripped_strings]
+                alternative_titles.append(strings[1]) # assuming 'Also Known As' is the first string in the list
+            # extract production companies
+            if info.h4.text == 'Production Co:':
+                production_companies = [company.text for company in info.select('span[itemprop="creator"] a span')]
+            
+    # extract director names
+    directors_list = bs.select('div.credit_summary_item span[itemprop="director"] a span')
+    directors = [director.text for director in directors_list]
+        
+    # extract writer names
+    writers_list = bs.select('div.credit_summary_item span[itemprop="creator"] a span')
+    writers = [writer.text for writer in writers_list]
+    
+    # extract actor names: only the top first 5 names
+    actors_list = bs.select('td.itemprop a span.itemprop')
+    actors = [actor.text for actor in actors_list]
+    actors = actors[0:5]
+    
+    return directors, writers, actors, countries, languages, alternative_titles, production_companies
+    
+    
+    
 def main():
     '''
     The main function that searches through the imdb website and crawls for movie pages and extracts information from them.
     '''
     links = article_spider_multi_page(IMDB_BASE_URL, IMDB_SEARCH_LINK, start_page, end_page, LINK_SEARCH_TERM)
-    print(links)
-
+    print("number of links: ", len(links))
     for link in links:
-        extract_info_from_page(link)
+        A, B, C, D, E, F, G = extract_info_from_page(link)
+        print (A)
+        print (B)
+        print (C)
+        print (D)
+        print (E)
+        print (F)
+        print (G)
 
 
 if __name__ == '__main__':
-    main()
+    links = main()
