@@ -113,7 +113,7 @@ def get_urls():
         page_url = START_PAGE % str(i)
         print ('Craw for movie links on page: ' + page_url)
         source = requests.get(page_url, allow_redirects = True)
-        plain_text = source.text  # call attribute 'text' of object 'source'
+        plain_text = source.tex
         soup = BeautifulSoup(plain_text, 'html.parser')
         for a in soup.find_all("a", class_="title result"):
             movie_url = 'https://www.themoviedb.org' + a.get('href')
