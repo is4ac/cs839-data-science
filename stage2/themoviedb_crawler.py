@@ -114,9 +114,9 @@ def get_all_urls():
     # We first read from 'Data/themoviedb_crawl_urls
     urls = []
     START_PAGE = 'https://www.themoviedb.org/movie/top-rated?page=%s'
-    for i in range(1, 3):
+    for i in range(1, 276):
         page_url = START_PAGE % str(i)
-        print ('Craw for movie links on page: ' + page_url)
+        print ('Crawl for movie links on page: ' + page_url)
         source = requests.get(page_url, allow_redirects = True)
         plain_text = source.text
         soup = BeautifulSoup(plain_text, 'html.parser')
