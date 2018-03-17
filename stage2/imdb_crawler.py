@@ -83,6 +83,43 @@ def extract_info_from_page(link):
     # 7) Extract release date
     year = bs.select_one('div#ratingWidget p').get_text().split()[-1]
     year = year.translate({ord(c): None for c in '()'})
+    
+    # extract countries, languages, alternative titles, production companies:
+    details = bs.select('div.txt-block')
+    countries = []
+    languages = []
+    alternative_titles = [] # contains at most 1 alternative title
+    production_companies = []
+    for info in details:
+        # extract countries
+        if info.h4 is None:
+            continue
+        else:
+            if info.h4.text == 'Country:':
+                countries = [country.text for country in info.select('a[itemprop=\'url\']')]
+            # extract languages
+            if info.h4.text == 'Language:':
+                languages = [language.text for language in info.select('a[itemprop=\'url\']')]
+            # extract alternative titles
+            if info.h4.text == 'Also Known As:':
+                strings = [string for string in info.stripped_strings]
+                alternative_titles.append(strings[1]) # assuming 'Also Known As' is the first string in the list
+            # extract production companies
+            if info.h4.text == 'Production Co:':
+                production_companies = [company.text for company in info.select('span[itemprop="creator"] a span')]
+            
+    # extract director names
+    directors_list = bs.select('div.credit_summary_item span[itemprop="director"] a span')
+    directors = [director.text for director in directors_list]
+        
+    # extract writer names
+    writers_list = bs.select('div.credit_summary_item span[itemprop="creator"] a span')
+    writers = [writer.text for writer in writers_list]
+    
+    # extract actor names: only the top first 5 names
+    actors_list = bs.select('td.itemprop a span.itemprop')
+    actors = [actor.text for actor in actors_list]
+    actors = actors[0:5]
 
     # 13) Box office records
     budget = "n/a"
@@ -111,19 +148,34 @@ def extract_info_from_page(link):
                     cumulative_gross = string
                     if cumulative_gross[-1] == ",":
                         cumulative_gross = cumulative_gross[0:-1]
-    print(cumulative_gross)
+    #print(cumulative_gross)
+    
+    return title, rating, plot_keywords, content_rating, running_time, genres, year, directors, writers, actors, \
+           countries, languages, alternative_titles, production_companies
 
-
-
+    
 def main():
     '''
     The main function that searches through the imdb website and crawls for movie pages and extracts information from them.
     '''
     links = article_spider_multi_page(IMDB_BASE_URL, IMDB_SEARCH_LINK, start_page, end_page, LINK_SEARCH_TERM)
-    print(links)
-
+    print("number of links: ", len(links))
     for link in links:
-        extract_info_from_page(link)
+        A, B, C, D, E, F, G, H, I, J, K, L, M, N = extract_info_from_page(link)
+        print (A)
+        print (B)
+        print (C)
+        print (D)
+        print (E)
+        print (F)
+        print (G)
+        print(H)
+        print(I)
+        print(J)
+        print(K)
+        print(L)
+        print(M)
+        print(N)
 
 
 if __name__ == '__main__':
