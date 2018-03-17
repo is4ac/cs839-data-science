@@ -3,12 +3,14 @@ __author__ = 'Isaac Sung'
 import requests
 from bs4 import BeautifulSoup
 from article_crawler import article_spider_multi_page
+import pandas as pd
 
 IMDB_BASE_URL = 'http://www.imdb.com'
-IMDB_SEARCH_LINK = 'http://www.imdb.com/search/title?title_type=feature&release_date=1975-01-01,2017-12-31&user_rating=5.0,10.0&certificates=US%3Ag,US%3Apg,US%3Apg_13,US%3Ar&countries=us&sort=year,asc&page='
+#IMDB_SEARCH_LINK = 'http://www.imdb.com/search/title?title_type=feature&release_date=1975-01-01,2017-12-31&user_rating=5.0,10.0&certificates=US%3Ag,US%3Apg,US%3Apg_13,US%3Ar&countries=us&sort=year,asc&page='
+IMDB_SEARCH_LINK = 'http://www.imdb.com/search/title?title_type=feature&release_date=,2018-03-01&user_rating=7.5,&num_votes=100,&sort=moviemeter,asc'
 LINK_SEARCH_TERM = 'div.lister-item-image a'
 start_page = 1
-end_page = 2
+end_page = 70
 
 
 def extract_duration(runtime):
@@ -54,22 +56,19 @@ def extract_info_from_page(link):
     # 3) extract plot keywords
     keywords = bs.select('span[itemprop="keywords"]')
     keywords = [keyword.string for keyword in keywords]
-    plot_keywords = ""
-    for keyword in keywords:
-        plot_keywords += keyword
-        if keyword != keywords[-1]:
-            plot_keywords += ";"
+    keywords = list_to_string(keywords)
 
     # 4) extract content rating (G, PG, PG-13, etc)
-    content_rating = bs.select_one('span[itemprop="contentRating"]')
+    content_rating = bs.select_one('meta[itemprop="contentRating"]')
     if content_rating is None:
         content_rating = "Not Rated"
     else:
-        content_rating = content_rating.string
+        content_rating = content_rating['content']
 
     # 5) extract running time in minutes
     running_time = bs.select('time[itemprop="duration"]')
     if len(running_time) < 2:
+        #print (running_time)
         running_time = running_time[0].string
         running_time = extract_duration(running_time)
     else:
@@ -79,22 +78,43 @@ def extract_info_from_page(link):
     # 6) Extract genres
     genres = bs.select('a[href$="tt_stry_gnr"]')
     genres = [genre.string.strip() for genre in genres]
-
+    genres = list_to_string(genres)
+    
     # 7) Extract release date
     year = bs.select_one('div#ratingWidget p').get_text().split()[-1]
     year = year.translate({ord(c): None for c in '()'})
+        
+    # 8) Extract director names
+    directors_list = bs.select('div.credit_summary_item span[itemprop="director"] a span')
+    directors = [director.text for director in directors_list]
+    directors = list_to_string(directors)
     
-    # extract countries, languages, alternative titles, production companies:
+    # 9) Extract writer names
+    writers_list = bs.select('div.credit_summary_item span[itemprop="creator"] a span')
+    writers = [writer.text for writer in writers_list]
+    writers = list_to_string(writers)
+    
+    # 10) Extract actor names: only the top first 5 names
+    actors_list = bs.select('td.itemprop a span.itemprop')
+    actors = [actor.text for actor in actors_list]
+    actors = actors[0:5]
+    actors = list_to_string(actors)
+
+    # 11-17) 
     details = bs.select('div.txt-block')
     countries = []
     languages = []
     alternative_titles = [] # contains at most 1 alternative title
     production_companies = []
+    budget = []
+    opening_weekend = []
+    gross_usa = []
+    cumulative_gross = []
     for info in details:
-        # extract countries
         if info.h4 is None:
             continue
         else:
+            # extract countries
             if info.h4.text == 'Country:':
                 countries = [country.text for country in info.select('a[itemprop=\'url\']')]
             # extract languages
@@ -107,76 +127,67 @@ def extract_info_from_page(link):
             # extract production companies
             if info.h4.text == 'Production Co:':
                 production_companies = [company.text for company in info.select('span[itemprop="creator"] a span')]
-            
-    # extract director names
-    directors_list = bs.select('div.credit_summary_item span[itemprop="director"] a span')
-    directors = [director.text for director in directors_list]
+            # extract budget
+            if info.h4.text == 'Budget:':
+                strings = [string for string in info.stripped_strings]
+                budget.append(strings[1].replace(',', ''))
+            if info.h4.text == 'Opening Weekend USA:':
+                strings = [string for string in info.stripped_strings]
+                opening_weekend.append(strings[1].replace(',', ''))
+            if info.h4.text == 'Gross USA:':
+                strings = [string for string in info.stripped_strings]
+                gross_usa.append(strings[1].replace(',', ''))
+            if info.h4.text == 'Cumulative Worldwide Gross:':
+                strings = [string for string in info.stripped_strings]
+                cumulative_gross.append(strings[1].replace(',', ''))
+                
+    countries = list_to_string(countries)
+    languages = list_to_string(languages)
+    alternative_titles = list_to_string(alternative_titles)
+    production_companies = list_to_string(production_companies)
+    budget = list_to_string(budget)
+    opening_weekend = list_to_string(opening_weekend)
+    gross_usa = list_to_string(gross_usa)
+    cumulative_gross = list_to_string(cumulative_gross)
+    
+    return [title, actors,	directors,	writers,	genres, keywords,\
+           content_rating,	running_time,	year,	languages,	rating,\
+           budget,	cumulative_gross,	opening_weekend,	production_companies,\
+           countries,	alternative_titles]
+
+def list_to_string(entity):
+    # convert an entity list to string
+    str = ''
+    if type(entity) == list and len(entity) > 1:
+        for i in range(0, len(entity) - 1):
+            str = str + entity[i] + ';'
+        str = str + entity[-1]
+    elif type(entity) == list and len(entity) == 1:
+        str = entity[0]
+    elif type(entity) != list:
+        str = entity
+    return str
         
-    # extract writer names
-    writers_list = bs.select('div.credit_summary_item span[itemprop="creator"] a span')
-    writers = [writer.text for writer in writers_list]
-    
-    # extract actor names: only the top first 5 names
-    actors_list = bs.select('td.itemprop a span.itemprop')
-    actors = [actor.text for actor in actors_list]
-    actors = actors[0:5]
-
-    # 13) Box office records
-    budget = "n/a"
-    opening_weekend = "n/a"
-    gross_usa = "n/a"
-    cumulative_gross = "n/a"
-    txt_blocks = bs.select('div.txt-block')
-    for block in txt_blocks:
-        text = block.get_text()
-        text = text.split()
-        if "Budget:" in text[0]:
-            budget = text[0][7:]
-        elif "Opening" in text[0]:
-            for string in text:
-                if string[0] == "$":
-                    opening_weekend = string[0:-1]
-        elif "Gross" in text[0]:
-            for string in text:
-                if string[0] == "$":
-                    gross_usa = string
-                    if gross_usa[-1] == ',':
-                        gross_usa = gross_usa[0:-1]
-        elif "Cumulative" in text[0]:
-            for string in text:
-                if string[0] == "$":
-                    cumulative_gross = string
-                    if cumulative_gross[-1] == ",":
-                        cumulative_gross = cumulative_gross[0:-1]
-    #print(cumulative_gross)
-    
-    return title, rating, plot_keywords, content_rating, running_time, genres, year, directors, writers, actors, \
-           countries, languages, alternative_titles, production_companies
-
-    
 def main():
     '''
     The main function that searches through the imdb website and crawls for movie pages and extracts information from them.
     '''
     links = article_spider_multi_page(IMDB_BASE_URL, IMDB_SEARCH_LINK, start_page, end_page, LINK_SEARCH_TERM)
     print("number of links: ", len(links))
+    # CSV tables' columns
+    headers = ['title', 'cast',	'directors',	'writers',	'genres',\
+               'keywords',	'content_rating,', 'run_time', 'release_year',\
+               'languages',	'rating',	'budget',	'revenue',	'opening_weekend_revenue',\
+               'production_companies',	'production_countries',	'alternative_titles']
+    tuples = []
     for link in links:
-        A, B, C, D, E, F, G, H, I, J, K, L, M, N = extract_info_from_page(link)
-        print (A)
-        print (B)
-        print (C)
-        print (D)
-        print (E)
-        print (F)
-        print (G)
-        print(H)
-        print(I)
-        print(J)
-        print(K)
-        print(L)
-        print(M)
-        print(N)
-
+        tuple = extract_info_from_page(link)
+        tuples.append(tuple)
+    # create pandas dataframe
+    df = pd.DataFrame(tuples, columns = headers)
+    # write to csv
+    df.to_csv('IMDb_movies.csv', encoding = 'utf-8', index = False)        
+        
 
 if __name__ == '__main__':
     main()
