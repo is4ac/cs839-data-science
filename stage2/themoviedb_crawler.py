@@ -2,6 +2,7 @@ __author__ = 'Hoai Nguyen'
 
 import csv
 import requests
+import os
 from bs4 import BeautifulSoup
 
 TITLE = 'Title'
@@ -104,33 +105,68 @@ def get_entity(url):
         row.append(entity[att])
     return row
 
-def get_urls():
-    """Returns all links to crawl."""
-    urls = ['https://www.themoviedb.org/movie/399055-the-shape-of-water']
+def get_all_urls():
+    """Returns all links to crawl. This function will crawl everything
+    from the website. So could be slow. 
+
+    Used only to generate the urls once.
     """
+    # We first read from 'Data/themoviedb_crawl_urls
+    urls = []
     START_PAGE = 'https://www.themoviedb.org/movie/top-rated?page=%s'
-    for i in range(1, 2):
+    for i in range(1, 3):
         page_url = START_PAGE % str(i)
         print ('Craw for movie links on page: ' + page_url)
         source = requests.get(page_url, allow_redirects = True)
-        plain_text = source.tex
+        plain_text = source.text
         soup = BeautifulSoup(plain_text, 'html.parser')
         for a in soup.find_all("a", class_="title result"):
             movie_url = 'https://www.themoviedb.org' + a.get('href')
             urls.append(movie_url)
-    """
     return urls
 
+CRAWLED_URLS = 'Data/themoviedb_crawled_urls.txt'
+
+def get_urls():
+    """Returns a list of url to crawl. Skip the one already been crawled."""
+    ALL_URLS = 'Data/themoviedb_all_urls.txt'
+    if os.path.exists(ALL_URLS) or os.path.isfile(ALL_URLS):
+        print('Skip creating ' + ALL_URLS)
+    else:
+        print('Creating ' + ALL_URLS)
+        with open(ALL_URLS, 'w') as text_file:
+            for url in get_all_urls():
+                text_file.write(url + '\n')
+    # Now, have a set of all urls we have to crawl.
+    all_urls = set()
+    with open(ALL_URLS) as f:
+        all_urls.update(f.readlines())
+    # Next, build a set of crawed urls by reading from ALL_URLS.
+    # This set is used to skip the urls that we have crawled.
+    crawled_urls = set()
+    # Next, for each url in ALL_URLS, check if it has been crawled
+    # A crawled url must exist in CRAWLED_URLS file.
+    if os.path.exists(CRAWLED_URLS):
+        with open(CRAWLED_URLS) as f:
+            crawled_urls.update(f.readlines())
+    return all_urls - crawled_urls
+
 def main():
-    """
-    This is comment in python 
-    for multiple lines
-    """
-    csvfile = open('movies.csv', 'w')
+    """Main entry point of the program."""
+    CSV_FILE = 'Data/themoviedb.csv'
+    create_file_for_the_first_time = not os.path.exists(CSV_FILE)
+    csvfile = open(CSV_FILE, 'a')
     writer = csv.writer(csvfile, delimiter='|')
-    writer.writerow(ATTRIBUTES)
-    for url in get_urls():
-        writer.writerow(get_entity(url))
+    if (create_file_for_the_first_time):
+        writer.writerow(ATTRIBUTES)
+    with open(CRAWLED_URLS, 'a') as crawled_url_file:
+        urls = get_urls()
+        print('Total url needs to crawl: ' + str(len(urls)))
+        for url in urls:
+            print('Crawling ' + url)
+            writer.writerow(get_entity(url))
+            crawled_url_file.write(url)
+    csvfile.close()
 
 if __name__ == "__main__":
     main()
