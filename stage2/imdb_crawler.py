@@ -20,22 +20,37 @@ def extract_duration(runtime):
     given a string in the format "1h 20min" extracts the running time in minutes
     '''
     runtime = runtime.split()
-    hr = runtime[0]
-    minutes = runtime[1]
+    if len(runtime) < 1:
+        return "not available"
 
+    hr_min = 0
+    minutes = 0
+    hr = runtime[0]
     ind = hr.find("h")
+    ind2 = hr.find("min")
     if ind != -1:
         hr = (int)(hr[:ind])
+        hr_min = 60*hr
+    elif ind2 != -1:
+        minutes = (int)(hr[:ind2])
+        return str(minutes)
     else:
         print("h not found in runtime string.")
+        return "not available"
+
+    if len(runtime) < 2:
+        return str(hr_min)
+
+    minutes = runtime[1]
 
     ind = minutes.find("min")
     if ind != -1:
         minutes = (int)(minutes[:ind])
     else:
         print("min not found in runtime string.")
+        return "not available"
 
-    return str((hr*60)+minutes)
+    return str(hr_min+minutes)
 
 
 def extract_info_from_page(link):
@@ -207,7 +222,7 @@ def main():
         with open('IMDb_movies.csv', 'a') as file:
             file.write(','.join(info_list) + '\n')
 
-        time.sleep(0.3)
+        time.sleep(1)
 
     # create pandas dataframe
     #df = pd.DataFrame(tuples, columns = headers)

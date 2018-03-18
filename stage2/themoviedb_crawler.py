@@ -5,25 +5,62 @@ import requests
 import os
 from bs4 import BeautifulSoup
 
-TITLE = 'Title'
-USER_SCORE = 'User Score'
-DIRECTOR = 'Director'
-SCREENPLAY = 'Screenplay'
-TOP_BILLED_CAST = 'Top Billed Cast'
-RELEASE_DATE = 'Release Date'
-CONTENT_RATING = 'Content Rating'
-GENRES = 'Genres'
-KEYWORDS = 'Keywords'
-REVENUE = 'Revenue'
-LANGUAGE = 'Original Language'
-RUNTIME = 'Runtime'
-BUDGET = 'Budget'
-HOMEPAGE = 'Homepage'
+TITLE = 'title'
+TOP_BILLED_CAST = 'cast'
+DIRECTOR = 'directors'
+SCREENPLAY = 'writers'
+GENRES = 'genres'
+KEYWORDS = 'keywords'
+CONTENT_RATING = 'content_rating'
+RUNTIME = 'run_time'
+RELEASE_DATE = 'release_year'
+LANGUAGE = 'languages'
+USER_SCORE = 'rating'
+BUDGET = 'budget'
+REVENUE = 'revenue'
 
-ATTRIBUTES = [TITLE, USER_SCORE, DIRECTOR, SCREENPLAY, TOP_BILLED_CAST, RELEASE_DATE, 
-              CONTENT_RATING, GENRES, KEYWORDS, REVENUE, LANGUAGE, RUNTIME, BUDGET,
-              HOMEPAGE]
-              
+ATTRIBUTES = [TITLE, TOP_BILLED_CAST, DIRECTOR, SCREENPLAY, GENRES, KEYWORDS, CONTENT_RATING, RUNTIME, RELEASE_DATE,
+              LANGUAGE, USER_SCORE, BUDGET, REVENUE]
+
+
+def extract_duration(runtime):
+    '''
+    given a string in the format "1h 20min" extracts the running time in minutes
+    '''
+    runtime = runtime.split()
+    if len(runtime) < 1:
+        return "not available"
+
+    hr_min = 0
+    minutes = 0
+    hr = runtime[0]
+    ind = hr.find("h")
+    ind2 = hr.find("m")
+    if ind != -1:
+        hr = (int)(hr[:ind])
+        hr_min = 60*hr
+    elif ind2 != -1:
+        minutes = (int)(hr[:ind2])
+        return str(minutes)
+    else:
+        print("h not found in runtime string.")
+        return "not available"
+
+    if len(runtime) < 2:
+        return str(hr_min)
+
+    minutes = runtime[1]
+
+    ind = minutes.find("m")
+    if ind != -1:
+        minutes = (int)(minutes[:ind])
+    else:
+        print("min not found in runtime string.")
+        return "not available"
+
+    return str(hr_min+minutes)
+
+
 def get_entity(url):
     """For each url, returns an entity with attributes in ATTRIBUTES."""
     source = requests.get(url, allow_redirects = True)
@@ -53,8 +90,8 @@ def get_entity(url):
                     directors.append(p[0].get_text())
                 if crew.strip() == SCREENPLAY:
                     screenplays.append(p[0].get_text())
-    entity[DIRECTOR] = ",".join(directors)
-    entity[SCREENPLAY] = ",".join(screenplays)
+    entity[DIRECTOR] = ";".join(directors)
+    entity[SCREENPLAY] = ";".join(screenplays)
     
     # Top billed cast
     topcastnames = []
@@ -63,16 +100,24 @@ def get_entity(url):
         p = card.find_all("p")
         # print(p[0].get_text())
         topcastnames.append(p[0].get_text())
-    entity[TOP_BILLED_CAST] = ",".join(topcastnames)
+    entity[TOP_BILLED_CAST] = ";".join(topcastnames)
     
 
     # Extract attribute from fact section.
     facts_section = soup.find("section", class_="facts left_column")
     for line in facts_section.get_text().split('\n'):
-        for att in ATTRIBUTES:
-            if line.startswith(att):
-                value = line.replace(att, '').strip()
-                entity[att] = value
+        if line.startswith('Runtime'):
+            value = line.replace('Runtime', '').strip()
+            entity[RUNTIME] = extract_duration(value)
+        elif line.startswith('Budget'):
+            value = line.replace('Budget', '').strip()
+            entity[BUDGET] = value.replace(',', '')
+        elif line.startswith('Revenue'):
+            value = line.replace('Revenue', '').strip()
+            entity[REVENUE] = value.replace(',', '')
+        elif line.startswith('Original Language'):
+            value = line.replace('Original Language', '').strip()
+            entity[LANGUAGE] = value
 
     # Extract attribute from genres section.
     genres_section = soup.find("section", class_="genres right_column")
@@ -80,7 +125,7 @@ def get_entity(url):
     for line in genres_section.find_all("li"):
         genres.append(line.get_text())
 
-    entity[GENRES] = ",".join(genres)
+    entity[GENRES] = ";".join(genres)
 
     # Extract Release Date.
     release_date = soup.find("div", class_="header_poster_wrapper")
@@ -88,7 +133,11 @@ def get_entity(url):
     entity[RELEASE_DATE] = date.get_text().replace('(', '').replace(')', '')
 
     # Extract Content Rating.
-    content = soup.select_one('div.certification span').string
+    content = soup.select_one('div.certification span')
+    if content is not None:
+        content = content.string
+    else:
+        content = "not available"
     entity[CONTENT_RATING] = content
 
     # Extract Keywords
@@ -97,7 +146,7 @@ def get_entity(url):
     for line in keywords_section.find_all("li"):
         keywords.append(line.get_text())
        
-    entity[KEYWORDS] = ",".join(keywords)
+    entity[KEYWORDS] = ";".join(keywords)
 
     # Construct data to be written to CSV.
     row = []
@@ -153,18 +202,27 @@ def get_urls():
 
 def main():
     """Main entry point of the program."""
+    global ATTRIBUTES
     CSV_FILE = 'Data/themoviedb.csv'
     create_file_for_the_first_time = not os.path.exists(CSV_FILE)
     csvfile = open(CSV_FILE, 'a')
-    writer = csv.writer(csvfile, delimiter='|')
+    writer = csv.writer(csvfile, delimiter=',')
     if (create_file_for_the_first_time):
+        ATTRIBUTES.extend(['opening_weekend_revenue', 'production_companies',
+                           'production_countries', 'alternative_titles'])
         writer.writerow(ATTRIBUTES)
     with open(CRAWLED_URLS, 'a') as crawled_url_file:
+        # throw away extra columns at end that were added to match imdb table
+        if len(ATTRIBUTES) > 13:
+            ATTRIBUTES = ATTRIBUTES[:-4]
+
         urls = get_urls()
         print('Total url needs to crawl: ' + str(len(urls)))
         for url in urls:
             print('Crawling ' + url)
-            writer.writerow(get_entity(url))
+            entities = get_entity(url)
+            entities.extend(['', '', '', ''])
+            writer.writerow(entities)
             crawled_url_file.write(url)
     csvfile.close()
 
