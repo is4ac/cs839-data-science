@@ -4,10 +4,11 @@ import requests
 from bs4 import BeautifulSoup
 from article_crawler import article_spider_multi_page
 import pandas as pd
+import time
 
 IMDB_BASE_URL = 'http://www.imdb.com'
 #IMDB_SEARCH_LINK = 'http://www.imdb.com/search/title?title_type=feature&release_date=1975-01-01,2017-12-31&user_rating=5.0,10.0&certificates=US%3Ag,US%3Apg,US%3Apg_13,US%3Ar&countries=us&sort=year,asc&page='
-IMDB_SEARCH_LINK = 'http://www.imdb.com/search/title?title_type=feature&release_date=,2018-03-01&user_rating=7.5,&num_votes=100,&sort=moviemeter,asc'
+IMDB_SEARCH_LINK = 'http://www.imdb.com/search/title?title_type=feature&release_date=,2018-03-01&user_rating=7.5,&num_votes=100,&sort=moviemeter,asc&page='
 LINK_SEARCH_TERM = 'div.lister-item-image a'
 start_page = 1
 end_page = 70
@@ -45,7 +46,7 @@ def extract_info_from_page(link):
     plain_text = source.text
     bs = BeautifulSoup(plain_text, 'html.parser')
 
-    print(link)
+    #print(link)
 
     # 1) extract Movie Title
     title = bs.select_one('div#ratingWidget p strong').string
@@ -69,8 +70,11 @@ def extract_info_from_page(link):
     running_time = bs.select('time[itemprop="duration"]')
     if len(running_time) < 2:
         #print (running_time)
-        running_time = running_time[0].string
-        running_time = extract_duration(running_time)
+        if len(running_time) < 1:
+            running_time = "not available"
+        else:
+            running_time = running_time[0].string
+            running_time = extract_duration(running_time)
     else:
         running_time = bs.select('time[itemprop="duration"]')[1].string
         running_time = running_time.split()[0]
@@ -172,21 +176,43 @@ def main():
     '''
     The main function that searches through the imdb website and crawls for movie pages and extracts information from them.
     '''
-    links = article_spider_multi_page(IMDB_BASE_URL, IMDB_SEARCH_LINK, start_page, end_page, LINK_SEARCH_TERM)
-    print("number of links: ", len(links))
+    #links = article_spider_multi_page(IMDB_BASE_URL, IMDB_SEARCH_LINK, start_page, end_page, LINK_SEARCH_TERM)
+    #print("number of links: ", len(links))
+
+    #with open('IMDb_all_urls.txt', 'w') as file:
+    #    file.write('\n'.join(links))
+
     # CSV tables' columns
-    headers = ['title', 'cast',	'directors',	'writers',	'genres',\
-               'keywords',	'content_rating,', 'run_time', 'release_year',\
-               'languages',	'rating',	'budget',	'revenue',	'opening_weekend_revenue',\
-               'production_companies',	'production_countries',	'alternative_titles']
+    #headers = ['title', 'cast',	'directors',	'writers',	'genres',\
+    #           'keywords',	'content_rating,', 'run_time', 'release_year',\
+    #           'languages',	'rating',	'budget',	'revenue',	'opening_weekend_revenue',\
+    #           'production_companies',	'production_countries',	'alternative_titles']
+
+    #with open('IMDb_movies.csv', 'w') as file:
+    #    file.write(','.join(headers))
+
+    #with open('IMDb_movies.csv', 'a') as file:
+    #    file.write('\n')
+
+    links = []
+    with open('IMDb_all_urls.txt', 'r') as file:
+        for line in file:
+            links.append(line)
+
     tuples = []
     for link in links:
-        tuple = extract_info_from_page(link)
-        tuples.append(tuple)
+        info_list = extract_info_from_page(link)
+
+        # write tuples to file
+        with open('IMDb_movies.csv', 'a') as file:
+            file.write(','.join(info_list) + '\n')
+
+        time.sleep(0.3)
+
     # create pandas dataframe
-    df = pd.DataFrame(tuples, columns = headers)
+    #df = pd.DataFrame(tuples, columns = headers)
     # write to csv
-    df.to_csv('IMDb_movies.csv', encoding = 'utf-8', index = False)        
+    #df.to_csv('IMDb_movies.csv', encoding = 'utf-8', index = False)
         
 
 if __name__ == '__main__':
