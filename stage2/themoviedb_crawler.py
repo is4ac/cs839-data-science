@@ -88,8 +88,8 @@ def get_entity(url):
     entity[RELEASE_DATE] = date.get_text().replace('(', '').replace(')', '')
 
     # Extract Content Rating.
-    content = soup.find("div", class_="content_score")
-    entity[CONTENT_RATING] = content.get_text().strip()
+    content = soup.select_one('div.certification span').string
+    entity[CONTENT_RATING] = content
 
     # Extract Keywords
     keywords_section = soup.find("section", class_="keywords right_column")
