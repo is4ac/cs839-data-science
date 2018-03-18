@@ -4,6 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 from article_crawler import article_spider_multi_page
 import pandas as pd
+import os
 
 IMDB_BASE_URL = 'http://www.imdb.com'
 #IMDB_SEARCH_LINK = 'http://www.imdb.com/search/title?title_type=feature&release_date=1975-01-01,2017-12-31&user_rating=5.0,10.0&certificates=US%3Ag,US%3Apg,US%3Apg_13,US%3Ar&countries=us&sort=year,asc&page='
@@ -172,21 +173,64 @@ def main():
     '''
     The main function that searches through the imdb website and crawls for movie pages and extracts information from them.
     '''
-    links = article_spider_multi_page(IMDB_BASE_URL, IMDB_SEARCH_LINK, start_page, end_page, LINK_SEARCH_TERM)
-    print("number of links: ", len(links))
     # CSV tables' columns
     headers = ['title', 'cast',	'directors',	'writers',	'genres',\
                'keywords',	'content_rating,', 'run_time', 'release_year',\
                'languages',	'rating',	'budget',	'revenue',	'opening_weekend_revenue',\
                'production_companies',	'production_countries',	'alternative_titles']
     tuples = []
-    for link in links:
-        tuple = extract_info_from_page(link)
-        tuples.append(tuple)
-    # create pandas dataframe
-    df = pd.DataFrame(tuples, columns = headers)
-    # write to csv
-    df.to_csv('IMDb_movies.csv', encoding = 'utf-8', index = False)        
+    # write links to a text file
+    if not os.path.isfile('imdb_urls.txt'):
+        links = article_spider_multi_page(IMDB_BASE_URL, IMDB_SEARCH_LINK, start_page, end_page, LINK_SEARCH_TERM)
+        print("number of links: ", len(links))
+        with open('imdb_urls.txt', 'w') as file:
+            file.write('\n'.join(links))
+    else:
+        if not os.path.isfile('imdb_movies.csv'):
+            with open('imdb_urls.txt', 'r') as f1:
+                with open('imdb_processed_urls.txt', 'w') as f2:
+                    with open('imdb_movies.csv', 'w') as f3:
+                        df_headers = pd.DataFrame(columns = headers)
+                        df_headers.to_csv(f3, encoding = 'latin-1', index = False)
+                        for line in f1:
+                            link = line.strip('\n')
+                            tuple = extract_info_from_page(link)
+                            tuple = pd.Series(tuple, index = headers)
+                            df = df_headers.append(tuple, ignore_index = True)
+                            df.to_csv(f3, mode = 'a', encoding = 'utf-8', index = False, header = False)
+                            f2.write(link + '\n')
+        else:
+            existing_df = pd.read_csv('imdb_movies.csv', encoding = 'latin-1')
+            # get row_count
+            row_count = existing_df.shape[0]
+            # open imdb_urls.txt file and start processing from (row_count)th link
+            with open('imdb_urls.txt', 'r') as f1:
+                lines = f1.readlines()[row_count:]
+                #print (len(lines))
+                #print (row_count)
+            with open('imdb_processed_urls.txt', 'a') as f2:
+                with open('imdb_movies.csv','a', encoding = 'utf-8') as f3:
+                    df_headers = pd.DataFrame(columns = headers)
+                    for line in lines:
+                        link = line.strip('\n')
+                        tuple = extract_info_from_page(link)
+                        tuple = pd.Series(tuple, index = headers)
+                        df = df_headers.append(tuple, ignore_index = True)
+                        df.to_csv(f3, mode = 'a', encoding = 'utf-8', index = False, header = False)
+                        f2.write(link + '\n')
+            
+            
+                        
+                    
+                
+            
+##    for link in links:
+##        tuple = extract_info_from_page(link)
+##        tuples.append(tuple)
+##    # create pandas dataframe
+##    df = pd.DataFrame(tuples, columns = headers)
+##    # write to csv
+##    df.to_csv('IMDb_movies.csv', encoding = 'utf-8', index = False)        
         
 
 if __name__ == '__main__':
