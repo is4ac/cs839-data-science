@@ -62,7 +62,7 @@ def extract_info_from_page(link):
     # 4) extract content rating (G, PG, PG-13, etc)
     content_rating = bs.select_one('meta[itemprop="contentRating"]')
     if content_rating is None:
-        content_rating = "Not Rated"
+        content_rating = ""
     else:
         content_rating = content_rating['content']
 
@@ -71,7 +71,7 @@ def extract_info_from_page(link):
     if len(running_time) < 2:
         # print (running_time)
         if len(running_time) < 1:
-            running_time = "not available"
+            running_time = ""
         else:
             running_time = running_time[0].string
             running_time = extract_duration(running_time)
@@ -180,7 +180,7 @@ def main():
     '''
     # CSV tables' columns
     headers = ['title', 'cast', 'directors', 'writers', 'genres', \
-               'keywords', 'content_rating,', 'run_time', 'release_year', \
+               'keywords', 'content_rating', 'run_time', 'release_year', \
                'languages', 'rating', 'budget', 'revenue', 'opening_weekend_revenue', \
                'production_companies', 'production_countries', 'alternative_titles']
     tuples = []
