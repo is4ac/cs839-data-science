@@ -86,9 +86,9 @@ def get_entity(url):
         p = entry.find_all("p")
         if len(p) == 2:
             for crew in p[1].get_text().split(','):
-                if crew.strip() == DIRECTOR:
+                if crew.strip() == 'Director':
                     directors.append(p[0].get_text())
-                if crew.strip() == SCREENPLAY:
+                if crew.strip() in ['Screenplay', 'Writer', 'Novel', 'Story', 'Author'] :
                     screenplays.append(p[0].get_text())
     entity[DIRECTOR] = ";".join(directors)
     entity[SCREENPLAY] = ";".join(screenplays)
