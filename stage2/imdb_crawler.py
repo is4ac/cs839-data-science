@@ -66,7 +66,7 @@ def extract_info_from_page(link):
 
     # 1) extract Movie Title
     title = bs.select_one('div#ratingWidget p strong').string
-
+    title = '"' + title + '"'
     # 2) extract rating (out of 10)
     rating = bs.select_one('span[itemprop="ratingValue"]').string
 
@@ -143,7 +143,8 @@ def extract_info_from_page(link):
             # extract alternative titles
             if info.h4.text == 'Also Known As:':
                 strings = [string for string in info.stripped_strings]
-                alternative_titles.append(strings[1]) # assuming 'Also Known As' is the first string in the list
+                alternative_title = '"' + strings[1] + '"'
+                alternative_titles.append(alternative_title) # assuming 'Also Known As' is the first string in the list
             # extract production companies
             if info.h4.text == 'Production Co:':
                 production_companies = [company.text for company in info.select('span[itemprop="creator"] a span')]
@@ -200,7 +201,7 @@ def main():
 
     # CSV tables' columns
     #headers = ['title', 'cast',	'directors',	'writers',	'genres',\
-    #           'keywords',	'content_rating,', 'run_time', 'release_year',\
+    #           'keywords',	'content_rating', 'run_time', 'release_year',\
     #           'languages',	'rating',	'budget',	'revenue',	'opening_weekend_revenue',\
     #           'production_companies',	'production_countries',	'alternative_titles']
 
