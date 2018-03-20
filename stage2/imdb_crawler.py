@@ -21,7 +21,7 @@ def extract_duration(runtime):
     '''
     runtime = runtime.split()
     if len(runtime) < 1:
-        return "not available"
+        return ""
 
     hr_min = 0
     minutes = 0
@@ -36,7 +36,7 @@ def extract_duration(runtime):
         return str(minutes)
     else:
         print("h not found in runtime string.")
-        return "not available"
+        return ""
 
     if len(runtime) < 2:
         return str(hr_min)
@@ -48,7 +48,7 @@ def extract_duration(runtime):
         minutes = (int)(minutes[:ind])
     else:
         print("min not found in runtime string.")
-        return "not available"
+        return ""
 
     return str(hr_min+minutes)
 
@@ -78,7 +78,7 @@ def extract_info_from_page(link):
     # 4) extract content rating (G, PG, PG-13, etc)
     content_rating = bs.select_one('meta[itemprop="contentRating"]')
     if content_rating is None:
-        content_rating = "Not Rated"
+        content_rating = ""
     else:
         content_rating = content_rating['content']
 
@@ -87,7 +87,7 @@ def extract_info_from_page(link):
     if len(running_time) < 2:
         #print (running_time)
         if len(running_time) < 1:
-            running_time = "not available"
+            running_time = ""
         else:
             running_time = running_time[0].string
             running_time = extract_duration(running_time)
@@ -200,28 +200,38 @@ def main():
     #    file.write('\n'.join(links))
 
     # CSV tables' columns
-    #headers = ['title', 'cast',	'directors',	'writers',	'genres',\
-    #           'keywords',	'content_rating', 'run_time', 'release_year',\
-    #           'languages',	'rating',	'budget',	'revenue',	'opening_weekend_revenue',\
-    #           'production_companies',	'production_countries',	'alternative_titles']
+    headers = ['title', 'cast',	'directors',	'writers',	'genres',\
+               'keywords',	'content_rating', 'run_time', 'release_year',\
+               'languages',	'rating',	'budget',	'revenue',	'opening_weekend_revenue',\
+               'production_companies',	'production_countries',	'alternative_titles']
 
-    #with open('IMDb_movies.csv', 'w') as file:
-    #    file.write(','.join(headers))
-
-    #with open('IMDb_movies.csv', 'a') as file:
-    #    file.write('\n')
+    if not os.path.exists('Data/IMDb_movies.csv'):
+        with open('Data/IMDb_movies.csv', 'w') as file:
+            file.write(','.join(headers))
+        with open('Data/IMDb_movies.csv', 'a') as file:
+            file.write('\n')
 
     links = []
     with open('IMDb_all_urls.txt', 'r') as file:
         for line in file:
-            links.append(line)
+            links.append(line.strip())
+
+    finished_links = []
+    with open('IMDb_finished_urls.txt', 'r') as file:
+        for line in file:
+            finished_links.append(line.strip())
+
+    links = [link for link in links if link not in finished_links]
 
     for link in links:
         info_list = extract_info_from_page(link)
 
         # write tuples to file
-        with open('IMDb_movies.csv', 'a') as file:
+        with open('Data/IMDb_movies.csv', 'a') as file:
             file.write(','.join(info_list) + '\n')
+
+        with open('IMDb_finished_urls.txt', 'a') as file:
+            file.write(link + "\n")
 
         time.sleep(1)
 
