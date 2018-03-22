@@ -1,8 +1,17 @@
 ---
 layout: default
 title: Team Big HIT CS 839
-description: Project CS 839. Name entity information extraction from various news articles covering movies, entertainment, and politics.
+description: Project Stages for CS 839 at UW-Madison Spring 2018.
 ---
+
+# Stage 2
+
+- [Data directory with both tables A and B](https://github.com/is4ac/cs839-data-science/tree/master/stage2/Data)
+
+    `imdb_movies.csv` and `themoviedb.csv` contain the tables from IMDb and TMDb respectively.
+
+- [Code directory with all source code for stage 2](https://github.com/is4ac/cs839-data-science/tree/master/stage2)
+- [Report PDF file]()
 
 # Stage 1
 
