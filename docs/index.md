@@ -11,7 +11,7 @@ description: Project Stages for CS 839 at UW-Madison Spring 2018.
     `imdb_movies.csv` and `themoviedb.csv` contain the tables from IMDb and TMDb respectively.
 
 - [Code directory with all source code for stage 2](https://github.com/is4ac/cs839-data-science/tree/master/stage2/SourceCode)
-- [Report PDF file](https://github.com/is4ac/cs839-data-science/tree/master/stage2/Report)
+- [Report PDF file](https://github.com/is4ac/cs839-data-science/tree/master/stage2/Report/CS839_Stage2_Report.pdf)
 
 # Stage 1
 
