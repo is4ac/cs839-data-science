@@ -1,0 +1,22 @@
+1. Down sampling
+   A -> A'
+   B -> B'
+2. Define notion of match
+3. Use library for matching
+   A' -> blocking
+                  \
+                   C pairs
+   B' -> blocking /
+
+Here we need to decide what blockers to use. 
+If it is learn-based blocker, we need to define a set of features
+4. From C of matching pair, get a sample S.
+5. Manually label S (match / not match)
+6. Using labelled-S, develop the train set and test set, similar to what we did in P2
+   We basically test here what kinds of matchers has the best precision and recall
+7. Depends on what we get, we might revisit step 3->6. The outcome is that we should
+   be able to determine:
+   - blockers to be used in step 3
+   - matchers to be used in step 6
+Then we run the entire pipeline with input table A, B
+   
