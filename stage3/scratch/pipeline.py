@@ -55,7 +55,7 @@ def main():
     #                           exclude_attrs=['_id', 'ltable_id', 'rtable_id', 'ltable_title', 
     #                                          'rtable_title'],
     #                           target_attr='gold_labels', k=5)
-    print(result)
+    #print(result)
 
 if __name__ == '__main__':
     main()
