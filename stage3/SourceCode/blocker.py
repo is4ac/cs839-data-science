@@ -129,7 +129,7 @@ def main():
     em.set_key(B, 'id')
     # block tables using black-box blocker
     C = black_box_blocker(A, B)
-    C.to_csv('C.csv')
+    C.to_csv('C.csv', index = False)
     # debug blocker
     dbq = blocker_debugging(C, A, B)
     dbq.to_csv('debugged_result.csv')

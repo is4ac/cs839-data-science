@@ -20,8 +20,8 @@ def main():
     I = IJ['train']
     J = IJ['test']
     # Save I and J to files
-    I.to_csv(FOLDER+'I.csv')
-    J.to_csv(FOLDER+'J.csv')
+    I.to_csv(FOLDER+'I.csv', index = False)
+    J.to_csv(FOLDER+'J.csv', index = False)
     # Generate features set F
     F = em.get_features_for_matching(A, B, validate_inferred_attr_types = False)
     #print(F.feature_name)
