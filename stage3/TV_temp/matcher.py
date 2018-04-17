@@ -41,28 +41,29 @@ def main():
     rf = em.RFMatcher(name='RF', random_state=0)
     lg = em.LogRegMatcher(name='LogReg', random_state=0)
     ln = em.LinRegMatcher(name='LinReg')
+    nb = em.NBMatcher(name='NaiveBayes')
     # Selecting best matcher with CV using F1-score as criteria
-    CV_result = em.select_matcher([dt, rf, svm, ln, lg], table = H,
+    CV_result = em.select_matcher([dt, rf, svm, ln, lg, nb], table = H,
                                   exclude_attrs = excluded_attributes,
                                   k = 10, target_attr = 'label',
                                   metric_to_select_matcher = 'f1',
                                   random_state = 0)
-    #print(CV_result['cv_stats']) # RF is the best matcher 
-    # Best matcher found is RF, train RF on H
+    print(CV_result['cv_stats']) # RF is the best matcher 
+    # Best matchers found is RF and NB (same F1 score) but RF has higher P so we pick RF as the best matcher
     rf.fit(table = H, exclude_attrs = excluded_attributes, target_attr = 'label')
     # Convert J into a set of features using F
     L = em.extract_feature_vecs(J, feature_table = F, attrs_after = 'label', show_progress = False)
     # Fill in missing values with column's average
     L = em.impute_table(L, exclude_attrs = excluded_attributes,
                 strategy='mean')
-    # Predict on L
-    predictions = rf.predict(table = L, exclude_attrs = excluded_attributes,
+    # Predict on L with rf
+    predictions_rf = rf.predict(table = L, exclude_attrs = excluded_attributes,
                              append = True, target_attr = 'predicted', inplace = False,
                              return_probs = True, probs_attr = 'proba')
     # Evaluate predictions
-    eval_result = em.eval_matches(predictions, 'label', 'predicted')
-    em.print_eval_summary(eval_result)
-    
+    rf_eval = em.eval_matches(predictions_rf, 'label', 'predicted')
+    em.print_eval_summary(rf_eval)
+        
 if __name__ == '__main__':
     main()
     
