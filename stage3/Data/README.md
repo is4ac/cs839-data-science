@@ -5,10 +5,8 @@
 - G.csv: Labeled sample set of candidate tuples, contains 400 tuples
 - I.csv: Development set used for classifier training, contains 200 tuples
 - J.csv: Evaluation set used to evaluate predictions made by selected classifier trained on I. 
-## CSV Table Description
-- IMDb table (A.csv) contains 3,500 tuples 
-- TMDb table (B.csv) contains 5,490 tuples. 
-- Each table consists of 18 attributes listed below. Attributes 15-18 are unique to IMDb movies. If an attribute has multiple values, the values are separated by semicolons.
+## CSV Tables Attributes' Description
+- Each tuple in table A or B consists of 18 attributes listed below. Attributes 15-18 are unique to IMDb movies. If an attribute has multiple values, the values are separated by semicolons.
 1. id: unique id of the movie
 2. title: title of the movie
 3. cast:	names of the top 5 billed actors/actresses
