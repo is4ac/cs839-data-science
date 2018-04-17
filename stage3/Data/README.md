@@ -1,6 +1,6 @@
 ## CSV Table Description
-- IMDb table (imdb_movies.csv) contains 3,500 tuples 
-- TMDb table (themoviedb.csv) contains 5,490 tuples. 
+- IMDb table (A.csv) contains 3,500 tuples 
+- TMDb table (B.csv) contains 5,490 tuples. 
 - Each table consists of 17 attributes listed below. Attributes 14-17 are unique to IMDb movies. If an attribute has multiple values, the values are separated by semicolons.
 1. title: title of the movie
 2. cast:	names of the top 5 billed actors/actresses
