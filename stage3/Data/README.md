@@ -4,7 +4,7 @@
 - C.csv: Candidate set of all tuple pairs that survive the blocking step, contains 2547 tuples
 - G.csv: Labeled sample set of candidate tuples, contains 400 tuples
 - I.csv: Development set used for classifier training, contains 200 tuples
-- J.csv: Evaluation set used to evaluate predictions made by selected classifier trained on I. 
+- J.csv: Evaluation set used to evaluate predictions made by selected classifier trained on I, contains 200 tuples. 
 ## CSV Tables Attributes' Description
 - Each tuple in table A or B consists of 18 attributes listed below. Attributes 15-18 are unique to IMDb movies. If an attribute has multiple values, the values are separated by semicolons.
 1. id: unique id of the movie
