@@ -8,7 +8,7 @@ description: Project Stages for CS 839 at UW-Madison Spring 2018.
 
 - [Data directory](https://github.com/is4ac/cs839-data-science/tree/master/stage3/Data)
 - [Code directory](https://github.com/is4ac/cs839-data-science/tree/master/stage3/SourceCode)
-- [Report](https://github.com/is4ac/cs839-data-science/tree/master/stage3/Report)
+- [Report](https://github.com/is4ac/cs839-data-science/blob/master/stage3/Report/CS839%20Stage3%20Report.pdf)
 
 # Stage 2
 
