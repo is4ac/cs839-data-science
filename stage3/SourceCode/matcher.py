@@ -49,21 +49,51 @@ def main():
                                   metric_to_select_matcher = 'f1',
                                   random_state = 0)
     print(CV_result['cv_stats']) # RF is the best matcher 
-    # Best matchers found is RF and NB (same F1 score) but RF has higher P so we pick RF as the best matcher
+    # Train matchers on H
+    dt.fit(table = H, exclude_attrs = excluded_attributes, target_attr = 'label')
     rf.fit(table = H, exclude_attrs = excluded_attributes, target_attr = 'label')
+    svm.fit(table = H, exclude_attrs = excluded_attributes, target_attr = 'label')
+    lg.fit(table = H, exclude_attrs = excluded_attributes, target_attr = 'label')
+    ln.fit(table = H, exclude_attrs = excluded_attributes, target_attr = 'label')
+    nb.fit(table = H, exclude_attrs = excluded_attributes, target_attr = 'label')
     # Convert J into a set of features using F
     L = em.extract_feature_vecs(J, feature_table = F, attrs_after = 'label', show_progress = False)
     # Fill in missing values with column's average
     L = em.impute_table(L, exclude_attrs = excluded_attributes,
                 strategy='mean')
-    # Predict on L with rf
+    # Predict on L with trained matchers
+    predictions_dt = dt.predict(table = L, exclude_attrs = excluded_attributes,
+                             append = True, target_attr = 'predicted', inplace = False,
+                             return_probs = False, probs_attr = 'proba')
     predictions_rf = rf.predict(table = L, exclude_attrs = excluded_attributes,
                              append = True, target_attr = 'predicted', inplace = False,
-                             return_probs = True, probs_attr = 'proba')
+                             return_probs = False, probs_attr = 'proba')
+    predictions_svm = svm.predict(table = L, exclude_attrs = excluded_attributes,
+                             append = True, target_attr = 'predicted', inplace = False,
+                             return_probs = False, probs_attr = 'proba')
+    predictions_lg = lg.predict(table = L, exclude_attrs = excluded_attributes,
+                             append = True, target_attr = 'predicted', inplace = False,
+                             return_probs = False, probs_attr = 'proba')
+    predictions_ln = ln.predict(table = L, exclude_attrs = excluded_attributes,
+                             append = True, target_attr = 'predicted', inplace = False,
+                             return_probs = False, probs_attr = 'proba')
+    predictions_nb = nb.predict(table = L, exclude_attrs = excluded_attributes,
+                             append = True, target_attr = 'predicted', inplace = False,
+                             return_probs = False, probs_attr = 'proba')
     # Evaluate predictions
+    dt_eval = em.eval_matches(predictions_dt, 'label', 'predicted')
+    em.print_eval_summary(dt_eval)
     rf_eval = em.eval_matches(predictions_rf, 'label', 'predicted')
     em.print_eval_summary(rf_eval)
-        
+    svm_eval = em.eval_matches(predictions_svm, 'label', 'predicted')
+    em.print_eval_summary(svm_eval)
+    lg_eval = em.eval_matches(predictions_lg, 'label', 'predicted')
+    em.print_eval_summary(lg_eval)
+    ln_eval = em.eval_matches(predictions_ln, 'label', 'predicted')
+    em.print_eval_summary(ln_eval)
+    nb_eval = em.eval_matches(predictions_nb, 'label', 'predicted')
+    em.print_eval_summary(nb_eval)
+    
 if __name__ == '__main__':
     main()
     
