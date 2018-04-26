@@ -45,11 +45,24 @@ def main():
                              inplace = False, return_probs = False, 
                              probs_attr = 'proba')
     # Output the merged table (Basically what matches).
+    # We start with rows from A that matches.
+    # We then merge value from B into A.
     matched_pairs = predictions[predictions.predicted==1]
     left_ids = matched_pairs['l_id'].to_frame()
     left_ids.columns = ['id']
-    merged_table = pd.merge(A, left_ids, on='id')
-    merged_table.to_csv(FOLDER+'E.csv', index = False)
+    merged = pd.merge(A, left_ids, on='id')
+    merged.set_index('id', inplace=True)
+    B.set_index('id', inplace=True)
+    black_list = { 'a872', 'a987' }
+    for pair in matched_pairs.itertuples():
+        aid = pair.l_id
+        bid = pair.r_id
+        if (aid in black_list):
+            continue
+        # Rating: take the average after converting B rating to scale 10.
+        m_rating = (merged.loc[aid, 'rating'] + 0.1 * B.loc[bid, 'rating']) / 2
+        merged.loc[aid, 'rating'] = m_rating
+    merged.to_csv(FOLDER+'E.csv', index = True)
     
 if __name__ == '__main__':
     main()
