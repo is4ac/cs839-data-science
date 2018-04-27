@@ -9,6 +9,17 @@ FOLDER = './Data/'
 # Set seed value (to get reproducible results)
 seed = 0
 
+def merge_cell(a, b):
+    """Returned the merged content of the two cell a and b.
+    a and be must be strings likes directors, writers, etc.
+    We assume ';' as delimeters."""
+    # TODO(all): this is just exact match, literally.
+    if (pd.isnull(a)):
+        return b
+    if (pd.isnull(b)):
+        return a
+    return ';'.join(set(a.split(';')) | set(b.split(';')))
+
 def main():
     # Read in data files
     A = em.read_csv_metadata(FOLDER+'A.csv', key = 'id') # imdb data
@@ -59,6 +70,24 @@ def main():
         bid = pair.r_id
         if (aid in black_list):
             continue
+        # Title: keep title from A, if title from B is not an exact matched
+        # from A, append B’s title to the alternative title field if B’s title
+        # is not already in A’s alternative title.
+        m_title = merged.loc[aid, 'title']
+        a_title = merged.loc[aid, 'title']
+        b_title = B.loc[bid, 'title']
+        if (b_title != a_title):
+            if pd.isnull(merged.loc[aid, 'alternative_titles']):
+                merged.loc[aid, 'alternative_titles'] = b_title
+            else:
+                alt = set(merged.loc[aid, 'alternative_titles'].split(';'))
+                if (b_title not in alt):
+                    merged.loc[aid, 'alternative_titles'] += ';' +  b_title
+        for col in ['directors', 'writers', 'cast', 'genres', 'keywords', 
+                    'languages', 'production_companies', 
+                    'production_countries']:
+            merged.loc[aid, col] = merge_cell(merged.loc[aid, col],
+                                              B.loc[bid, col])
         # Rating: take the average after converting B rating to scale 10.
         m_rating = (merged.loc[aid, 'rating'] + 0.1 * B.loc[bid, 'rating']) / 2
         merged.loc[aid, 'rating'] = m_rating
