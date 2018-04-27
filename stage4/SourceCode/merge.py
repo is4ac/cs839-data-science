@@ -20,6 +20,22 @@ def merge_cell(a, b):
         return a
     return ';'.join(set(a.split(';')) | set(b.split(';')))
 
+def merge_money(a, b):
+    if (pd.isnull(a)):
+        return b
+    if (pd.isnull(b)):
+        return a
+    try:
+        a_budget = float(a[1:])
+    except:
+        return b
+    try:
+        b_budget = float(b[1:])
+    except:
+        return a
+    m_budget = int(a_budget / 2 + b_budget / 2)
+    return a[:1] + str(m_budget)
+
 def main():
     # Read in data files
     A = em.read_csv_metadata(FOLDER+'A.csv', key = 'id') # imdb data
@@ -88,6 +104,15 @@ def main():
                     'production_countries']:
             merged.loc[aid, col] = merge_cell(merged.loc[aid, col],
                                               B.loc[bid, col])
+        # Content rating: keep A
+        # Release year: keep A
+        # Opening_weekend_revenue: keep A
+        # Run time
+        m_runtime = int((merged.loc[aid, 'run_time'] + B.loc[bid, 'run_time']) / 2)
+        merged.loc[aid, 'run_time'] = m_runtime
+        # Budget and Revenue
+        for col in ['budget', 'revenue']:
+            merged.loc[aid, col] = merge_money(merged.loc[aid, col], B.loc[bid, col])
         # Rating: take the average after converting B rating to scale 10.
         m_rating = (merged.loc[aid, 'rating'] + 0.1 * B.loc[bid, 'rating']) / 2
         merged.loc[aid, 'rating'] = m_rating
