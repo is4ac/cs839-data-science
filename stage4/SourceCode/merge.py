@@ -18,7 +18,9 @@ def merge_cell(a, b):
         return b
     if (pd.isnull(b)):
         return a
-    return ';'.join(set(a.split(';')) | set(b.split(';')))
+    merged_data = set(a.lower().split(';')) | set(b.lower().split(';'))
+    merged_data = {data.title() for data in merged_data}
+    return ';'.join(merged_data)
 
 def merge_money(a, b):
     if (pd.isnull(a)):
