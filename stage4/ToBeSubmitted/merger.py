@@ -173,22 +173,6 @@ def merge_money(a, b):
             merged_value = int(round((float(numbera) + float(numberb))/2))
             return symbola + str(merged_value)
 
-def extract_allSymbols(C):
-    # extract the currency symbol from 'budget', 'revenue', and 'opening_weekend_revenue'
-    currency_symbols = []
-    columns = ['l_budget', 'l_revenue', 'l_opening_weekend_revenue', 'r_budget', 'r_revenue']
-    for index, row in C.iterrows():
-        for attribute in columns:
-            if pd.isnull(row[attribute]):
-                continue
-            else:
-                symbol, number = extract_symbol(row[attribute])
-                if symbol == '-':
-                    continue
-                else:
-                    currency_symbols.append(symbol)
-    return currency_symbols 
-            
 def extract_symbol(x):
     # extract the currency symbol from string x
     symbol = ''
