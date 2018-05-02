@@ -140,7 +140,7 @@ def compute_corrCoeff(data):
     for key in data.keys():
         value = np.asarray(data[key])
         budget.extend(value[:,0])
-        revenue.extend(value[:, 0])
+        revenue.extend(value[:, 1])
     return np.corrcoef(budget, revenue)[0, 1]
 
 def drill_down(df, year):
@@ -158,7 +158,7 @@ def drill_down(df, year):
                     if float(revenue_value) > max_value:
                         max_value = float(revenue_value)
                         max_value_id = index
-    print(max_value)
+    #print(max_value)
     return df.iloc[max_value_id]
                 
 def main():
