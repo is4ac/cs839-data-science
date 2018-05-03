@@ -4,6 +4,11 @@ title: Team Big HIT CS 839
 description: Project Stages for CS 839 at UW-Madison Spring 2018.
 ---
 
+# Stage 4: Integration and Analysis
+
+- [Main project directory (data and code)](https://github.com/is4ac/cs839-data-science/tree/master/stage4/ToBeSubmitted)
+- [Report](https://github.com/is4ac/cs839-data-science/tree/master/stage4/ToBeSubmitted/CS839Stage4Report.pdf)
+
 # Stage 3: Entity Matching
 
 - [Data directory](https://github.com/is4ac/cs839-data-science/tree/master/stage3/Data)
